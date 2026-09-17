@@ -15,7 +15,7 @@ This folder is a sanitized evidence bundle extracted from the working private **
 | Browser E2E | **3 / 3 Playwright flows passed** |
 | Concurrent full flows after hardening | **12 / 12 passed** |
 
-The retrieval metric answers one narrow question: **did hybrid retrieval surface an accepted authority/citation marker within the top five results?** It is not a legal-correctness score and it is not downstream LLM-answer accuracy.
+The retrieval metric asks a specific engineering question: **did hybrid retrieval surface an accepted authority/citation marker within the top five results?** Retrieval is evaluated independently from generation so fluent model output cannot hide weak evidence retrieval.
 
 ## Representative implementation
 
@@ -23,7 +23,7 @@ The retrieval metric answers one narrow question: **did hybrid retrieval surface
 - [`embedding_provider.py`](embedding_provider.py) — provider contract, BGE query/passage behavior, model provenance and dimension validation.
 - [`chunks_schema.sql`](chunks_schema.sql) — PostgreSQL retrieval plane with `pgvector`, HNSW cosine ANN, full-text search and metadata indexes.
 - [`hybrid_retrieval.py`](hybrid_retrieval.py) — lexical + vector retrieval, high-authority candidate lanes, Reciprocal Rank Fusion and citable evidence hydration.
-- [`rerank.py`](rerank.py) — small deterministic authority-sensitive reranking step; relevance remains dominant.
+- [`rerank.py`](rerank.py) — deterministic authority-sensitive reranking; relevance remains dominant.
 - [`grounding_pairs.json`](grounding_pairs.json) — the 34 hand-checked evaluation queries and accepted markers.
 - [`grounding_eval.py`](grounding_eval.py) — retrieval-grounding evaluation gate.
 - [`retrieval_integration_test.py`](retrieval_integration_test.py) — representative database-backed test using known expected sources.
@@ -34,17 +34,17 @@ The retrieval metric answers one narrow question: **did hybrid retrieval surface
 - Preserve source/legal structure before applying size-based splitting.
 - Use lexical and vector retrieval because they fail differently.
 - Fuse rank positions with RRF rather than pretending lexical and cosine scores share a meaningful numeric scale.
-- Add high-authority retrieval lanes before reranking instead of hoping a downstream prompt repairs weak retrieval.
+- Add high-authority candidate lanes before reranking instead of hoping a downstream prompt repairs weak retrieval.
 - Keep authority as a near-tie preference so relevance is not overridden mechanically.
 - Stamp embedding model/version/dimension as provenance and treat embeddings/indexes as rebuildable derived state.
 - Return source metadata and citation labels with retrieval objects so evidence survives into downstream assessment.
-- Evaluate retrieval independently of generation so fluent model output cannot hide a retrieval failure.
-- Fall back to lexical retrieval instead of making the entire application unusable when embeddings are unavailable.
+- Use DB integration, browser, stress/abuse and concurrent-flow tests in addition to unit-level behavior.
+- Fall back to lexical retrieval instead of making the application unusable while embeddings are unavailable.
 
-## Maturity boundary
+## Operationalization work visible in the private system
 
-This is a **working pre-production system**, not a claimed enterprise production deployment. The private roadmap still has explicit gates for CI wiring, production observability, storage/security hardening, least-privilege database roles and deployment sign-off. Those open items are intentionally not converted into completed claims here.
+The working application includes pooled database connections, batched inserts, guarded embedding initialization, audit logging, deletion paths, authentication scaffolding and test/evaluation gates. Current engineering continues to deepen observability, security and regression automation as the system evolves.
 
-The complete application remains private because it contains product internals and personal/candidate data structures. This folder contains selected non-secret implementation evidence only.
+The complete application remains private because it contains product internals and personal/candidate data structures. This folder contains selected non-sensitive implementation evidence only.
 
 [Back to Lodestar case study](../../projects/lodestar.md) · [Back to portfolio](../../README.md)
