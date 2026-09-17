@@ -2,6 +2,10 @@
 
 **Public implementation:** [Pub-JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper)
 
+![Authentic JobLooper dashboard](../visuals/joblooper_governed_workflow_ui.jpg)
+
+*Authentic dashboard rendered from the public application using fictional demo data. The interface itself is real; no applicant or employer claim in the screenshot is presented as career evidence.*
+
 JobLooper is useful evidence here because it demonstrates a design principle for applied AI: the model may help with interpretation or drafting, but **truth, provenance, workflow state and release gates remain deterministic software responsibilities**.
 
 ## What the public implementation actually is
@@ -39,14 +43,8 @@ document build + hashes + submission record
 
 The public repository therefore demonstrates **AI containment and assurance**, not a claim that every stage is AI-powered.
 
-## What is deliberately not claimed
+## Assurance boundary
 
-- no prediction of ATS ranking or hiring outcome;
-- no claim that an LLM is authoritative for dates, metrics or ownership;
-- no claim of a TypeScript/Node runtime for the public implementation;
-- no claim of cross-provider review unless a particular private experimental branch is being discussed separately;
-- no claim that optional AI integration replaces deterministic validation.
-
-A related private experimental system, JobPilot Local, explores additional career-document workflows, but private features are not used here as proof of public implementation capability.
+JobLooper deliberately keeps hiring predictions, ATS-score claims and unverified model output outside its authority model. Dates, metrics, ownership, workflow state and release decisions remain bound to approved evidence and deterministic checks. A related private experimental system, JobPilot Local, explores additional workflows, while this portfolio uses the public implementation as the evidence source.
 
 [Back to portfolio](../README.md)
