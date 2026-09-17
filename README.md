@@ -10,8 +10,8 @@ I build and lead AI-enabled engineering systems that have to work outside the no
 
 | Capability | What is actually implemented | Evidence |
 |---|---|---|
-| **Deployed edge AI / computer vision** | LWIR model development; multi-model YOLO work; TensorRT deployment on Jetson Orin Nano; RGB + passive-IR concurrent inference; YOLOv12 + SAHI; geolocation; MAVLink/REST; GCS integration | **3,499 LWIR source frames · 5,593 objects · 23 classes · 29 controlled training runs · 25.0 FPS TensorRT inference · 15.6 FPS end-to-end** → [Clear Run / TIR-FOD case study](projects/tir-fod-clear-run.md) |
-| **Grounded RAG / GenAI systems** | FastAPI; BGE embeddings; PostgreSQL + `pgvector`; HNSW + lexical retrieval; RRF; authority-aware reranking; citable evidence objects; LLM-provider abstraction; full-stack testing | **209 documents · 2,945 embedded chunks · 2.9% top-5 retrieval-grounding error · 53 backend tests · 12/12 concurrent flows** → [Lodestar case study](projects/lodestar.md) |
+| **Deployed edge AI / computer vision** | LWIR model development; multi-model YOLO work; TensorRT deployment on Jetson Orin Nano; RGB + passive-IR concurrent inference; YOLOv12 + SAHI; geolocation; MAVLink/REST; GCS integration | **3,499 LWIR source frames · 5,593 objects · 23 classes · 29 controlled training runs · 25.0 FPS TensorRT inference · 15.6 FPS end-to-end** → [case study](projects/tir-fod-clear-run.md) · [deployment-code evidence](evidence/clear-run/README.md) |
+| **Grounded RAG / GenAI systems** | FastAPI; BGE embeddings; PostgreSQL + `pgvector`; HNSW + lexical retrieval; RRF; authority-aware reranking; citable evidence objects; LLM-provider abstraction; full-stack testing | **209 documents · 2,945 embedded chunks · 2.9% top-5 retrieval-grounding error · 53 backend tests · 12/12 concurrent flows** → [case study](projects/lodestar.md) · [implementation evidence](evidence/lodestar/README.md) |
 | **AI assurance / governed workflows** | Independent builder-reviewer model workflow; mutation checks; deterministic evidence/provenance gates around AI-assisted generation | **Two public working tools** → [Codex Adversarial Review Lite](projects/codex-adversarial-review-lite.md) · [JobLooper](projects/joblooper-jobpilot.md) |
 
 ## Start here by role
@@ -34,7 +34,7 @@ I build and lead AI-enabled engineering systems that have to work outside the no
 - Clear Run expands the deployed stack to **concurrent RGB + passive-IR FP16 TensorRT inference**, small-object sliced inference, geolocation, MAVLink/REST telemetry, synchronized recording and GCS mission integration.
 - Current system work closes the final UAV–GCS–UGV target hand-off, terminal alignment and physical-retention validation loop.
 
-**Deep dive:** [TIR-FOD / Clear Run — deployed edge AI for runway inspection and autonomy](projects/tir-fod-clear-run.md)
+**Deep dive:** [TIR-FOD / Clear Run case study](projects/tir-fod-clear-run.md) · [sanitized deployment implementation](evidence/clear-run/README.md)
 
 ## Flagship 2 — grounded RAG as an engineering system
 
