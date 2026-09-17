@@ -1,22 +1,19 @@
-# BuildSignal AI — validated AI/editorial product workflow
+# BuildSignal — product / publishing workflow engineering
 
-**Source repository:** private product repository; public-safe architecture only.
+**Status:** private working repository; included as secondary software/product evidence, **not as a core AI/ML project**.
 
-BuildSignal AI is a **Next.js / TypeScript / MDX** publishing and research platform for AI, SaaS and technical content. The point of including it here is not that a blog is an AI project; it is that the product uses explicit validation and workflow controls around AI-assisted research/editorial work.
+BuildSignal is a Next.js, TypeScript and MDX editorial platform for technical content. Its relevance to this portfolio is conventional product engineering around structured workflows, validation and publishing—not model training or RAG.
 
 ## Implemented product surface
 
-- Next.js 16 / React 19 / TypeScript 6;
-- MDX content pipeline;
-- local admin workspaces for Articles, Media, Video, Audio, YouTube, Social, Research, Comments, QA, Tools and Publish;
-- article approval boundary before publishing;
-- environment-secret separation;
-- platform, editorial, media-pipeline and operations validators;
-- style checking, lint, strict type checking and production build validation;
-- layout inspection tooling;
-- an AI-judge-loop simulation path for evaluating AI-assisted review behavior.
+- Next.js / TypeScript / MDX application;
+- local administrative workspaces for articles, media, video, audio, YouTube, social, research, comments, QA, tools and publishing;
+- explicit approval before content publication;
+- environment-secret separation through local configuration;
+- platform, editorial and pipeline validation commands;
+- linting, type checking and build validation.
 
-## Validation commands in the working repo
+Representative validation commands in the working repository include:
 
 ```text
 npm run validate:platforms
@@ -29,8 +26,8 @@ npm run typecheck
 npm run build
 ```
 
-## Why it is relevant
+## Portfolio boundary
 
-It demonstrates product engineering around AI-assisted work: content/data pipelines, validation, QA, human approval and maintainable web tooling. I do not present it as an ML-model training project; its value is the controlled application layer around AI-enabled research/editorial workflows.
+BuildSignal demonstrates web/product workflow engineering. It is deliberately separated from the portfolio's direct AI evidence—Lodestar, TIR-FOD, Codex Adversarial Review Lite and JobLooper—so ordinary software features are not inflated into AI credentials.
 
-[Back to portfolio](../README.md)
+[Back to project inventory](README.md) · [Back to portfolio](../README.md)
