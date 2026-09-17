@@ -10,6 +10,8 @@ Foreign Object Debris (FOD) is an aviation-safety hazard. Visible-spectrum inspe
 
 **Public dataset:** [TIR-FOD v1.2 — Zenodo DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586)
 
+**Inspectable result data:** [selected raw benchmark result snapshot](../evidence/tir-fod/benchmark_results.json)
+
 - **3,499** single-shot LWIR source frames acquired over real runway surfaces;
 - **5,593** bounding-box annotations;
 - **23** FOD categories;
@@ -18,6 +20,8 @@ Foreign Object Debris (FOD) is an aviation-safety hazard. Visible-spectrum inspe
 - frozen source-grouped partitions;
 - blind second annotation on **338 frames** plus automated checks;
 - **29 training runs** across YOLOv8, YOLO11 and YOLO12 configurations and comparative studies.
+
+The SVG above is a visualization of measured project results, not generated project imagery. The JSON snapshot exposes representative raw benchmark fields so the numbers can be inspected directly.
 
 ## Model and generalisation evidence
 
@@ -37,7 +41,7 @@ Ten-run means reported in the current manuscript:
 - **25.0 FPS** inference;
 - **15.6 FPS** end-to-end.
 
-This is the part that moves the work from a dataset/model study toward an operational AI system: sensor acquisition, preprocessing, model execution, deployment constraints, telemetry and field validation.
+This moves the work from a dataset/model study toward an operational AI system: sensor acquisition, preprocessing, model execution, deployment constraints, telemetry and field validation.
 
 ## Clear Run extension
 
