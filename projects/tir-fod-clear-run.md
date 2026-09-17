@@ -10,11 +10,11 @@
 | **Dataset / benchmark** | **3,499 LWIR source frames · 5,593 annotated objects · 23 classes · 29 completed training runs** |
 | **Model work** | YOLOv8 / YOLO11 / YOLO12 comparative experiments + current **multi-model LWIR fusion** |
 | **Edge deployment** | Jetson Orin Nano · FP16 TensorRT · UAV flight trials · **25.0 FPS inference / 15.6 FPS end-to-end** |
-| **Integrated AI runtime** | Concurrent RGB + passive-IR inference · YOLOv12 + SAHI · geolocation · MAVLink/REST · GCS mission integration |
+| **Integrated AI runtime** | Concurrent RGB + passive-IR inference · Ultralytics YOLO + SAHI sliced inference · geolocation · MAVLink/REST · GCS mission integration |
 | **Current systems focus** | Closing and quantitatively validating target hand-off, terminal alignment, collection and retention |
 | **My role** | Technical direction, systems architecture/interfaces, experiment and evaluation strategy, deployment review, integration gates and team leadership |
 
-**Public dataset:** [TIR-FOD v1.2 — Zenodo DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586) · **Result extract:** [benchmark snapshot](../evidence/tir-fod/benchmark_results.json)
+**Public dataset:** [TIR-FOD v1.2 — Zenodo DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586) · **Result extract:** [benchmark snapshot](../evidence/tir-fod/benchmark_results.json) · **Deployment-code extract:** [Clear Run evidence](../evidence/clear-run/README.md)
 
 ## Why this project matters for applied-AI roles
 
@@ -82,13 +82,13 @@ This is field-deployed edge AI rather than workstation-only inference.
 
 ## 3. Clear Run — deployed dual-camera AI runtime
 
-Clear Run extends perception into a broader UAV–GCS–UGV system. The active aerial AI stack includes:
+Clear Run extends perception into a broader UAV–GCS–UGV system. The inspected aerial AI source and dual-camera system record show:
 
-- **1080p RGB** and **passive IR** streams;
+- **RGB and passive-IR camera streams**;
 - independent **FP16 TensorRT engines** for RGB and IR inference;
 - concurrent multi-stream processing;
-- **YOLOv12 + SAHI-style sliced inference** for small-object detection;
-- TensorRT `.engine`, ONNX and Ultralytics model support;
+- **Ultralytics YOLO with optional SAHI sliced prediction** for small-object detection;
+- TensorRT `.engine`, ONNX and Ultralytics model paths;
 - CUDA/GPU execution on Jetson;
 - independent model management for each stream;
 - synchronized RGB/IR recording with bounding-box overlays;
@@ -124,4 +124,4 @@ I lead the applied R&D / systems-engineering effort: technical direction, archit
 - The TIR-FOD IEEE Access manuscript is under revision in 2026.
 - Clear Run is under active field integration and measurement.
 
-[Back to portfolio](../README.md) · [Technical evidence index](../evidence/README.md) · [Research record](../research/README.md)
+[Back to portfolio](../README.md) · [Technical evidence index](../evidence/README.md) · [Clear Run deployment evidence](../evidence/clear-run/README.md) · [Research record](../research/README.md)
