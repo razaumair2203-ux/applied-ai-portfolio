@@ -2,6 +2,10 @@
 
 This is a public-safe summary of a private evidence archive. It intentionally separates **completed Phase I evidence** from future sensing research.
 
+![Authentic Counter-UAS Phase I visual evidence](../visuals/counter_uas_phase1_evidence.jpg)
+
+*Repository-original sensor-mount imagery, indoor/outdoor trial frames and training curves. The visual shows completed Phase I computer-vision work only; passive-RF, acoustic and broader multisensor directions are not presented as demonstrated capability.*
+
 ## Completed Phase I evidence
 
 - computer-vision drone-detection demonstrator;
