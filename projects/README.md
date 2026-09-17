@@ -1,42 +1,50 @@
-# Project and maturity inventory
+# Project inventory — AI engineering, deployment and aerospace systems
 
-This inventory separates **inspectable AI engineering**, **active systems/R&D integration**, and **adjacent engineering leadership**. A project appearing here does not mean every subsystem or line of code was authored personally; ownership language follows the actual role.
+The portfolio is organized by the kind of engineering evidence each project provides. Ownership language reflects my actual role: direct implementation where applicable, and technical leadership/systems integration where work is team-developed.
 
-## A. Direct, inspectable AI / software engineering evidence
+## A. Core AI engineering evidence
 
-| Project | Evidence depth | Current maturity |
+| Project | Engineering evidence | Current state |
 |---|---|---|
-| [Lodestar](lodestar.md) | Python/FastAPI backend, structure-aware ingestion/chunking, BGE embeddings, PostgreSQL/pgvector, HNSW + FTS hybrid retrieval, RRF, reranking, LLM integration, automated evaluation/tests and browser flow | Working **pre-production** private system; sanitized implementation/evaluation is public here |
-| [TIR-FOD](tir-fod-clear-run.md) | Real LWIR runway dataset, repeated YOLO experiments, leakage/generalisation studies, Jetson Orin Nano/TensorRT, integrated UAV flight trials and public dataset | Public research dataset + **flight-tested prototype**; IEEE Access manuscript under revision |
-| [Codex Adversarial Review Lite](codex-adversarial-review-lite.md) | Public skill/source, independent builder-reviewer control flow, model preflight/fallback, mutation checks, structured audit, human approval | Public working tool |
-| [JobLooper](joblooper-jobpilot.md) | Public Python local-first workflow, provenance/hashes, deterministic validation/release state, CLI/dashboard/document build, optional assistant integration | Public working software |
+| [Lodestar](lodestar.md) | Python/FastAPI RAG; structure-aware ingestion; BGE embeddings; PostgreSQL/pgvector; HNSW + FTS hybrid retrieval; RRF; authority reranking; LLM integration; evaluation, stress and browser tests | Working private full-stack system with sanitized public implementation/evaluation evidence |
+| [TIR-FOD / Clear Run](tir-fod-clear-run.md) | Real LWIR dataset; 29-run six-model YOLO study; multi-model LWIR work; reproducible experiment orchestration; Jetson/TensorRT UAV deployment; dual RGB/IR FP16 inference; YOLOv12 + SAHI; geolocation, MAVLink/REST and GCS integration | Flight-tested edge AI plus active field integration into the UAV–GCS–UGV mission system |
+| [Codex Adversarial Review Lite](codex-adversarial-review-lite.md) | Independent multi-model review workflow; preflight/fallback; mutation checks; structured audit; human release decision | Public working AI-assurance tool |
+| [JobLooper](joblooper-jobpilot.md) | Deterministic evidence/provenance controls around optional AI assistance; local workflow, CLI/dashboard, release gates and document generation | Public working software |
 
-These four projects are the main evidence for hands-on AI integration, retrieval, computer vision, evaluation, APIs/software, edge deployment and AI-assurance design.
+These are the main evidence streams for RAG, GenAI integration, computer vision, model evaluation, edge inference, APIs, deployment and AI assurance.
 
-## B. Active AI / autonomy systems integration
+## B. Deployed computer vision and autonomy
 
-| Workstream | What exists now | What remains in progress |
-|---|---|---|
-| **Clear Run UAV–GCS–UGV FOD retrieval** | Day/night aerial detection tested; telemetry/video recording; UAV/GCS/UGV experimental platform; UGV hardware/navigation; retrieval CAD; TIR-FOD perception baseline | Complete target hand-off/acknowledgement, retrieval-mechanism integration, terminal alignment, retained-object trials and complete detection-to-retention KPIs |
-| [Counter-UAS Phase I](counter-uas.md) | Computer-vision drone-detection demonstrator; indoor/outdoor trials; original visual/training evidence archived with provenance | Passive RF, acoustic and broader multisensor work are proposed research directions, not completed capability |
-| **AI imaging / compression and sensing projects** | Current supervised R&D streams inside the CAE project portfolio | Results remain project-specific and should not be promoted to completed public products without evidence |
+### Clear Run UAV–GCS–UGV
 
-## C. Research and engineering infrastructure
+The active Clear Run stack includes Jetson Orin Nano aerial compute, RGB and passive-IR cameras, independent FP16 TensorRT engines, YOLO/SAHI inference, geolocation, camera-tagged detections, synchronized recording, MAVLink telemetry and Flask/Leaflet GCS integration. UGV computing/navigation and the retrieval mechanism form the downstream robotic layer. Current trials are closing the final target-hand-off, terminal-alignment and physical-retention measurements.
 
-- [ATLAS GPU/HPC environment](atlas-hpc.md) — GPU/HPC research environment, reproducibility/containers/monitoring/governance work. This is infrastructure leadership, not an AI model claim.
+### TIR-FOD thermal UAV deployment
+
+The TIR-FOD detector was converted to TensorRT and flight-tested on Jetson Orin Nano over runway surfaces. Ten-run means were 25.0 FPS inference and 15.6 FPS end-to-end on the 640 × 512 thermal stream, with power and thermal observations recorded during system testing.
+
+### Counter-UAS Phase I
+
+[Counter-UAS Phase I](counter-uas.md) provides a separate physical computer-vision demonstrator with indoor/outdoor drone-detection and tracking trials, hardware integration and preserved training/visual evidence.
+
+## C. ML lifecycle, evaluation and reproducibility
+
+TIR-FOD provides the strongest model-lifecycle evidence: configuration-driven resumable experiment queues, deterministic multi-seed training, controlled protocol variations, validation-based checkpoint selection, held-out testing, per-class metrics, run histories, checksums/manifests and deployment profiling. Lodestar adds retrieval evaluation, regression-style gates, concurrency/stress testing and provenance-aware model/retrieval integration.
+
+## D. Research and engineering infrastructure
+
+- [ATLAS GPU/HPC environment](atlas-hpc.md) — GPU/HPC research platform, containers, monitoring, reproducibility and controlled engineering use.
 - **GNSS 8-element CRPA interference suppression** — adaptive array / interference-rejection research; accepted/presented IBCAST 2026 work.
 - **AERIS-10 radar demonstrator** — RF/antenna/embedded-processing integration and staged V&V.
-- **Ku-band phased array, UWB radar and radar/EW teaching labs** — applied RF/signal-processing and engineering-education work.
-- **Sensor-enhanced aircraft digital-twin concepts** — systems/digital-engineering work in progress; not represented as a fielded production twin.
+- **Ku-band phased array, UWB radar and radar/EW laboratories** — RF/signal-processing development and technical education.
+- **Sensor-enhanced aircraft digital-twin work** — systems/digital-engineering development with sensing, lifecycle data and staged validation.
 
-## D. Product/software work that is not counted as core AI evidence
+## E. Product/software engineering
 
-[BuildSignal](buildsignal-ai.md) is a Next.js/TypeScript/MDX editorial/product platform with validation and publishing workflows. It demonstrates product/software engineering, but it is intentionally **not** used as a flagship AI credential merely because its subject matter involves AI content.
+[BuildSignal](buildsignal-ai.md) is a Next.js/TypeScript/MDX editorial/product platform with validation and publishing workflows. It is included as software/product evidence rather than inflated into a machine-learning claim.
 
-## Current portfolio leadership context
+## Portfolio leadership context
 
-In my current CAE/NUST role I govern **100+ multidisciplinary engineering and R&D initiatives** across avionics, radar/RF, communications, embedded systems, sensing, UAV/autonomous systems and AI. That number describes portfolio responsibility and technical governance. It does **not** imply personal authorship of every project algorithm, dataset, circuit, mechanical design or codebase.
-
-For recruiter or technical review, start with the direct-evidence projects in Section A and use Sections B–D as systems context rather than mixing all work into one undifferentiated "AI portfolio."
+In my current CAE/NUST role I govern **100+ multidisciplinary engineering and R&D initiatives** across avionics, radar/RF, communications, embedded systems, sensing, UAV/autonomous systems and AI. That scale demonstrates technical portfolio leadership while the individual project pages identify the implementation and evidence specific to each workstream.
 
 [Back to portfolio](../README.md)
