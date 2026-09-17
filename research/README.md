@@ -2,7 +2,9 @@
 
 This page separates **published / indexed work**, **public datasets**, and **active manuscripts**. Status is stated explicitly; no submitted paper is presented as published.
 
-## Peer-reviewed conference papers
+**Public author record:** [Google Scholar — Muhammad Umair Raza](https://scholar.google.com/citations?user=0EVckyAAAAAJ&hl=en) · College of Aeronautical Engineering · verified `cae.nust.edu.pk` affiliation.
+
+## Published / indexed conference papers
 
 ### Low-Latency Architectures for Real-Time Multi-Stream Object Detection
 
@@ -22,12 +24,14 @@ Focus: transferable physical adversarial patches evaluated across multiple YOLO 
 
 **Portfolio relevance:** adversarial ML, robustness evaluation, physical-world testing, model-agnostic attack design.
 
+## 2026 conference paper
+
 ### Adaptive Interference Suppression in GNSS Using an 8-Element CRPA Antenna Array
 
-**IBCAST 2026, Wireless Communication & Radar track**  
+**IBCAST 2026, Murree Hills, Pakistan**  
 Authors: Samaira Waqar Elahi, Malik Muhammad Abdullah, Waqas Aftab, Sohaib Yaqoob Chaudhry, **Umair Raza**.
 
-The paper was accepted/presented at IBCAST 2026. IBCAST is IEEE technically co-sponsored; conference guidance states accepted and presented papers are considered for IEEE Xplore subject to IEEE scope/quality checks. This portfolio does **not** invent an IEEE Xplore DOI before a public record is verifiable.
+Accepted/presented at IBCAST 2026. This portfolio does **not** claim IEEE Xplore indexing or a DOI until a public record is verifiable.
 
 **Portfolio relevance:** adaptive signal processing, antenna arrays, GNSS resilience, interference suppression, sensing-system engineering.
 
@@ -48,7 +52,7 @@ DOI: [10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586)
 
 A public dataset is treated here as a first-class research output: acquisition design, annotation, curation, leakage control, versioning, reproducible splits and evaluation are part of the engineering contribution.
 
-[Technical case study](../projects/tir-fod-clear-run.md)
+[Technical case study](../projects/tir-fod-clear-run.md) · [Inspectable benchmark result snapshot](../evidence/tir-fod/benchmark_results.json)
 
 ## Active manuscript
 
@@ -70,8 +74,8 @@ Current manuscript evidence includes 29 training runs, repeated seeds, source-aw
 - sensor-enhanced digital-twin concepts;
 - GPU/HPC infrastructure for applied engineering research.
 
-## Independent public verification
+## Independent verification
 
-The two 2025 ICoDT2 papers have DOI records. The TIR-FOD dataset has a public Zenodo DOI. The current Google Scholar profile also provides an author-level research identity record; citation counts are intentionally not copied here because they are mutable.
+The two 2025 ICoDT2 papers have public DOI records. The TIR-FOD dataset has a public Zenodo DOI. Google Scholar provides the author-level research identity record. Citation counts are intentionally not copied because they are mutable.
 
 [Back to portfolio](../README.md)
