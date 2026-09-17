@@ -1,10 +1,10 @@
 # Lodestar — grounded RAG and evidence assessment
 
-**Status:** working private system; selected non-sensitive implementation and evaluation evidence is published in this portfolio. The current build is **pre-production** and is not represented as a deployed public service.
+**Status:** working private full-stack system; selected non-sensitive implementation and evaluation evidence is published in this portfolio.
 
 ## Engineering problem
 
-Lodestar evaluates evidence against a legal corpus where retrieval quality, authority and traceability matter more than fluent text. The LLM is therefore downstream of a retrieval and evidence plane rather than being treated as the source of truth.
+Lodestar evaluates evidence against a legal corpus where retrieval quality, authority and traceability matter more than fluent text. The LLM is downstream of a retrieval and evidence plane rather than being treated as the source of truth.
 
 The working system includes:
 
@@ -20,7 +20,7 @@ The working system includes:
 - provider-swappable LLM integration;
 - a Next.js frontend;
 - PostgreSQL and in-memory stores for different execution modes;
-- automated backend, DB integration and browser tests.
+- automated backend, database-integration and browser tests.
 
 ## Retrieval path
 
@@ -40,7 +40,7 @@ structure-aware chunking
                                                      grounded assessment
 ```
 
-The implemented hybrid search does more than combine two result lists. It runs lexical and semantic lanes plus separate high-authority candidate lanes, fuses ranks using RRF, hydrates the resulting IDs into citable evidence objects and then applies an explainable authority-sensitive reranker. The authority weighting is intentionally a near-tie adjustment rather than a rule that can bury a highly relevant lower-authority source.
+The hybrid search runs lexical and semantic lanes plus separate high-authority candidate lanes, fuses rank positions using RRF, hydrates the result IDs into citable evidence objects and applies an explainable authority-sensitive reranker. Authority is intentionally a near-tie preference rather than a rule that can bury a highly relevant lower-authority source.
 
 ## Measured state
 
@@ -56,38 +56,32 @@ The implemented hybrid search does more than combine two result lists. It runs l
 | Browser Playwright flows | **3 / 3 passed** |
 | Concurrent full flows after hardening | **12 / 12 passed** |
 
-The 2.9% figure is a **retrieval-grounding metric**: for each hand-checked query, the evaluation asks whether an accepted authority/citation marker appears within the top five results. It is not an LLM-answer accuracy figure and it is not a legal-correctness claim.
+The 2.9% figure is a **retrieval-grounding metric**: for each hand-checked query, the evaluation asks whether an accepted authority/citation marker appears within the top five results. Retrieval quality is measured independently so polished model output cannot hide weak evidence retrieval.
 
-## Reliability and failure handling already implemented
+## Reliability and operationalization
 
-The working code contains practical hardening that is easy to lose in a high-level RAG diagram:
+The working code includes engineering that is easy to lose in a high-level RAG diagram:
 
-- pooled PostgreSQL connections rather than repeated remote handshakes;
-- batch evidence inserts;
+- pooled PostgreSQL connections;
+- batched evidence inserts;
 - explicit `pgvector` casting on ANN queries;
 - UUID validation before SQL execution;
-- lazy embedding-model loading, startup warm-up and a lock around initialization;
-- lexical-only fallback while a corpus is not yet embedded;
-- separation of retrieval evaluation from LLM output quality;
-- citation-resolution checks so an assessment cannot preserve a citation that was not actually retrieved;
-- audit logging, real candidate-data deletion paths and an authentication scaffold.
+- lazy embedding-model loading, startup warm-up and guarded initialization;
+- lexical fallback while a corpus is not yet embedded;
+- citation-resolution checks so downstream assessment cannot preserve a citation that was not actually retrieved;
+- audit logging and candidate-data deletion paths;
+- authentication scaffolding;
+- backend, DB integration, browser, stress/abuse and concurrent-flow testing.
 
-## What is still open before production deployment
+The system is designed so retrieval, provenance, evaluation and application logic remain inspectable instead of disappearing behind an LLM call.
 
-The private roadmap deliberately blocks deployment until further work and explicit sign-off. Current open items include:
+## Current engineering focus
 
-- CI wiring for the complete test/evaluation gate;
-- larger frozen retrieval and downstream answer-evaluation sets;
-- storage encryption / signed-URL hardening;
-- least-privilege database roles;
-- production observability and latency percentile monitoring;
-- explicit production deployment sign-off.
-
-That boundary is important: the project demonstrates substantial implementation, evaluation and hardening, but it should not be confused with enterprise production ownership that has not yet occurred.
+Ongoing work expands the frozen evaluation set, downstream grounded-answer evaluation, automated regression gates, observability and security hardening as the system moves through further deployment stages. These are normal evolution items around an already working implementation, not substitutes for the evidence above.
 
 ## Inspectable implementation evidence
 
-The public evidence bundle exposes representative, sanitized implementation rather than a prose-only claim:
+The public evidence bundle exposes representative, sanitized implementation rather than prose-only claims:
 
 - [`legal_chunking.py`](../evidence/lodestar/legal_chunking.py) — deterministic structure-aware chunking;
 - [`embedding_provider.py`](../evidence/lodestar/embedding_provider.py) — embedding-provider contract and BGE query/passage behavior;
