@@ -1,47 +1,52 @@
-# JobLooper / JobPilot — governed AI product engineering
+# JobLooper — deterministic assurance around AI-assisted document generation
 
-**Public implementation:** [Pub-JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper)  
-**Private product:** JobPilot Local (private because test fixtures contain real personal career data)
+**Public implementation:** [Pub-JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper)
 
-## Product problem
+JobLooper is useful evidence here because it demonstrates a design principle for applied AI: the model may help with interpretation or drafting, but **truth, provenance, workflow state and release gates remain deterministic software responsibilities**.
 
-Most AI résumé/application tools optimize for fluent text. These systems instead optimize for **traceability and controlled generation**: every material claim should map to verified evidence, unsupported claims should fail closed, and AI-generated output should pass deterministic checks before release.
+## What the public implementation actually is
 
-## JobPilot pipeline
+The public application is a local-first **Python 3.10+** system built primarily on the standard library. It can operate without an AI provider and adds optional assistant integration rather than making the model a hard runtime dependency.
 
-```mermaid
-flowchart TD
-    A[Capture job description] --> B[Deterministic requirement analysis]
-    B --> C[Match against verified career anchors]
-    C --> D[Truthful scaffold]
-    D --> E[AI wording refinement]
-    E --> F[Deterministic authenticity validation]
-    F -->|violation| G[Revert / remove unsupported claim]
-    F -->|pass| H[Independent cross-provider review]
-    H --> I[Keyword + readability checks]
-    I --> J[DOCX / searchable PDF]
-    J --> K[Release audit + provenance]
+Its implemented workflow includes:
+
+- exact job-description capture;
+- preflight / requirement checks;
+- structured evidence and career-anchor handling;
+- deterministic generation and release gates;
+- provenance and content hashes;
+- stateful application records;
+- local dashboard and CLI paths;
+- document build / export controls;
+- submission-state tracking;
+- optional Codex/OpenAI App Server assistance.
+
+## Why the architecture is relevant to AI systems
+
+A common failure mode in AI-assisted generation is allowing fluent output to overwrite factual or workflow state. JobLooper instead keeps the model inside a bounded layer:
+
+```text
+source evidence + captured requirement
+              ↓
+deterministic application state
+              ↓
+optional AI assistance
+              ↓
+deterministic validation / release gates
+              ↓
+document build + hashes + submission record
 ```
 
-## Engineering features
+The public repository therefore demonstrates **AI containment and assurance**, not a claim that every stage is AI-powered.
 
-- local-first architecture;
-- structured career knowledge base / claim anchors;
-- provenance-preserving IDs;
-- deterministic checks for dates, metrics, ownership verbs and unsupported facts;
-- fail-closed behavior when evidence is missing;
-- separate AI-provider adapters;
-- Claude/Codex cross-provider review;
-- browser extension + loopback companion architecture;
-- DOCX/PDF generation;
-- release-gate protocol and audit log;
-- TypeScript/Node implementation;
-- automated test, typecheck and real-browser QA paths.
+## What is deliberately not claimed
 
-## Why this is relevant to AI development
+- no prediction of ATS ranking or hiring outcome;
+- no claim that an LLM is authoritative for dates, metrics or ownership;
+- no claim of a TypeScript/Node runtime for the public implementation;
+- no claim of cross-provider review unless a particular private experimental branch is being discussed separately;
+- no claim that optional AI integration replaces deterministic validation.
 
-This is an example of **AI inside a deterministic product**, rather than AI replacing product logic. The model is deliberately constrained to a narrow layer; evidence storage, validation, release decisions, rendering and auditability remain conventional software responsibilities.
-
-That design pattern is directly applicable to enterprise AI: keep the model useful, but do not make it the sole authority for correctness, permissions or release state.
+A related private experimental system, JobPilot Local, explores additional career-document workflows, but private features are not used here as proof of public implementation capability.
 
 [Back to portfolio](../README.md)
