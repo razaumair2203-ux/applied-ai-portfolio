@@ -6,6 +6,12 @@ I build and lead AI-enabled engineering systems that have to work outside the no
 
 > **Primary differentiator:** model/data engineering + edge deployment + physical-system integration + aerospace V&V.
 
+<p align="center">
+  <img src="visuals/clear_run_system_evidence.jpg" alt="Authentic Clear Run system evidence: UAV, field detections, GCS, UGV, retrieval mechanism and documented architecture" width="100%">
+</p>
+
+<p align="center"><sub><b>Clear Run — field-to-system evidence.</b> Repository-original photos, recorded detections, GCS output, CAD and architecture; only crop/layout/labels/compression were added for portfolio presentation.</sub></p>
+
 ## 60-second technical proof
 
 | Capability | What is actually implemented | Evidence |
@@ -34,11 +40,15 @@ I build and lead AI-enabled engineering systems that have to work outside the no
 - Clear Run expands the deployed stack to **concurrent RGB + passive-IR FP16 TensorRT inference**, small-object sliced inference, geolocation, MAVLink/REST telemetry, synchronized recording and GCS mission integration.
 - Current system work closes the final UAV–GCS–UGV target hand-off, terminal alignment and physical-retention validation loop.
 
+![Authentic TIR-FOD evidence: real LWIR detections, UAV payload, Jetson runtime, class coverage, training curves and confusion matrix](visuals/tir_fod_evidence.jpg)
+
 **Deep dive:** [TIR-FOD / Clear Run case study](projects/tir-fod-clear-run.md) · [sanitized deployment implementation](evidence/clear-run/README.md)
 
 ## Flagship 2 — grounded RAG as an engineering system
 
 **Lodestar** is a working private full-stack RAG/evidence system with public sanitized implementation evidence.
+
+![Authentic Lodestar product UI captured from the working application](visuals/lodestar_product_ui.jpg)
 
 - Python / FastAPI backend with PostgreSQL and `pgvector`.
 - Legal-structure-aware chunking and BGE query/passage embeddings.
@@ -55,6 +65,11 @@ I build and lead AI-enabled engineering systems that have to work outside the no
 - **JobLooper** — local-first evidence/provenance and release controls around optional AI-assisted document generation. [Case study](projects/joblooper-jobpilot.md)
 - **Counter-UAS Phase I** — computer-vision drone-detection demonstrator with indoor/outdoor physical trials. [Case study](projects/counter-uas.md)
 - **ATLAS GPU/HPC environment** — research compute, containers, monitoring and reproducibility infrastructure. [Case study](projects/atlas-hpc.md)
+
+| Governed AI workflow | Independent AI review |
+|---|---|
+| ![Authentic JobLooper dashboard rendered from the public application with fictional demo data](visuals/joblooper_governed_workflow_ui.jpg) | ![Actual Codex Adversarial Review sample audit report rendered from the public repository](visuals/codex_review_report_evidence.jpg) |
+| **JobLooper:** deterministic truth, provenance and release state around optional AI assistance. | **Codex Adversarial Review Lite:** independent reviewer metadata, findings, verification and human decision record. |
 
 ## Aerospace systems context
 
@@ -83,7 +98,7 @@ That background changes how I approach AI: deployment constraints, interfaces, f
 
 ## Technical evidence index
 
-For reviewers who want code and measured artefacts rather than narrative, start at **[evidence/](evidence/README.md)**. The portfolio contains sanitized implementation where it is safe to publish; complete programme/product repositories remain private where they contain personal, institutional or programme material.
+For reviewers who want code and measured artefacts rather than narrative, start at **[evidence/](evidence/README.md)**. For image provenance and the non-synthetic visual policy, see **[visuals/README.md](visuals/README.md)**. The portfolio contains sanitized implementation where it is safe to publish; complete programme/product repositories remain private where they contain personal, institutional or programme material.
 
 ---
 
