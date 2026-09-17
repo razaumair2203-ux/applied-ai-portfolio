@@ -1,0 +1,46 @@
+{
+  "source": "TIR-FOD working benchmark result snapshot",
+  "note": "Selected raw benchmark fields copied from the working project result file for public technical review. This snapshot is not the repeated-seed aggregate reported in the IEEE Access manuscript.",
+  "yolov8n": {
+    "train_sec": 10123,
+    "test_mAP50": 0.9948,
+    "test_mAP50_95": 0.8628,
+    "test_mAP75": 0.9594,
+    "precision": 0.9869,
+    "recall": 0.9948,
+    "params_M": 3.01,
+    "speed_ms": {
+      "preprocess": 1.53,
+      "inference": 2.67,
+      "postprocess": 1.04
+    }
+  },
+  "yolov8s": {
+    "train_sec": 14600,
+    "test_mAP50": 0.9948,
+    "test_mAP50_95": 0.8670,
+    "test_mAP75": 0.9667,
+    "precision": 0.9868,
+    "recall": 0.9960,
+    "params_M": 11.13,
+    "speed_ms": {
+      "preprocess": 1.62,
+      "inference": 3.68,
+      "postprocess": 0.88
+    }
+  },
+  "yolov8m": {
+    "train_sec": 20594,
+    "test_mAP50": 0.9950,
+    "test_mAP50_95": 0.8636,
+    "test_mAP75": 0.9618,
+    "precision": 0.9884,
+    "recall": 0.9962,
+    "params_M": 25.85,
+    "speed_ms": {
+      "preprocess": 1.49,
+      "inference": 7.55,
+      "postprocess": 0.93
+    }
+  }
+}
