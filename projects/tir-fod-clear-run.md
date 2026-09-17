@@ -16,6 +16,8 @@
 
 **Public dataset:** [TIR-FOD v1.2 — Zenodo DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586) · **Result extract:** [benchmark snapshot](../evidence/tir-fod/benchmark_results.json) · **Deployment-code extract:** [Clear Run evidence](../evidence/clear-run/README.md)
 
+**Evidence boundary:** the dataset record, benchmark extract and sanitized detector code are public. Full dual-camera mission source, flight logs and programme integration records remain private/team material. The field throughput, power and thermal figures below are recorded programme measurements, not a benchmark that can be rerun from this portfolio alone.
+
 ![Authentic Clear Run system evidence](../visuals/clear_run_system_evidence.jpg)
 
 *System evidence assembled from repository-original UAV/UGV photographs, recorded field detections, the actual GCS, retrieval-mechanism CAD and documented architecture. No generated imagery or synthetic detections are used.*
@@ -113,14 +115,21 @@ RGB camera ──> FP16 TensorRT model ──┐
                                      ├─> detections ─> geolocation ─> MAVLink/REST ─> GCS
 IR camera  ──> FP16 TensorRT model ──┘
 
-GCS target handling ─> UGV mission/navigation ─> terminal retrieval subsystem
+GCS target handling ── hand-off under validation ──> UGV mission/navigation ─> terminal retrieval subsystem
 ```
 
-The architecture therefore demonstrates **multi-model, multi-stream edge inference integrated with a physical mission system**, not a single offline detector.
+The architecture demonstrates **multi-model, multi-stream edge inference integrated with the aerial/GCS mission stack and a developing ground subsystem**, not a single offline detector. The inspected programme record does not yet establish closed-loop physical goal delivery from the GCS to the rover, so this portfolio does not claim that hand-off as complete.
 
 ## Systems-integration status
 
 The AI inference, dual-camera processing, telemetry/GCS integration, day/night detection trials, UGV computing/navigation hardware and retrieval subsystem are part of the active programme. Current engineering is focused on producing defensible mission-level KPIs for the final **detection-to-physical-retention** chain: target hand-off, terminal alignment, collection and retention.
+
+## Engineering trade-offs, failures and current limits
+
+- **Data leakage materially changes the apparent result.** A size-matched contamination experiment increased mAP@[.50:.95] by **8.52 ± 0.19 percentage points**. Source lineage is therefore treated as an evaluation control, not dataset bookkeeping.
+- **Frame-level generalisation was optimistic.** On the shared 12-class experiment, acquisition-block-disjoint evaluation produced **0.7410 ± 0.0423**, compared with **0.8223 ± 0.0070** under frame-level partitioning. The harder split is more informative for deployment across new acquisition conditions.
+- **Model FPS is not system FPS.** The flight stack measured **25.0 FPS TensorRT inference** but **15.6 FPS end-to-end**. Camera I/O, preprocessing/postprocessing and mission-pipeline overhead therefore matter to system sizing; both values are retained instead of presenting model latency as mission throughput.
+- **The autonomy loop is not yet claimed complete.** Detection, dual-camera processing, telemetry/GCS functions, UGV hardware and the retrieval subsystem exist in the active programme, while physical target hand-off, terminal alignment, capture and verified retention are still being quantitatively closed.
 
 ## My role
 
