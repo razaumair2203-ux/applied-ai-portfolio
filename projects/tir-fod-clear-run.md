@@ -1,107 +1,127 @@
 # TIR-FOD / Clear Run — deployed edge AI for runway inspection and autonomy
 
-This programme spans the full path from dataset/model development to airborne edge inference and multi-agent systems integration.
+**One programme, three engineering layers:** model/data development → airborne edge deployment → UAV–GCS–UGV autonomy integration.
 
-## TIR-FOD — LWIR dataset, multi-model AI and controlled evaluation
+## At a glance
 
-**Public dataset:** [TIR-FOD v1.2 — Zenodo DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586)  
-**Inspectable result data:** [selected benchmark snapshot](../evidence/tir-fod/benchmark_results.json)
+| Dimension | Evidence |
+|---|---|
+| **Problem** | Detect, geolocate and ultimately retrieve runway Foreign Object Debris using unmanned aerial and ground systems |
+| **Dataset / benchmark** | **3,499 LWIR source frames · 5,593 annotated objects · 23 classes · 29 completed training runs** |
+| **Model work** | YOLOv8 / YOLO11 / YOLO12 comparative experiments + current **multi-model LWIR fusion** |
+| **Edge deployment** | Jetson Orin Nano · FP16 TensorRT · UAV flight trials · **25.0 FPS inference / 15.6 FPS end-to-end** |
+| **Integrated AI runtime** | Concurrent RGB + passive-IR inference · YOLOv12 + SAHI · geolocation · MAVLink/REST · GCS mission integration |
+| **Current systems focus** | Closing and quantitatively validating target hand-off, terminal alignment, collection and retention |
+| **My role** | Technical direction, systems architecture/interfaces, experiment and evaluation strategy, deployment review, integration gates and team leadership |
 
-The released study contains:
+**Public dataset:** [TIR-FOD v1.2 — Zenodo DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586) · **Result extract:** [benchmark snapshot](../evidence/tir-fod/benchmark_results.json)
 
-- **3,499** single-shot LWIR source frames acquired over real runway surfaces;
-- **5,593** bounding-box annotations across **23 FOD classes**;
-- a 29,243-image stored archival pool after offline augmentation;
-- frozen source-lineage-aware partitions and automated leakage checks;
-- blind second annotation on **338 frames**;
-- **29 completed training runs**;
-- a multi-generation detector study across **YOLOv8n, YOLOv8s, YOLOv8m, YOLO11s, YOLO11m and YOLO12s**;
-- repeated-seed evaluation, class/size diagnostics, contamination tests and acquisition-block generalisation studies.
+## Why this project matters for applied-AI roles
 
-The best observed three-seed YOLOv8n mean mAP@[.50:.95] is **0.8603 ± 0.0017**. A size-matched contamination experiment produced an **8.52 ± 0.19 percentage-point** uplift, demonstrating why lineage control matters more than reporting a single attractive score. On the shared 12-class experiment, acquisition-block-disjoint evaluation produced **0.7410 ± 0.0423**, compared with **0.8223 ± 0.0070** for frame-level partitioning.
+This is not a model-training-only project. The work spans data acquisition, annotation quality, controlled model comparison, leakage/generalisation analysis, reproducible experiment orchestration, model packaging, GPU edge inference, aircraft/UAV integration, telemetry, ground-control interfaces and field validation.
 
-### Multi-model LWIR work
+```text
+RUNWAY DATA / MODEL ENGINEERING
+LWIR acquisition → source-aware dataset → multi-model experiments → evaluation
+                                      ↓
+EDGE DEPLOYMENT
+                           TensorRT / Jetson Orin Nano
+                                      ↓
+AERIAL MISSION SYSTEM
+RGB + IR inference → geolocation → MAVLink/REST → GCS target handling
+                                      ↓
+GROUND AUTONOMY
+                         UGV navigation → terminal retrieval
+```
 
-Beyond the published six-configuration benchmark, current project work includes **multi-model LWIR fusion using YOLO-family detectors**, extending comparative model evaluation into fused inference. The detailed fusion implementation remains part of the underlying project evidence while this public page records the capability and its relationship to the released benchmark.
+## 1. TIR-FOD — dataset, multi-model AI and controlled evaluation
 
-## ML experiment and model-lifecycle engineering
+The released study contains **3,499 single-shot LWIR source frames**, **5,593 bounding-box annotations** across **23 FOD classes**, a 29,243-image archival pool after offline augmentation, frozen source-lineage-aware partitions and a blind second annotation pass on **338 frames**.
 
-The model-development workflow is implemented as reproducible engineering rather than ad-hoc training:
+The experimental programme includes **29 completed training runs** across **YOLOv8n, YOLOv8s, YOLOv8m, YOLO11s, YOLO11m and YOLO12s**, plus current multi-model LWIR fusion work.
 
-- configuration-driven experiment queues;
-- resumable execution that skips completed runs;
-- controlled protocol deviations recorded per configuration;
+Key findings include:
+
+- best observed three-seed YOLOv8n mean mAP@[.50:.95]: **0.8603 ± 0.0017**;
+- a size-matched contamination experiment increased mAP@[.50:.95] by **8.52 ± 0.19 percentage points**;
+- on the shared 12-class experiment, acquisition-block-disjoint evaluation produced **0.7410 ± 0.0423**, compared with **0.8223 ± 0.0070** using frame-level partitioning.
+
+The important engineering point is not just the headline mAP. The project explicitly tests how data lineage, repeated seeds and capture-session structure change what a detector result actually means.
+
+### Model-lifecycle engineering
+
+The model-development workflow includes:
+
+- configuration-driven, resumable experiment queues;
 - deterministic multi-seed training;
-- validation-based checkpoint selection followed by held-out test evaluation;
+- recorded protocol deviations per configuration;
+- validation-selected checkpoints followed by held-out test evaluation;
 - per-class AP, mAP, precision, recall, parameter count and training-duration capture;
 - preserved run histories, initializer checksums and experiment manifests;
-- public reproducibility artifacts;
+- reproducibility artefacts;
 - model conversion for edge execution;
 - field throughput, power and thermal measurement.
 
-This is practical model lifecycle management: train, compare, select, package, deploy, measure and iterate.
+This is the practical loop: **train → compare → select → package → deploy → measure → iterate**.
 
-## TIR-FOD — flight-tested Jetson / TensorRT deployment
+## 2. Flight-tested Jetson / TensorRT deployment
 
-The thermal detector was deployed onboard a **Jetson Orin Nano** and exercised through repeated runway UAV trials with a thermal payload and GNSS/Pixhawk flight stack.
+The thermal detector was deployed onboard **Jetson Orin Nano** with a thermal payload and GNSS/Pixhawk flight stack and exercised through repeated runway UAV trials.
 
-The flight-tested system demonstrated:
+Measured system evidence includes:
 
-- thermal image acquisition in the airborne environment;
-- onboard TensorRT inference;
-- transmission of detection outputs to the operator interface;
-- successful detections plus recorded misses, false detections and misclassifications;
+- onboard TensorRT inference from the airborne LWIR stream;
+- transmission of detections into the operator workflow;
+- captured successful detections, misses, false detections and misclassifications;
 - ten-run mean **25.0 FPS TensorRT inference**;
 - ten-run mean **15.6 FPS end-to-end** on the 640 × 512 LWIR stream;
 - approximately **16–18 W** compute-and-camera subsystem power during the reported trials;
 - reported Jetson module temperatures of approximately **55–70 °C**.
 
-This is a completed edge-AI system-integration and flight-test demonstration, not a desktop-only benchmark.
+This is field-deployed edge AI rather than workstation-only inference.
 
-## Clear Run — deployed dual-camera AI runtime
+## 3. Clear Run — deployed dual-camera AI runtime
 
-Clear Run takes the perception stack into a broader UAV–GCS–UGV autonomy system. The current source/runtime contains an operational aerial AI layer on **Jetson Orin Nano** with:
+Clear Run extends perception into a broader UAV–GCS–UGV system. The active aerial AI stack includes:
 
-- **1080p RGB** and **passive IR** camera streams;
+- **1080p RGB** and **passive IR** streams;
 - independent **FP16 TensorRT engines** for RGB and IR inference;
 - concurrent multi-stream processing;
-- **YOLOv12 + SAHI-style sliced inference** for small-object detection in the active aerial stack;
-- support for TensorRT `.engine`, ONNX and Ultralytics model paths;
+- **YOLOv12 + SAHI-style sliced inference** for small-object detection;
+- TensorRT `.engine`, ONNX and Ultralytics model support;
 - CUDA/GPU execution on Jetson;
-- independent model management so RGB and IR models can be changed without stopping the other stream;
-- synchronized RGB/IR video recording with bounding-box overlays;
+- independent model management for each stream;
+- synchronized RGB/IR recording with bounding-box overlays;
 - CSV/JSON mission records with camera-tagged detection events;
-- camera-source handling for USB, CSI/GStreamer, RTSP and recorded video;
-- real-time detection latency/FPS reporting;
-- geolocation and coordinate transformation;
+- USB, CSI/GStreamer, RTSP and recorded-video source handling;
+- real-time latency/FPS reporting;
+- geolocation / coordinate transformation;
 - MAVLink injection and bandwidth-aware telemetry;
-- Flask/Leaflet ground-control integration using MAVLink/REST data;
-- a common detected-FOD list carrying RGB/IR source tags into the mission workflow.
-
-The resulting architecture is **multi-model and multi-stream at the edge**: two sensing streams, independent optimized inference engines and a common telemetry/GCS layer rather than a single offline detector.
+- Flask/Leaflet GCS integration over MAVLink/REST;
+- common target handling with RGB/IR source tags.
 
 ```text
 RGB camera ──> FP16 TensorRT model ──┐
-                                     ├─> camera-tagged detections ─> geolocation ─> MAVLink/REST ─> GCS
+                                     ├─> detections ─> geolocation ─> MAVLink/REST ─> GCS
 IR camera  ──> FP16 TensorRT model ──┘
 
-GCS target handling ─> UGV mission / navigation ─> terminal retrieval subsystem
+GCS target handling ─> UGV mission/navigation ─> terminal retrieval subsystem
 ```
+
+The architecture therefore demonstrates **multi-model, multi-stream edge inference integrated with a physical mission system**, not a single offline detector.
 
 ## Systems-integration status
 
-AI inference, dual-camera processing, telemetry/GCS integration, day/night detection trials, UGV computing/navigation hardware and the retrieval mechanism are all part of the active system. Current engineering work is focused on closing and quantitatively validating the final **detection-to-physical-retention** chain: target hand-off, terminal alignment, collection and retention KPIs.
-
-That remaining systems-validation work is a maturity statement about the **complete robotic mission**, not a qualification on whether the AI has been deployed.
+The AI inference, dual-camera processing, telemetry/GCS integration, day/night detection trials, UGV computing/navigation hardware and retrieval subsystem are part of the active programme. Current engineering is focused on producing defensible mission-level KPIs for the final **detection-to-physical-retention** chain: target hand-off, terminal alignment, collection and retention.
 
 ## My role
 
-I lead the applied R&D / systems-engineering effort: technical direction, architecture and interfaces, experiment design, model/evaluation strategy, deployment review, integration gates, performance/KPI definition, multidisciplinary student/research teams and publication development.
+I lead the applied R&D / systems-engineering effort: technical direction, architecture and interfaces, experiment design, model/evaluation strategy, deployment review, integration gates, KPI definition, multidisciplinary student/research teams and publication development.
 
 ## Research status
 
 - TIR-FOD dataset v1.2 is publicly released on Zenodo.
-- TIR-FOD IEEE Access manuscript is under revision in 2026.
+- The TIR-FOD IEEE Access manuscript is under revision in 2026.
 - Clear Run is under active field integration and measurement.
 
-[Back to portfolio](../README.md) · [Research record](../research/README.md)
+[Back to portfolio](../README.md) · [Technical evidence index](../evidence/README.md) · [Research record](../research/README.md)
