@@ -1,95 +1,97 @@
 # Lodestar — grounded RAG and evidence assessment
 
-**Status:** working private full-stack system; selected non-sensitive implementation and evaluation evidence is published in this portfolio.
+**Working private full-stack RAG system with public sanitized implementation and evaluation evidence.**
 
-## Engineering problem
+## At a glance
 
-Lodestar evaluates evidence against a legal corpus where retrieval quality, authority and traceability matter more than fluent text. The LLM is downstream of a retrieval and evidence plane rather than being treated as the source of truth.
+| Dimension | Evidence |
+|---|---|
+| **Problem** | Evidence assessment where retrieval quality, source authority and citation traceability matter more than fluent generation |
+| **Backend** | Python · FastAPI · PostgreSQL · `pgvector` |
+| **Retrieval** | BGE embeddings · HNSW semantic search · PostgreSQL FTS · four retrieval lanes · Reciprocal Rank Fusion |
+| **Grounding** | Citable evidence objects · source metadata · deterministic authority-aware reranking |
+| **LLM integration** | Provider-swappable generation downstream of retrieval/evidence logic |
+| **Measured state** | **209 documents · 2,945 chunks · 34 hand-checked retrieval queries · 2.9% top-5 retrieval-grounding error** |
+| **Software assurance** | **53 backend tests · 17/17 stress/abuse cases · 3/3 Playwright flows · 12/12 concurrent full flows** |
 
-The working system includes:
+## Why this project matters for GenAI / RAG roles
 
-- a Python/FastAPI backend;
-- PostgreSQL with `pgvector` and full-text search;
-- a data-ingestion pipeline and legal-structure-aware chunker;
-- BGE query/passage embeddings with provider and dimensionality checks;
-- hybrid lexical + vector retrieval;
-- Reciprocal Rank Fusion (RRF);
-- authority-aware deterministic reranking;
-- citable retrieval objects carrying source metadata and binding weight;
-- evidence parsing and assessment logic;
-- provider-swappable LLM integration;
-- a Next.js frontend;
-- PostgreSQL and in-memory stores for different execution modes;
-- automated backend, database-integration and browser tests.
+Lodestar is designed around the engineering failure modes that matter in RAG systems: poor chunking, weak retrieval, inconsistent score spaces, unsupported citations, model/provider coupling and the tendency for fluent generation to conceal evidence failures.
 
-## Retrieval path
+The LLM is therefore intentionally downstream of a retrieval and evidence plane.
 
 ```text
 legal / policy corpus
         ↓
 structure-aware chunking
-        ├─────────────── BGE passage embeddings ──> pgvector / HNSW cosine ─┐
-        └─────────────── PostgreSQL tsvector ─────> lexical retrieval ──────┤
-                                                                            ↓
-                                                     Reciprocal Rank Fusion
-                                                                            ↓
-                                                     authority-aware rerank
-                                                                            ↓
-                                                     citable evidence objects
-                                                                            ↓
-                                                     grounded assessment
+        ├── BGE passage embeddings ──> pgvector / HNSW ───┐
+        └── PostgreSQL full text ─────> lexical retrieval ┤
+                                                         ↓
+                                      Reciprocal Rank Fusion
+                                                         ↓
+                                      authority-aware reranking
+                                                         ↓
+                                      citable evidence objects
+                                                         ↓
+                                      grounded assessment / LLM
 ```
 
-The hybrid search runs lexical and semantic lanes plus separate high-authority candidate lanes, fuses rank positions using RRF, hydrates the result IDs into citable evidence objects and applies an explainable authority-sensitive reranker. Authority is intentionally a near-tie preference rather than a rule that can bury a highly relevant lower-authority source.
+## Retrieval architecture
 
-## Measured state
+The implemented system includes:
 
-| Measure | Current verified project state |
-|---|---:|
-| Real source corpus | **209 documents** |
-| Embedded corpus | **2,945 chunks** |
-| Hand-checked retrieval queries | **34** |
-| Retrieval depth | **top-5** |
-| Current retrieval-grounding error | **2.9%** |
-| Backend/Python tests | **53 green** |
-| Stress / abuse cases | **17 / 17 passed** |
-| Browser Playwright flows | **3 / 3 passed** |
-| Concurrent full flows after hardening | **12 / 12 passed** |
+- legal-structure-aware ingestion and chunking;
+- BGE query/passage embeddings with model and dimensionality checks;
+- PostgreSQL `pgvector` HNSW cosine search;
+- PostgreSQL full-text lexical search;
+- separate high-authority candidate lanes;
+- Reciprocal Rank Fusion rather than mixing incomparable lexical/vector score scales directly;
+- deterministic authority-sensitive reranking;
+- citable retrieval objects carrying source/citation metadata;
+- evidence parsing and assessment logic;
+- provider-swappable LLM integration;
+- Next.js frontend and FastAPI backend.
 
-The 2.9% figure is a **retrieval-grounding metric**: for each hand-checked query, the evaluation asks whether an accepted authority/citation marker appears within the top five results. Retrieval quality is measured independently so polished model output cannot hide weak evidence retrieval.
+Authority acts as a near-tie preference rather than mechanically overriding relevance.
+
+## Evaluation
+
+The hand-checked grounding set currently contains **34 query / expected-source pairs**. The evaluation asks whether an accepted authority/citation marker appears in the top five retrieved results.
+
+**Current result: 2.9% top-5 retrieval-grounding error.**
+
+This metric is intentionally separated from answer-generation quality so fluent text cannot hide a retrieval miss.
 
 ## Reliability and operationalization
 
-The working code includes engineering that is easy to lose in a high-level RAG diagram:
+The working code also includes practical software/runtime engineering:
 
-- pooled PostgreSQL connections;
-- batched evidence inserts;
+- pooled PostgreSQL connections and batched evidence inserts;
 - explicit `pgvector` casting on ANN queries;
 - UUID validation before SQL execution;
-- lazy embedding-model loading, startup warm-up and guarded initialization;
-- lexical fallback while a corpus is not yet embedded;
-- citation-resolution checks so downstream assessment cannot preserve a citation that was not actually retrieved;
+- lazy embedding-model loading, warm-up and guarded initialization;
+- lexical fallback while embeddings are unavailable;
+- citation-resolution checks before evidence reaches downstream assessment;
 - audit logging and candidate-data deletion paths;
 - authentication scaffolding;
-- backend, DB integration, browser, stress/abuse and concurrent-flow testing.
-
-The system is designed so retrieval, provenance, evaluation and application logic remain inspectable instead of disappearing behind an LLM call.
-
-## Current engineering focus
-
-Ongoing work expands the frozen evaluation set, downstream grounded-answer evaluation, automated regression gates, observability and security hardening as the system moves through further deployment stages. These are normal evolution items around an already working implementation, not substitutes for the evidence above.
+- backend, DB integration, browser, stress/abuse and concurrency testing.
 
 ## Inspectable implementation evidence
 
-The public evidence bundle exposes representative, sanitized implementation rather than prose-only claims:
+A technical reviewer can inspect representative sanitized implementation directly:
 
-- [`legal_chunking.py`](../evidence/lodestar/legal_chunking.py) — deterministic structure-aware chunking;
-- [`embedding_provider.py`](../evidence/lodestar/embedding_provider.py) — embedding-provider contract and BGE query/passage behavior;
-- [`hybrid_retrieval.py`](../evidence/lodestar/hybrid_retrieval.py) — four-lane hybrid retrieval, RRF and evidence hydration;
+- [`legal_chunking.py`](../evidence/lodestar/legal_chunking.py) — structure-aware chunking;
+- [`embedding_provider.py`](../evidence/lodestar/embedding_provider.py) — embedding-provider contract and BGE behavior;
+- [`hybrid_retrieval.py`](../evidence/lodestar/hybrid_retrieval.py) — hybrid retrieval, candidate lanes, RRF and evidence hydration;
 - [`rerank.py`](../evidence/lodestar/rerank.py) — deterministic authority-sensitive reranking;
-- [`chunks_schema.sql`](../evidence/lodestar/chunks_schema.sql) — retrieval schema, FTS and HNSW vector index;
-- [`grounding_eval.py`](../evidence/lodestar/grounding_eval.py) — retrieval-grounding gate;
-- [`retrieval_integration_test.py`](../evidence/lodestar/retrieval_integration_test.py) — database-backed retrieval test against known expected sources;
-- [`grounding-eval.md`](../evidence/lodestar/grounding-eval.md) — current measured retrieval result.
+- [`chunks_schema.sql`](../evidence/lodestar/chunks_schema.sql) — PostgreSQL schema, FTS and HNSW vector index;
+- [`grounding_pairs.json`](../evidence/lodestar/grounding_pairs.json) — hand-checked evaluation set;
+- [`grounding_eval.py`](../evidence/lodestar/grounding_eval.py) — retrieval-grounding evaluation;
+- [`retrieval_integration_test.py`](../evidence/lodestar/retrieval_integration_test.py) — database-backed retrieval test;
+- [`grounding-eval.md`](../evidence/lodestar/grounding-eval.md) — measured evaluation record.
 
-[Back to portfolio](../README.md) · [Evidence bundle](../evidence/lodestar/README.md)
+## Current engineering direction
+
+The next evolution is deeper downstream answer evaluation, automated regression gating, observability and security hardening around an already working retrieval/application system.
+
+[Back to portfolio](../README.md) · [Technical evidence index](../evidence/README.md) · [Lodestar evidence bundle](../evidence/lodestar/README.md)
