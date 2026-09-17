@@ -4,19 +4,23 @@
 
 **Applied AI · RAG / Retrieval · Computer Vision · Edge AI · GenAI Workflows · Aerospace Systems**
 
-I currently lead applied engineering and R&D work at CAE/NUST, with hands-on projects spanning AI/ML, computer vision, autonomous systems, retrieval systems, GenAI workflows, embedded deployment and GPU/HPC infrastructure. My earlier career adds 18+ years of operational aerospace, systems integration, V&V, fleet engineering and programme delivery.
+I lead applied engineering and R&D work at CAE/NUST, with current work spanning AI/ML, computer vision, autonomous systems, retrieval systems, GenAI workflows, embedded deployment and GPU/HPC-supported research. My earlier career adds 18+ years of operational aerospace, systems integration, V&V, fleet engineering and programme delivery.
 
-This repository is the public evidence layer: measured results, architecture, implementation choices, tests, publications, datasets and selected code evidence. It does not expose sensitive programme material or private product repositories.
+This repository is the public evidence layer: **measured results, architecture, selected implementation code, tests, publications, datasets and deployment records**. It does not expose sensitive programme material or private user data.
 
 ## 60-second evidence
 
 | Evidence | Measured / inspectable proof |
 |---|---|
 | **Grounded RAG / retrieval engineering — Lodestar** | **209 documents / 2,945 embedded chunks**; structure-aware chunking; BGE embeddings; PostgreSQL/Supabase + `pgvector`; HNSW cosine search; lexical retrieval; Reciprocal Rank Fusion; authority-aware reranking; citation-grounded outputs. **34 hand-checked grounding pairs; 2.9% top-5 retrieval error; 53 backend tests; 17/17 abuse/stress cases; 3/3 browser E2E flows; 12/12 concurrent full flows.** |
-| **Operational edge AI — TIR-FOD / Clear Run** | **3,499 LWIR source frames, 5,593 annotations, 23 classes, 29 YOLO training runs.** Best observed three-seed YOLOv8n mAP@[.50:.95] **0.8603 ± 0.0017**. A controlled leakage experiment inflated mAP by **8.52 ± 0.19 percentage points**. Jetson Orin Nano/TensorRT UAV trials: **25.0 FPS inference / 15.6 FPS end-to-end** across ten runs. |
+| **Operational edge AI — TIR-FOD / Clear Run** | **3,499 LWIR source frames, 5,593 annotations, 23 classes, 29 YOLO training runs.** Best observed three-seed YOLOv8n mAP@[.50:.95] **0.8603 ± 0.0017**. Controlled held-out-source contamination inflated mAP by **8.52 ± 0.19 percentage points**. Jetson Orin Nano/TensorRT UAV trials: **25.0 FPS inference / 15.6 FPS end-to-end** across ten runs. |
 | **GenAI engineering — Codex Adversarial Review Lite** | Public multi-model review workflow with independent builder/reviewer roles, frozen scope, test contracts, model fallback, mutation checks, privacy preflight, structured verdicts and human approval before fixes. |
-| **AI product engineering — JobLooper / JobPilot** | Local-first AI-assisted application systems with governed evidence, deterministic validation, provider abstraction, provenance, release gates, browser workflow and document generation. Public JobLooper code; private JobPilot product evidence summarized safely. |
-| **Research output** | **3 IEEE conference papers (2025–2026)** across real-time multi-stream vision, adversarial robustness and GNSS interference suppression; **public TIR-FOD AI dataset** on Zenodo; IEEE Access TIR-FOD manuscript under revision. |
+| **AI product engineering — JobLooper / JobPilot** | Local-first AI-assisted systems with governed evidence, deterministic validation, provider abstraction, provenance, release gates, browser workflow and document generation. Public JobLooper code; private JobPilot implementation summarized without exposing personal fixtures. |
+| **Research output** | **Three peer-reviewed conference papers / conference records across 2025–2026**, including two IEEE Xplore DOI publications and an IBCAST 2026 GNSS/CRPA paper; **public TIR-FOD AI dataset** on Zenodo; IEEE Access TIR-FOD manuscript under revision. |
+
+![Lodestar measured retrieval evidence](assets/lodestar-evidence.svg)
+
+![TIR-FOD benchmark and deployment evidence](assets/tir-fod-benchmark.svg)
 
 ## Flagship systems
 
@@ -26,9 +30,9 @@ This repository is the public evidence layer: measured results, architecture, im
 
 **Pipeline:** ingest → structure-aware chunking → BGE embeddings → PostgreSQL/Supabase storage → `pgvector` HNSW + full-text retrieval → RRF fusion → authority-aware reranking → citable evidence objects → grounded LLM assessment.
 
-**Why it matters for AI engineering:** the interesting work is not merely calling an LLM. It is data structure, chunking, retrieval, ranking, evaluation, provenance, concurrency and failure handling.
+**Why it matters:** the engineering work is data structure, chunking, retrieval, ranking, evaluation, provenance, concurrency and failure handling—not merely an LLM call.
 
-[Technical case study](projects/lodestar.md) · [Representative implementation evidence](evidence/lodestar/README.md)
+[Technical case study](projects/lodestar.md) · [Representative implementation evidence](evidence/lodestar/README.md) · [Measured grounding evaluation](evidence/lodestar/grounding-eval.md)
 
 ### 2. TIR-FOD / Clear Run — AI for runway inspection and retrieval
 
@@ -56,26 +60,21 @@ These systems treat the model as one component inside a controlled application: 
 
 | Project / research stream | What I worked on | Evidence |
 |---|---|---|
-| **Counter-UAS / anti-drone R&D** | Computer-vision drone detection, deployment framework evolution, indoor/outdoor trials, training curves and system-level research planning | [Case study](projects/counter-uas.md) |
+| **Counter-UAS / anti-drone R&D** | Computer-vision drone detection, deployment-framework evolution, indoor/outdoor trials, training evidence and system-level research planning | [Case study](projects/counter-uas.md) |
 | **Low-latency multi-stream vision** | Real-time architecture for concurrent video streams; latency/throughput-driven computer-vision design | IEEE publication · [Research page](research/README.md) |
-| **TK-Patch adversarial robustness** | Cross-model adversarial patch research for person-evasion robustness | IEEE publication · [Research page](research/README.md) |
-| **GNSS CRPA interference suppression** | 8-element CRPA array and adaptive interference-suppression research | IBCAST 2026 / IEEE conference paper · [Research page](research/README.md) |
-| **BuildSignal AI** | Next.js/TypeScript AI editorial/research platform with validation pipelines and structured publishing workflow | [Case study](projects/buildsignal-ai.md) |
-| **ATLAS GPU/HPC environment** | GPU/HPC research environment for AI, simulation and engineering workloads; governance, examples, containers, monitoring/admin structure | [Engineering note](projects/atlas-hpc.md) |
-| **Applied R&D portfolio** | Current oversight of a 100+ project portfolio spanning AI/ML, autonomy, embedded systems, radar/RF, sensors and avionics; includes AI image compression, FOD autonomy and edge AI | Career / project evidence |
+| **TK-Patch adversarial robustness** | Cross-model physical adversarial-patch research for person-detection robustness | IEEE publication · [Research page](research/README.md) |
+| **GNSS CRPA interference suppression** | 8-element CRPA array and adaptive interference-suppression research | IBCAST 2026 · [Research page](research/README.md) |
+| **BuildSignal AI** | Next.js/TypeScript AI/editorial product with validation pipelines and structured publishing workflow | [Case study](projects/buildsignal-ai.md) |
+| **ATLAS GPU/HPC environment** | GPU/HPC research environment for AI, simulation and engineering workloads; reproducibility, containers/examples, monitoring and governance | [Engineering note](projects/atlas-hpc.md) |
+| **Applied R&D portfolio** | Governance of **100+** projects across avionics, radar/RF, embedded systems, sensing, UAV/autonomy and AI; current streams include AI-enabled imaging, FOD autonomy and edge AI | [Full project inventory](projects/README.md) |
 
 ## Research, publications and datasets
 
-**IEEE publications**
-
 1. **Low-Latency Architectures for Real-Time Multi-Stream Object Detection** — IEEE ICoDT2, 2025. DOI: [10.1109/ICoDT269104.2025.11360736](https://doi.org/10.1109/ICoDT269104.2025.11360736)
 2. **TK-Patch: Universal Top-K Adversarial Patches for Cross-Model Person Evasion** — IEEE ICoDT2, 2025. DOI: [10.1109/ICoDT269104.2025.11360694](https://doi.org/10.1109/ICoDT269104.2025.11360694)
-3. **Adaptive Interference Suppression in GNSS Using an 8-Element CRPA Antenna Array** — IBCAST 2026, Murree Hills, Pakistan.
-
-**Dataset / active manuscript**
-
-- **TIR-FOD: A Thermal-Infrared Benchmark Dataset for Foreign Object Debris Detection on Airfields** — public Zenodo dataset v1.2, DOI [10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586).
-- IEEE Access manuscript revision in progress. The current manuscript reports 3,499 LWIR source frames, 5,593 annotations, 23 classes, 29 YOLO training runs, controlled leakage/generalisation studies and operational Jetson/TensorRT UAV evidence.
+3. **Adaptive Interference Suppression in GNSS Using an 8-Element CRPA Antenna Array** — accepted/presented at IBCAST 2026; IEEE technically co-sponsored conference. This portfolio does not invent an Xplore DOI before a public record is verifiable.
+4. **TIR-FOD: A Thermal-Infrared Benchmark Dataset for Foreign Object Debris Detection on Airfields** — public Zenodo dataset v1.2, DOI [10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586).
+5. **TIR-FOD IEEE Access manuscript** — revision in progress; not represented as published.
 
 [Full research record](research/README.md)
 
@@ -89,11 +88,13 @@ These systems treat the model as one component inside a controlled application: 
 
 **Deployment / engineering:** NVIDIA Jetson, GPU/HPC environments, containers, Linux, MATLAB, embedded/real-time systems, V&V, requirements/interface engineering, configuration control.
 
-## For the GE Aerospace Lead AI Developer role
+## GE Aerospace — AI Lead Developer
 
-The role asks for hands-on AI/ML, GenAI, RAG/prompt workflows, Python, APIs, deployment, testing/evaluation, Agile delivery and the ability to turn engineering/business requirements into working products. The evidence map below links each requirement to inspectable work rather than repeating résumé keywords.
+The Warsaw role asks for hands-on AI/ML, GenAI, RAG/prompt workflows, Python, APIs, deployment, testing/evaluation, Agile delivery and the ability to translate engineering/business requirements into working products.
 
-**[GE Aerospace — requirement → evidence map](ge-aerospace-ai-lead.md)**
+**[Open the GE requirement → evidence map](ge-aerospace-ai-lead.md)**
+
+The role-specific page deliberately labels the genuine partial area—enterprise cloud depth—instead of disguising it with keywords.
 
 ---
 
