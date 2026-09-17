@@ -1,41 +1,42 @@
-# Project inventory
+# Project and maturity inventory
 
-This page gives the broader engineering context behind the flagship case studies. It distinguishes **hands-on product/research work**, **research leadership**, and **portfolio oversight** so the breadth is visible without pretending I personally wrote every line of code in a 100+ project portfolio.
+This inventory separates **inspectable AI engineering**, **active systems/R&D integration**, and **adjacent engineering leadership**. A project appearing here does not mean every subsystem or line of code was authored personally; ownership language follows the actual role.
 
-## Flagship hands-on / deeply involved AI systems
+## A. Direct, inspectable AI / software engineering evidence
 
-| Work | Scope | Public evidence |
+| Project | Evidence depth | Current maturity |
 |---|---|---|
-| **Lodestar** | grounded RAG; structure-aware chunking; embeddings; pgvector/HNSW; hybrid retrieval; RRF; reranking; evaluation; FastAPI | [Case study](lodestar.md) · [code evidence](../evidence/lodestar/README.md) |
-| **TIR-FOD / Clear Run** | thermal computer vision; dataset engineering; repeated YOLO benchmarking; leakage/generalisation studies; Jetson/TensorRT deployment; UAV–GCS–UGV integration | [Case study](tir-fod-clear-run.md) · [dataset DOI](https://doi.org/10.5281/zenodo.22546586) |
-| **Codex Adversarial Review Lite** | independent multi-model code review; model fallback; test contracts; mutation checks; human approval | [Case study](codex-adversarial-review-lite.md) · [public repo](https://github.com/razaumair2203-ux/codex-adversarial-review-lite) |
-| **JobLooper / JobPilot** | AI-assisted product workflow with deterministic evidence validation, provider adapters, provenance and release gates | [Case study](joblooper-jobpilot.md) · [public repo](https://github.com/razaumair2203-ux/Pub-JobLooper) |
-| **BuildSignal AI** | Next.js/TypeScript AI/editorial product workflow with validation, QA and approval controls | [Case study](buildsignal-ai.md) |
+| [Lodestar](lodestar.md) | Python/FastAPI backend, structure-aware ingestion/chunking, BGE embeddings, PostgreSQL/pgvector, HNSW + FTS hybrid retrieval, RRF, reranking, LLM integration, automated evaluation/tests and browser flow | Working **pre-production** private system; sanitized implementation/evaluation is public here |
+| [TIR-FOD](tir-fod-clear-run.md) | Real LWIR runway dataset, repeated YOLO experiments, leakage/generalisation studies, Jetson Orin Nano/TensorRT, integrated UAV flight trials and public dataset | Public research dataset + **flight-tested prototype**; IEEE Access manuscript under revision |
+| [Codex Adversarial Review Lite](codex-adversarial-review-lite.md) | Public skill/source, independent builder-reviewer control flow, model preflight/fallback, mutation checks, structured audit, human approval | Public working tool |
+| [JobLooper](joblooper-jobpilot.md) | Public Python local-first workflow, provenance/hashes, deterministic validation/release state, CLI/dashboard/document build, optional assistant integration | Public working software |
 
-## Applied AI / autonomy research leadership
+These four projects are the main evidence for hands-on AI integration, retrieval, computer vision, evaluation, APIs/software, edge deployment and AI-assurance design.
 
-| Stream | Current engineering focus | Role boundary |
+## B. Active AI / autonomy systems integration
+
+| Workstream | What exists now | What remains in progress |
 |---|---|---|
-| **Counter-UAS / drone detection** | computer-vision detection, experiment evidence, research-framework evolution | Phase-I PI / research lead; future RF/acoustic work is explicitly not represented as completed |
-| **Runway FOD autonomy** | RGB/LWIR UAV sensing, edge detection, GCS handoff, UGV navigation, terminal guidance, retrieval and KPI design | technical direction, architecture/integration, validation planning and team leadership |
-| **AI-enabled imaging / compression** | applied AI image-processing project within current R&D portfolio | portfolio/project oversight; do not infer sole algorithm authorship |
-| **Sensor-enhanced aircraft digital twin** | lifecycle/condition insight, sensors, architecture/interfaces, staged validation | systems/R&D leadership; work in progress |
-| **ATLAS GPU/HPC** | shared research compute for AI/simulation workloads, containers/examples/monitoring/governance | technical/portfolio leadership rather than hyperscale-cloud ownership |
+| **Clear Run UAV–GCS–UGV FOD retrieval** | Day/night aerial detection tested; telemetry/video recording; UAV/GCS/UGV experimental platform; UGV hardware/navigation; retrieval CAD; TIR-FOD perception baseline | Complete target hand-off/acknowledgement, retrieval-mechanism integration, terminal alignment, retained-object trials and complete detection-to-retention KPIs |
+| [Counter-UAS Phase I](counter-uas.md) | Computer-vision drone-detection demonstrator; indoor/outdoor trials; original visual/training evidence archived with provenance | Passive RF, acoustic and broader multisensor work are proposed research directions, not completed capability |
+| **AI imaging / compression and sensing projects** | Current supervised R&D streams inside the CAE project portfolio | Results remain project-specific and should not be promoted to completed public products without evidence |
 
-## Sensing / signal-processing programmes adjacent to AI
+## C. Research and engineering infrastructure
 
-These projects matter because applied aerospace AI is constrained by sensing, compute, interfaces and validation—not only models.
+- [ATLAS GPU/HPC environment](atlas-hpc.md) — GPU/HPC research environment, reproducibility/containers/monitoring/governance work. This is infrastructure leadership, not an AI model claim.
+- **GNSS 8-element CRPA interference suppression** — adaptive array / interference-rejection research; accepted/presented IBCAST 2026 work.
+- **AERIS-10 radar demonstrator** — RF/antenna/embedded-processing integration and staged V&V.
+- **Ku-band phased array, UWB radar and radar/EW teaching labs** — applied RF/signal-processing and engineering-education work.
+- **Sensor-enhanced aircraft digital-twin concepts** — systems/digital-engineering work in progress; not represented as a fielded production twin.
 
-- **8-element CRPA GNSS interference suppression** — antenna array and adaptive interference-suppression research; IBCAST 2026 paper.
-- **AERIS-10 phased-array radar demonstrator** — 10.5 GHz pulsed-LFM research demonstrator with range-Doppler, MTI, CFAR and phased-array development workstreams.
-- **Compact UWB radar** — supervised R&D work within the current project portfolio.
-- **Ku-band 4×4 array** — antenna/array research project within the current portfolio.
-- **Radar systems teaching/labs** — pulsed radar, FMCW, tracking, phased arrays, EW, Kalman filtering, MTI, CFAR and pulse compression using MATLAB/hardware labs.
+## D. Product/software work that is not counted as core AI evidence
 
-## Current portfolio scale
+[BuildSignal](buildsignal-ai.md) is a Next.js/TypeScript/MDX editorial/product platform with validation and publishing workflows. It demonstrates product/software engineering, but it is intentionally **not** used as a flagship AI credential merely because its subject matter involves AI content.
 
-As Officer In Charge Projects / R&D & Systems Engineering Lead at CAE/NUST, I govern **100+ multidisciplinary engineering and R&D initiatives** across avionics, radar/RF, communications, embedded systems, sensors, UAV/autonomous systems and AI. The role covers translation of sponsor needs into scope/requirements, work packages, resources, procurement, milestones, risks, design reviews, integration, V&V, demonstrations and technical acceptance.
+## Current portfolio leadership context
 
-That portfolio scale is leadership evidence; the flagship case studies above are where this repository provides deeper technical proof.
+In my current CAE/NUST role I govern **100+ multidisciplinary engineering and R&D initiatives** across avionics, radar/RF, communications, embedded systems, sensing, UAV/autonomous systems and AI. That number describes portfolio responsibility and technical governance. It does **not** imply personal authorship of every project algorithm, dataset, circuit, mechanical design or codebase.
+
+For recruiter or technical review, start with the direct-evidence projects in Section A and use Sections B–D as systems context rather than mixing all work into one undifferentiated "AI portfolio."
 
 [Back to portfolio](../README.md)
