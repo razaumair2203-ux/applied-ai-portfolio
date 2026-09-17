@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="487" height="186" preserveAspectRatio="xMinYMin meet" viewBox="0 0 487 186" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd">
+  <rect width="487" height="186" fill="#ffffff"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="0" y="7" width="112" height="43" rx="5" fill="#ebf5f5" stroke="#c7dede"/><text x="31" y="25" font-size="9" font-weight="700" fill="#12314a">P1 / AI vision</text><text x="31" y="42" font-size="8" fill="#526168">Visual records</text>
+    <rect x="125" y="7" width="112" height="43" rx="5" fill="#ebf5f5" stroke="#c7dede"/><text x="144" y="25" font-size="9" font-weight="700" fill="#12314a">P4 / Optical motion</text><text x="145" y="42" font-size="8" fill="#526168">May share P1 imagery</text>
+    <rect x="250" y="7" width="112" height="43" rx="5" fill="#ebf5f5" stroke="#c7dede"/><text x="278" y="25" font-size="9" font-weight="700" fill="#12314a">P2 / Passive RF</text><text x="282" y="42" font-size="8" fill="#526168">Future records</text>
+    <rect x="375" y="7" width="112" height="43" rx="5" fill="#ebf5f5" stroke="#c7dede"/><text x="407" y="25" font-size="9" font-weight="700" fill="#12314a">P3 / Acoustic</text><text x="407" y="42" font-size="8" fill="#526168">Future records</text>
+    <line x1="56" y1="50" x2="56" y2="68" stroke="#127d85"/><line x1="181" y1="50" x2="181" y2="68" stroke="#127d85"/><line x1="306" y1="50" x2="306" y2="68" stroke="#127d85"/><line x1="431" y1="50" x2="431" y2="68" stroke="#127d85"/><line x1="56" y1="68" x2="431" y2="68" stroke="#127d85"/><line x1="243.5" y1="68" x2="243.5" y2="82" stroke="#127d85"/>
+    <rect x="56" y="82" width="375" height="44" rx="5" fill="#ebf5f5" stroke="#c7dede"/><text x="189" y="101" font-size="9" font-weight="700" fill="#12314a">P5 / Evidence representation</text><text x="149" y="118" font-size="8" fill="#526168">Recording origin · shared sources · observation availability</text>
+    <line x1="243.5" y1="126" x2="243.5" y2="141" stroke="#127d85"/>
+    <rect x="96" y="141" width="295" height="44" rx="5" fill="#ebf5f5" stroke="#c7dede"/><text x="174" y="160" font-size="9" font-weight="700" fill="#12314a">Retrospective reporting and research</text><text x="168" y="177" font-size="8" fill="#526168">Compare interpretations of the same evidence</text>
+  </g>
+</svg>
