@@ -16,6 +16,10 @@
 
 **Public dataset:** [TIR-FOD v1.2 — Zenodo DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586) · **Result extract:** [benchmark snapshot](../evidence/tir-fod/benchmark_results.json) · **Deployment-code extract:** [Clear Run evidence](../evidence/clear-run/README.md)
 
+![Authentic Clear Run system evidence](../visuals/clear_run_system_evidence.jpg)
+
+*System evidence assembled from repository-original UAV/UGV photographs, recorded field detections, the actual GCS, retrieval-mechanism CAD and documented architecture. No generated imagery or synthetic detections are used.*
+
 ## Why this project matters for applied-AI roles
 
 This is not a model-training-only project. The work spans data acquisition, annotation quality, controlled model comparison, leakage/generalisation analysis, reproducible experiment orchestration, model packaging, GPU edge inference, aircraft/UAV integration, telemetry, ground-control interfaces and field validation.
@@ -35,6 +39,10 @@ GROUND AUTONOMY
 ```
 
 ## 1. TIR-FOD — dataset, multi-model AI and controlled evaluation
+
+![Authentic TIR-FOD benchmark and deployment evidence](../visuals/tir_fod_evidence.jpg)
+
+*Real LWIR detections and class imagery, actual UAV/payload photography, recorded Jetson runtime output, training curves and confusion matrix from the project evidence set.*
 
 The released study contains **3,499 single-shot LWIR source frames**, **5,593 bounding-box annotations** across **23 FOD classes**, a 29,243-image archival pool after offline augmentation, frozen source-lineage-aware partitions and a blind second annotation pass on **338 frames**.
 
