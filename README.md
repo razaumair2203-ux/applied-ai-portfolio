@@ -1,88 +1,89 @@
-# M. Umair Raza — Applied AI Engineering Portfolio
+# M. Umair Raza — Aerospace AI & Autonomous Systems
 
-**RAG / retrieval · deployed computer vision · edge AI · AI assurance · aerospace systems**
+**Applied AI · computer vision · RAG / retrieval · edge deployment · aerospace systems engineering**
 
-I am an aerospace systems engineer and engineering leader working across applied AI, computer vision, retrieval systems, edge deployment, autonomous systems and AI-assisted software. My earlier 18+ year aerospace career adds aircraft integration, verification and validation, fleet engineering, international OEM work and programme delivery.
+I build and lead AI-enabled engineering systems that have to work outside the notebook: on embedded hardware, across sensors and interfaces, through verification, and into field trials. My background combines current hands-on applied AI with 18+ years in aircraft systems integration, V&V, fleet engineering and programme delivery.
 
-This repository is an **engineering evidence index**. It prioritizes inspectable implementation, measured results, field deployment and reproducibility rather than generic AI claims.
+> **Primary differentiator:** model/data engineering + edge deployment + physical-system integration + aerospace V&V.
 
-## Start with the engineering evidence
+## 60-second technical proof
 
-| System | Engineering depth | Evidence |
+| Capability | What is actually implemented | Evidence |
 |---|---|---|
-| **Lodestar** | Python/FastAPI RAG system; legal-structure-aware chunking; BGE embeddings; PostgreSQL + `pgvector`; HNSW semantic search; PostgreSQL FTS; Reciprocal Rank Fusion; authority-aware reranking; citable evidence objects; LLM-provider abstraction; full-stack tests and hardening | **209 documents / 2,945 embedded chunks; 34 hand-checked retrieval pairs; 2.9% top-5 retrieval-grounding error; 53 backend tests; 17/17 stress/abuse cases; 12/12 concurrent full flows.** [Case study](projects/lodestar.md) · [implementation evidence](evidence/lodestar/README.md) |
-| **TIR-FOD / LWIR AI** | Real-runway thermal dataset engineering; **29 controlled training runs across six YOLOv8/YOLO11/YOLO12 configurations**; multi-model LWIR fusion; source-lineage leakage studies; acquisition-block generalisation; reproducible experiment orchestration; TensorRT edge deployment | **3,499 LWIR source frames, 5,593 annotated objects, 23 classes. Flight-tested Jetson Orin Nano / TensorRT pipeline: 25.0 FPS inference / 15.6 FPS end-to-end across ten runs.** [Case study](projects/tir-fod-clear-run.md) · [benchmark snapshot](evidence/tir-fod/benchmark_results.json) · [dataset DOI](https://doi.org/10.5281/zenodo.22546586) |
-| **Clear Run** | Deployed UAV edge-AI stack with Jetson Orin Nano; RGB + passive-IR streams; concurrent FP16 TensorRT engines; YOLOv12 + SAHI small-object inference; camera-tagged detections; geolocation; MAVLink/REST telemetry; synchronized recording; GCS integration; UGV mission hand-off | **Working field-integration system with AI inference running on the aerial platform and detections integrated into the mission/GCS workflow.** [Technical case study](projects/tir-fod-clear-run.md) |
-| **Codex Adversarial Review Lite** | Independent builder/reviewer AI workflow; review contracts; model preflight/fallback; mutation checks; structured verdict; human approval before changes | **Public working tool.** [Case study](projects/codex-adversarial-review-lite.md) · [source](https://github.com/razaumair2203-ux/codex-adversarial-review-lite) |
-| **JobLooper** | Evidence-governed AI-assisted workflow; deterministic release gates; provenance/hashes; local dashboard + CLI; document generation; optional model integration | **Public working software.** [Case study](projects/joblooper-jobpilot.md) · [source](https://github.com/razaumair2203-ux/Pub-JobLooper) |
+| **Deployed edge AI / computer vision** | LWIR model development; multi-model YOLO work; TensorRT deployment on Jetson Orin Nano; RGB + passive-IR concurrent inference; YOLOv12 + SAHI; geolocation; MAVLink/REST; GCS integration | **3,499 LWIR source frames · 5,593 objects · 23 classes · 29 controlled training runs · 25.0 FPS TensorRT inference · 15.6 FPS end-to-end** → [Clear Run / TIR-FOD case study](projects/tir-fod-clear-run.md) |
+| **Grounded RAG / GenAI systems** | FastAPI; BGE embeddings; PostgreSQL + `pgvector`; HNSW + lexical retrieval; RRF; authority-aware reranking; citable evidence objects; LLM-provider abstraction; full-stack testing | **209 documents · 2,945 embedded chunks · 2.9% top-5 retrieval-grounding error · 53 backend tests · 12/12 concurrent flows** → [Lodestar case study](projects/lodestar.md) |
+| **AI assurance / governed workflows** | Independent builder-reviewer model workflow; mutation checks; deterministic evidence/provenance gates around AI-assisted generation | **Two public working tools** → [Codex Adversarial Review Lite](projects/codex-adversarial-review-lite.md) · [JobLooper](projects/joblooper-jobpilot.md) |
 
-## Deployed AI and ML lifecycle engineering
+## Start here by role
 
-The computer-vision work is not limited to training notebooks. TIR-FOD took a detector from controlled model development through TensorRT conversion and repeated UAV runway trials on a Jetson Orin Nano, including onboard inference, communications and operator display. The measured ten-run means are **25.0 FPS for TensorRT inference and 15.6 FPS end-to-end** on the 640 × 512 thermal stream.
+| If you are hiring for… | Review first | Why |
+|---|---|---|
+| **Aerospace AI / Applied AI Lead** | [Clear Run / TIR-FOD](projects/tir-fod-clear-run.md), then [Lodestar](projects/lodestar.md) | Shows model development, deployment, physical integration, evaluation and broader AI systems depth |
+| **Computer Vision / Edge AI / Autonomy** | [Clear Run / TIR-FOD](projects/tir-fod-clear-run.md) | Strongest evidence from dataset design through Jetson/TensorRT flight deployment and UAV–GCS–UGV integration |
+| **GenAI / RAG / AI Platform** | [Lodestar](projects/lodestar.md), then [AI assurance](projects/codex-adversarial-review-lite.md) | Retrieval, grounding, APIs, evaluation, testing and responsible model integration |
+| **AI Engineering Manager / Systems Architect** | [Project inventory](projects/README.md) | Breadth across AI software, embedded deployment, autonomy, HPC and aerospace systems |
 
-Clear Run extends this into a broader deployed autonomy stack. Its aerial unit runs **RGB and IR camera streams on Jetson Orin Nano**, with independent FP16 TensorRT engines, model management, YOLO/SAHI inference, geolocation, MAVLink telemetry, synchronized video/data recording and a Flask/Leaflet GCS that consumes camera-tagged FOD events for mission handling. Physical retrieval and end-to-end collection validation continue as the next systems-integration layer; the perception and mission-integration stack is already deployed and under field testing.
+## Flagship 1 — runway AI from benchmark to aircraft
 
-The training/evaluation workflow also contains practical ML lifecycle controls: configuration-driven and resumable experiment queues, deterministic multi-seed runs, preserved run metadata, validation-selected checkpoints, held-out testing, per-class metrics, experiment manifests/checksums, reproducibility artifacts, TensorRT conversion and field performance/power/thermal measurement. This is the operational discipline behind the models.
+**TIR-FOD / Clear Run** is the strongest example of my end-to-end applied-AI work.
 
-## Lodestar — RAG built as an evidence system
+- Real-runway LWIR acquisition and annotation: **3,499 source frames, 5,593 objects, 23 FOD classes**.
+- **29 controlled training runs** across YOLOv8, YOLO11 and YOLO12 configurations, plus current multi-model LWIR fusion work.
+- Source-lineage leakage controls, repeated seeds, contamination studies and acquisition-block generalisation—not just a best-checkpoint result.
+- Detector converted to **TensorRT** and flight-tested onboard **Jetson Orin Nano**.
+- Clear Run expands the deployed stack to **concurrent RGB + passive-IR FP16 TensorRT inference**, small-object sliced inference, geolocation, MAVLink/REST telemetry, synchronized recording and GCS mission integration.
+- Current system work closes the final UAV–GCS–UGV target hand-off, terminal alignment and physical-retention validation loop.
 
-Lodestar is a working private full-stack RAG system with a FastAPI backend, PostgreSQL/`pgvector` data plane, ingestion pipeline, structure-aware chunking, BGE embeddings, hybrid lexical/vector retrieval, RRF, deterministic authority-aware reranking, citable evidence objects, provider-swappable LLM integration, a Next.js frontend and automated evaluation.
+**Deep dive:** [TIR-FOD / Clear Run — deployed edge AI for runway inspection and autonomy](projects/tir-fod-clear-run.md)
 
-```text
-source corpus
-   ↓
-structure-aware chunking
-   ├── BGE embeddings ───────────> pgvector / HNSW ───────┐
-   └── PostgreSQL full text ─────> lexical retrieval ─────┤
-                                                           ↓
-                                            RRF + authority reranking
-                                                           ↓
-                                            citable evidence objects
-                                                           ↓
-                                            grounded assessment
-```
+## Flagship 2 — grounded RAG as an engineering system
 
-Its public evidence bundle contains representative retrieval code, schema, embedding logic, the hand-checked grounding set, evaluation harness and database-backed retrieval tests. [Inspect Lodestar evidence](evidence/lodestar/README.md).
+**Lodestar** is a working private full-stack RAG/evidence system with public sanitized implementation evidence.
 
-## TIR-FOD / Clear Run — computer vision from benchmark to aircraft
+- Python / FastAPI backend with PostgreSQL and `pgvector`.
+- Legal-structure-aware chunking and BGE query/passage embeddings.
+- Hybrid vector + lexical retrieval with HNSW, PostgreSQL FTS and Reciprocal Rank Fusion.
+- Deterministic authority-aware reranking and citable evidence objects.
+- Independent retrieval-grounding evaluation so fluent LLM output cannot hide weak retrieval.
+- Reliability work includes pooled DB connections, guarded embedding initialization, citation checks, audit paths, browser tests, stress/abuse tests and concurrent flows.
 
-TIR-FOD is a leakage-aware LWIR runway benchmark built from real acquisition rather than synthetic project imagery. The released study covers **six detector configurations — YOLOv8n/s/m, YOLO11s/m and YOLO12s — across 29 completed training runs**, repeated seeds, annotation-quality checks, controlled contamination testing and acquisition-block generalisation.
+**Deep dive:** [Lodestar case study](projects/lodestar.md) · [inspectable implementation evidence](evidence/lodestar/README.md)
 
-Current project work extends this with **multi-model LWIR fusion across YOLO-family detectors**. Clear Run adds a second axis of integration: concurrent RGB and IR edge inference with independent TensorRT engines, camera-tagged detection events and a common telemetry/GCS mission workflow.
+## AI engineering beyond the two flagships
 
-[Detailed TIR-FOD / Clear Run case study](projects/tir-fod-clear-run.md)
+- **Codex Adversarial Review Lite** — independent builder/reviewer AI workflow with review contracts, model fallback, mutation checks and human approval. [Case study](projects/codex-adversarial-review-lite.md)
+- **JobLooper** — local-first evidence/provenance and release controls around optional AI-assisted document generation. [Case study](projects/joblooper-jobpilot.md)
+- **Counter-UAS Phase I** — computer-vision drone-detection demonstrator with indoor/outdoor physical trials. [Case study](projects/counter-uas.md)
+- **ATLAS GPU/HPC environment** — research compute, containers, monitoring and reproducibility infrastructure. [Case study](projects/atlas-hpc.md)
 
-## AI assurance and governed software
+## Aerospace systems context
 
-**Codex Adversarial Review Lite** treats model output as something to verify: builder and reviewer roles are separated, review scope is frozen, the reviewer is preflighted, repository mutation is checked and a human decision is required before fixes are applied.
+My AI work sits inside a wider engineering career spanning aircraft hardware/software integration, avionics, requirements/interfaces, FAT/SAT and acceptance testing, flight-line fault isolation, fleet sustainment, configuration management and international OEM coordination. Current CAE/NUST responsibilities include technical governance of **100+ multidisciplinary engineering and R&D initiatives** across avionics, radar/RF, communications, embedded systems, UAV/autonomy and AI.
 
-**JobLooper** uses the same engineering principle in AI-assisted document generation: source evidence, provenance, workflow state and release decisions remain deterministic even when a model assists interpretation or drafting.
+That background changes how I approach AI: deployment constraints, interfaces, failure modes, traceability, verification and operational behaviour are treated as engineering requirements rather than post-processing concerns.
 
-## Research and field work
+## Research
 
-- **Low-Latency Architectures for Real-Time Multi-Stream Object Detection** — IEEE ICoDT2, 2025. DOI `10.1109/ICoDT269104.2025.11360736`.
-- **TK-Patch: Universal Top-K Adversarial Patches for Cross-Model Person Evasion** — IEEE ICoDT2, 2025. DOI `10.1109/ICoDT269104.2025.11360694`.
-- **Adaptive Interference Suppression in GNSS Using an 8-Element CRPA Antenna Array** — accepted/presented at IBCAST 2026.
-- **TIR-FOD** — public Zenodo dataset v1.2; IEEE Access manuscript revision in progress.
-- **Counter-UAS Phase I** — computer-vision drone-detection demonstrator with indoor/outdoor trial evidence.
+- **Low-Latency Architectures for Real-Time Multi-Stream Object Detection** — IEEE ICoDT2 2025 · DOI `10.1109/ICoDT269104.2025.11360736`
+- **TK-Patch: Universal Top-K Adversarial Patches for Cross-Model Person Evasion** — IEEE ICoDT2 2025 · DOI `10.1109/ICoDT269104.2025.11360694`
+- **Adaptive Interference Suppression in GNSS Using an 8-Element CRPA Antenna Array** — IBCAST 2026
+- **TIR-FOD** — public Zenodo dataset v1.2; IEEE Access manuscript revision in progress
 
-[Research record](research/README.md) · [Project inventory](projects/README.md)
+[Research record](research/README.md)
 
-## Engineering context around the AI
+## Technical stack evidenced in the projects
 
-Current work sits inside a broader aerospace environment spanning UAV/autonomous systems, radar/RF, GNSS resilience, embedded processing, requirements/interfaces, staged V&V and technical acceptance. I govern **100+ multidisciplinary engineering and R&D initiatives** while directly leading selected applied-AI and systems-integration work.
+**AI / ML / retrieval:** Python · PyTorch/Ultralytics · YOLOv8/11/12 · SAHI · OpenCV · TensorRT · BGE embeddings · RAG · `pgvector` · HNSW · PostgreSQL FTS · RRF · LLM/provider integration
 
-My earlier aerospace career adds a development-to-operations perspective: aircraft hardware/software integration, flight-line fault isolation, OEM development, acceptance testing, fleet configuration control and lifecycle support. That makes deployment constraints, interfaces, failure modes and verification first-class engineering concerns rather than afterthoughts.
+**ML lifecycle / evaluation:** configuration-driven experiment orchestration · deterministic multi-seed training · checkpoint selection · held-out evaluation · leakage/generalisation testing · manifests/checksums · model conversion · edge profiling · field validation
 
-## Technical stack evidenced by the work
+**Backend / product:** FastAPI · PostgreSQL · Supabase · REST APIs · Next.js/TypeScript · Flask · Git/GitHub · Playwright · automated/concurrency/stress testing
 
-**AI / ML / retrieval:** Python, PyTorch/Ultralytics, YOLOv8/YOLO11/YOLO12, SAHI, OpenCV, TensorRT, BGE embeddings, RAG, semantic search, `pgvector`, HNSW, PostgreSQL FTS, RRF, LLM/provider integration.
+**Edge / autonomy / systems:** NVIDIA Jetson Orin Nano / Jetson Nano · FP16 TensorRT · ROS/ROS2 · MAVLink · Pixhawk/GNSS · Linux/containers · MATLAB · GPU/HPC · embedded/real-time systems · requirements/interfaces · V&V · configuration control
 
-**ML lifecycle / evaluation:** configuration-driven experiment orchestration, multi-seed training, deterministic runs, checkpoint selection, held-out evaluation, per-class metrics, leakage/generalisation testing, reproducibility manifests/checksums, model conversion, edge profiling and field validation.
+## Technical evidence index
 
-**Backend / product:** FastAPI, PostgreSQL, Supabase, REST APIs, Next.js/TypeScript, Flask, Git/GitHub, Playwright, automated tests, concurrency/stress testing, deterministic validation and provenance controls.
-
-**Edge / autonomy / systems:** NVIDIA Jetson Orin Nano and Jetson Nano, FP16 TensorRT engines, ROS/ROS2, MAVLink, Pixhawk/GNSS, GPU/HPC environments, Linux/containers, MATLAB, embedded/real-time systems, requirements/interface engineering, V&V and configuration control.
+For reviewers who want code and measured artefacts rather than narrative, start at **[evidence/](evidence/README.md)**. The portfolio contains sanitized implementation where it is safe to publish; complete programme/product repositories remain private where they contain personal, institutional or programme material.
 
 ---
 
