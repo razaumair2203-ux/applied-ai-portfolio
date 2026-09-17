@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '.github/workflows/install-authentic-visuals.yml'
+      - 'assets_payload/**'
   workflow_dispatch:
 
 permissions:
