@@ -20,7 +20,23 @@ Inspectable evidence includes:
 
 Measured state recorded in the portfolio: **209 source documents, 2,945 embedded chunks, 34 hand-checked retrieval queries, 2.9% top-5 retrieval-grounding error, 53 backend tests, 17/17 stress/abuse cases and 12/12 concurrent full flows.**
 
-## 2. TIR-FOD — benchmark/result evidence
+## 2. Clear Run — edge-AI implementation extract
+
+**Start here:** [`clear-run/README.md`](clear-run/README.md)
+
+This public extract traces the deployment claims to working team-developed source without publishing the complete private programme repository. It documents:
+
+- NVIDIA Jetson / GStreamer camera handling;
+- Ultralytics YOLO and optional SAHI sliced inference;
+- CUDA device execution;
+- `.pt`, ONNX and TensorRT `.engine` model paths;
+- normalized detection outputs;
+- latency measurement and headless flight execution;
+- the telemetry hand-off contract into the broader mission system.
+
+[`clear-run/edge_detector_excerpt.py`](clear-run/edge_detector_excerpt.py) is a reduced, sanitized implementation extract. Ownership is explicitly bounded: Clear Run is team-developed; Umair's role is systems engineering/integration, technical direction, experiment/validation framing and team leadership rather than sole code authorship.
+
+## 3. TIR-FOD — benchmark/result evidence
 
 **Result snapshot:** [`tir-fod/benchmark_results.json`](tir-fod/benchmark_results.json)
 
@@ -28,7 +44,7 @@ The public portfolio summarizes the larger private research record: real-runway 
 
 The public dataset record is linked from the [TIR-FOD / Clear Run case study](../projects/tir-fod-clear-run.md).
 
-## 3. Public source repositories
+## 4. Public source repositories
 
 Some portfolio projects are already public in their own repositories and are therefore linked rather than duplicated:
 
@@ -43,6 +59,6 @@ The portfolio publishes enough implementation and measurement to make technical 
 - **measured results with a public/sanitized evidence extract**; and
 - **team/programme systems whose detailed repositories remain private**.
 
-This is a disclosure boundary, not a substitute for evidence. Claims on the landing page are intended to trace to one of the three categories above.
+Claims on the landing page are intended to trace to one of these evidence categories.
 
 [Back to portfolio](../README.md)
