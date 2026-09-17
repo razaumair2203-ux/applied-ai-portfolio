@@ -22,7 +22,7 @@ The best observed three-seed YOLOv8n mean mAP@[.50:.95] is **0.8603 ± 0.0017**.
 
 ### Multi-model LWIR work
 
-Beyond the published six-configuration benchmark, current project work includes **multi-model LWIR fusion using YOLO-family detectors**. The implementation is treated separately from the benchmark comparison so the research record does not confuse model benchmarking with fused inference. No unverified fusion mechanism is invented in this public description.
+Beyond the published six-configuration benchmark, current project work includes **multi-model LWIR fusion using YOLO-family detectors**, extending comparative model evaluation into fused inference. The detailed fusion implementation remains part of the underlying project evidence while this public page records the capability and its relationship to the released benchmark.
 
 ## ML experiment and model-lifecycle engineering
 
