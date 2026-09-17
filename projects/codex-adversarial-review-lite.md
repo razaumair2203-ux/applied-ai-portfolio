@@ -1,6 +1,8 @@
 # Codex Adversarial Review Lite — independent AI code review
 
-![Real audit-report preview from the public repository](https://raw.githubusercontent.com/razaumair2203-ux/codex-adversarial-review-lite/main/docs/assets/audit-report-preview.svg)
+![Actual Codex Adversarial Review sample audit report](../visuals/codex_review_report_evidence.jpg)
+
+*Rendered from the public repository's actual `examples/sample-audit-report.html`: reviewer/runtime metadata, human-review floor, concrete finding, verification, rubric result and decision record. No report fields or findings were invented for the portfolio.*
 
 **Public repository:** [codex-adversarial-review-lite](https://github.com/razaumair2203-ux/codex-adversarial-review-lite)
 
