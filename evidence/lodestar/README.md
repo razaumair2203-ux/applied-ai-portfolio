@@ -1,56 +1,50 @@
-# Lodestar — Inspectable RAG Engineering Evidence
+# Lodestar — inspectable RAG engineering evidence
 
-This folder is a sanitized public evidence bundle extracted from the working private **Lodestar** codebase. It exists so a technical reviewer can inspect representative implementation details instead of relying on a résumé claim that says “RAG”.
+This folder is a sanitized evidence bundle extracted from the working private **Lodestar** codebase. Its purpose is to let a technical reviewer inspect representative implementation, tests and evaluation rather than infer capability from a résumé keyword.
 
-## Current verified state
+## Current measured state
 
 | Evidence | State |
 |---|---:|
-| Real legal corpus | **209 documents** |
-| Retrieval units | **2,945 chunks, all embedded** |
-| Grounding evaluation | **34 hand-checked query / expected-citation pairs** |
-| Top-5 grounding error | **2.9%** |
-| Python/backend automated tests | **53 green** |
-| Stress / abuse cases | **17 / 17 pass** |
-| Browser E2E | **3 / 3 Playwright flows pass** |
-| Concurrent full-flow stress | **12 / 12 pass** |
+| Real source corpus | **209 documents** |
+| Embedded retrieval units | **2,945 chunks** |
+| Hand-checked retrieval evaluation | **34 query / expected-source pairs** |
+| Top-5 retrieval-grounding error | **2.9%** |
+| Python/backend tests | **53 green** |
+| Stress / abuse cases | **17 / 17 passed** |
+| Browser E2E | **3 / 3 Playwright flows passed** |
+| Concurrent full flows after hardening | **12 / 12 passed** |
 
-## Retrieval architecture
+The retrieval metric answers one narrow question: **did hybrid retrieval surface an accepted authority/citation marker within the top five results?** It is not a legal-correctness score and it is not downstream LLM-answer accuracy.
 
-```mermaid
-flowchart LR
-    A[Primary source corpus] --> B[Structure-aware chunking]
-    B --> C[1024-d BGE passage embeddings]
-    B --> D[PostgreSQL tsvector]
-    C --> E[pgvector / HNSW cosine]
-    D --> F[Lexical retrieval]
-    E --> G[Semantic retrieval]
-    F --> H[RRF fusion]
-    G --> H
-    H --> I[Authority-aware reranking]
-    I --> J[Citable retrieval objects]
-    J --> K[Grounded assessment]
-```
-
-## Representative implementation files
+## Representative implementation
 
 - [`legal_chunking.py`](legal_chunking.py) — deterministic legal-structure-aware chunking.
-- [`embedding_provider.py`](embedding_provider.py) — provider contract, BGE query/passage asymmetry, dimensionality validation, lazy loading.
-- [`hybrid_retrieval.py`](hybrid_retrieval.py) — lexical + vector retrieval, RRF fusion, authority lanes, reranking and citable evidence hydration.
-- [`chunks_schema.sql`](chunks_schema.sql) — PostgreSQL retrieval plane with `pgvector`, HNSW cosine ANN, FTS and metadata indexes.
-- [`grounding-eval.md`](grounding-eval.md) — measured retrieval-grounding result.
+- [`embedding_provider.py`](embedding_provider.py) — provider contract, BGE query/passage behavior, model provenance and dimension validation.
+- [`chunks_schema.sql`](chunks_schema.sql) — PostgreSQL retrieval plane with `pgvector`, HNSW cosine ANN, full-text search and metadata indexes.
+- [`hybrid_retrieval.py`](hybrid_retrieval.py) — lexical + vector retrieval, high-authority candidate lanes, Reciprocal Rank Fusion and citable evidence hydration.
+- [`rerank.py`](rerank.py) — small deterministic authority-sensitive reranking step; relevance remains dominant.
+- [`grounding_pairs.json`](grounding_pairs.json) — the 34 hand-checked evaluation queries and accepted markers.
+- [`grounding_eval.py`](grounding_eval.py) — retrieval-grounding evaluation gate.
+- [`retrieval_integration_test.py`](retrieval_integration_test.py) — representative database-backed test using known expected sources.
+- [`grounding-eval.md`](grounding-eval.md) — current measured result log.
 
-## Architecture decisions
+## Design decisions visible in the code
 
-- legal structure before size-based chunk splitting;
-- hybrid lexical + vector retrieval because each catches different failure modes;
-- Reciprocal Rank Fusion instead of pretending cosine and lexical rank scores are directly comparable;
-- high-authority candidate lanes before reranking;
-- embedding model/version/dimension stamped as provenance;
-- vector index treated as a rebuildable cache, not source truth;
-- retrieval evaluation separated from LLM answer-quality evaluation;
-- lexical fallback instead of hard failure when embeddings are unavailable.
+- Preserve source/legal structure before applying size-based splitting.
+- Use lexical and vector retrieval because they fail differently.
+- Fuse rank positions with RRF rather than pretending lexical and cosine scores share a meaningful numeric scale.
+- Add high-authority retrieval lanes before reranking instead of hoping a downstream prompt repairs weak retrieval.
+- Keep authority as a near-tie preference so relevance is not overridden mechanically.
+- Stamp embedding model/version/dimension as provenance and treat embeddings/indexes as rebuildable derived state.
+- Return source metadata and citation labels with retrieval objects so evidence survives into downstream assessment.
+- Evaluate retrieval independently of generation so fluent model output cannot hide a retrieval failure.
+- Fall back to lexical retrieval instead of making the entire application unusable when embeddings are unavailable.
 
-The full application remains private because it contains product internals and candidate-data structures. This bundle contains selected non-secret implementation evidence only.
+## Maturity boundary
+
+This is a **working pre-production system**, not a claimed enterprise production deployment. The private roadmap still has explicit gates for CI wiring, production observability, storage/security hardening, least-privilege database roles and deployment sign-off. Those open items are intentionally not converted into completed claims here.
+
+The complete application remains private because it contains product internals and personal/candidate data structures. This folder contains selected non-secret implementation evidence only.
 
 [Back to Lodestar case study](../../projects/lodestar.md) · [Back to portfolio](../../README.md)
