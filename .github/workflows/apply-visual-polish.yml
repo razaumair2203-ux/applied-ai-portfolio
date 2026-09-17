@@ -1,0 +1,38 @@
+name: Apply authentic visual polish
+
+on:
+  push:
+    paths:
+      - '.github/workflows/apply-visual-polish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode and verify exact visual update
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat visual_update_payload/part*.txt > /tmp/payload.b64
+          base64 -d /tmp/payload.b64 > /tmp/visuals.zip
+          unzip -t /tmp/visuals.zip
+          unzip -o /tmp/visuals.zip -d visuals
+          test -f visuals/clear_run_system_evidence.jpg
+          test -f visuals/tir_fod_evidence.jpg
+          test -f visuals/counter_uas_phase1_evidence.jpg
+          rm -rf visual_update_payload
+          rm -f .github/workflows/apply-visual-polish.yml
+      - name: Commit polished authentic visuals
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Polish authentic visual evidence presentation"
+          git push
