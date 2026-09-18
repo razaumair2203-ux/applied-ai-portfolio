@@ -20,7 +20,7 @@ The platform is built with **Next.js / TypeScript / MDX**, but its value is the 
 - explicit owner-controlled publication gate;
 - planned/partial visual and media QA automation.
 
-## Why this is an AI systems project
+## AI systems contribution
 
 BuildSignal treats generative AI as one worker inside a broader content-production system. The engineering problem is to preserve **source hierarchy, asset state, transformation history, review decisions, QA and publication authority** as content moves across formats. That is a different problem from a chat-based writing assistant.
 
@@ -28,8 +28,10 @@ BuildSignal treats generative AI as one worker inside a broader content-producti
 
 The local admin workflow is implemented, but the project documentation explicitly requires authentication before any hosted admin preview. Visual/media editing integrations and some automated QA remain under development.
 
-## My role
+## Contribution boundary
 
-Product direction, AI workflow design, research/source policy, editorial-system architecture and quality/release governance.
+- **Direct responsibility:** product direction, AI workflow design, research/source policy, editorial-system architecture and quality/release governance.
+- **Implementation model:** AI/coding assistance may accelerate implementation, but source state, rights/provenance, QA, approval and publication authority remain explicit system controls.
+- **Maturity boundary:** local operating workflow is implemented; hosted-admin authentication and selected media/QA integrations remain open work.
 
 [Back to portfolio](../../README.md) · [Domain index](README.md)
