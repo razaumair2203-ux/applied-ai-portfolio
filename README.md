@@ -1,5 +1,7 @@
 # M. Umair Raza — Aerospace AI & Autonomous Systems
 
+[![Portfolio evidence smoke checks](https://github.com/razaumair2203-ux/applied-ai-portfolio/actions/workflows/portfolio-evidence.yml/badge.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/actions/workflows/portfolio-evidence.yml)
+
 **Applied AI · computer vision · RAG / retrieval · edge deployment · aerospace systems engineering**
 
 I build and lead AI-enabled engineering systems that have to work outside the notebook: on embedded hardware, across sensors and interfaces, through verification, and into field trials. My background combines current hands-on applied AI with 18+ years in aircraft systems integration, V&V, fleet engineering and programme delivery.
