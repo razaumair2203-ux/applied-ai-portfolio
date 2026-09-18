@@ -1,0 +1,57 @@
+name: "Private repository access — Clear Run"
+description: "Request reviewer access to the private Clear Run technical repository."
+title: "[ACCESS][Clear Run] "
+assignees:
+  - razaumair2203-ux
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your interest in **Clear Run / TIR-FOD**.
+
+        The public portfolio contains a release-safe case study and evidence. The complete working repository remains private because it contains active research, integration records and unreleased programme material.
+
+        This request is visible publicly in the portfolio repository. **Do not include confidential, proprietary or personal information.** Approval is discretionary and repository access is granted separately after review.
+  - type: input
+    id: github_username
+    attributes:
+      label: GitHub username
+      description: "The GitHub account that should receive access if the request is approved."
+      placeholder: "@username"
+    validations:
+      required: true
+  - type: dropdown
+    id: context
+    attributes:
+      label: Review context
+      options:
+        - Recruiter / hiring manager
+        - Technical interviewer / engineering reviewer
+        - Research / academic reviewer
+        - Potential collaborator
+        - Other professional review
+    validations:
+      required: true
+  - type: input
+    id: organization
+    attributes:
+      label: Organization
+      description: "Company, university or organization (optional)."
+      placeholder: "Organization name"
+    validations:
+      required: false
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What would you like to review?
+      description: "Briefly state the technical areas or evidence you want to inspect."
+      placeholder: "Example: edge deployment, UAV–GCS–UGV integration, evaluation methodology, or MBSE/V&V evidence."
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Request acknowledgement
+      options:
+        - label: "I understand this public request does not automatically grant access and that access may be limited to release-safe material."
+          required: true
