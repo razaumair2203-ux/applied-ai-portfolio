@@ -12,6 +12,8 @@ That work is grounded in **18+ years of aerospace systems engineering, avionics 
 
 **Career profile:** [AI-focused base resume](profile/AI_BASE_RESUME.md) · **LinkedIn:** [Profile](https://www.linkedin.com/in/mumairaza/) · **Research:** [Google Scholar](https://scholar.google.com/citations?user=0EVckyAAAAAJ&hl=en) · **Dataset:** [TIR-FOD v1.2](https://doi.org/10.5281/zenodo.22546586)
 
+**Private technical review:** selected complete working repositories are available to recruiters, hiring managers and technical reviewers by request · [Request project-specific access →](PRIVATE_REPOSITORY_ACCESS.md)
+
 ## Technical identity
 
 **Core specialization — Applied AI Systems Engineering.** The common thread across the portfolio is taking AI from model or retrieval logic into a governed, testable system with real interfaces, operational constraints and evidence.
@@ -81,15 +83,17 @@ Original hardware, field media, product UI and public technical evidence are sho
 
 #### Clear Run / TIR-FOD — airfield robotics from detection to verified removal
 
+**Complete working repository:** private · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
+
 **System value:** a real detection-to-removal airfield robotics chain: thermal/RGB sensing, dataset and model engineering, Jetson/TensorRT deployment, target geolocation, operator/GCS decision support, UGV dispatch and developing physical recovery. The portfolio separates every intermediate success from verified end-to-end removal.
 
-![Clear Run detection-to-removal architecture](visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)
+[![Clear Run detection-to-removal architecture](visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
 
 *Clear Run detection-to-removal architecture combining the actual aerial unit, GCS interface and ground unit with the mission hand-off and validation state. It makes the implemented aerial↔GCS path and the still-open GCS↔ground end-to-end validation boundary explicit.*
 
 <p align="center">
-  <img src="visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" alt="TIR-FOD airborne edge-AI UAV platform" width="49%">
-  <img src="visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png" alt="Representative Clear Run recorded RGB and passive-IR field detections" width="49%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" alt="TIR-FOD airborne edge-AI UAV platform" width="49%"></a>
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png" alt="Representative Clear Run recorded RGB and passive-IR field detections" width="49%"></a>
 </p>
 
 *Airborne prototype and representative recorded RGB/LWIR inference outputs from field trials.*
@@ -107,9 +111,11 @@ Key engineering evidence:
 
 #### Counter-UAS Phase I — physical AI-vision prototype and multisensor research foundation
 
+**Historical technical repository:** private · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml)
+
 <p align="center">
-  <img src="visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" alt="Constructed Counter-UAS Phase-I laser-camera mount" width="49%">
-  <img src="visuals/autonomy-edge-ai/counter-uas/outdoor_detection.png" alt="Outdoor Counter-UAS Phase-I detection trial" width="49%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml"><img src="visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" alt="Constructed Counter-UAS Phase-I laser-camera mount" width="49%"></a>
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml"><img src="visuals/autonomy-edge-ai/counter-uas/outdoor_detection.png" alt="Outdoor Counter-UAS Phase-I detection trial" width="49%"></a>
 </p>
 
 *Left: the constructed Phase-I laser–camera sensing mount from the original project record. Right: retained outdoor detection output from the completed demonstrator.*
@@ -120,13 +126,15 @@ Phase I progressed from model training into a **constructed laser–camera sensi
 
 #### AI Systems Assurance / MBSE — evidence linked to system boundaries
 
+**Working system repository:** private with Clear Run · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
+
 <p align="center">
-  <img src="visuals/autonomy-edge-ai/clear-run/aerial_unit_architecture.svg" alt="Clear Run aerial-unit architecture with authentic UAV project photograph" width="49%">
-  <img src="visuals/autonomy-edge-ai/clear-run/gcs_architecture.svg" alt="Clear Run ground-control architecture with native GCS interface capture" width="49%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="visuals/autonomy-edge-ai/clear-run/aerial_unit_architecture.svg" alt="Clear Run aerial-unit architecture with authentic UAV project photograph" width="49%"></a>
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="visuals/autonomy-edge-ai/clear-run/gcs_architecture.svg" alt="Clear Run ground-control architecture with native GCS interface capture" width="49%"></a>
 </p>
 
 <p align="center">
-  <img src="visuals/autonomy-edge-ai/clear-run/ugv_architecture.svg" alt="Clear Run UGV architecture with authentic ground-unit project photograph" width="72%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="visuals/autonomy-edge-ai/clear-run/ugv_architecture.svg" alt="Clear Run UGV architecture with authentic ground-unit project photograph" width="72%"></a>
 </p>
 
 *Subsystem views from the selected Research Outreach architecture set. They retain the real project UAV and UGV photographs and the native GCS interface capture; the architecture overlays show functions, interfaces and still-open validation paths.*
@@ -139,11 +147,13 @@ The assurance case separates detection, geolocation, operator review, ground-veh
 
 #### i-MSHA — national MSHA data consolidation and mine-safety decision platform
 
+**Complete working product repository:** private · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
+
 <p align="center">
-  <img src="visuals/compliance-regtech/i-msha/logo-wordmark.svg" alt="i-MSHA official project wordmark" width="30%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml"><img src="visuals/compliance-regtech/i-msha/logo-wordmark.svg" alt="i-MSHA official project wordmark" width="30%"></a>
 </p>
 
-![i-MSHA dashboard regression snapshot](visuals/compliance-regtech/i-msha/dashboard-regression.png)
+[![i-MSHA dashboard regression snapshot](visuals/compliance-regtech/i-msha/dashboard-regression.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
 
 *Official project wordmark and an authentic browser-regression dashboard snapshot from the product test suite.*
 
@@ -155,9 +165,11 @@ The product consolidates fragmented U.S. MSHA public data into one national→st
 
 #### Lodestar — EB-2 NIW / EB-1A evidence-assessment SaaS
 
+**Complete working product repository:** private · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml)
+
 **System value:** a browser-based immigration evidence-assessment product that maps applicant records to EB-2 NIW / EB-1A legal criteria, retrieves authority, builds cited evidence/gap assessments and refuses unsupported conclusions. FastAPI, BGE embeddings, PostgreSQL/pgvector, FTS, HNSW and RRF are the implementation stack—not the product description.
 
-![Lodestar product surface](visuals/compliance-regtech/lodestar/product-surface.svg)
+[![Lodestar product surface](visuals/compliance-regtech/lodestar/product-surface.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml)
 
 *Source-derived rendering of the current Lodestar landing page. The private product does not expose a distributable product screenshot or separate logo asset.*
 
@@ -169,11 +181,13 @@ Recorded engineering state includes **209 documents · 2,945 chunks · a 34-quer
 
 #### JobLooper — evidence-governed job-application operating system
 
+**Public implementation:** [Pub-JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper) · **Private development/evaluation lineage:** [Request review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-joblooper-private.yml)
+
 <p align="center">
-  <img src="visuals/practical-ai-products/joblooper/app-icon.svg" alt="Official JobLooper project mark" width="12%">
+  <a href="https://github.com/razaumair2203-ux/Pub-JobLooper"><img src="visuals/practical-ai-products/joblooper/app-icon.svg" alt="Official JobLooper project mark" width="12%"></a>
 </p>
 
-![JobLooper application workspace](visuals/practical-ai-products/joblooper/dashboard-surface.svg)
+[![JobLooper application workspace](visuals/practical-ai-products/joblooper/dashboard-surface.svg)](https://github.com/razaumair2203-ux/Pub-JobLooper)
 
 *Official JobLooper mark and a source-derived rendering of the current public dashboard.*
 
@@ -183,9 +197,11 @@ The system governs the application lifecycle from **signed career truth and exac
 
 #### BuildSignal AI — governed research-to-publication operations
 
+**Complete working product repository:** private · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-buildsignal.yml)
+
 BuildSignal is an **AI-native publishing operations system**, not an article generator. It carries technical work through research/source capture, article and derivative-media state, rights/provenance, QA, review and explicit owner-controlled publication across articles, audio, video, YouTube-supported essays and social variants. The admin surface exposes dedicated Today, Articles, Media, Video, Audio, YouTube, Social, Research, Comments, QA, Tools and Publish workspaces.
 
-![BuildSignal AI admin workspace](visuals/practical-ai-products/buildsignal/admin-surface.svg)
+[![BuildSignal AI admin workspace](visuals/practical-ai-products/buildsignal/admin-surface.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-buildsignal.yml)
 
 *Source-derived rendering of the current BuildSignal admin workspace. Research, media, QA and publication remain separate reviewable states with owner-controlled release.*
 
@@ -213,7 +229,7 @@ The same bounded-agent / independent-check / human-approval pattern also informs
 #### Super Mushshak — first three glass-cockpit prototypes to a traceable digital thread
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/main/assets/dynon-cockpit-prototype-sanitized.jpg" alt="Original Super Mushshak Dynon SkyView prototype cockpit" width="72%">
+  <a href="https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification"><img src="https://raw.githubusercontent.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/main/assets/dynon-cockpit-prototype-sanitized.jpg" alt="Original Super Mushshak Dynon SkyView prototype cockpit" width="72%"></a>
 </p>
 
 *Original Dynon SkyView prototype cockpit from the public project record.*
