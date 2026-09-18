@@ -77,7 +77,9 @@ This track shows that I also build **usable AI software for recurring everyday w
 
 Original hardware, field media, product UI and public technical evidence are shown wherever they can be released. Source-derived interface renders are labelled directly when the underlying product remains private.
 
-### Clear Run / TIR-FOD — airfield robotics from detection to verified removal
+### Autonomous, embedded and edge AI evidence
+
+#### Clear Run / TIR-FOD — airfield robotics from detection to verified removal
 
 **System value:** a real detection-to-removal airfield robotics chain: thermal/RGB sensing, dataset and model engineering, Jetson/TensorRT deployment, target geolocation, operator/GCS decision support, UGV dispatch and developing physical recovery. The portfolio separates every intermediate success from verified end-to-end removal.
 
@@ -103,7 +105,20 @@ Key engineering evidence:
 
 [Open the Clear Run / TIR-FOD case →](projects/tir-fod-clear-run.md)
 
-### AI Systems Assurance / MBSE — evidence linked to system boundaries
+#### Counter-UAS Phase I — physical AI-vision prototype and multisensor research foundation
+
+<p align="center">
+  <img src="visuals/counter-uas/phase1_original_mount.jpg" alt="Constructed Counter-UAS Phase-I laser-camera mount" width="49%">
+  <img src="visuals/counter-uas/outdoor_detection.png" alt="Outdoor Counter-UAS Phase-I detection trial" width="49%">
+</p>
+
+*Left: the constructed Phase-I laser–camera sensing mount from the original project record. Right: retained outdoor detection output from the completed demonstrator.*
+
+Phase I progressed from model training into a **constructed laser–camera sensing setup**, with approximately **14,000 training images**, a **1,500-image test set** and preliminary indoor/outdoor detection trials under the user's PI leadership. The hardware photograph is a publication-sized derivative of the original project image; only orientation, resize, compression and minor photographic correction were applied. Passive-RF, acoustic and wider multisensor concepts remain separate future research directions.
+
+[Open the Counter-UAS case →](projects/counter-uas.md)
+
+#### AI Systems Assurance / MBSE — evidence linked to system boundaries
 
 <p align="center">
   <img src="visuals/clear-run/aerial_unit_architecture.svg" alt="Clear Run aerial-unit architecture with authentic UAV project photograph" width="49%">
@@ -120,19 +135,9 @@ The assurance case separates detection, geolocation, operator review, ground-veh
 
 [Open the AI Systems Assurance / MBSE case →](projects/mbse-ai-assurance.md)
 
-### Lodestar — EB-2 NIW / EB-1A evidence-assessment SaaS
+### Compliance and regulatory intelligence evidence
 
-**System value:** a browser-based immigration evidence-assessment product that maps applicant records to EB-2 NIW / EB-1A legal criteria, retrieves authority, builds cited evidence/gap assessments and refuses unsupported conclusions. FastAPI, BGE embeddings, PostgreSQL/pgvector, FTS, HNSW and RRF are the implementation stack—not the product description.
-
-![Lodestar product surface](visuals/lodestar_product_surface.svg)
-
-*Source-derived rendering of the current Lodestar landing page. The private product does not expose a distributable product screenshot or separate logo asset.*
-
-Recorded engineering state includes **209 documents · 2,945 chunks · a 34-query frozen retrieval regression set · 1 top-5 expected-source miss**. Public fixtures exercise PostgreSQL + pgvector retrieval, authority-policy ablation, an 11-invariant reliability regression and adversarial structured-output controls.
-
-[Open the Lodestar case →](projects/lodestar.md) · [Inspectable implementation evidence →](evidence/lodestar/README.md)
-
-### i-MSHA — national MSHA data consolidation and mine-safety decision platform
+#### i-MSHA — national MSHA data consolidation and mine-safety decision platform
 
 <p align="center">
   <img src="visuals/msha/logo-wordmark.svg" alt="i-MSHA official project wordmark" width="30%">
@@ -148,7 +153,21 @@ The product consolidates fragmented U.S. MSHA public data into one national→st
 
 [Open the i-MSHA case →](projects/msha-compliance-ai.md)
 
-### JobLooper — evidence-governed job-application operating system
+#### Lodestar — EB-2 NIW / EB-1A evidence-assessment SaaS
+
+**System value:** a browser-based immigration evidence-assessment product that maps applicant records to EB-2 NIW / EB-1A legal criteria, retrieves authority, builds cited evidence/gap assessments and refuses unsupported conclusions. FastAPI, BGE embeddings, PostgreSQL/pgvector, FTS, HNSW and RRF are the implementation stack—not the product description.
+
+![Lodestar product surface](visuals/lodestar_product_surface.svg)
+
+*Source-derived rendering of the current Lodestar landing page. The private product does not expose a distributable product screenshot or separate logo asset.*
+
+Recorded engineering state includes **209 documents · 2,945 chunks · a 34-query frozen retrieval regression set · 1 top-5 expected-source miss**. Public fixtures exercise PostgreSQL + pgvector retrieval, authority-policy ablation, an 11-invariant reliability regression and adversarial structured-output controls.
+
+[Open the Lodestar case →](projects/lodestar.md) · [Inspectable implementation evidence →](evidence/lodestar/README.md)
+
+### Practical AI product evidence
+
+#### JobLooper — evidence-governed job-application operating system
 
 <p align="center">
   <img src="visuals/joblooper/app-icon.svg" alt="Official JobLooper project mark" width="12%">
@@ -162,7 +181,19 @@ The system governs the application lifecycle from **signed career truth and exac
 
 [Open the JobLooper case →](projects/joblooper-jobpilot.md) · [Evaluation case →](projects/ai-evaluation-workflows.md) · [Public repository →](https://github.com/razaumair2203-ux/Pub-JobLooper)
 
-### Adversarial Review Lite — independent AI review as an engineering control
+#### BuildSignal AI — governed research-to-publication operations
+
+BuildSignal is an **AI-native publishing operations system**, not an article generator. It carries technical work through research/source capture, article and derivative-media state, rights/provenance, QA, review and explicit owner-controlled publication across articles, audio, video, YouTube-supported essays and social variants. The admin surface exposes dedicated Today, Articles, Media, Video, Audio, YouTube, Social, Research, Comments, QA, Tools and Publish workspaces.
+
+![BuildSignal AI admin workspace](visuals/buildsignal/admin-surface.svg)
+
+*Source-derived rendering of the current BuildSignal admin workspace. Research, media, QA and publication remain separate reviewable states with owner-controlled release.*
+
+[Open the BuildSignal AI case →](projects/buildsignal-ai.md)
+
+### AI assurance and aerospace digital-engineering evidence
+
+#### Adversarial Review Lite — independent AI review as an engineering control
 
 ![Adversarial Review Lite report preview](visuals/codex/audit-report-preview.jpg)
 
@@ -177,30 +208,7 @@ Both turn second-model review into a repeatable assurance workflow: frozen scope
 
 [Open the AI-assurance case →](projects/codex-adversarial-review-lite.md)
 
-### Counter-UAS Phase I — physical AI-vision prototype and multisensor research foundation
-
-<p align="center">
-  <img src="visuals/counter-uas/phase1_original_mount.jpg" alt="Constructed Counter-UAS Phase-I laser-camera mount" width="49%">
-  <img src="visuals/counter-uas/outdoor_detection.png" alt="Outdoor Counter-UAS Phase-I detection trial" width="49%">
-</p>
-
-*Left: the constructed Phase-I laser–camera sensing mount from the original project record. Right: retained outdoor detection output from the completed demonstrator.*
-
-Phase I progressed from model training into a **constructed laser–camera sensing setup**, with approximately **14,000 training images**, a **1,500-image test set** and preliminary indoor/outdoor detection trials under the user's PI leadership. The hardware photograph is a publication-sized derivative of the original project image; only orientation, resize, compression and minor photographic correction were applied. Passive-RF, acoustic and wider multisensor concepts remain separate future research directions.
-
-[Open the Counter-UAS case →](projects/counter-uas.md)
-
-### BuildSignal AI — governed research-to-publication operations
-
-BuildSignal is an **AI-native publishing operations system**, not an article generator. It carries technical work through research/source capture, article and derivative-media state, rights/provenance, QA, review and explicit owner-controlled publication across articles, audio, video, YouTube-supported essays and social variants. The admin surface exposes dedicated Today, Articles, Media, Video, Audio, YouTube, Social, Research, Comments, QA, Tools and Publish workspaces.
-
-![BuildSignal AI admin workspace](visuals/buildsignal/admin-surface.svg)
-
-*Source-derived rendering of the current BuildSignal admin workspace. Research, media, QA and publication remain separate reviewable states with owner-controlled release.*
-
-[Open the BuildSignal AI case →](projects/buildsignal-ai.md)
-
-### Super Mushshak — first three glass-cockpit prototypes to a traceable digital thread
+#### Super Mushshak — first three glass-cockpit prototypes to a traceable digital thread
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/main/assets/dynon-cockpit-prototype-sanitized.jpg" alt="Original Super Mushshak Dynon SkyView prototype cockpit" width="72%">
