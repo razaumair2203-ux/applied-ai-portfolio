@@ -1,10 +1,10 @@
-# Codex Adversarial Review Lite — independent AI code review
+# Adversarial Review Lite — cross-model assurance for AI-written software
 
 **Public tools:** [Codex Adversarial Review Lite](https://github.com/razaumair2203-ux/codex-adversarial-review-lite) · [Claude Adversarial Review Lite](https://github.com/razaumair2203-ux/claude-adversarial-review-lite)
 
-The two repositories are companion directions of the same assurance pattern: **Claude builds → Codex reviews** or **Codex builds → Claude reviews**, with human authority retained in both directions.
+The two public repositories turn an informal “ask another model to look at it” habit into a **repeatable software-assurance workflow** for people building real applications with coding agents. They support both directions—**Claude builds → Codex reviews** and **Codex builds → Claude reviews**—while keeping mutation and release authority with the human.
 
-AI coding agents can preserve their own blind spots during self-review. The toolchain inserts an independent reviewer model into the workflow, then requires each finding to be re-validated before any change is accepted.
+The system freezes review scope, carries relevant tests/fixtures/rubrics into the review contract, snapshots repository state, dispatches an independent reviewer, validates reviewer output, re-checks each finding instead of obeying it blindly, and presents a report **before** any fix is allowed. It is aimed at changes where hallucinated APIs, weak tests, auth/billing mistakes, migrations or multi-file scope drift can create real engineering cost.
 
 ![Adversarial-review report preview](../visuals/codex/audit-report-preview.jpg)
 
