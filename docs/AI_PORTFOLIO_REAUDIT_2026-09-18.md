@@ -81,10 +81,10 @@ The initial remediation assumed a sanitized raw run-log extract could be publish
 
 **Resolution:** corrected the portfolio rather than manufacturing data. The 25.0 FPS TensorRT-stage and 15.6 FPS end-to-end values are now explicitly labelled **author-confirmed ten-run historical summaries**; the retained 25.12/15.07 runtime display is distinguished from those means; historical checkpoint identity is marked unavailable; the power wording is corrected so the 16–18 W range is not mislabelled as compute-and-camera-only power; and a machine-readable evidence-status file enforces these boundaries. A separate named-checkpoint measurement protocol is published for future/returned reproducible Jetson evidence, with engine/checkpoint hashes, repeated runs, CUDA-synchronized per-frame timing, separate telemetry and refusal gates.
 
-### R08 — S2 — Answer-level RAG evaluation is missing
-Retrieval is evaluated independently, which is good, but citation faithfulness, answer correctness, abstention behavior and retrieval-to-generation failure propagation are not yet publicly demonstrated.
+### R08 — S2 — Answer-level RAG evaluation is missing — **RESOLVED AT THE REAL PRODUCT OUTPUT CONTRACT**
+Inspection of the authoritative Lodestar implementation showed that the downstream surface is not a generic free-form QA chatbot; it is a structured per-criterion evidence assessment with a five-state schema and hard grounding gates.
 
-**Status:** open.
+**Resolution:** published a 10-case adversarial evaluation derived from the real assessment invariants. CI now verifies post-gate citation validity, hallucinated/ambiguous citation dropping, unambiguous prefix recovery, refusal when grounding disappears, preservation of `not_applicable` where appropriate, filtering of invented evidence IDs, five-state enforcement, and removal of unauthorized numeric approval/score fields. The portfolio explicitly does **not** convert this into a claim of semantic legal correctness; that remains a human/domain evaluation problem.
 
 ### R09 — S3 — Repository metadata under-sells the work
 The GitHub repository description is only "Applied Ai portfolio", topics are empty, and there is no repository license. These do not weaken the engineering itself, but they reduce discoverability and polish.
