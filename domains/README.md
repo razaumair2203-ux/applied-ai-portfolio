@@ -34,22 +34,22 @@ This is a deliberate product niche: converting fragmented authoritative data and
 
 The domain changes; the engineering pattern stays reusable.
 
-## 3. Practical AI products and public utility workflows
+## 3. Practical agentic AI products and everyday work tools
 
-These projects are intended to solve recurring real-world workflow problems and, where suitable, be released for public use rather than remain portfolio demonstrations.
+This is an **independent and growing product stream**: useful AI/agentic software for recurring real-world work, with public/free releases where appropriate. The goal is not prompt demos; it is tools people can repeatedly use with visible state, bounded agent action and human control.
 
 | Project family | System / product value | Core architecture | My role | Current state |
 |---|---|---|---|---|
 | **[JobLooper / JobPilot family](03-practical-ai-products/joblooper-jobpilot.md)** | Evidence-governed job-search/application operating system from career truth and exact JD capture through gap analysis, AI-assisted tailoring, human approval, deterministic document build and outcome learning | local-first Python · deterministic state machine · provenance/hashes · DOCX/PDF validation · optional model assistance | product/system design, AI-workflow governance, evaluation and release controls | public implementation plus private evaluation/development lineage |
 | **[BuildSignal AI](03-practical-ai-products/buildsignal-ai.md)** | AI-native research-to-publication operating system with source, rights, QA, review and publication-state governance across text and media | Next.js · TypeScript · MDX · research/source registry · validation commands · admin workflow | product direction, AI workflow design, source/review policy, quality governance | active private platform; local operating workflow implemented |
+| **[Adversarial Review Lite](03-practical-ai-products/adversarial-review-lite.md)** | Everyday agentic review tools that make independent second-model review repeatable during AI-assisted coding | Claude↔Codex companion tools · self-test · model fallback · test/rubric context · file hashes · structured report | product/workflow design, assurance logic, human-control model | two public cross-platform companion tools |
 
 ## 4. AI assurance, evaluation and digital engineering
 
-These are cross-cutting engineering controls and the bridge between current AI work and the earlier high-integrity aerospace systems background.
+This is a **cross-cutting capability layer**, not a separate product stream. It carries verification, evidence, evaluation, configuration and release discipline across autonomy, compliance products and practical agentic tools, and bridges current AI work to the earlier high-integrity aerospace systems background.
 
 | Project / capability | System value | Evidence / scale | Status |
 |---|---|---|---|
-| **[Adversarial Review Lite](04-assurance-digital-engineering/adversarial-review-lite.md)** | Cross-model assurance workflow for AI-written software with independent reviewer models, mutation checks and human approval before fixes | Claude↔Codex companion tools · self-test · model fallback · test/rubric context · file hashes · report | two public cross-platform companion tools |
 | **[Evaluation-Driven AI Workflow Engineering](04-assurance-digital-engineering/ai-evaluation-workflows.md)** | Frozen evaluation and release-control framework for AI workflow changes rather than intuition-led prompt iteration | train/validation/held-out cases · fabrication/date/metric checks · parser rescoring · release safeguards | retained engineering evidence |
 | **[Super Mushshak digital engineering](04-assurance-digital-engineering/super-mushshak-digital-engineering.md)** | Completed first-three-prototype glass-cockpit integration programme now reconstructed into an evidence-linked digital thread | requirements · interfaces · configurations · verification · decisions · historical prototype evidence | retrofit completed; digital-thread backbone implemented; executable-twin functions remain future work |
 | **ATLAS GPU/HPC environment** | Research-computing platform supporting AI, simulation and reproducible engineering workflows | 22-node GPU/HPC environment · Linux/Ubuntu · SLURM · CUDA · Docker | current accountable technical leadership |
@@ -59,9 +59,9 @@ These are cross-cutting engineering controls and the bridge between current AI w
 The portfolio is intentionally multi-domain, but it is not random.
 
 - **Autonomous / edge AI** is the primary technical specialization.
-- **Compliance intelligence** is the deliberate product vertical being built across regulated domains.
-- **AI assurance and digital engineering** provide the verification, evidence and lifecycle discipline that differentiates the work from model-only AI projects.
-- **Practical AI utilities** demonstrate product-building capability beyond aerospace and regulated environments.
+- **Compliance / regulatory intelligence** is a deliberate and aggressively growing independent product niche across regulated, evidence-heavy domains.
+- **Practical agentic work tools** are a second independent and growing product stream for everyday engineering, career, research and knowledge work.
+- **AI assurance, evaluation and digital engineering** are cross-cutting disciplines used across both product streams and the professional autonomy work.
 - The aerospace record supplies the systems-engineering foundation: requirements, interfaces, configuration, qualification, airworthiness, acceptance and lifecycle responsibility.
 
 ## Supporting engineering background
