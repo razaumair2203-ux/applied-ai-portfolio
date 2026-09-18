@@ -187,6 +187,10 @@ def check_career_profile() -> None:
     path = ROOT / "profile/AI_BASE_RESUME.md"
     text = path.read_text(encoding="utf-8")
     required = (
+        "Autonomous / Embedded / Edge AI",
+        "Compliance / Regulatory Intelligence",
+        "Practical Agentic AI Products",
+        "AI Assurance / Evaluation / Digital Engineering",
         "18+ years",
         "100+ project",
         "60+ advanced engineering projects",
