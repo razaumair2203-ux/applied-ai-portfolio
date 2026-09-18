@@ -24,17 +24,17 @@ The through-line is **programme leadership + hands-on AI engineering + aerospace
 
 The work spans deployed edge vision, grounded RAG, AI assurance, regulatory intelligence, local-first AI workflows, autonomy integration and digital engineering. Each case states the current system maturity and the verification that remains open.
 
-| Project family | What it is | My role | Current maturity |
+| Project family | What was built / why it matters | My role | Evidence-backed state |
 |---|---|---|---|
-| **[Clear Run / TIR-FOD](projects/tir-fod-clear-run.md)** | Edge computer vision and supervised UAV–GCS–UGV runway-FOD system | research/programme leadership, systems architecture & integration, experiment/V&V strategy, deployment review | flight-tested edge AI; active field integration; end-to-end retrieval verification still open |
-| **[Lodestar](projects/lodestar.md)** | Grounded RAG / evidence-assessment system with explicit source authority and refusal controls | system architecture, retrieval/evaluation design, implementation direction, reliability controls | working private full-stack system with public implementation/evaluation evidence |
-| **[i-MSHA / MSHA Compliance SaaS](projects/msha-compliance-ai.md)** | AI-enabled regulatory/compliance intelligence platform over structured MSHA public data | product/programme direction, AI/data workflow definition, technical review, validation framing | private product in pre-deployment hardening; production/UAT not claimed |
-| **[JobLooper / JobLoop-AI](projects/joblooper-jobpilot.md)** | Local-first AI-assisted application system with deterministic truth, provenance and release authority | product/system design, AI-workflow governance, evaluation and release controls | public implementation plus private evaluation/development lineage |
-| **[Adversarial Review Lite](projects/codex-adversarial-review-lite.md)** | Independent Claude↔Codex review toolchain for AI-written code | AI-assurance workflow design, review contracts, human-release controls | two public companion tools |
-| **[BuildSignal AI](projects/buildsignal-ai.md)** | AI research/editorial/media operations platform with source, QA and publish governance | product direction, AI workflow design, source/review policy | active private platform |
-| **[Counter-UAS Phase I](projects/counter-uas.md)** | Physical computer-vision drone-detection demonstrator | research direction, systems/integration oversight | Phase I completed; later RF/acoustic/multisensor work remains research |
-| **[AI Systems Assurance / MBSE](projects/mbse-ai-assurance.md)** | Evidence-linked Capella/Arcadia assurance case within Clear Run | systems modelling, interface/V&V framing, evidence applicability | current assurance case; INCOSE IACS submission pending review |
-| **[Super Mushshak digital engineering](projects/super-mushshak-digital-engineering.md)** | Completed glass-cockpit retrofit record extended into an evidence-linked digital thread | historical lead systems/avionics integration role; current retrospective modelling | retrofit completed; public digital-thread backbone implemented; executable twin functions remain future work |
+| **[Clear Run / TIR-FOD](projects/tir-fod-clear-run.md)** | **Integrated airfield robotics programme** that closes the chain from RGB/LWIR runway-FOD sensing and Jetson/TensorRT inference to target geolocation, GCS review/tasking, UGV approach and physical recovery. It includes a public 23-class thermal dataset, controlled model research, real UAV deployment and active detection-to-retention verification—not a detector-only demo. | research/programme leadership, systems architecture & integration, experiment/V&V strategy, deployment review | flight-tested edge AI and active UAV–GCS–UGV integration; physical retrieval closure still in progress |
+| **[Lodestar](projects/lodestar.md)** | **Full-stack EB-2 NIW / EB-1A evidence-assessment SaaS**. Applicants can upload evidence, map it to Dhanasar/Kazarian legal criteria, retrieve controlling sources and AAO decisions, identify gaps and receive structured cited assessments. The system explicitly refuses unsupported/citation-invalid conclusions and does not manufacture approval scores or a finished petition. | system architecture, legal-RAG retrieval/evaluation design, implementation direction, reliability controls | working private browser product with real corpus, end-to-end flow and public-safe retrieval/control evidence |
+| **[i-MSHA](projects/msha-compliance-ai.md)** | **U.S. mine-safety intelligence and MSHA data-consolidation platform** spanning mine/controller profiles, violations, penalties, inspections, injury/safety, legal intelligence, occupational exposure, contractor intelligence, acquisition due diligence, comparison/weekly-pulse tooling and Canary AI. The engineering challenge is turning fragmented public MSHA data into one navigable national→state→mine decision environment. | product/programme direction, systems architecture, AI/data workflow definition, technical review, validation framing | 8 active modules · 25 frontend features · 100 backend handlers; private product in pre-deployment hardening |
+| **[JobLooper](projects/joblooper-jobpilot.md)** | **Evidence-governed job-application operating system**: approved career truth → exact JD capture → gap/preflight decisions → AI-assisted tailoring → complete human review → deterministic DOCX/PDF build → hash-bound submission record → outcome learning. AI can assist reasoning, but cannot rewrite truth, self-approve or silently release documents. | product/system design, AI-workflow governance, evaluation and release controls | public local-first implementation plus private evaluation/development lineage |
+| **[Adversarial Review Lite](projects/codex-adversarial-review-lite.md)** | **Cross-model assurance layer for AI-written software**. Claude↔Codex companion tools freeze review scope, pass test/rubric context, capture mutation hashes, run an independent reviewer, re-validate every finding and require human approval before code changes. | AI-assurance workflow design, reviewer contracts, cross-platform execution and release controls | two public cross-platform companion tools with self-test, report and safety model |
+| **[BuildSignal AI](projects/buildsignal-ai.md)** | **AI-native research-to-publication operations system** for technical content: source capture, research logging, article/media/audio/video/social state, QA, rights/provenance, review and explicit owner-controlled publication. The product treats AI content generation as one component inside a governed operating workflow. | product direction, AI workflow design, source/review policy, quality governance | active private platform; local admin workflow implemented, hosted auth/media automation still open |
+| **[Counter-UAS Phase I](projects/counter-uas.md)** | **Completed physical AI-vision drone-detection prototype**: constructed laser–camera sensing mount, model development using ~14,000 training images, a 1,500-image test set, and indoor/outdoor trials. It provides the experimental base for a later visual/RF/acoustic multisensor monitoring research programme without claiming the later phases as complete. | Principal Investigator / research direction, prototype and systems-integration oversight | Phase I completed; passive-RF/acoustic/multisensor extensions remain research |
+| **[AI Systems Assurance / MBSE](projects/mbse-ai-assurance.md)** | **Evidence-linked assurance model for an AI/autonomy mission system**, connecting functions, interfaces, requirements, configuration and verification to the Clear Run detection→removal chain. A producer-consumer replay exposed a concrete telemetry truncation failure mode and converted it into explicit acceptance requirements. | systems modelling, interface/V&V framing, evidence applicability, regression logic | current Capella/Arcadia assurance case; INCOSE IACS submission pending review |
+| **[Super Mushshak digital engineering](projects/super-mushshak-digital-engineering.md)** | **Completed aircraft-level glass-cockpit integration programme for the first three prototypes**, covering avionics/sensor integration, electrical and wiring changes, ARINC interfaces, configuration, installed-aircraft tests, flight-test feedback and customer evaluation; now reconstructed into a public-safe digital thread linking evidence→requirements→interfaces→configuration→verification→decisions. | historical lead systems/avionics integration role; current retrospective modelling | retrofit completed; digital-thread backbone implemented; executable twin behaviour remains future work |
 
 [Complete project inventory and maturity map →](projects/README.md)
 
@@ -42,9 +42,9 @@ The work spans deployed edge vision, grounded RAG, AI assurance, regulatory inte
 
 Original hardware, field media, product UI and public technical evidence are shown wherever they can be released. Source-derived interface renders are labelled directly when the underlying product remains private.
 
-### Clear Run / TIR-FOD — edge AI moved into a real UAV/autonomy programme
+### Clear Run / TIR-FOD — airfield robotics from detection to verified removal
 
-**Scope:** thermal/RGB perception, dataset engineering, source-aware evaluation, TensorRT/Jetson deployment, target geolocation, GCS integration and developing UGV retrieval.
+**System value:** a real detection-to-removal airfield robotics chain: thermal/RGB sensing, dataset and model engineering, Jetson/TensorRT deployment, target geolocation, operator/GCS decision support, UGV dispatch and developing physical recovery. The portfolio separates every intermediate success from verified end-to-end removal.
 
 ![Clear Run system architecture with authentic project assets](visuals/clear-run/system_architecture.svg)
 
@@ -85,9 +85,9 @@ The assurance case separates detection, geolocation, operator review, ground-veh
 
 [Open the AI Systems Assurance / MBSE case →](projects/mbse-ai-assurance.md)
 
-### Lodestar — grounded RAG with explicit retrieval and refusal controls
+### Lodestar — EB-2 NIW / EB-1A evidence-assessment SaaS
 
-**Scope:** FastAPI, BGE embeddings, PostgreSQL/pgvector, full-text retrieval, HNSW, RRF, authority-aware candidate handling, citable evidence objects and structured output control.
+**System value:** a browser-based immigration evidence-assessment product that maps applicant records to EB-2 NIW / EB-1A legal criteria, retrieves authority, builds cited evidence/gap assessments and refuses unsupported conclusions. FastAPI, BGE embeddings, PostgreSQL/pgvector, FTS, HNSW and RRF are the implementation stack—not the product description.
 
 ![Lodestar product surface](visuals/lodestar_product_surface.svg)
 
@@ -97,7 +97,7 @@ Recorded engineering state includes **209 documents · 2,945 chunks · a 34-quer
 
 [Open the Lodestar case →](projects/lodestar.md) · [Inspectable implementation evidence →](evidence/lodestar/README.md)
 
-### i-MSHA — full-stack regulatory intelligence with AI inside a larger data product
+### i-MSHA — national MSHA data consolidation and mine-safety decision platform
 
 <p align="center">
   <img src="visuals/msha/logo-wordmark.svg" alt="i-MSHA official project wordmark" width="30%">
@@ -107,13 +107,13 @@ Recorded engineering state includes **209 documents · 2,945 chunks · a 34-quer
 
 *Official project wordmark and an authentic browser-regression dashboard snapshot from the product test suite.*
 
-The active product combines **Next.js + FastAPI + PostgreSQL + DuckDB/Parquet**, MSHA public-data ingestion/validation, risk/inspection/compliance modules and the Canary AI assistant. The current source-of-truth status records **8 active modules · 25 frontend features · 100 backend handlers**, with **385 Canary unit tests and 839 full backend tests passing** as of 20 May 2026.
+The product consolidates fragmented U.S. MSHA public data into one national→state→mine operating environment covering mine/controller intelligence, violations, penalties, inspections, safety/injury, legal outcomes, occupational exposure, contractors, acquisition due diligence, comparisons and weekly pulse. **Next.js + FastAPI + PostgreSQL + DuckDB/Parquet** support the application and analytical layers; Canary AI sits across the system rather than replacing deterministic data logic. Current source-of-truth status records **8 active modules · 25 frontend features · 100 backend handlers**, with **385 Canary unit tests and 839 full backend tests passing** as of 20 May 2026.
 
 **Current boundary:** deployment work remains open in the product plan; production deployment, customer UAT and regulatory certification are not claimed.
 
 [Open the i-MSHA case →](projects/msha-compliance-ai.md)
 
-### JobLooper / JobLoop-AI — AI assistance bounded by deterministic truth and release controls
+### JobLooper — evidence-governed job-application operating system
 
 <p align="center">
   <img src="visuals/joblooper/app-icon.svg" alt="Official JobLooper project mark" width="12%">
@@ -142,7 +142,7 @@ Both retain frozen review scope, mutation checks, structured findings, builder v
 
 [Open the AI-assurance case →](projects/codex-adversarial-review-lite.md)
 
-### Counter-UAS Phase I — physical computer vision demonstrator
+### Counter-UAS Phase I — physical AI-vision prototype and multisensor research foundation
 
 <p align="center">
   <img src="visuals/counter-uas/phase1_original_mount.jpg" alt="Constructed Counter-UAS Phase-I laser-camera mount" width="49%">
@@ -151,7 +151,7 @@ Both retain frozen review scope, mutation checks, structured findings, builder v
 
 *Left: the constructed Phase-I laser–camera sensing mount from the original project record. Right: retained outdoor detection output from the completed demonstrator.*
 
-Phase I progressed from model training into a **constructed physical sensing setup** and indoor/outdoor trials. The hardware photograph is a publication-sized derivative of the original project image; only orientation, resize, compression and minor photographic correction were applied. Passive-RF, acoustic and wider multisensor concepts remain separate future research directions.
+Phase I progressed from model training into a **constructed laser–camera sensing setup**, with approximately **14,000 training images**, a **1,500-image test set** and preliminary indoor/outdoor detection trials under the user's PI leadership. The hardware photograph is a publication-sized derivative of the original project image; only orientation, resize, compression and minor photographic correction were applied. Passive-RF, acoustic and wider multisensor concepts remain separate future research directions.
 
 [Open the Counter-UAS case →](projects/counter-uas.md)
 
@@ -163,7 +163,7 @@ Phase I progressed from model training into a **constructed physical sensing set
 
 [Open the BuildSignal AI case →](projects/buildsignal-ai.md)
 
-### Super Mushshak — aircraft integration experience carried into digital engineering
+### Super Mushshak — first three glass-cockpit prototypes to a traceable digital thread
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/main/assets/dynon-cockpit-prototype-sanitized.jpg" alt="Original Super Mushshak Dynon SkyView prototype cockpit" width="72%">
