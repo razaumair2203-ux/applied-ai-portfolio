@@ -25,7 +25,15 @@ This directory is a sanitized evidence bundle, not a standalone copy of the priv
 python -m evidence.lodestar.public_smoke_test
 ```
 
-That zero-dependency check exercises RRF fusion, authority-weighted reranking, retrieval metadata filters, structure-aware chunking and the frozen 34-pair evaluation specification. CI runs the same check on pull requests.
+That zero-dependency check exercises RRF fusion, authority-weighted reranking, retrieval metadata filters, structure-aware chunking and the frozen 34-pair evaluation specification.
+
+A second public path now executes the **actual published hybrid retrieval SQL against PostgreSQL + pgvector** using a small non-sensitive fixture corpus:
+
+```bash
+python -m evidence.lodestar.fixture.postgres_fixture_test
+```
+
+See the [database fixture README](fixture/README.md) for the pgvector service command and dependency. CI runs both public paths on pull requests.
 
 The reported **1/34 top-5 expected-source miss rate (2.9%)** is a recorded full-system measurement from the private **209-document / 2,945-chunk** corpus. The public repository exposes the frozen query/expected-source set and evaluation logic, but it does **not** publish the complete corpus/database and therefore does not claim that the 2.9% full-system result can be reproduced from this repository alone.
 
@@ -38,7 +46,8 @@ The reported **1/34 top-5 expected-source miss rate (2.9%)** is a recorded full-
 - [`rerank.py`](rerank.py) — deterministic authority-weighted reranking; relevance remains dominant.
 - [`grounding_pairs.json`](grounding_pairs.json) — the 34 hand-checked evaluation queries and accepted markers.
 - [`grounding_eval.py`](grounding_eval.py) — retrieval-grounding evaluation gate.
-- [`retrieval_integration_test.py`](retrieval_integration_test.py) — representative database-backed test using known expected sources.
+- [`retrieval_integration_test.py`](retrieval_integration_test.py) — representative private-product database-backed test shape.
+- [`fixture/postgres_fixture_test.py`](fixture/postgres_fixture_test.py) — **publicly runnable real PostgreSQL/pgvector integration test** over the published hybrid retrieval code.
 - [`grounding-eval.md`](grounding-eval.md) — current measured result log.
 
 ## Design decisions visible in the code
