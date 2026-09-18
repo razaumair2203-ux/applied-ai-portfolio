@@ -22,6 +22,20 @@
 
 *System evidence assembled from repository-original UAV/UGV photographs, recorded field detections, the actual GCS, retrieval-mechanism CAD and documented architecture. No generated imagery or synthetic detections are used.*
 
+## Engineering impact and decision value
+
+The strongest result is not the best checkpoint. It is the evidence that changed how the system should be evaluated and advanced.
+
+- **Evaluation risk was made visible.** The contamination experiment produced an invalid **+8.52 ± 0.19 percentage-point** uplift, demonstrating that source lineage can dominate apparent model improvement.
+- **A harder generalisation test changed the interpretation of performance.** Acquisition-block-disjoint evaluation produced **0.7410 ± 0.0423** versus **0.8223 ± 0.0070** under frame-level partitioning on the shared 12-class experiment. The harder split is therefore the more meaningful deployment signal.
+- **Deployment exposed a system bottleneck that model FPS alone hides.** Historical evidence separates roughly **25.0 FPS TensorRT-stage** from **15.6 FPS end-to-end**, motivating separate inference, camera/pipeline and telemetry measurement in the newer protocol.
+- **The work created reusable engineering assets.** The dataset, source-aware split evidence, 29-run scalar bundle, training contract, deployment protocol and sanitized runtime extract make future experiments easier to challenge and repeat.
+- **System maturity advanced beyond perception.** Dual-camera inference, geolocation and GCS integration exist in the active programme; the next defensible gate is measured GCS→UGV hand-off, terminal alignment and physical retention.
+
+### What is not claimed
+
+This project is not presented as proof of measured runway-safety improvement, certified operational deployment, or a completed autonomous FOD-recovery mission. The final physical-retrieval loop remains under quantitative validation, and historical Jetson ten-run summaries are not presented as raw-log-reproducible benchmarks.
+
 ## Why this project matters for applied-AI roles
 
 This is not a model-training-only project. The work spans data acquisition, annotation quality, controlled model comparison, leakage/generalisation analysis, reproducible experiment orchestration, model packaging, GPU edge inference, aircraft/UAV integration, telemetry, ground-control interfaces and field validation.
