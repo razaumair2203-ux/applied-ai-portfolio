@@ -29,6 +29,10 @@ The product is deliberately narrower and more defensible than a generic immigrat
 
 Immigration evidence assessment is a **domain-reasoning and authority problem**, not simply “ask an LLM about my CV.” Applicant facts have to be mapped to specific legal tests; controlling and non-binding sources must remain distinguishable; evidence gaps must stay visible; and fluent generation must not outrun what the record actually supports. Lodestar treats those constraints as software and retrieval architecture rather than prompt wording.
 
+## Product differentiation
+
+Lodestar's product shape is an **evidence-assessment workflow, not a legal chatbot**: applicant material is ingested and structured, mapped to named legal criteria, challenged through gap questions, connected to retrieved authority, and constrained to cited assessment states. Source authority, non-binding examples, invalid citations, unsupported claims and refusal are handled as explicit system states rather than left to model discretion.
+
 ## Retrieval architecture
 
 ![Lodestar retrieval architecture](../visuals/lodestar_architecture.svg)
