@@ -1,6 +1,6 @@
-# Counter-UAS Phase I — physical computer-vision demonstrator
+# Counter-UAS Phase I — physical AI-vision prototype and multisensor research foundation
 
-Phase I is a completed computer-vision demonstrator with hardware integration and indoor/outdoor trials. Later passive-RF, acoustic and multisensor work remains a separate research direction.
+Phase I is a completed **physical drone-detection research prototype**, led by M. Umair Raza as **Principal Investigator**. The work progressed from dataset/model development into a constructed laser–camera sensing mount and preliminary indoor/outdoor trials, using approximately **14,000 training images**, a **1,500-image test set**, **200 training epochs** and 640×640 inputs. Later passive-RF, acoustic and multisensor work remains a separate research direction rather than being back-claimed as completed capability.
 
 ## Physical system evidence
 
@@ -32,7 +32,7 @@ The archived project evidence includes:
 
 ## Engineering scope
 
-The value of the work is not a claim of an operational counter-drone system. It demonstrates the transition from model training into a physical sensing setup, with real trial conditions and hardware integration rather than notebook-only inference.
+The engineering value is the **prototype-to-experiment transition**: model development, physical sensing hardware, camera/mount integration, manual/automatic operating modes and real indoor/outdoor trial conditions were brought together under one Phase-I programme. It is not represented as an operational counter-drone weapon or fielded C-UAS product.
 
 ## Evidence provenance and programme evolution
 
