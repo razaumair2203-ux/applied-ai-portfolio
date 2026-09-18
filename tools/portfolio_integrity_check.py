@@ -109,7 +109,7 @@ def check_lodestar_assessment_eval_contract() -> None:
 
 def check_repository_metadata_contract() -> None:
     spec = json.loads((ROOT / "docs" / "REPOSITORY_METADATA_CONTRACT.json").read_text(encoding="utf-8"))
-    assert spec["desired_description"].startswith("Applied AI portfolio:")
+    assert spec["desired_description"].startswith("Applied AI engineering:")
     assert len(spec["desired_topics"]) == 12
     assert "computer-vision" in spec["desired_topics"]
     assert "rag" in spec["desired_topics"]
