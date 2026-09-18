@@ -6,8 +6,8 @@ The portfolio is organized by the kind of engineering evidence each project prov
 
 | Project | Engineering evidence | Current state |
 |---|---|---|
-| [Lodestar](lodestar.md) | Python/FastAPI RAG; structure-aware ingestion; BGE embeddings; PostgreSQL/pgvector; HNSW + FTS hybrid retrieval; RRF; authority reranking; LLM integration; evaluation, stress and browser tests | Working private full-stack system with sanitized public implementation/evaluation evidence |
-| [TIR-FOD / Clear Run](tir-fod-clear-run.md) | Real LWIR dataset; 29-run six-model YOLO study; multi-model LWIR work; reproducible experiment orchestration; Jetson/TensorRT UAV deployment; dual RGB/IR FP16 inference; YOLOv12 + SAHI; geolocation, MAVLink/REST and GCS integration | Flight-tested edge AI plus active field integration into the UAV–GCS–UGV mission system |
+| [Lodestar](lodestar.md) | Python/FastAPI RAG; structure-aware ingestion; BGE embeddings; PostgreSQL/pgvector; HNSW + FTS hybrid retrieval; RRF; authority-weighted reranking; LLM integration; evaluation, stress and browser tests | Working private full-stack system with sanitized implementation, frozen evaluation spec and runnable public pure-logic checks |
+| [TIR-FOD / Clear Run](tir-fod-clear-run.md) | Real LWIR dataset; 29-run six-model YOLO study; multi-model LWIR work; reproducible experiment orchestration; Jetson/TensorRT UAV deployment; dual RGB/IR FP16 inference; YOLOv12 + SAHI; geolocation, MAVLink/REST and GCS integration | Flight-tested edge AI plus active field integration; GCS→UGV hand-off and physical retention remain under end-to-end validation |
 | [Codex Adversarial Review Lite](codex-adversarial-review-lite.md) | Independent multi-model review workflow; preflight/fallback; mutation checks; structured audit; human release decision | Public working AI-assurance tool |
 | [JobLooper](joblooper-jobpilot.md) | Deterministic evidence/provenance controls around optional AI assistance; local workflow, CLI/dashboard, release gates and document generation | Public working software |
 
@@ -17,7 +17,7 @@ These are the main evidence streams for RAG, GenAI integration, computer vision,
 
 ### Clear Run UAV–GCS–UGV
 
-The active Clear Run stack includes Jetson Orin Nano aerial compute, RGB and passive-IR cameras, independent FP16 TensorRT engines, YOLO/SAHI inference, geolocation, camera-tagged detections, synchronized recording, MAVLink telemetry and Flask/Leaflet GCS integration. UGV computing/navigation and the retrieval mechanism form the downstream robotic layer. Current trials are closing the final target-hand-off, terminal-alignment and physical-retention measurements.
+The active Clear Run stack includes Jetson Orin Nano aerial compute, RGB and passive-IR cameras, independent FP16 TensorRT engines, YOLO/SAHI inference, geolocation, camera-tagged detections, synchronized recording, MAVLink telemetry and Flask/Leaflet GCS integration. UGV computing/navigation and the retrieval mechanism form the downstream robotic layer. Current trials are closing the GCS→UGV hand-off, terminal-alignment and physical-retention measurements; those final end-to-end steps are not described as completed capability.
 
 ### TIR-FOD thermal UAV deployment
 
