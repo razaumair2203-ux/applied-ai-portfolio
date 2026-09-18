@@ -60,7 +60,7 @@ A first digital-thread backbone now exists around:
 
 The follow-on does **not** claim an executable aircraft digital twin today. Electrical loading, configuration-dependent failure effects, maintenance state and selected data replay are longer-term directions that depend on sufficient releasable source data.
 
-## Why it matters to the AI/autonomy portfolio
+## Connection to current AI/autonomy engineering
 
 This project is the clearest bridge between the earlier aerospace record and current AI-enabled systems work. It demonstrates the same engineering habits used across Clear Run, Lodestar and AI assurance: configuration identity, interface ownership, verification evidence, change history and explicit treatment of unknowns.
 
