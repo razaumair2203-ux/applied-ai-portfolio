@@ -51,10 +51,10 @@ The value is exactly **1 miss in a frozen 34-query set**. Calling it only a "2.9
 
 **Treatment:** changed recruiter-facing wording to **1/34 top-5 expected-source misses (2.9%)** and explicitly labelled the set a targeted regression/evidence-retrieval check.
 
-### R02 — S1/S2 — Authority enters Lodestar retrieval twice
+### R02 — S1/S2 — Authority enters Lodestar retrieval twice — **RESOLVED / CHARACTERIZED**
 High-authority lexical/vector lanes contribute extra Reciprocal Rank Fusion score, and the final reranker applies a second authority multiplier. The previous prose made this sound like only a small final preference.
 
-**Treatment:** documentation now describes the actual two-stage authority policy and identifies ablation against a two-lane baseline as the correct next validation step.
+**Resolution:** documentation now describes the actual two-stage policy, and a public PostgreSQL/pgvector fixture ablation compares ordinary two-lane RRF, four-lane RRF and four-lane RRF plus reranking. CI verifies that the authority lanes increase the controlling-source score advantage and that the final multiplier increases it again. This is explicitly a mechanistic characterization, not a claim that the policy improves quality on the private corpus.
 
 ### R03 — S2 — Personal hands-on contribution was not visible early enough
 The portfolio correctly bounded team authorship, but a cold reviewer could still ask: "What did Umair personally implement versus lead?"
