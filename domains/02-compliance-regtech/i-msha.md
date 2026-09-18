@@ -56,9 +56,11 @@ Canary is designed to sit **across** the product rather than replace the underly
 
 The engineering boundary matters: **the LLM is not the regulatory database**. Public MSHA records, typed transformations and deterministic feature logic remain the source of truth; AI is used to help a user reach, interpret and navigate that evidence.
 
-## My role
+## Contribution boundary
 
-**Product/programme direction, systems architecture, AI/data workflow definition, technical review, feature prioritisation and validation framing** across the product. The work spans market/problem definition, full-stack architecture, data and AI design, quality gates, performance/security review and pre-deployment readiness rather than a single model or feature.
+- **Direct responsibility:** product/programme direction, systems architecture, AI/data workflow definition, feature prioritisation, technical review and validation framing.
+- **Product-development scope:** the case represents the integrated product and its measured engineering state; individual feature implementation is not presented as sole manual coding.
+- **Decision authority:** source data, deterministic analytics, validation and release gates remain outside unconstrained model output.
 
 ## Boundary
 
