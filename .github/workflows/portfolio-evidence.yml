@@ -46,6 +46,7 @@ jobs:
             evidence/tir-fod/reproducibility/recompute_results.py \
             evidence/tir-fod/reproducibility/train_public.py \
             evidence/tir-fod/deployment/validate_historical_measurement.py \
+            tools/check_repository_metadata_contract.py \
             tools/portfolio_integrity_check.py
       - name: Run zero-dependency Lodestar smoke checks
         run: python -m evidence.lodestar.public_smoke_test
@@ -63,5 +64,7 @@ jobs:
             --config baseline_n --data /tmp/frozen-data.yaml --seed 42 --dry-run
       - name: Validate historical Jetson evidence boundary
         run: python evidence/tir-fod/deployment/validate_historical_measurement.py
+      - name: Validate repository metadata and license contract
+        run: python tools/check_repository_metadata_contract.py
       - name: Run portfolio evidence integrity checks
         run: python tools/portfolio_integrity_check.py
