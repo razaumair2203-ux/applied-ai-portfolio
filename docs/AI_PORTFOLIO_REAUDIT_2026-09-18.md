@@ -66,10 +66,10 @@ The original workflow compiled four Lodestar files and ran one pure-logic smoke 
 
 **Treatment:** CI now compiles all published Python evidence and runs repository-wide checks for Markdown links, JSON validity, frozen evaluation-contract consistency and key evidence-boundary assertions.
 
-### R05 — S2 — Public model-training reproducibility remains thin
-TIR-FOD shows strong reported methodology and result evidence but the portfolio does not expose a small training/evaluation harness, experiment configuration, partition manifest or aggregate recomputation path.
+### R05 — S2 — Public model-training reproducibility remains thin — **RESOLVED**
+TIR-FOD previously showed strong reported methodology and result evidence without an executable public aggregate-verification path.
 
-**Status:** open. This is now one of the highest-value upgrades.
+**Resolution:** published a sanitized current-revision reproducibility bundle containing 29 seed-level scalar run records, the exact training/evaluation contract, the current acquisition-block split manifest, the recorded relevant environment, a GPU training harness and a zero-dependency recomputation script. CI now recomputes the manuscript headline means/SDs and seed-paired effects and validates the training contract in dry-run mode. Full 29-run GPU retraining is deliberately not performed in portfolio CI.
 
 ### R06 — S2 — Full Lodestar retrieval remains non-reproducible publicly
 The portfolio correctly says this, but a senior RAG reviewer still cannot run the real PostgreSQL/pgvector retrieval path with a small fixture corpus.
