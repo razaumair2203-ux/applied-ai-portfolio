@@ -68,7 +68,7 @@ The public machine-readable record is in [`evidence/mbse/telemetry_replay_cases.
 
 The distinction matters: **encoding precision is not localisation accuracy**. Printing five decimal places does not prove that a physical target estimate is accurate enough for terminal approach or pickup.
 
-## Why this belongs in an AI portfolio
+## AI system assurance contribution
 
 This work demonstrates the engineering around AI that model metrics alone do not cover:
 
