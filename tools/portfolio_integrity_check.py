@@ -67,6 +67,18 @@ def check_tir_fod_reproducibility() -> None:
         "Scissor", "ScrewDriver", "SprayCan", "Tape", "SodaCan", "Wire"
     }
 
+
+def check_lodestar_db_fixture_contract() -> None:
+    base = ROOT / "evidence" / "lodestar" / "fixture"
+    assert (base / "schema.sql").exists()
+    assert (base / "postgres_fixture_test.py").exists()
+    schema = (base / "schema.sql").read_text(encoding="utf-8")
+    test = (base / "postgres_fixture_test.py").read_text(encoding="utf-8")
+    assert "vector(1024)" in schema
+    assert "websearch_to_tsquery" not in schema  # query logic stays in published retrieval module
+    assert "from evidence.lodestar.hybrid_retrieval import hybrid_search" in test
+    assert "criterion_tags" in test and "visa_class" in test
+
 def check_claim_boundaries() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "Evidence boundary." in readme
@@ -83,6 +95,7 @@ def main() -> None:
         check_json_evidence,
         check_lodestar_eval_contract,
         check_tir_fod_reproducibility,
+        check_lodestar_db_fixture_contract,
         check_claim_boundaries,
     ]
     for check in checks:
