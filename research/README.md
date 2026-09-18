@@ -15,6 +15,8 @@ Focus: low-latency processing architectures for concurrent object-detection stre
 
 **Engineering relevance:** real-time computer vision, concurrent inference, latency/throughput trade-offs and deployment-oriented architecture.
 
+**Contribution boundary:** co-author. The publication is used as public evidence of research in this domain; individual contribution is not inferred from author order.
+
 ### TK-Patch: Universal Top-K Adversarial Patches for Cross-Model Person Evasion
 
 **IEEE ICoDT2, 2025**  
@@ -23,6 +25,8 @@ DOI: [10.1109/ICoDT269104.2025.11360694](https://doi.org/10.1109/ICoDT269104.202
 Focus: transferable physical adversarial patches evaluated across multiple YOLO person detectors and real-world transformations.
 
 **Engineering relevance:** adversarial ML, robustness evaluation, cross-model transfer and physical-world testing.
+
+**Contribution boundary:** co-author. The publication is used as public evidence of adversarial-vision research; individual contribution is not inferred from author order.
 
 ## 2026 conference work
 
@@ -34,6 +38,8 @@ Authors include **Umair Raza**.
 Status used in this portfolio: **accepted/presented at IBCAST 2026**. No IEEE Xplore indexing or DOI is claimed until a public record can be independently verified.
 
 **Engineering relevance:** adaptive signal processing, antenna arrays, GNSS resilience and interference suppression.
+
+**Contribution boundary:** co-author; conference status is reported conservatively and no DOI/indexing status is inferred.
 
 ## Public AI dataset
 
@@ -53,6 +59,8 @@ Verified dataset/study scope includes:
 - a **flight-tested Jetson Orin Nano / TensorRT UAV prototype**, including measured onboard/integrated throughput.
 
 A public dataset is treated here as an engineering output in its own right: acquisition design, annotation, curation, source lineage, leakage control, versioning, reproducible partitions and deployment testing are part of the work.
+
+**Programme contribution:** technical direction, experiment/evaluation strategy, deployment review and publication development are documented in the linked Clear Run case; dataset and field work are represented as team-developed rather than sole-authorship output.
 
 [Technical case study](../domains/01-autonomy-edge-ai/clear-run-tir-fod.md) · [Inspectable benchmark result snapshot](../evidence/autonomy_edge_ai/tir_fod/benchmark_results.json)
 
