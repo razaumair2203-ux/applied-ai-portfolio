@@ -1,6 +1,6 @@
 # AI Portfolio Inspection Contract
 
-> **Current scoring note:** this document records the first audit/remediation pass. The stricter independent re-audit and current score are in [AI_PORTFOLIO_REAUDIT_2026-09-18.md](AI_PORTFOLIO_REAUDIT_2026-09-18.md).
+> **Historical audit note:** this document records the first audit/remediation pass. The repository's current release decision is maintained in [FINAL_RELEASE_AUDIT_2026-09-18.md](FINAL_RELEASE_AUDIT_2026-09-18.md). Historical numeric scores are retained for traceability, not presented as recruiter credentials.
 
 **Audit date:** 2026-09-18  
 **Audit target:** a cold AI/ML recruiter, applied-AI hiring manager, senior ML engineer, or aerospace/autonomy technical reviewer.
