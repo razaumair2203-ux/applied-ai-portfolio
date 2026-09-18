@@ -71,10 +71,10 @@ TIR-FOD previously showed strong reported methodology and result evidence withou
 
 **Resolution:** published a sanitized current-revision reproducibility bundle containing 29 seed-level scalar run records, the exact training/evaluation contract, the current acquisition-block split manifest, the recorded relevant environment, a GPU training harness and a zero-dependency recomputation script. CI now recomputes the manuscript headline means/SDs and seed-paired effects and validates the training contract in dry-run mode. Full 29-run GPU retraining is deliberately not performed in portfolio CI.
 
-### R06 — S2 — Full Lodestar retrieval remains non-reproducible publicly
-The portfolio correctly says this, but a senior RAG reviewer still cannot run the real PostgreSQL/pgvector retrieval path with a small fixture corpus.
+### R06 — S2 — Full Lodestar retrieval remains non-reproducible publicly — **RESOLVED**
+A senior RAG reviewer previously could inspect the SQL but could not execute the published hybrid path against a public database fixture.
 
-**Status:** open. Publish a non-sensitive fixture database/bootstrap and end-to-end retrieval test.
+**Resolution:** added a non-sensitive PostgreSQL + pgvector fixture using the same `pgvector/pgvector:pg16` database family as the authoritative development setup. CI now executes the published hybrid retrieval implementation end to end across PostgreSQL FTS, 1024-dimensional pgvector ordering, metadata filters, four candidate lanes, RRF, hydration, authority reranking and non-precedent labeling. Only the heavyweight embedding model is substituted by deterministic fixture query vectors; the private 209-document corpus remains correctly bounded as private.
 
 ### R07 — S2 — Clear Run performance evidence needs machine-readable recomputation
 25.0 FPS / 15.6 FPS and thermal/power figures are well bounded as private measurements, but a public CSV/log extract plus a tiny aggregation script would materially increase trust.
