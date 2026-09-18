@@ -1,0 +1,297 @@
+{
+  "comment": "Frozen adversarial output-contract cases derived from Lodestar's private assessment invariants. These are software-evaluation fixtures, not legal advice or a legal-accuracy benchmark.",
+  "cases": [
+    {
+      "id": "grounded_documented",
+      "criterion_label": "membership criterion",
+      "allowed_chunk_ids": [
+        "11111111-1111-1111-1111-111111111111"
+      ],
+      "valid_evidence_ids": [
+        "ev-membership"
+      ],
+      "model_response": {
+        "status": "documented",
+        "whats_weak": [],
+        "whats_missing": [],
+        "citation_chunk_ids": [
+          "11111111-1111-1111-1111-111111111111"
+        ],
+        "used_evidence_ids": [
+          "ev-membership"
+        ],
+        "rationale": "Grounded fixture response."
+      },
+      "expected": {
+        "status": "documented",
+        "citations": [
+          "11111111-1111-1111-1111-111111111111"
+        ],
+        "used_evidence_ids": [
+          "ev-membership"
+        ],
+        "dropped": 0,
+        "refusal": false
+      }
+    },
+    {
+      "id": "hallucinated_citation_forces_refusal",
+      "criterion_label": "awards criterion",
+      "allowed_chunk_ids": [
+        "22222222-2222-2222-2222-222222222222"
+      ],
+      "valid_evidence_ids": [
+        "ev-award"
+      ],
+      "model_response": {
+        "status": "documented",
+        "citation_chunk_ids": [
+          "chunk_that_does_not_exist"
+        ],
+        "used_evidence_ids": [
+          "ev-award"
+        ],
+        "rationale": "Fabricated citation."
+      },
+      "expected": {
+        "status": "unsupported",
+        "citations": [],
+        "used_evidence_ids": [],
+        "dropped": 1,
+        "refusal": true
+      }
+    },
+    {
+      "id": "mixed_valid_and_hallucinated",
+      "criterion_label": "national importance",
+      "allowed_chunk_ids": [
+        "33333333-3333-3333-3333-333333333333"
+      ],
+      "valid_evidence_ids": [
+        "ev-plan"
+      ],
+      "model_response": {
+        "status": "arguable_but_weak",
+        "citation_chunk_ids": [
+          "33333333-3333-3333-3333-333333333333",
+          "invented-source"
+        ],
+        "used_evidence_ids": [
+          "ev-plan"
+        ],
+        "rationale": "One valid, one invalid citation."
+      },
+      "expected": {
+        "status": "arguable_but_weak",
+        "citations": [
+          "33333333-3333-3333-3333-333333333333"
+        ],
+        "used_evidence_ids": [
+          "ev-plan"
+        ],
+        "dropped": 1,
+        "refusal": false
+      }
+    },
+    {
+      "id": "unique_prefix_recovery",
+      "criterion_label": "final merits",
+      "allowed_chunk_ids": [
+        "abcdef12-3456-7890-abcd-ef1234567890",
+        "99999999-9999-9999-9999-999999999999"
+      ],
+      "valid_evidence_ids": [
+        "ev-1"
+      ],
+      "model_response": {
+        "status": "documented",
+        "citation_chunk_ids": [
+          "abcdef12-3456"
+        ],
+        "used_evidence_ids": [
+          "ev-1"
+        ],
+        "rationale": "Truncated but unique UUID prefix."
+      },
+      "expected": {
+        "status": "documented",
+        "citations": [
+          "abcdef12-3456-7890-abcd-ef1234567890"
+        ],
+        "used_evidence_ids": [
+          "ev-1"
+        ],
+        "dropped": 0,
+        "recovered": 1,
+        "refusal": false
+      }
+    },
+    {
+      "id": "ambiguous_prefix_forces_refusal",
+      "criterion_label": "critical role",
+      "allowed_chunk_ids": [
+        "deadbeef-1111-1111-1111-111111111111",
+        "deadbeef-2222-2222-2222-222222222222"
+      ],
+      "valid_evidence_ids": [
+        "ev-role"
+      ],
+      "model_response": {
+        "status": "documented",
+        "citation_chunk_ids": [
+          "deadbeef"
+        ],
+        "used_evidence_ids": [
+          "ev-role"
+        ],
+        "rationale": "Ambiguous prefix."
+      },
+      "expected": {
+        "status": "unsupported",
+        "citations": [],
+        "used_evidence_ids": [],
+        "dropped": 1,
+        "recovered": 0,
+        "refusal": true
+      }
+    },
+    {
+      "id": "no_retrieved_authority_refuses_before_conclusion",
+      "criterion_label": "scholarly authorship",
+      "allowed_chunk_ids": [],
+      "valid_evidence_ids": [
+        "ev-paper"
+      ],
+      "model_response": {
+        "status": "documented",
+        "citation_chunk_ids": [],
+        "used_evidence_ids": [
+          "ev-paper"
+        ],
+        "rationale": "Should never establish a conclusion."
+      },
+      "expected": {
+        "status": "unsupported",
+        "citations": [],
+        "used_evidence_ids": [],
+        "dropped": 0,
+        "refusal": true
+      }
+    },
+    {
+      "id": "not_applicable_preserved_after_grounding_drop",
+      "criterion_label": "performing arts commercial success",
+      "allowed_chunk_ids": [
+        "44444444-4444-4444-4444-444444444444"
+      ],
+      "valid_evidence_ids": [],
+      "model_response": {
+        "status": "not_applicable",
+        "citation_chunk_ids": [
+          "invented-source"
+        ],
+        "used_evidence_ids": [],
+        "rationale": "Not applicable."
+      },
+      "expected": {
+        "status": "not_applicable",
+        "citations": [],
+        "used_evidence_ids": [],
+        "dropped": 1,
+        "refusal": true
+      }
+    },
+    {
+      "id": "unknown_evidence_id_filtered",
+      "criterion_label": "original contribution",
+      "allowed_chunk_ids": [
+        "55555555-5555-5555-5555-555555555555"
+      ],
+      "valid_evidence_ids": [
+        "ev-valid"
+      ],
+      "model_response": {
+        "status": "documented",
+        "citation_chunk_ids": [
+          "55555555-5555-5555-5555-555555555555"
+        ],
+        "used_evidence_ids": [
+          "ev-valid",
+          "ev-invented"
+        ],
+        "rationale": "Evidence id filter fixture."
+      },
+      "expected": {
+        "status": "documented",
+        "citations": [
+          "55555555-5555-5555-5555-555555555555"
+        ],
+        "used_evidence_ids": [
+          "ev-valid"
+        ],
+        "dropped": 0,
+        "refusal": false
+      }
+    },
+    {
+      "id": "numeric_authority_extra_field_removed",
+      "criterion_label": "judging",
+      "allowed_chunk_ids": [
+        "66666666-6666-6666-6666-666666666666"
+      ],
+      "valid_evidence_ids": [
+        "ev-judge"
+      ],
+      "model_response": {
+        "status": "arguable_but_weak",
+        "citation_chunk_ids": [
+          "66666666-6666-6666-6666-666666666666"
+        ],
+        "used_evidence_ids": [
+          "ev-judge"
+        ],
+        "rationale": "Canonical output only.",
+        "approval_probability": 0.91,
+        "score": 91
+      },
+      "expected": {
+        "status": "arguable_but_weak",
+        "citations": [
+          "66666666-6666-6666-6666-666666666666"
+        ],
+        "used_evidence_ids": [
+          "ev-judge"
+        ],
+        "dropped": 0,
+        "refusal": false,
+        "forbidden_fields_removed": [
+          "approval_probability",
+          "score"
+        ]
+      }
+    },
+    {
+      "id": "invalid_state_rejected",
+      "criterion_label": "membership",
+      "allowed_chunk_ids": [
+        "77777777-7777-7777-7777-777777777777"
+      ],
+      "valid_evidence_ids": [
+        "ev-x"
+      ],
+      "model_response": {
+        "status": "strong_pass",
+        "citation_chunk_ids": [
+          "77777777-7777-7777-7777-777777777777"
+        ],
+        "used_evidence_ids": [
+          "ev-x"
+        ],
+        "rationale": "Invalid state."
+      },
+      "expected": {
+        "schema_rejected": true
+      }
+    }
+  ]
+}

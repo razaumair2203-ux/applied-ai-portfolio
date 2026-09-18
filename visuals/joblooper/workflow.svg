@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+<title id="title">JobLooper governed application workflow</title>
+<desc id="desc">Approved career truth and exact job description flow through preflight, drafting, human review, deterministic release gates, hashed artifacts, submission and outcome learning.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1322"/><stop offset="1" stop-color="#17213a"/></linearGradient>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#8aa4d6"/></marker>
+</defs>
+<rect width="1600" height="760" rx="28" fill="url(#bg)"/>
+<text x="70" y="78" fill="#f8fafc" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="42" font-weight="700">JobLooper — governed AI-assisted application workflow</text>
+<text x="72" y="120" fill="#aab8d2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21">Model assistance is optional; truth, workflow state, approval and release remain deterministic.</text>
+
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+<rect x="70" y="185" width="230" height="160" rx="22" fill="#162540" stroke="#4f7dd8" stroke-width="2"/>
+<text x="95" y="225" fill="#9dbbff" font-size="19" font-weight="700">APPROVED TRUTH</text>
+<text x="95" y="268" fill="#edf4ff" font-size="21"><tspan x="95">reviewed anchors</tspan><tspan x="95" dy="34">provenance + hashes</tspan><tspan x="95" dy="34">explicit boundaries</tspan></text>
+
+<rect x="345" y="185" width="230" height="160" rx="22" fill="#162540" stroke="#4f7dd8" stroke-width="2"/>
+<text x="370" y="225" fill="#9dbbff" font-size="19" font-weight="700">EXACT JD CAPTURE</text>
+<text x="370" y="268" fill="#edf4ff" font-size="21"><tspan x="370">stored source advert</tspan><tspan x="370" dy="34">company / title confirm</tspan><tspan x="370" dy="34">staleness checks</tspan></text>
+
+<rect x="620" y="185" width="230" height="160" rx="22" fill="#162540" stroke="#a78bfa" stroke-width="2"/>
+<text x="645" y="225" fill="#c4b5fd" font-size="19" font-weight="700">PREFLIGHT</text>
+<text x="645" y="268" fill="#f2edff" font-size="21"><tspan x="645">requirement mapping</tspan><tspan x="645" dy="34">gaps / cautions</tspan><tspan x="645" dy="34">proceed / stop decision</tspan></text>
+
+<rect x="895" y="185" width="230" height="160" rx="22" fill="#162540" stroke="#a78bfa" stroke-width="2"/>
+<text x="920" y="225" fill="#c4b5fd" font-size="19" font-weight="700">DRAFT + REVIEW</text>
+<text x="920" y="268" fill="#f2edff" font-size="21"><tspan x="920">approved wording only</tspan><tspan x="920" dy="34">optional AI reasoning</tspan><tspan x="920" dy="34">human sign-off</tspan></text>
+
+<rect x="1170" y="185" width="360" height="160" rx="22" fill="#162540" stroke="#22c55e" stroke-width="2"/>
+<text x="1195" y="225" fill="#86efac" font-size="19" font-weight="700">DETERMINISTIC RELEASE</text>
+<text x="1195" y="268" fill="#edfff3" font-size="21"><tspan x="1195">validation gates + document build</tspan><tspan x="1195" dy="34">DOCX / PDF text checks</tspan><tspan x="1195" dy="34">artifact hashes + manifest</tspan></text>
+
+<path d="M300 265 H335 M575 265 H610 M850 265 H885 M1125 265 H1160" stroke="#8aa4d6" stroke-width="4" marker-end="url(#arrow)"/>
+
+<rect x="190" y="445" width="480" height="170" rx="24" fill="#111d31" stroke="#334c74"/>
+<text x="220" y="490" fill="#f8fafc" font-size="23" font-weight="700">Submission record</text>
+<text x="220" y="535" fill="#dbe7fa" font-size="21"><tspan x="220">exact files sent + fingerprints</tspan><tspan x="220" dy="34">channel / date / screening evidence</tspan><tspan x="220" dy="34">immutable submitted package</tspan></text>
+
+<rect x="930" y="445" width="480" height="170" rx="24" fill="#111d31" stroke="#334c74"/>
+<text x="960" y="490" fill="#f8fafc" font-size="23" font-weight="700">Outcome learning</text>
+<text x="960" y="535" fill="#dbe7fa" font-size="21"><tspan x="960">employer response recorded</tspan><tspan x="960" dy="34">hypotheses kept separate from facts</tspan><tspan x="960" dy="34">similar prior cases surfaced later</tspan></text>
+
+<path d="M1350 345 V405 H430 V435" stroke="#8aa4d6" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+<path d="M670 530 H920" stroke="#8aa4d6" stroke-width="4" marker-end="url(#arrow)"/>
+
+<text x="70" y="700" fill="#9fb0ca" font-size="18">Public implementation: Python 3.10+ standard-library-first engine, local dashboard/CLI, optional assistant integration, deterministic generation and release controls.</text>
+</g>
+</svg>

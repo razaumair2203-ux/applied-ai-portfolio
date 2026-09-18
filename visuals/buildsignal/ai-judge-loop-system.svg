@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">AI judge loop with external anchors</title>
+  <desc id="desc">Diagram showing model output scored by an AI judge, optimized by feedback, and grounded by human review, deterministic tests, references, and production outcomes.</desc>
+  <style>
+    .bg{fill:#fbfcf8}.panel{fill:#f4f7f2;stroke:#142019;stroke-width:2}.box{fill:#fbfcf8;stroke:#142019;stroke-width:2}.anchor{fill:#e7efe6;stroke:#3f7653;stroke-width:2}.risk{fill:#fff4ef;stroke:#af3f2f;stroke-width:2}.title{fill:#101611;font:800 44px Georgia,serif}.sub{fill:#334038;font:500 23px Inter,Arial,sans-serif}.label{fill:#101611;font:800 25px Inter,Arial,sans-serif}.small{fill:#334038;font:500 20px Inter,Arial,sans-serif}.arrow{stroke:#142019;stroke-width:4;fill:none;marker-end:url(#arrow)}.riskline{stroke:#af3f2f;stroke-width:4;fill:none;stroke-dasharray:10 8;marker-end:url(#riskarrow)}
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#142019"/></marker>
+    <marker id="riskarrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#af3f2f"/></marker>
+  </defs>
+  <rect class="bg" width="100%" height="100%"/>
+  <rect class="panel" x="32" y="32" width="1216" height="696" rx="8"/>
+  <text x="88" y="92" class="title">AI can judge AI. It cannot be the whole court.</text>
+  <text x="88" y="128" class="sub">Use the judge for scale. Use external anchors so the loop does not start grading its own homework in a blazer.</text>
+
+  <rect class="box" x="90" y="235" width="230" height="106" rx="8"/>
+  <text x="118" y="277" class="label">Model output</text>
+  <text x="118" y="309" class="small">The thing being judged</text>
+
+  <rect class="risk" x="410" y="215" width="236" height="146" rx="8"/>
+  <text x="438" y="267" class="label">AI judge</text>
+  <text x="438" y="301" class="small">Fast, useful, biased</text>
+  <text x="438" y="329" class="small">on a bad day</text>
+
+  <rect class="box" x="742" y="235" width="230" height="106" rx="8"/>
+  <text x="770" y="277" class="label">Optimizer</text>
+  <text x="770" y="309" class="small">Learns the scorer</text>
+
+  <rect class="risk" x="476" y="474" width="328" height="100" rx="8"/>
+  <text x="506" y="515" class="label">Goodhart zone</text>
+  <text x="506" y="548" class="small">Score goes up. Truth takes the stairs.</text>
+
+  <path class="arrow" d="M320 288 H400"/>
+  <path class="arrow" d="M646 288 H732"/>
+  <path class="arrow" d="M857 341 C858 428 736 474 640 474"/>
+  <path class="riskline" d="M640 474 C540 432 505 382 526 362"/>
+  <path class="arrow" d="M742 288 C742 178 282 166 206 232"/>
+
+  <rect class="anchor" x="92" y="594" width="222" height="72" rx="8"/>
+  <text x="122" y="638" class="label">Human review</text>
+
+  <rect class="anchor" x="376" y="594" width="222" height="72" rx="8"/>
+  <text x="406" y="638" class="label">Tests &amp; facts</text>
+
+  <rect class="anchor" x="660" y="594" width="222" height="72" rx="8"/>
+  <text x="690" y="638" class="label">References</text>
+
+  <rect class="anchor" x="944" y="594" width="222" height="72" rx="8"/>
+  <text x="974" y="638" class="label">User outcomes</text>
+
+  <path class="arrow" d="M203 594 C250 500 346 386 410 332"/>
+  <path class="arrow" d="M487 594 C512 507 523 423 528 362"/>
+  <path class="arrow" d="M771 594 C724 504 648 406 586 358"/>
+  <path class="arrow" d="M1055 594 C999 494 937 403 905 341"/>
+</svg>

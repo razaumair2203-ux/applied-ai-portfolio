@@ -1,0 +1,69 @@
+{
+  "version": "2026-09-18",
+  "purpose": "Verification contract for the Clear Run detection-to-retention mission chain. Status records demonstrated evidence without promoting an intermediate state to mission completion.",
+  "stages": [
+    {
+      "id": "CR-01",
+      "stage": "RGB / passive-IR detection output",
+      "status": "demonstrated",
+      "acceptance_measure": "event-level detection evidence with class/confidence and retained source media",
+      "current_evidence": "annotated RGB and passive-IR field-trial outputs"
+    },
+    {
+      "id": "CR-02",
+      "stage": "Structured target-event logging",
+      "status": "demonstrated",
+      "acceptance_measure": "event record contains image location, target coordinates, UAV pose and altitude",
+      "current_evidence": "12 RGB event records across 8 reported classes"
+    },
+    {
+      "id": "CR-03",
+      "stage": "Target geolocation accuracy",
+      "status": "open_measurement",
+      "acceptance_measure": "error distribution against surveyed target coordinates under declared altitude/pose conditions",
+      "current_evidence": "coordinates are produced, but surveyed ground truth is absent in the reviewed batch"
+    },
+    {
+      "id": "CR-04",
+      "stage": "GCS target ingest and operator handling",
+      "status": "implemented_evidence",
+      "acceptance_measure": "target message ingested, represented correctly and retained with traceable event identity",
+      "current_evidence": "implemented interface and GCS evidence; quantitative end-to-end response measurement remains open"
+    },
+    {
+      "id": "CR-05",
+      "stage": "GCS to UGV task assignment / acknowledgement",
+      "status": "open_measurement",
+      "acceptance_measure": "assignment success rate, acknowledgement latency and failure/retry behaviour",
+      "current_evidence": "interface represented; linked end-to-end measurement not yet established"
+    },
+    {
+      "id": "CR-06",
+      "stage": "UGV approach and terminal alignment",
+      "status": "open_measurement",
+      "acceptance_measure": "arrival error, terminal alignment error, time-to-target and intervention/retry count",
+      "current_evidence": "ground platform/navigation development evidence; quantitative closure pending"
+    },
+    {
+      "id": "CR-07",
+      "stage": "Physical capture",
+      "status": "development",
+      "acceptance_measure": "capture success rate by object class/geometry and approach condition",
+      "current_evidence": "retrieval mechanism design/development; integrated success-rate evidence pending"
+    },
+    {
+      "id": "CR-08",
+      "stage": "Retention after movement",
+      "status": "open_measurement",
+      "acceptance_measure": "retained-capture success after declared post-capture motion profile",
+      "current_evidence": "no quantitative retained-capture result yet"
+    },
+    {
+      "id": "CR-09",
+      "stage": "End-to-end detection-to-retention mission",
+      "status": "open_measurement",
+      "acceptance_measure": "mission success rate with trace from source detection through retained physical removal",
+      "current_evidence": "intermediate subsystems demonstrated; full chain not yet quantitatively closed"
+    }
+  ]
+}

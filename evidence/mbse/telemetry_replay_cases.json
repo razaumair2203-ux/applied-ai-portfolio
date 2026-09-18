@@ -1,0 +1,45 @@
+{
+  "schema": "mbse.telemetry-replay.v1",
+  "status": "constructed_software_boundary_examples",
+  "observed_flight_incident": false,
+  "frozen_baseline_scope": "formatter-parser methods only; no radios, ROS, rover connection or flight mission invoked",
+  "formatter_contract": {
+    "coordinate_precision_decimals": 5,
+    "max_return_characters": 49,
+    "optional_fields": [
+      "event_id",
+      "count"
+    ]
+  },
+  "cases": [
+    {
+      "id": "control-short-message",
+      "input_condition": "valid short target message",
+      "outcome": "intended coordinates preserved",
+      "classification": "control"
+    },
+    {
+      "id": "metadata-truncation",
+      "input_condition": "event_id=12345 and count=15 added",
+      "outcome": "message truncated after lon=7; consumer accepted numeric longitude 7.0",
+      "classification": "unsafe_accept"
+    },
+    {
+      "id": "negative-coordinate-truncation",
+      "input_condition": "negative-coordinate message with truncation",
+      "outcome": "longitude field became empty; consumer substituted aircraft longitude from test fixture",
+      "classification": "unsafe_substitution"
+    }
+  ],
+  "derived_requirements": [
+    {
+      "id": "R-COORD",
+      "summary": "Complete valid target messages recover supplied coordinates; incomplete/unsupported messages are explicitly rejected."
+    },
+    {
+      "id": "R-ORIGIN",
+      "summary": "Malformed or absent target coordinates must not silently substitute aircraft position."
+    }
+  ],
+  "claim_boundary": "Constructed replay evidence supports interface-contract and regression requirements only; it does not establish a flight incident, localisation accuracy, or deployed transport performance."
+}

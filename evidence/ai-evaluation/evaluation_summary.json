@@ -1,0 +1,69 @@
+{
+  "schema": "ai-evaluation.aggregate-v1",
+  "provenance": {
+    "source_repository": "private JobLoop-AI evaluation workspace",
+    "snapshots": [
+      "2026-05-03T12:07:25.638Z",
+      "2026-05-03T12:23:49.783Z",
+      "2026-05-09T21:04:25.836Z"
+    ],
+    "disclosure": "Aggregate public-safe summary only; no private or pair-level source content is reproduced."
+  },
+  "pilot": {
+    "total_pairs": 50,
+    "split": {
+      "train": 20,
+      "validation": 15,
+      "held_out": 15
+    },
+    "coverage_counts": {
+      "personas": 9,
+      "industries": 40,
+      "regions": 8,
+      "jd_styles": 5
+    },
+    "sensitivity": {
+      "fabrication_detection": 1,
+      "metric_detection": 0.92,
+      "date_detection": 1
+    },
+    "reference_ceiling": {
+      "cv_pass_rate": 1,
+      "jd_pass_rate": 1,
+      "note": "Reference/evaluation ceiling for the frozen pilot, not a production success rate."
+    }
+  },
+  "baseline_comparison": {
+    "evaluated_pairs": 20,
+    "baseline_structural_pass_rate": 0.6,
+    "reference_ceiling_pass_rate": 1,
+    "claim_boundary": "This comparison describes the frozen test harness, not real-world hiring or application outcomes."
+  },
+  "jd_parser_rescore": {
+    "pairs_scored": 38,
+    "mean": 0.8599717647037978,
+    "median": 0.8825525789293904,
+    "min": 0.6205137525748213,
+    "max": 0.9944444444444444,
+    "note": "Aggregate parser score after ground-truth corrections and scoring changes; it is not an ATS score."
+  },
+  "safeguard_example": {
+    "overall_safe": false,
+    "decision": "BLOCKED",
+    "reason": "Improvement was not statistically significant and was below the configured materiality threshold.",
+    "requires_human_review": true,
+    "significance_gate": "ANOVA p >= 0.05 blocked deployment in the retained safeguard snapshot."
+  },
+  "interpretation": [
+    "Evaluation data is separated into train, validation and held-out partitions.",
+    "Changes are compared against frozen cases rather than judged from anecdotal outputs.",
+    "Fabrication, metric preservation and date preservation are measured separately.",
+    "A change can be blocked even when it appears subjectively acceptable if evidence does not show a material improvement.",
+    "Human review remains a release gate."
+  ],
+  "limitations": [
+    "Historical snapshots from May 2026; they are not live product metrics.",
+    "The public summary does not expose pair-level prompts, CVs, job descriptions or personal data.",
+    "Scores belong to the original harness definitions and should not be compared directly with unrelated benchmarks."
+  ]
+}

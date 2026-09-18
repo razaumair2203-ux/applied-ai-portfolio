@@ -1,0 +1,76 @@
+name: Engineering validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  technical-validation:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: eb
+          POSTGRES_PASSWORD: eb
+          POSTGRES_DB: eb
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U eb -d eb"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      LODESTAR_FIXTURE_DSN: postgresql://eb:eb@localhost:5432/eb
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compile published Python modules
+        run: |
+          python -m py_compile             evidence/lodestar/legal_chunking.py             evidence/lodestar/hybrid_retrieval.py             evidence/lodestar/rerank.py             evidence/lodestar/embedding_provider.py             evidence/lodestar/grounding_eval.py             evidence/lodestar/retrieval_integration_test.py             evidence/lodestar/public_smoke_test.py             evidence/lodestar/reliability_regression.py             evidence/lodestar/fixture/postgres_fixture_test.py             evidence/lodestar/fixture/authority_ablation.py             evidence/lodestar/assessment_eval/assessment_guardrail.py             evidence/lodestar/assessment_eval/run_eval.py             evidence/clear-run/edge_detector_excerpt.py             evidence/clear-run/validate_field_evidence.py             evidence/mbse/validate_mbse_evidence.py             evidence/ai-evaluation/validate_evaluation_summary.py             evidence/tir-fod/reproducibility/recompute_results.py             evidence/tir-fod/reproducibility/train_public.py             evidence/tir-fod/deployment/validate_historical_measurement.py             tools/engineering_validation.py
+
+      - name: Lodestar retrieval logic
+        run: python -m evidence.lodestar.public_smoke_test
+
+      - name: Lodestar reliability regression
+        run: python -m evidence.lodestar.reliability_regression
+
+      - name: Install PostgreSQL fixture dependency
+        run: pip install -r evidence/lodestar/fixture/requirements.txt
+
+      - name: Lodestar PostgreSQL + pgvector integration
+        run: python -m evidence.lodestar.fixture.postgres_fixture_test
+
+      - name: Lodestar authority-policy ablation
+        run: python -m evidence.lodestar.fixture.authority_ablation
+
+      - name: Lodestar structured-output evaluation
+        run: python -m evidence.lodestar.assessment_eval.run_eval
+
+      - name: Validate Clear Run field evidence and mission gates
+        run: python evidence/clear-run/validate_field_evidence.py
+
+      - name: Validate MBSE telemetry evidence
+        run: python evidence/mbse/validate_mbse_evidence.py
+
+      - name: Validate aggregate AI evaluation evidence
+        run: python evidence/ai-evaluation/validate_evaluation_summary.py
+
+      - name: Recompute TIR-FOD repeated-run metrics
+        run: python evidence/tir-fod/reproducibility/recompute_results.py
+
+      - name: Validate TIR-FOD training configuration
+        run: |
+          python evidence/tir-fod/reproducibility/train_public.py             --config baseline_n --data /tmp/frozen-data.yaml --seed 42 --dry-run
+
+      - name: Validate historical Jetson measurement record
+        run: python evidence/tir-fod/deployment/validate_historical_measurement.py
+
+      - name: Repository engineering checks
+        run: python tools/engineering_validation.py

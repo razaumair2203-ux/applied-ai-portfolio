@@ -1,0 +1,71 @@
+{
+  "snapshot_date": "2026-09-10",
+  "source_scope": "Initial Clear Run field-evidence batch reviewed in the private programme repository; public portfolio copy contains aggregate non-location-sensitive evidence only.",
+  "video_evidence": {
+    "unique_videos": 8,
+    "approximate_total_duration_seconds": 765,
+    "channels": {
+      "RGB": 5,
+      "IR": 3
+    }
+  },
+  "structured_rgb_events": {
+    "events": 12,
+    "reported_classes": [
+      "AllenKey",
+      "Glove",
+      "MetalShard",
+      "Pen",
+      "Rock",
+      "Screw",
+      "ScrewDriver",
+      "Wrench"
+    ],
+    "class_count": 8,
+    "confidence": {
+      "min": 0.5488,
+      "mean": 0.7125,
+      "max": 0.8887,
+      "meaning": "model confidence; not calibrated probability or accuracy"
+    },
+    "altitude_agl_m": {
+      "min": 1.176,
+      "mean": 2.069,
+      "max": 2.334
+    },
+    "recorded_fields": [
+      "event_id",
+      "camera",
+      "class_id",
+      "class_name",
+      "confidence",
+      "target_coordinates",
+      "image_center",
+      "first_seen",
+      "last_seen",
+      "count",
+      "altitude_agl",
+      "uav_position",
+      "uav_roll",
+      "uav_pitch",
+      "uav_yaw"
+    ]
+  },
+  "demonstrated": [
+    "annotated RGB small-object detections",
+    "annotated passive-IR small-object detections",
+    "class and confidence output",
+    "target-coordinate output",
+    "structured RGB event records containing image location, target coordinates, UAV pose and altitude"
+  ],
+  "not_established": [
+    "detector precision, recall, F1 or probability of detection from this trial batch",
+    "geolocation accuracy against surveyed target positions",
+    "track persistence or continuity",
+    "GCS-to-UGV task acknowledgement latency or reliability",
+    "terminal guidance accuracy",
+    "capture success rate",
+    "retention after subsequent movement",
+    "end-to-end autonomous mission success rate"
+  ]
+}

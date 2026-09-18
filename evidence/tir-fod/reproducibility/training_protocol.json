@@ -1,0 +1,207 @@
+{
+  "protocol_version": "TIR-FOD current revision public contract 2026-09-18",
+  "full_benchmark_split": {
+    "source_grouping": "source-frame grouped before derivatives",
+    "initial_shuffle_seed": 42,
+    "source_frames": {
+      "train": 2450,
+      "validation": 529,
+      "test": 520
+    },
+    "images": {
+      "train": 18221,
+      "validation": 529,
+      "test": 520
+    },
+    "boxes": {
+      "train": 31363,
+      "validation": 846,
+      "test": 826
+    },
+    "validation_and_test": "source originals only",
+    "train": "source originals plus ordinary stored derivatives",
+    "excluded_from_train": "stored four-image mosaics",
+    "authority": "frozen distributed lists, not split regeneration from seed"
+  },
+  "training_base": {
+    "epochs": 60,
+    "imgsz": 640,
+    "batch": 32,
+    "workers": 8,
+    "patience": 15,
+    "deterministic": true,
+    "optimizer": "auto",
+    "close_mosaic": 10,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "degrees": 0,
+    "translate": 0.1,
+    "scale": 0.5,
+    "shear": 0,
+    "perspective": 0,
+    "flipud": 0,
+    "fliplr": 0.5,
+    "mosaic": 1,
+    "mixup": 0,
+    "copy_paste": 0,
+    "validation_during_training": true
+  },
+  "configs": {
+    "baseline_n": {
+      "model": "yolov8n.pt",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "deviation": "none"
+    },
+    "baseline_s": {
+      "model": "yolov8s.pt",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "deviation": "none",
+      "recorded_optimizer_resolution": "MuSGD under optimizer=auto in the recorded environment"
+    },
+    "baseline_m": {
+      "model": "yolov8m.pt",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "deviation": "none"
+    },
+    "baseline_11s": {
+      "model": "yolo11s.pt",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "deviation": "none"
+    },
+    "baseline_11m": {
+      "model": "yolo11m.pt",
+      "seeds": [
+        42,
+        43
+      ],
+      "deviation": "two-seed supplementary capacity point"
+    },
+    "baseline_12s": {
+      "model": "yolo12s.pt",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "deviation": "none"
+    },
+    "originals_fixedopt_s": {
+      "model": "yolov8s.pt",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "deviation": {
+        "optimizer": "MuSGD",
+        "lr0": 0.01,
+        "momentum": 0.9
+      }
+    },
+    "contam_matched_s": {
+      "model": "yolov8s.pt",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "deviation": {
+        "optimizer": "MuSGD",
+        "lr0": 0.01,
+        "momentum": 0.9
+      },
+      "train_images": 18221
+    },
+    "framelevel_12c_s": {
+      "model": "yolov8s.pt",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "deviation": "none",
+      "split_counts": {
+        "train": 1169,
+        "validation": 252,
+        "test": 249
+      }
+    },
+    "xsession_12c_s": {
+      "model": "yolov8s.pt",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "deviation": "none",
+      "split_counts": {
+        "train": 1132,
+        "validation": 377,
+        "test": 161
+      },
+      "acquisition_block_overlap": 0
+    }
+  },
+  "acquisition_block_study": {
+    "classes": [
+      "HeadSet",
+      "MetalShard",
+      "Screw",
+      "Nut",
+      "PaperCup",
+      "SafetyGoggle",
+      "Scissor",
+      "ScrewDriver",
+      "SprayCan",
+      "Tape",
+      "SodaCan",
+      "Wire"
+    ],
+    "shared_source_pool": 1670,
+    "block_definition": "maximal runs of consecutive source-frame file indices with gap <= 2",
+    "frozen_membership_file": "current_v2_split_manifest.json"
+  },
+  "evaluation": {
+    "checkpoint_selection": "best validation checkpoint from each training run",
+    "held_out_split": "test",
+    "metrics": [
+      "test_mAP50",
+      "test_mAP50_95",
+      "test_mAP75",
+      "precision",
+      "recall"
+    ],
+    "aggregation": "mean and sample standard deviation across seeds",
+    "paired_comparisons": [
+      [
+        "contam_matched_s",
+        "baseline_s"
+      ],
+      [
+        "baseline_s",
+        "originals_fixedopt_s"
+      ],
+      [
+        "framelevel_12c_s",
+        "xsession_12c_s"
+      ]
+    ]
+  }
+}

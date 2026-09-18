@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="t d">
+<title id="t">BuildSignal AI admin workspace</title>
+<desc id="d">Public-safe rendering of the current BuildSignal AI admin page source, showing the Today workspace, owner review gates, KPI strip, navigation, and review queue.</desc>
+<rect width="1400" height="820" fill="#f4f7f2"/>
+<rect x="42" y="38" width="1316" height="118" rx="10" fill="#fbfcf8" stroke="#cbd7cc"/>
+<text x="76" y="72" fill="#af3f2f" font-family="Arial,sans-serif" font-size="13" font-weight="800" letter-spacing="2">ADMIN</text>
+<text x="76" y="115" fill="#101611" font-family="Georgia,serif" font-size="42" font-weight="700">Today workspace.</text>
+<text x="76" y="143" fill="#667268" font-family="Arial,sans-serif" font-size="16">Review the selected queue, approve it, or send it back for revision.</text>
+<g font-family="Arial,sans-serif" font-size="12" font-weight="700">
+  <rect x="892" y="67" width="118" height="28" rx="14" fill="#e7efe6"/><text x="951" y="86" text-anchor="middle" fill="#3f7653">LOCAL MODE</text>
+  <rect x="1022" y="67" width="166" height="28" rx="14" fill="#e7efe6"/><text x="1105" y="86" text-anchor="middle" fill="#3f7653">OWNER APPROVAL GATE</text>
+  <rect x="1200" y="67" width="122" height="28" rx="14" fill="#fff4ef"/><text x="1261" y="86" text-anchor="middle" fill="#af3f2f">AUTH BEFORE HOSTING</text>
+</g>
+
+<rect x="42" y="180" width="1316" height="118" rx="10" fill="#fbfcf8" stroke="#142019"/>
+<text x="76" y="216" fill="#af3f2f" font-family="Arial,sans-serif" font-size="13" font-weight="800" letter-spacing="2">NEXT ACTION</text>
+<text x="76" y="254" fill="#101611" font-family="Georgia,serif" font-size="30" font-weight="700">Owner review before publication.</text>
+<text x="76" y="280" fill="#667268" font-family="Arial,sans-serif" font-size="15">Research, media, QA and article state remain visible before a publish decision.</text>
+<rect x="1112" y="210" width="208" height="58" rx="8" fill="#e7efe6" stroke="#cbd7cc"/>
+<text x="1216" y="234" text-anchor="middle" fill="#667268" font-family="Arial,sans-serif" font-size="11" font-weight="700">PUBLISH AUTHORITY</text>
+<text x="1216" y="257" text-anchor="middle" fill="#101611" font-family="Arial,sans-serif" font-size="16" font-weight="700">Owner-controlled</text>
+
+<g transform="translate(42,322)" font-family="Arial,sans-serif">
+  <rect x="0" y="0" width="250" height="104" rx="8" fill="#fbfcf8" stroke="#cbd7cc"/>
+  <text x="22" y="28" fill="#667268" font-size="12" font-weight="800">PACKAGES</text><text x="22" y="68" fill="#101611" font-size="30" font-weight="700">Tracked</text><text x="22" y="90" fill="#667268" font-size="12">articles / media / social</text>
+  <rect x="268" y="0" width="250" height="104" rx="8" fill="#fbfcf8" stroke="#cbd7cc"/>
+  <text x="290" y="28" fill="#667268" font-size="12" font-weight="800">REVIEW</text><text x="290" y="68" fill="#af3f2f" font-size="30" font-weight="700">Needs owner</text><text x="290" y="90" fill="#667268" font-size="12">explicit decision required</text>
+  <rect x="536" y="0" width="250" height="104" rx="8" fill="#fbfcf8" stroke="#cbd7cc"/>
+  <text x="558" y="28" fill="#667268" font-size="12" font-weight="800">BLOCKED</text><text x="558" y="68" fill="#9f7a17" font-size="30" font-weight="700">Not approved</text><text x="558" y="90" fill="#667268" font-size="12">cannot publish</text>
+  <rect x="804" y="0" width="250" height="104" rx="8" fill="#fbfcf8" stroke="#cbd7cc"/>
+  <text x="826" y="28" fill="#667268" font-size="12" font-weight="800">MEDIA</text><text x="826" y="68" fill="#345f83" font-size="30" font-weight="700">Linked</text><text x="826" y="90" fill="#667268" font-size="12">source + review state</text>
+</g>
+
+<rect x="42" y="454" width="220" height="300" rx="8" fill="#fbfcf8" stroke="#cbd7cc"/>
+<text x="66" y="486" fill="#667268" font-family="Arial,sans-serif" font-size="12" font-weight="800">WORKSPACES</text>
+<g font-family="Arial,sans-serif" font-size="15">
+  <rect x="58" y="504" width="188" height="34" rx="5" fill="#101611"/><text x="78" y="526" fill="#f4f7f2" font-weight="700">Today</text>
+  <text x="78" y="562" fill="#334038">Articles</text><text x="78" y="592" fill="#334038">Media</text><text x="78" y="622" fill="#334038">Video</text>
+  <text x="78" y="652" fill="#334038">Audio</text><text x="78" y="682" fill="#334038">Research</text><text x="78" y="712" fill="#334038">QA</text><text x="78" y="742" fill="#334038">Publish</text>
+</g>
+
+<rect x="284" y="454" width="1074" height="300" rx="8" fill="#fbfcf8" stroke="#cbd7cc"/>
+<text x="314" y="492" fill="#af3f2f" font-family="Arial,sans-serif" font-size="12" font-weight="800" letter-spacing="2">TODAY</text>
+<text x="314" y="530" fill="#101611" font-family="Georgia,serif" font-size="30" font-weight="700">Review queue and publication controls</text>
+<rect x="314" y="562" width="1014" height="72" rx="7" fill="#f4f7f2" stroke="#cbd7cc"/>
+<text x="338" y="590" fill="#101611" font-family="Arial,sans-serif" font-size="16" font-weight="700">Research package</text>
+<text x="338" y="616" fill="#667268" font-family="Arial,sans-serif" font-size="13">Sources, claims, media and QA state remain visible before approval.</text>
+<rect x="1150" y="580" width="154" height="30" rx="15" fill="#fff4ef"/><text x="1227" y="600" text-anchor="middle" fill="#af3f2f" font-family="Arial,sans-serif" font-size="12" font-weight="700">NEEDS REVIEW</text>
+
+<rect x="314" y="648" width="1014" height="72" rx="7" fill="#f4f7f2" stroke="#cbd7cc"/>
+<text x="338" y="676" fill="#101611" font-family="Arial,sans-serif" font-size="16" font-weight="700">Publish package</text>
+<text x="338" y="702" fill="#667268" font-family="Arial,sans-serif" font-size="13">Owner approval is separate from drafting and revision state.</text>
+<rect x="1150" y="666" width="154" height="30" rx="15" fill="#e7efe6"/><text x="1227" y="686" text-anchor="middle" fill="#3f7653" font-family="Arial,sans-serif" font-size="12" font-weight="700">GATED</text>
+
+<text x="42" y="794" fill="#667268" font-family="Arial,sans-serif" font-size="14">Rendered from the current BuildSignal AI admin-page source and documented workflow states.</text>
+</svg>

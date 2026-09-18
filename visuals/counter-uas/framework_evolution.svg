@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="487" height="186" preserveAspectRatio="xMinYMin meet" viewBox="0 0 487 186" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="487" height="186"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-186)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="136" width="112" height="43" rx="5" ry="5" style="stroke: rgb(78%,87%,88%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(92%,96%,96%); fill-rule: evenodd;"/>
+			<text x="31.443359374999996" y="163" style="font-family: BodyBold; font-size: 9px;fill: rgb(7%,19%,29%); stroke:none;" transform="translate(0,326) scale(1,-1)">P1 / AI vision</text>
+			<text x="33.162109375" y="146" style="font-family: Body; font-size: 8px;fill: rgb(32%,38%,41%); stroke:none;" transform="translate(0,292) scale(1,-1)">Visual records</text>
+			<path d="M 56,136 L 56,118 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="125" y="136" width="112" height="43" rx="5" ry="5" style="stroke: rgb(78%,87%,88%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(92%,96%,96%); fill-rule: evenodd;"/>
+			<text x="144.426513671875" y="163" style="font-family: BodyBold; font-size: 9px;fill: rgb(7%,19%,29%); stroke:none;" transform="translate(0,326) scale(1,-1)">P4 / Optical motion</text>
+			<text x="144.97265625" y="146" style="font-family: Body; font-size: 8px;fill: rgb(32%,38%,41%); stroke:none;" transform="translate(0,292) scale(1,-1)">May share P1 imagery</text>
+			<path d="M 181,136 L 181,118 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="250" y="136" width="112" height="43" rx="5" ry="5" style="stroke: rgb(78%,87%,88%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(92%,96%,96%); fill-rule: evenodd;"/>
+			<text x="278.033203125" y="163" style="font-family: BodyBold; font-size: 9px;fill: rgb(7%,19%,29%); stroke:none;" transform="translate(0,326) scale(1,-1)">P2 / Passive RF</text>
+			<text x="282.083984375" y="146" style="font-family: Body; font-size: 8px;fill: rgb(32%,38%,41%); stroke:none;" transform="translate(0,292) scale(1,-1)">Future records</text>
+			<path d="M 306,136 L 306,118 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="375" y="136" width="112" height="43" rx="5" ry="5" style="stroke: rgb(78%,87%,88%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(92%,96%,96%); fill-rule: evenodd;"/>
+			<text x="406.568603515625" y="163" style="font-family: BodyBold; font-size: 9px;fill: rgb(7%,19%,29%); stroke:none;" transform="translate(0,326) scale(1,-1)">P3 / Acoustic</text>
+			<text x="407.083984375" y="146" style="font-family: Body; font-size: 8px;fill: rgb(32%,38%,41%); stroke:none;" transform="translate(0,292) scale(1,-1)">Future records</text>
+			<path d="M 431,136 L 431,118 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 56,118 L 431,118 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 243.5,118 L 243.5,104 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="56" y="60" width="375" height="44" rx="5" ry="5" style="stroke: rgb(78%,87%,88%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(92%,96%,96%); fill-rule: evenodd;"/>
+			<text x="189.264892578125" y="88" style="font-family: BodyBold; font-size: 9px;fill: rgb(7%,19%,29%); stroke:none;" transform="translate(0,176) scale(1,-1)">P5 / Evidence representation</text>
+			<text x="149.232421875" y="70" style="font-family: Body; font-size: 8px;fill: rgb(32%,38%,41%); stroke:none;" transform="translate(0,140) scale(1,-1)">Recording origin · shared sources · observation availability</text>
+			<path d="M 243.5,60 L 243.5,45 Z" style="stroke: rgb(7%,49%,52%); stroke-linecap: butt; stroke-width: 1;"/>
+			<rect x="96" y="1" width="295" height="44" rx="5" ry="5" style="stroke: rgb(78%,87%,88%); stroke-linecap: butt; stroke-width: 0.5; fill: rgb(92%,96%,96%); fill-rule: evenodd;"/>
+			<text x="174.04443359375" y="29" style="font-family: BodyBold; font-size: 9px;fill: rgb(7%,19%,29%); stroke:none;" transform="translate(0,58) scale(1,-1)">Retrospective reporting and research</text>
+			<text x="167.6015625" y="11" style="font-family: Body; font-size: 8px;fill: rgb(32%,38%,41%); stroke:none;" transform="translate(0,22) scale(1,-1)">Compare interpretations of the same evidence</text>
+		</g>
+	</g>
+</svg>

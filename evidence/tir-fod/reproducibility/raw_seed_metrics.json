@@ -1,0 +1,309 @@
+{
+  "source": "Sanitized scalar run records copied from the authoritative TIR-FOD revision numerical QA",
+  "provenance": {
+    "private_source": "05_CURRENT_PAPER/audit/REVISION_NUMERICAL_QA.json",
+    "copied_fields": [
+      "config",
+      "seed",
+      "model",
+      "test_mAP50",
+      "test_mAP50_95",
+      "test_mAP75",
+      "precision",
+      "recall"
+    ],
+    "private_paths_removed": true
+  },
+  "runs": [
+    {
+      "config": "baseline_n",
+      "seed": 42,
+      "model": "yolov8n.pt",
+      "test_mAP50": 0.9947955765482084,
+      "test_mAP50_95": 0.8585124799501149,
+      "test_mAP75": 0.9675805793793653,
+      "precision": 0.9832438449493538,
+      "recall": 0.9923990504049457
+    },
+    {
+      "config": "baseline_n",
+      "seed": 43,
+      "model": "yolov8n.pt",
+      "test_mAP50": 0.9949276137332406,
+      "test_mAP50_95": 0.8607453233293859,
+      "test_mAP75": 0.9605327599705945,
+      "precision": 0.9863334700642663,
+      "recall": 0.9895448951430469
+    },
+    {
+      "config": "baseline_n",
+      "seed": 44,
+      "model": "yolov8n.pt",
+      "test_mAP50": 0.9944877231890021,
+      "test_mAP50_95": 0.8617601302762464,
+      "test_mAP75": 0.963657064875242,
+      "precision": 0.9816044444676204,
+      "recall": 0.9919356664605299
+    },
+    {
+      "config": "baseline_s",
+      "seed": 42,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9940363627985115,
+      "test_mAP50_95": 0.8582105013426725,
+      "test_mAP75": 0.9596265654663348,
+      "precision": 0.9866140036011839,
+      "recall": 0.9883759211088573
+    },
+    {
+      "config": "baseline_s",
+      "seed": 43,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9919788244539897,
+      "test_mAP50_95": 0.8532099274536546,
+      "test_mAP75": 0.9542675763130448,
+      "precision": 0.9764348774940573,
+      "recall": 0.9880196806463065
+    },
+    {
+      "config": "baseline_s",
+      "seed": 44,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9940974845379079,
+      "test_mAP50_95": 0.8590944156311349,
+      "test_mAP75": 0.9625884744298012,
+      "precision": 0.9795981682501388,
+      "recall": 0.993518072336634
+    },
+    {
+      "config": "baseline_m",
+      "seed": 42,
+      "model": "yolov8m.pt",
+      "test_mAP50": 0.9939417964814387,
+      "test_mAP50_95": 0.8608808963143558,
+      "test_mAP75": 0.9691925619821874,
+      "precision": 0.9838316280421687,
+      "recall": 0.9940491271573115
+    },
+    {
+      "config": "baseline_m",
+      "seed": 43,
+      "model": "yolov8m.pt",
+      "test_mAP50": 0.9905502598913726,
+      "test_mAP50_95": 0.8522146092759034,
+      "test_mAP75": 0.9518584368045637,
+      "precision": 0.9823373230671868,
+      "recall": 0.99036512418545
+    },
+    {
+      "config": "baseline_m",
+      "seed": 44,
+      "model": "yolov8m.pt",
+      "test_mAP50": 0.991103444669941,
+      "test_mAP50_95": 0.8536232633588995,
+      "test_mAP75": 0.9525790743318029,
+      "precision": 0.9830531495251528,
+      "recall": 0.9872995013527925
+    },
+    {
+      "config": "baseline_11s",
+      "seed": 42,
+      "model": "yolo11s.pt",
+      "test_mAP50": 0.9910316205533599,
+      "test_mAP50_95": 0.8577190560406747,
+      "test_mAP75": 0.9527253190864227,
+      "precision": 0.987201184439088,
+      "recall": 0.9916126152297146
+    },
+    {
+      "config": "baseline_11s",
+      "seed": 43,
+      "model": "yolo11s.pt",
+      "test_mAP50": 0.9946738189079456,
+      "test_mAP50_95": 0.8611643868717986,
+      "test_mAP75": 0.9653607593644606,
+      "precision": 0.9833252873501026,
+      "recall": 0.9952938776077042
+    },
+    {
+      "config": "baseline_11s",
+      "seed": 44,
+      "model": "yolo11s.pt",
+      "test_mAP50": 0.994646328096456,
+      "test_mAP50_95": 0.861070402672611,
+      "test_mAP75": 0.9613864727494817,
+      "precision": 0.9836911043567824,
+      "recall": 0.9969508702659139
+    },
+    {
+      "config": "baseline_11m",
+      "seed": 42,
+      "model": "yolo11m.pt",
+      "test_mAP50": 0.9912651439318109,
+      "test_mAP50_95": 0.8517158088397296,
+      "test_mAP75": 0.9523412440795517,
+      "precision": 0.9846169305861452,
+      "recall": 0.9931019528825054
+    },
+    {
+      "config": "baseline_11m",
+      "seed": 43,
+      "model": "yolo11m.pt",
+      "test_mAP50": 0.9940750988142295,
+      "test_mAP50_95": 0.8566251962225299,
+      "test_mAP75": 0.9579466145694159,
+      "precision": 0.9859800559700701,
+      "recall": 0.9926809540125473
+    },
+    {
+      "config": "baseline_12s",
+      "seed": 42,
+      "model": "yolo12s.pt",
+      "test_mAP50": 0.9938158997137853,
+      "test_mAP50_95": 0.8566560796032358,
+      "test_mAP75": 0.9623197079576942,
+      "precision": 0.9849482120275009,
+      "recall": 0.9953948646663742
+    },
+    {
+      "config": "baseline_12s",
+      "seed": 43,
+      "model": "yolo12s.pt",
+      "test_mAP50": 0.9948563553151656,
+      "test_mAP50_95": 0.8572222601009466,
+      "test_mAP75": 0.9630043902317427,
+      "precision": 0.9868813858463485,
+      "recall": 0.9943952628317191
+    },
+    {
+      "config": "baseline_12s",
+      "seed": 44,
+      "model": "yolo12s.pt",
+      "test_mAP50": 0.9935488002643822,
+      "test_mAP50_95": 0.8576861270042933,
+      "test_mAP75": 0.9553956847644132,
+      "precision": 0.9852998545476163,
+      "recall": 0.9925216805707021
+    },
+    {
+      "config": "originals_fixedopt_s",
+      "seed": 42,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.988847773272165,
+      "test_mAP50_95": 0.8469171438547527,
+      "test_mAP75": 0.9568753698322942,
+      "precision": 0.9721465036817516,
+      "recall": 0.9843979994353428
+    },
+    {
+      "config": "originals_fixedopt_s",
+      "seed": 43,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9944163427219695,
+      "test_mAP50_95": 0.8560374131158878,
+      "test_mAP75": 0.9611530460328233,
+      "precision": 0.9844625736638216,
+      "recall": 0.988551009298292
+    },
+    {
+      "config": "originals_fixedopt_s",
+      "seed": 44,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9905342007026792,
+      "test_mAP50_95": 0.8474224772838677,
+      "test_mAP75": 0.9485949501374578,
+      "precision": 0.9838364777006631,
+      "recall": 0.9895707506802963
+    },
+    {
+      "config": "contam_matched_s",
+      "seed": 42,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9949762845849806,
+      "test_mAP50_95": 0.9440565338171487,
+      "test_mAP75": 0.9852662503817787,
+      "precision": 0.9904315944409291,
+      "recall": 0.9984961072000285
+    },
+    {
+      "config": "contam_matched_s",
+      "seed": 43,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9949920948616604,
+      "test_mAP50_95": 0.9398385396120607,
+      "test_mAP75": 0.9856660814641182,
+      "precision": 0.99095339507615,
+      "recall": 0.9986945818311092
+    },
+    {
+      "config": "contam_matched_s",
+      "seed": 44,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9950000000000002,
+      "test_mAP50_95": 0.9420700166682445,
+      "test_mAP75": 0.9826583925747248,
+      "precision": 0.9902418321873185,
+      "recall": 1
+    },
+    {
+      "config": "framelevel_12c_s",
+      "seed": 42,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9949999999999998,
+      "test_mAP50_95": 0.827292139016596,
+      "test_mAP75": 0.9366033536629846,
+      "precision": 0.9802104369662149,
+      "recall": 0.9954916362624479
+    },
+    {
+      "config": "framelevel_12c_s",
+      "seed": 43,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9942578347803358,
+      "test_mAP50_95": 0.8253592357456215,
+      "test_mAP75": 0.9291507861999406,
+      "precision": 0.9738408362988968,
+      "recall": 0.9950915261250705
+    },
+    {
+      "config": "framelevel_12c_s",
+      "seed": 44,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9923417337904138,
+      "test_mAP50_95": 0.8142329696138347,
+      "test_mAP75": 0.906110722464816,
+      "precision": 0.9695825857476823,
+      "recall": 0.9949622108974729
+    },
+    {
+      "config": "xsession_12c_s",
+      "seed": 42,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9490253827229399,
+      "test_mAP50_95": 0.7075092799543647,
+      "test_mAP75": 0.827381065450364,
+      "precision": 0.8397356185703057,
+      "recall": 0.9183874472522565
+    },
+    {
+      "config": "xsession_12c_s",
+      "seed": 43,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9758541666666666,
+      "test_mAP50_95": 0.7885809278388659,
+      "test_mAP75": 0.9110532407407406,
+      "precision": 0.9296068725555795,
+      "recall": 0.9326056918884126
+    },
+    {
+      "config": "xsession_12c_s",
+      "seed": 44,
+      "model": "yolov8s.pt",
+      "test_mAP50": 0.9527057515954255,
+      "test_mAP50_95": 0.727008062514038,
+      "test_mAP75": 0.8582045205093007,
+      "precision": 0.8060733502013281,
+      "recall": 0.9120607161890022
+    }
+  ]
+}

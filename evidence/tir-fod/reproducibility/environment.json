@@ -1,0 +1,18 @@
+{
+  "recorded_environment": {
+    "python": "3.12.4",
+    "torch": "2.3.1+cu118",
+    "torch_cuda": "11.8",
+    "ultralytics": "8.4.87",
+    "cudnn": 8700,
+    "gpu": "NVIDIA RTX A4000",
+    "os": "Windows 11",
+    "nvidia_driver": "555.85"
+  },
+  "pretrained_sha256": {
+    "yolov8n.pt": "F59B3D833E2FF32E194B5BB8E08D211DC7C5BDF144B90D2C8412C47CCFC83B36",
+    "yolov8s.pt": "1F47A78BF100391C2A140B7AC73A1CAAE18C32779BE7D310658112F7AC9AA78A",
+    "yolov8m.pt": "5D4A90CDC7A21786CC59CD19778E9EAFFF836DF9E2DA32524737C7EE6EFE4FE5"
+  },
+  "note": "Exact CUDA/PyTorch installation is platform-specific. The zero-dependency summary recomputation does not require this environment."
+}
