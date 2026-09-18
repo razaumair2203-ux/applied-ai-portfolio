@@ -25,7 +25,7 @@ Run from the repository root:
 python -m evidence.lodestar.public_smoke_test
 ```
 
-Measured state recorded in the working private system: **209 source documents, 2,945 embedded chunks, 34 hand-checked retrieval queries, 2.9% top-5 retrieval-grounding error, 53 backend tests, 17/17 stress/abuse cases and 12/12 concurrent full flows.**
+Measured state recorded in the working private system: **209 source documents, 2,945 embedded chunks, 34 hand-checked retrieval queries, 1/34 top-5 expected-source misses (2.9%), 53 backend tests, 17/17 stress/abuse cases and 12/12 concurrent full flows.**
 
 ## 2. Clear Run — edge-AI implementation extract
 

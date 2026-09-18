@@ -19,6 +19,13 @@ jobs:
             evidence/lodestar/legal_chunking.py \
             evidence/lodestar/hybrid_retrieval.py \
             evidence/lodestar/rerank.py \
-            evidence/lodestar/public_smoke_test.py
+            evidence/lodestar/embedding_provider.py \
+            evidence/lodestar/grounding_eval.py \
+            evidence/lodestar/retrieval_integration_test.py \
+            evidence/lodestar/public_smoke_test.py \
+            evidence/clear-run/edge_detector_excerpt.py \
+            tools/portfolio_integrity_check.py
       - name: Run zero-dependency Lodestar smoke checks
         run: python -m evidence.lodestar.public_smoke_test
+      - name: Run portfolio evidence integrity checks
+        run: python tools/portfolio_integrity_check.py

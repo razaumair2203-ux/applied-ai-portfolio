@@ -1,10 +1,14 @@
 # M. Umair Raza — Aerospace AI & Autonomous Systems
 
+[![Portfolio evidence smoke checks](https://github.com/razaumair2203-ux/applied-ai-portfolio/actions/workflows/portfolio-evidence.yml/badge.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/actions/workflows/portfolio-evidence.yml)
+
 **Applied AI · computer vision · RAG / retrieval · edge deployment · aerospace systems engineering**
 
 I build and lead AI-enabled engineering systems that have to work outside the notebook: on embedded hardware, across sensors and interfaces, through verification, and into field trials. My background combines current hands-on applied AI with 18+ years in aircraft systems integration, V&V, fleet engineering and programme delivery.
 
 > **Primary differentiator:** model/data engineering + edge deployment + physical-system integration + aerospace V&V.
+
+**Personal contribution, up front.** I own architecture and evaluation decisions and hands-on AI engineering in Lodestar, including AI-assisted Python implementation, testing and hardening; I lead experiment/evaluation strategy and deployment validation for TIR-FOD; and I lead systems architecture/integration for the team-developed Clear Run programme. Team source is labelled as team source rather than presented as sole authorship.
 
 <p align="center">
   <img src="visuals/clear_run_system_evidence.jpg" alt="Authentic Clear Run system evidence: UAV, field detections, GCS, UGV, retrieval mechanism and documented architecture" width="100%">
@@ -17,10 +21,10 @@ I build and lead AI-enabled engineering systems that have to work outside the no
 | Capability | What is actually implemented | Evidence |
 |---|---|---|
 | **Deployed edge AI / computer vision** | LWIR model development; multi-model YOLO work; TensorRT deployment on Jetson Orin Nano; RGB + passive-IR concurrent inference; YOLO + SAHI sliced inference; geolocation; MAVLink/REST; GCS mission-interface integration | **3,499 LWIR source frames · 5,593 objects · 23 classes · 29 controlled training runs · 25.0 FPS TensorRT inference · 15.6 FPS end-to-end** → [case study](projects/tir-fod-clear-run.md) · [benchmark extract](evidence/tir-fod/benchmark_results.json) · [deployment-code evidence](evidence/clear-run/README.md) |
-| **Grounded RAG / GenAI systems** | FastAPI; BGE embeddings; PostgreSQL + `pgvector`; HNSW + lexical retrieval; RRF; authority-weighted reranking; citable evidence objects; LLM-provider abstraction; full-stack testing | **209 documents · 2,945 embedded chunks · 2.9% top-5 retrieval-grounding error · 53 backend tests · 12/12 concurrent flows** → [case study](projects/lodestar.md) · [implementation + public smoke check](evidence/lodestar/README.md) |
+| **Grounded RAG / GenAI systems** | FastAPI; BGE embeddings; PostgreSQL + `pgvector`; HNSW + lexical retrieval; RRF; authority-weighted reranking; citable evidence objects; LLM-provider abstraction; full-stack testing | **209 documents · 2,945 embedded chunks · 1/34 top-5 expected-source misses (2.9%) · 53 backend tests · 12/12 concurrent flows** → [case study](projects/lodestar.md) · [implementation + public smoke check](evidence/lodestar/README.md) |
 | **AI assurance / governed workflows** | Independent builder-reviewer model workflow; mutation checks; deterministic evidence/provenance gates around AI-assisted generation | **Two public working tools** → [Codex Adversarial Review Lite](projects/codex-adversarial-review-lite.md) · [JobLooper](projects/joblooper-jobpilot.md) |
 
-**Evidence boundary.** Public code, visuals and result extracts are linked directly. The TIR-FOD field-performance figures and Lodestar full-corpus/test counts are recorded measurements from working private/team systems; where the complete corpus or programme repository cannot be published, this portfolio does not describe those exact numbers as independently reproducible. Lodestar includes a [zero-dependency public smoke check](evidence/lodestar/public_smoke_test.py), and the [headline evidence matrix](docs/HEADLINE_EVIDENCE_MATRIX.md) maps major claims to their proof class.
+**Evidence boundary.** Public code, visuals and result extracts are linked directly. The TIR-FOD field-performance figures and Lodestar full-corpus/test counts are recorded measurements from working private/team systems; where the complete corpus or programme repository cannot be published, this portfolio does not describe those exact numbers as independently reproducible. Lodestar includes a [zero-dependency public smoke check](evidence/lodestar/public_smoke_test.py), the [headline evidence matrix](docs/HEADLINE_EVIDENCE_MATRIX.md) maps major claims to their proof class, and the [independent re-audit](docs/AI_PORTFOLIO_REAUDIT_2026-09-18.md) records current gaps and scoring.
 
 ## Start here by role
 
