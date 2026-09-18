@@ -56,10 +56,10 @@ This is a **cross-cutting capability layer**, not a separate product stream. It 
 
 ## How the domains fit together
 
-The portfolio is intentionally multi-domain, but it is not random.
+The domains reinforce one engineering profile:
 
 - **Autonomous / edge AI** is the primary technical specialization.
-- **Compliance / regulatory intelligence** is a deliberate and aggressively growing independent product niche across regulated, evidence-heavy domains.
+- **Compliance / regulatory intelligence** is a deliberate and actively growing independent product niche across regulated, evidence-heavy domains.
 - **Practical agentic work tools** are a second independent and growing product stream for everyday engineering, career, research and knowledge work.
 - **AI assurance, evaluation and digital engineering** are cross-cutting disciplines used across both product streams and the professional autonomy work.
 - The aerospace record supplies the systems-engineering foundation: requirements, interfaces, configuration, qualification, airworthiness, acceptance and lifecycle responsibility.
