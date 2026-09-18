@@ -17,12 +17,15 @@ Inspectable evidence includes:
 - hand-checked grounding pairs;
 - retrieval evaluation code;
 - representative DB-backed integration testing;
-- a **zero-dependency public smoke check** for RRF, authority weighting, metadata filters, structure-aware chunking and the frozen evaluation specification.
+- a **zero-dependency public smoke check** for RRF, authority weighting, metadata filters, structure-aware chunking and the frozen evaluation specification;
+- a **real PostgreSQL/pgvector integration fixture** over the published hybrid retrieval path;
+- a **10-case adversarial structured-assessment evaluation** for citation grounding, refusal behavior, evidence-ID validity and schema/authority constraints.
 
 Run from the repository root:
 
 ```bash
 python -m evidence.lodestar.public_smoke_test
+python -m evidence.lodestar.assessment_eval.run_eval
 ```
 
 Measured state recorded in the working private system: **209 source documents, 2,945 embedded chunks, 34 hand-checked retrieval queries, 1/34 top-5 expected-source misses (2.9%), 53 backend tests, 17/17 stress/abuse cases and 12/12 concurrent full flows.**
