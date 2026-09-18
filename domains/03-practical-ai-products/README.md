@@ -10,7 +10,7 @@ This domain contains **independent AI products and agentic utilities for recurri
 
 ## Product direction
 
-These tools are not a miscellaneous side-project bucket. They form an **independent practical-agentic product stream** alongside the separate compliance/regulatory AI niche.
+These tools form an **independent practical-agentic product stream** alongside the separate compliance/regulatory AI niche.
 
 The shared pattern is:
 
