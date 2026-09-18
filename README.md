@@ -14,16 +14,8 @@ That work is grounded in **18+ years of aerospace systems engineering, avionics 
 
 | | |
 |---|---|
-| **[1. Autonomous, Embedded & Edge AI](#autonomy-edge-ai)**  
-Primary engineering domain: computer vision, edge deployment, sensing, UAV/UGV integration and system-level verification.  
-**Flagships:** Clear Run / TIR-FOD · Counter-UAS · AI Systems Assurance / MBSE | **[2. Compliance & Regulatory Intelligence](#compliance-regtech)**  
-Specialist product niche: authoritative-source consolidation, retrieval, analytics and bounded AI reasoning for regulated decisions.  
-**Flagships:** i-MSHA · Lodestar |
-| **[3. Practical Agentic AI Products](#practical-agentic-ai)**  
-Independent product stream for recurring engineering, career, research and knowledge work with explicit state, provenance and human control.  
-**Flagships:** JobLooper · BuildSignal AI · Adversarial Review Lite | **[4. AI Assurance, Evaluation & Digital Engineering](#assurance-digital-engineering)**  
-Cross-cutting discipline connecting evaluation, release controls, MBSE, research computing and aerospace digital-thread engineering.  
-**Flagships:** Evaluation-driven AI workflows · ATLAS GPU/HPC · Super Mushshak digital engineering |
+| **[1. Autonomous, Embedded & Edge AI](#autonomy-edge-ai)**<br>Primary engineering domain: computer vision, edge deployment, sensing, UAV/UGV integration and system-level verification.<br>**Flagships:** Clear Run / TIR-FOD · Counter-UAS · AI Systems Assurance / MBSE | **[2. Compliance & Regulatory Intelligence](#compliance-regtech)**<br>Specialist product niche: authoritative-source consolidation, retrieval, analytics and bounded AI reasoning for regulated decisions.<br>**Flagships:** i-MSHA · Lodestar |
+| **[3. Practical Agentic AI Products](#practical-agentic-ai)**<br>Independent product stream for recurring engineering, career, research and knowledge work with explicit state, provenance and human control.<br>**Flagships:** JobLooper · BuildSignal AI · Adversarial Review Lite | **[4. AI Assurance, Evaluation & Digital Engineering](#assurance-digital-engineering)**<br>Cross-cutting discipline connecting evaluation, release controls, MBSE, research computing and aerospace digital-thread engineering.<br>**Flagships:** Evaluation-driven AI workflows · ATLAS GPU/HPC · Super Mushshak digital engineering |
 
 ## At a glance
 
