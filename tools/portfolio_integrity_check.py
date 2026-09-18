@@ -50,6 +50,23 @@ def check_lodestar_eval_contract() -> None:
     assert "1 / 34 misses (2.9%)" in log
 
 
+
+def check_tir_fod_reproducibility() -> None:
+    base = ROOT / "evidence" / "tir-fod" / "reproducibility"
+    raw = json.loads((base / "raw_seed_metrics.json").read_text(encoding="utf-8"))
+    protocol = json.loads((base / "training_protocol.json").read_text(encoding="utf-8"))
+    split = json.loads((base / "current_v2_split_manifest.json").read_text(encoding="utf-8"))
+    assert len(raw["runs"]) == 29
+    assert protocol["full_benchmark_split"]["images"]["train"] == 18221
+    assert protocol["full_benchmark_split"]["source_frames"] == {
+        "train": 2450, "validation": 529, "test": 520
+    }
+    assert split["xsession_block_overlap"] == []
+    assert set(split["classes"]) == {
+        "HeadSet", "MetalShard", "Screw", "Nut", "PaperCup", "SafetyGoggle",
+        "Scissor", "ScrewDriver", "SprayCan", "Tape", "SodaCan", "Wire"
+    }
+
 def check_claim_boundaries() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "Evidence boundary." in readme
@@ -65,6 +82,7 @@ def main() -> None:
         check_internal_markdown_links,
         check_json_evidence,
         check_lodestar_eval_contract,
+        check_tir_fod_reproducibility,
         check_claim_boundaries,
     ]
     for check in checks:
