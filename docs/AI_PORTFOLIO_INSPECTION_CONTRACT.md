@@ -1,5 +1,7 @@
 # AI Portfolio Inspection Contract
 
+> **Current scoring note:** this document records the first audit/remediation pass. The stricter independent re-audit and current score are in [AI_PORTFOLIO_REAUDIT_2026-09-18.md](AI_PORTFOLIO_REAUDIT_2026-09-18.md).
+
 **Audit date:** 2026-09-18  
 **Audit target:** a cold AI/ML recruiter, applied-AI hiring manager, senior ML engineer, or aerospace/autonomy technical reviewer.
 
@@ -131,7 +133,7 @@ The largest remaining deficit is **public verification mechanics**, not AI bread
 | F12 No CI for public evidence | **Resolved** | Added a lightweight compile + smoke-test workflow. |
 | Lodestar personal contribution clarity | **Resolved** | Case study now states the product/specification ownership and AI-assisted development model without claiming manual authorship of every source line. |
 
-## 9. Post-remediation score
+## 9. First-pass post-remediation score (historical)
 
 | Dimension | Score |
 |---|---:|
