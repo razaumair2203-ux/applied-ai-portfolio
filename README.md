@@ -1,40 +1,75 @@
-# Muhammad Umair Raza — AI / R&D Programme Leader · Applied AI Engineer · Aerospace Systems Engineer
+# Muhammad Umair Raza — Applied AI Systems Engineer & R&D Programme Leader
 
-**Engineering AI systems from data and models through deployment, interfaces, verification and field evidence.**
+**Autonomous & Edge AI · Compliance / Regulatory Intelligence · AI Assurance · Aerospace Digital Engineering**
 
 **Current role:** Officer In Charge Projects / R&D & Systems Engineering Lead, College of Aeronautical Engineering, NUST · NUTECH assignments · **2023–present**
 
-I lead multidisciplinary engineering and applied-AI programmes while remaining technically hands-on in **system architecture, Python/backend implementation and review, computer vision, RAG/retrieval, AI evaluation, Jetson/TensorRT deployment, interfaces, verification and release controls**.
+I build and lead **applied-AI systems**, not isolated models: sensing, data, models, retrieval, backend services, interfaces, edge deployment, verification and field/product evidence are engineered as one system.
 
-My foundation is **18+ years in aircraft systems development, avionics integration, V&V, configuration/lifecycle engineering and technical programme delivery**. Current work extends that discipline into edge AI, autonomous systems, grounded GenAI/RAG, AI assurance, digital engineering and data-intensive products.
+My strongest current technical domain is **AI for autonomous and embedded systems**, especially **computer vision, UAV/UGV systems, RGB/LWIR sensing, Jetson/TensorRT deployment and system-level verification**. In parallel, I am deliberately building a second product niche in **compliance and regulatory intelligence**: AI systems that consolidate fragmented evidence, retrieve governing authority and support bounded, traceable decisions in regulated domains.
+
+That work is grounded in **18+ years of aerospace systems engineering, avionics integration, V&V, configuration/lifecycle engineering and technical programme delivery**. I remain hands-on in Python/backend implementation and review, computer vision, RAG/retrieval, AI evaluation, edge deployment, interfaces, MBSE and release controls while leading multidisciplinary programmes.
 
 **Career profile:** [AI-focused base resume](profile/AI_BASE_RESUME.md) · **LinkedIn:** [Profile](https://www.linkedin.com/in/mumairaza/) · **Research:** [Google Scholar](https://scholar.google.com/citations?user=0EVckyAAAAAJ&hl=en) · **Dataset:** [TIR-FOD v1.2](https://doi.org/10.5281/zenodo.22546586)
 
+## Technical identity
+
+**Core specialization — Applied AI Systems Engineering.** The common thread across the portfolio is taking AI from model or retrieval logic into a governed, testable system with real interfaces, operational constraints and evidence.
+
+- **Primary engineering domain:** autonomous / embedded / edge AI systems, computer vision and sensor-driven autonomy.
+- **Product vertical:** compliance, regulatory and evidence intelligence (RegTech / ComplianceTech).
+- **Cross-cutting engineering:** AI assurance, evaluation, retrieval/RAG, deployment, observability/test evidence, MBSE and digital engineering.
+- **Additional product track:** practical AI workflow tools for career, research and everyday knowledge-work use, with public/free releases where appropriate.
+- **Research depth:** peer-reviewed work in multi-stream computer vision and adversarial vision, plus thermal FOD data/research and current UAV-centric applied-AI work.
+
+I use **MLOps practices** where they are relevant—reproducible evaluation, deployment controls, regression tests, data/configuration lineage and release gates—but the portfolio is broader than a pure MLOps role. The stronger description is **Applied AI Systems / Autonomous Systems Engineering** with product depth in compliance intelligence.
+
 ## At a glance
 
-| Leadership scale | Hands-on technical work | Differentiating foundation |
+| Programme leadership | Hands-on AI / software | Systems foundation |
 |---|---|---|
-| Leads R&D / systems-engineering activity across a **100+ project portfolio** spanning AI, autonomy, avionics, radar/RF, communications, sensing and embedded systems | Python/backend implementation and review, retrieval/evaluation logic, computer-vision experiments, structured AI workflows, interface analysis and test evidence | **18+ years** across aircraft development, avionics integration, flight-line/MRO engineering, international OEM integration, configuration, qualification and airworthiness |
-| Supervised **60+ advanced engineering projects** | Jetson Orin Nano / TensorRT deployment, RGB/LWIR sensing, YOLO/SAHI, FastAPI, PostgreSQL/pgvector, BGE embeddings and RRF | Systems architecture, requirements, interfaces, V&V, configuration control, qualification and acceptance |
-| Accountable technical leadership for the **22-node ATLAS GPU/HPC environment** | Held-out evaluation, failure analysis, deterministic guardrails, MBSE/Capella, regression criteria and system-boundary verification | Aircraft/fleet programmes spanning prototype development through production, fielding, upgrades and sustainment |
+| Leads R&D / systems-engineering activity across a **100+ project portfolio** spanning AI, autonomy, avionics, radar/RF, communications, sensing and embedded systems | Python/backend implementation and review, computer vision, RAG/retrieval, AI evaluation, Jetson/TensorRT deployment, interfaces and test evidence | **18+ years** across aircraft development, avionics integration, flight-line/MRO engineering, international OEM integration, configuration, qualification and airworthiness |
+| Supervised **60+ advanced engineering projects** | RGB/LWIR sensing, YOLO/SAHI, FastAPI, PostgreSQL/pgvector, BGE embeddings, RRF, structured AI workflows | Requirements, architecture, interfaces, V&V, configuration control, qualification and acceptance |
+| Accountable technical leadership for the **22-node ATLAS GPU/HPC environment** | Held-out evaluation, failure analysis, deterministic guardrails, MBSE/Capella and regression criteria | Prototype-to-field engineering across aircraft development, upgrades, sustainment and current digital-engineering reconstruction |
 
-The through-line is **programme leadership + hands-on AI engineering + aerospace-grade systems discipline**: model performance matters, but so do data lineage, interfaces, configuration identity, evidence quality, failure modes and the boundary between a subsystem result and a verified system capability.
+## Portfolio by domain
 
-## Applied AI, autonomy and digital engineering
+### 1. Autonomous, embedded and edge AI — primary applied-AI domain
 
-The portfolio spans **airfield robotics, immigration evidence-assessment, U.S. mine-safety intelligence, governed career automation, cross-model AI assurance, research-to-publication operations and evidence-linked digital engineering**. Each case leads with the system/problem first, then shows the AI/data/software stack, measurable evidence, current maturity and verification still open.
+| Project family | System / contribution | Evidence-backed state |
+|---|---|---|
+| **[Clear Run / TIR-FOD](projects/tir-fod-clear-run.md)** | Integrated UAV–GCS–UGV airfield robotics programme: RGB/LWIR sensing, small-object computer vision, Jetson/TensorRT inference, geolocation, operator tasking and developing physical recovery. This is the main convergence point for my current work in drones, edge AI, autonomy, systems integration and V&V. | flight-tested edge AI and active UAV–GCS–UGV integration; physical retrieval closure still in progress |
+| **[Counter-UAS Phase I](projects/counter-uas.md)** | Physical AI-vision drone-detection prototype taken from model development into constructed laser–camera hardware and indoor/outdoor trials. | Phase I completed; passive-RF/acoustic/multisensor extensions remain research |
+| **[AI Systems Assurance / MBSE](projects/mbse-ai-assurance.md)** | Evidence-linked system assurance for an AI/autonomy mission chain, connecting functions, interfaces, configuration and verification rather than treating model metrics as system proof. | current Capella/Arcadia assurance case; INCOSE IACS submission pending review |
 
-| Project family | What was built / why it matters | My role | Evidence-backed state |
-|---|---|---|---|
-| **[Clear Run / TIR-FOD](projects/tir-fod-clear-run.md)** | **Integrated airfield robotics programme** that closes the chain from RGB/LWIR runway-FOD sensing and Jetson/TensorRT inference to target geolocation, GCS review/tasking, UGV approach and physical recovery. It includes a public 23-class thermal dataset, controlled model research, real UAV deployment and active detection-to-retention verification—not a detector-only demo. | research/programme leadership, systems architecture & integration, experiment/V&V strategy, deployment review | flight-tested edge AI and active UAV–GCS–UGV integration; physical retrieval closure still in progress |
-| **[Lodestar](projects/lodestar.md)** | **Full-stack EB-2 NIW / EB-1A evidence-assessment SaaS**. Applicants can upload evidence, map it to Dhanasar/Kazarian legal criteria, retrieve controlling sources and AAO decisions, identify gaps and receive structured cited assessments. The system explicitly refuses unsupported/citation-invalid conclusions and does not manufacture approval scores or a finished petition. | system architecture, legal-RAG retrieval/evaluation design, implementation direction, reliability controls | working private browser product with real corpus, end-to-end flow and public-safe retrieval/control evidence |
-| **[i-MSHA](projects/msha-compliance-ai.md)** | **U.S. mine-safety intelligence and MSHA data-consolidation platform** spanning mine/controller profiles, violations, penalties, inspections, injury/safety, legal intelligence, occupational exposure, contractor intelligence, acquisition due diligence, comparison/weekly-pulse tooling and Canary AI. The engineering challenge is turning fragmented public MSHA data into one navigable national→state→mine decision environment. | product/programme direction, systems architecture, AI/data workflow definition, technical review, validation framing | 8 active modules · 25 frontend features · 100 backend handlers; private product in pre-deployment hardening |
-| **[JobLooper](projects/joblooper-jobpilot.md)** | **Evidence-governed job-application operating system**: approved career truth → exact JD capture → gap/preflight decisions → AI-assisted tailoring → complete human review → deterministic DOCX/PDF build → hash-bound submission record → outcome learning. AI can assist reasoning, but cannot rewrite truth, self-approve or silently release documents. | product/system design, AI-workflow governance, evaluation and release controls | public local-first implementation plus private evaluation/development lineage |
-| **[Adversarial Review Lite](projects/codex-adversarial-review-lite.md)** | **Cross-model assurance layer for AI-written software**. Claude↔Codex companion tools freeze review scope, pass test/rubric context, capture mutation hashes, run an independent reviewer, re-validate every finding and require human approval before code changes. | AI-assurance workflow design, reviewer contracts, cross-platform execution and release controls | two public cross-platform companion tools with self-test, report and safety model |
-| **[BuildSignal AI](projects/buildsignal-ai.md)** | **AI-native research-to-publication operations system** for technical content: source capture, research logging, article/media/audio/video/social state, QA, rights/provenance, review and explicit owner-controlled publication. The product treats AI content generation as one component inside a governed operating workflow. | product direction, AI workflow design, source/review policy, quality governance | active private platform; local admin workflow implemented, hosted auth/media automation still open |
-| **[Counter-UAS Phase I](projects/counter-uas.md)** | **Completed physical AI-vision drone-detection prototype**: constructed laser–camera sensing mount, model development using ~14,000 training images, a 1,500-image test set, and indoor/outdoor trials. It provides the experimental base for a later visual/RF/acoustic multisensor monitoring research programme without claiming the later phases as complete. | Principal Investigator / research direction, prototype and systems-integration oversight | Phase I completed; passive-RF/acoustic/multisensor extensions remain research |
-| **[AI Systems Assurance / MBSE](projects/mbse-ai-assurance.md)** | **Evidence-linked assurance model for an AI/autonomy mission system**, connecting functions, interfaces, requirements, configuration and verification to the Clear Run detection→removal chain. A producer-consumer replay exposed a concrete telemetry truncation failure mode and converted it into explicit acceptance requirements. | systems modelling, interface/V&V framing, evidence applicability, regression logic | current Capella/Arcadia assurance case; INCOSE IACS submission pending review |
-| **[Super Mushshak digital engineering](projects/super-mushshak-digital-engineering.md)** | **Completed aircraft-level glass-cockpit integration programme for the first three prototypes**, covering avionics/sensor integration, electrical and wiring changes, ARINC interfaces, configuration, installed-aircraft tests, flight-test feedback and customer evaluation; now reconstructed into a public-safe digital thread linking evidence→requirements→interfaces→configuration→verification→decisions. | historical lead systems/avionics integration role; current retrospective modelling | retrofit completed; digital-thread backbone implemented; executable twin behaviour remains future work |
+**Research evidence:** peer-reviewed work in **real-time multi-stream object detection** and **adversarial computer vision**, plus the public **TIR-FOD thermal dataset** and active UAV/airfield autonomy research.
+
+### 2. Compliance and regulatory intelligence — deliberate product niche
+
+| Project family | System / contribution | Evidence-backed state |
+|---|---|---|
+| **[i-MSHA](projects/msha-compliance-ai.md)** | U.S. mine-safety compliance and decision-intelligence platform that consolidates fragmented MSHA public data into one national→state→mine environment spanning violations, penalties, inspections, safety, legal, exposure, contractors and acquisition due diligence. | 8 active modules · 25 frontend features · 100 backend handlers; private product in pre-deployment hardening |
+| **[Lodestar](projects/lodestar.md)** | EB-2 NIW / EB-1A evidence-assessment platform that maps applicant records to Dhanasar/Kazarian criteria, retrieves governing authority and AAO decisions, identifies gaps and produces bounded cited assessments. | working private browser product with real corpus and public-safe retrieval/control evidence |
+
+These are not generic chatbots. The reusable engineering pattern is **fragmented authoritative data → structured evidence model → retrieval/analytics → bounded AI reasoning → traceable decision support**. That is the compliance-tech capability I am intentionally developing across domains.
+
+### 3. Practical AI products and public utility workflows
+
+| Project family | System / contribution | Evidence-backed state |
+|---|---|---|
+| **[JobLooper / JobPilot family](projects/joblooper-jobpilot.md)** | Evidence-governed job-search and application workflow: career truth, JD capture, gap analysis, AI-assisted tailoring, human review, deterministic document build, submission trace and outcome learning. Intended as practical tooling rather than a portfolio-only demo. | public local-first implementation plus private evaluation/development lineage |
+| **[BuildSignal AI](projects/buildsignal-ai.md)** | Research-to-publication operating system spanning source capture, content/media state, QA, rights/provenance, review and explicit owner-controlled publication. | active private platform; local admin workflow implemented |
+
+This track shows that I also build **usable AI software for recurring everyday work**, with an emphasis on provenance, human control and release quality rather than one-off prompt demos.
+
+### 4. AI assurance, developer controls and digital engineering
+
+| Project family | System / contribution | Evidence-backed state |
+|---|---|---|
+| **[Adversarial Review Lite](projects/codex-adversarial-review-lite.md)** | Cross-model assurance layer for AI-written software: frozen scope, independent model review, mutation/hash checks, re-validation and human approval before code changes. | two public cross-platform companion tools |
+| **[Evaluation-Driven AI Workflow Engineering](projects/ai-evaluation-workflows.md)** | Frozen evaluation and release-control framework for AI workflow changes, including held-out cases, fabrication/date/metric checks and regression safeguards. | retained engineering evidence from active product-development lineage |
+| **[Super Mushshak digital engineering](projects/super-mushshak-digital-engineering.md)** | Completed first-three-prototype glass-cockpit integration programme now being reconstructed as an evidence-linked digital thread. It is the bridge from legacy aerospace systems engineering into current digital-engineering and future executable-twin work. | retrofit completed; digital-thread backbone implemented; executable twin behaviour remains future work |
+| **ATLAS GPU/HPC** | 22-node research-computing environment supporting AI, simulation and reproducible engineering workflows. | current infrastructure leadership |
 
 [Complete project inventory and maturity map →](projects/README.md)
 
