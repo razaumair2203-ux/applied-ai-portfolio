@@ -20,6 +20,12 @@ This project family starts with a **completed aircraft-level glass-cockpit integ
 | Current digital-engineering state | first public-safe digital-thread backbone implemented; executable/parametric twin functions remain future work |
 | My role | lead systems engineer / avionics integration engineer on the retrofit; current retrospective systems modelling and digital-thread reconstruction |
 
+## Contribution boundary
+
+- **Historical direct role:** lead systems engineer / avionics integration engineer across aircraft-level integration, configuration, installed-aircraft testing, flight-test feedback and customer evaluation.
+- **Programme boundary:** the retrofit was multidisciplinary and OEM/customer-facing; downstream aircraft sales and later product variants are programme outcomes, not sole-causation claims.
+- **Current direct work:** retrospective public-safe systems modelling and digital-thread reconstruction from surviving engineering evidence; executable twin behaviour remains future work.
+
 ## Completed retrofit engineering
 
 The original programme covered more than display replacement. The surviving public record documents sensor and avionics integration, Dynon/Garmin evaluation, aircraft electrical and wiring-harness changes, ARINC-429 and other interfaces, databases/configuration, maintainability, installed-aircraft functional checks, flight-test feedback and customer-facing technical evaluation.
