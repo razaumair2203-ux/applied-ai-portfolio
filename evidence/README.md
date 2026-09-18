@@ -45,11 +45,17 @@ This public extract traces the deployment claims to working team-developed sourc
 
 ## 3. TIR-FOD — benchmark/result evidence
 
-**Result snapshot:** [`tir-fod/benchmark_results.json`](tir-fod/benchmark_results.json)
+**Start here:** [`tir-fod/README.md`](tir-fod/README.md)
 
-The public portfolio summarizes the larger private research record: real-runway LWIR acquisition, 23 classes, 29 controlled training runs, repeated-seed testing, contamination/leakage analysis, acquisition-block generalisation and Jetson/TensorRT flight deployment.
+The public reproducibility slice now includes **29 sanitized seed-level run records**, the exact current training/evaluation protocol, the current 12-class acquisition-block split manifest, the recorded relevant environment, a GPU training harness and a zero-dependency recomputation script. Run:
 
-The public dataset record is linked from the [TIR-FOD / Clear Run case study](../projects/tir-fod-clear-run.md).
+```bash
+python evidence/tir-fod/reproducibility/recompute_results.py
+```
+
+That public check independently recomputes the multi-seed means/SDs and paired contamination/generalisation effects used by the current revision. Full GPU retraining still requires the public dataset, frozen split files, pretrained weights and compatible ML hardware/software.
+
+The older [single-run benchmark snapshot](tir-fod/benchmark_results.json) is retained for historical traceability. The public dataset record is linked from the [TIR-FOD / Clear Run case study](../projects/tir-fod-clear-run.md).
 
 ## 4. Public source repositories
 
