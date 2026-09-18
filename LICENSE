@@ -13,3 +13,5 @@ This notice intentionally does not apply a permissive open-source license to pri
 programme extracts, project evidence, photographs, composites, research records, or
 portfolio prose. Public projects linked from this portfolio retain the licenses stated
 in their own repositories.
+
+Verification note: executable evidence and validation instructions in this repository are published so technical reviewers can inspect and run the provided checks for evaluation of the portfolio. This does not grant permission to redistribute, sublicense, commercially reuse, or create derivative works from that code unless a specific file or subdirectory provides a separate license.
