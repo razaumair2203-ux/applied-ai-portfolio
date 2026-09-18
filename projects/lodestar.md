@@ -24,6 +24,20 @@ I defined the product constraints, stack, retrieval/grounding requirements and a
 
 That distinction matters for this project: the design deliberately keeps model generation downstream of deterministic retrieval, citation resolution, evidence state and release constraints, so AI assistance in development does not become authority inside the product.
 
+## Engineering impact and decision value
+
+Lodestar's useful outcome is not “it can answer questions.” It is that evidence authority, retrieval quality and release rules are made explicit instead of being delegated to fluent model output.
+
+- **Retrieval quality became a regression target.** The frozen 34-query set recorded **1/34 top-5 expected-source misses** on the private corpus and is kept separate from downstream generation quality.
+- **Authority is implemented as inspectable policy.** High-authority candidate lanes and deterministic reranking can be tested and ablated rather than hidden inside a prompt.
+- **Unsupported output is prevented from silently becoming canonical state.** Citation resolution, evidence IDs, five-state output constraints and refusal behavior are enforced after model-shaped output.
+- **Public fixtures reduce trust dependence.** A real PostgreSQL/pgvector mini-corpus executes the published hybrid retrieval path in CI, while the adversarial output-contract evaluation tests grounding and refusal rules.
+- **The architecture remains replaceable at the model boundary.** Retrieval/evidence state and provider-swappable generation are separated so model changes do not redefine the source of truth.
+
+### What is not claimed
+
+The recorded **1/34** result is not a universal RAG accuracy measure, the private 209-document corpus is not publicly reproducible from this repository, and the software guardrails do not establish semantic legal correctness or production adoption.
+
 ## Why this project matters for GenAI / RAG roles
 
 Lodestar is designed around the engineering failure modes that matter in RAG systems: poor chunking, weak retrieval, inconsistent score spaces, unsupported citations, model/provider coupling and the tendency for fluent generation to conceal evidence failures.
