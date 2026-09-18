@@ -18,6 +18,12 @@
 
 *Authentic Next.js application render captured from the working private repository. The UI proves the implemented product surface; retrieval architecture, evaluation and reliability claims remain independently inspectable in the public code/evidence bundle.*
 
+## My contribution and development model
+
+I defined the product constraints, stack, retrieval/grounding requirements and acceptance criteria, then drove iterative implementation, testing and hardening through an **AI-assisted coding workflow**. The portfolio claim is engineering ownership of the architecture, evaluation gates and working system—not that every source line was manually typed without coding-agent assistance.
+
+That distinction matters for this project: the design deliberately keeps model generation downstream of deterministic retrieval, citation resolution, evidence state and release constraints, so AI assistance in development does not become authority inside the product.
+
 ## Why this project matters for GenAI / RAG roles
 
 Lodestar is designed around the engineering failure modes that matter in RAG systems: poor chunking, weak retrieval, inconsistent score spaces, unsupported citations, model/provider coupling and the tendency for fluent generation to conceal evidence failures.
