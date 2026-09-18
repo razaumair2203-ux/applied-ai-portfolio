@@ -1,6 +1,8 @@
 # TIR-FOD / Clear Run — edge AI and airfield robotics from detection to physical recovery
 
-![Clear Run detection-to-removal architecture](../../visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)
+**Full working repository:** private · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
+
+[![Clear Run detection-to-removal architecture](../../visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
 
 Clear Run is an **airfield robotics programme**, not a standalone object detector. It connects **dataset/model development → airborne edge deployment → target geolocation and operator review → UAV–GCS–UGV mission integration → physical FOD capture and retained removal**. The programme is valuable precisely because it forces perception, avionics, communications, human supervision, ground autonomy and mechanical recovery to work as one traceable mission chain.
 
@@ -21,7 +23,7 @@ Clear Run is an **airfield robotics programme**, not a standalone object detecto
 
 ## 1. TIR-FOD — dataset and controlled model evaluation
 
-![TIR-FOD graphical abstract — data, evaluation finding and flight deployment](../../visuals/autonomy-edge-ai/tir-fod/graphical_abstract.png)
+[![TIR-FOD graphical abstract — data, evaluation finding and flight deployment](../../visuals/autonomy-edge-ai/tir-fod/graphical_abstract.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
 
 *The research story is evaluation-first: protocol effects from leakage and acquisition-block partitioning materially exceed the spread attributed to model choice. The flight-throughput figure is retained as a historical system measurement, not a checkpoint-reproducible benchmark.*
 
@@ -37,7 +39,7 @@ Key results:
 
 The important engineering result is that **data lineage and capture-session structure materially changed the apparent model conclusion**.
 
-![TIR-FOD acquisition sessions used for source-aware evaluation](../../visuals/autonomy-edge-ai/tir-fod/capture_sessions.png)
+[![TIR-FOD acquisition sessions used for source-aware evaluation](../../visuals/autonomy-edge-ai/tir-fod/capture_sessions.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
 
 *Acquisition-session structure is treated as an evaluation variable rather than hidden inside a random frame split.*
 
@@ -48,12 +50,12 @@ The workflow includes configuration-driven resumable experiment queues, determin
 ## 2. Jetson / TensorRT flight deployment
 
 <p align="center">
-  <img src="../../visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" alt="Complete UAV used for the airborne edge-AI programme" width="49%">
-  <img src="../../visuals/autonomy-edge-ai/tir-fod/jetson_mounted.png" alt="Jetson Orin Nano mounted on the UAV" width="49%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" alt="Complete UAV used for the airborne edge-AI programme" width="49%"></a>
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/tir-fod/jetson_mounted.png" alt="Jetson Orin Nano mounted on the UAV" width="49%"></a>
 </p>
 
 <p align="center">
-  <img src="../../visuals/autonomy-edge-ai/tir-fod/camera_mount.png" alt="Physical camera payload mount used by the UAV programme" width="58%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/tir-fod/camera_mount.png" alt="Physical camera payload mount used by the UAV programme" width="58%"></a>
 </p>
 
 *Authentic programme hardware: complete UAV, installed Jetson compute and camera payload integration. These images are retained from the project evidence set; they are not stock or generated illustrations.*
@@ -61,7 +63,7 @@ The workflow includes configuration-driven resumable experiment queues, determin
 The thermal detector was deployed on **Jetson Orin Nano** with a thermal payload and GNSS/Pixhawk flight stack and exercised through repeated runway UAV trials.
 
 <p align="center">
-  <img src="../../visuals/autonomy-edge-ai/tir-fod/jetson_runtime.png" alt="Recorded Jetson thermal inference runtime" width="72%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/tir-fod/jetson_runtime.png" alt="Recorded Jetson thermal inference runtime" width="72%"></a>
 </p>
 
 Historical records include onboard TensorRT inference, successful detections, misses and false detections, an author-confirmed ten-run mean of **25.0 FPS TensorRT-stage**, and **15.6 FPS end-to-end** with reported range **15.07–16.0 FPS**. The retained runtime display above records **25.12 FPS TensorRT / 15.07 FPS end-to-end**.
@@ -73,20 +75,20 @@ The raw ten-run logs and historical TensorRT engine were not retained, so those 
 Clear Run extends the perception work into an aerial-ground system with RGB and passive-IR streams, independent FP16 TensorRT models, YOLO/SAHI processing, synchronized recording, geolocation, MAVLink/REST interfaces, a purpose-built GCS, and a developing UGV retrieval layer.
 
 <p align="center">
-  <img src="../../visuals/autonomy-edge-ai/clear-run/video_thumbnail.png" alt="Clear Run field-trial evidence thumbnail" width="64%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/video_thumbnail.png" alt="Clear Run field-trial evidence thumbnail" width="64%"></a>
 </p>
 
 *Recorded field-video evidence is retained in the programme archive. The public case study surfaces representative frames and the machine-readable event snapshot; these records demonstrate field inference output but are **not** used as precision/recall, geolocation-accuracy or mission-success metrics.*
 
-![Clear Run field-trial evidence](../../visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png)
+[![Clear Run field-trial evidence](../../visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
 
 Current field records demonstrate annotated RGB and passive-IR detections with class, confidence and target-coordinate outputs. The reviewed snapshot contains **8 unique trial videos** (5 RGB, 3 IR; approximately 12 min 45 s total) and **12 structured RGB event records across 8 reported classes**. Those records carry image location, target coordinates, UAV pose and altitude. Recorded model confidence spans **0.5488–0.8887** (mean **0.7125**) and logged altitude spans **1.176–2.334 m AGL** (mean **2.069 m**). These are pipeline/event statistics, not detector or geolocation accuracy.
 
 The aggregate, non-location-sensitive snapshot is published as [`field_trial_snapshot.json`](../../evidence/autonomy_edge_ai/clear_run/field_trial_snapshot.json) and validated in CI.
 
 <p align="center">
-  <img src="../../visuals/autonomy-edge-ai/clear-run/gcs_integration.png" alt="Clear Run ground-control integration" width="49%">
-  <img src="../../visuals/autonomy-edge-ai/clear-run/retrieval_development.png" alt="Clear Run ground vehicle and retrieval development" width="49%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/gcs_integration.png" alt="Clear Run ground-control integration" width="49%"></a>
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/retrieval_development.png" alt="Clear Run ground vehicle and retrieval development" width="49%"></a>
 </p>
 
 The GCS consolidates aerial telemetry, detection review, target prioritisation and ground-agent dispatch. The UGV layer combines mecanum mobility, embedded compute/navigation and the retrieval mechanism under fabrication/integration.
@@ -97,15 +99,15 @@ The GCS consolidates aerial telemetry, detection review, target prioritisation a
 These views come from the programme's reviewed architecture set and retain authentic project imagery/interface captures. They are functional system views rather than decorative redraws.
 
 <p align="center">
-  <img src="../../visuals/autonomy-edge-ai/clear-run/aerial_unit_architecture.svg" alt="Clear Run aerial-unit architecture" width="94%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/aerial_unit_architecture.svg" alt="Clear Run aerial-unit architecture" width="94%"></a>
 </p>
 
 <p align="center">
-  <img src="../../visuals/autonomy-edge-ai/clear-run/gcs_architecture.svg" alt="Clear Run ground-control-station architecture" width="94%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/gcs_architecture.svg" alt="Clear Run ground-control-station architecture" width="94%"></a>
 </p>
 
 <p align="center">
-  <img src="../../visuals/autonomy-edge-ai/clear-run/ugv_architecture.svg" alt="Clear Run UGV architecture" width="94%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/ugv_architecture.svg" alt="Clear Run UGV architecture" width="94%"></a>
 </p>
 
 The dedicated GCS view makes the operator/telemetry/target-handling layer inspectable at useful scale; the Aerial and UGV views preserve the component and interface context on either side of that hand-off.
