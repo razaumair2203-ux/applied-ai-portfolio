@@ -10,7 +10,7 @@ Applied-AI systems and aerospace-engineering leader with **18+ years** across ai
 
 My primary current technical domain is **autonomous / embedded / edge AI**, especially computer vision, UAV/UGV systems, RGB/LWIR sensing, Jetson/TensorRT deployment and system-level verification. In parallel, I am building a deliberate product niche in **compliance and regulatory intelligence**, applying retrieval, structured evidence models, analytics and bounded AI reasoning to regulated decision environments.
 
-The wider portfolio also includes practical AI workflow products, cross-model AI assurance, evaluation/release controls, GPU/HPC research infrastructure and aerospace digital engineering. The common thread is **Applied AI Systems Engineering**: AI treated as part of a complete engineered system with explicit data, interfaces, configuration, verification and operational boundaries.
+The wider portfolio also includes an **independent and growing practical-agentic product stream** for everyday engineering, career, research and knowledge work, alongside cross-cutting AI assurance, evaluation/release controls, GPU/HPC research infrastructure and aerospace digital engineering. The common thread is **Applied AI Systems Engineering**: AI treated as part of a complete engineered system with explicit data, interfaces, configuration, verification and operational boundaries.
 
 ## Applied AI evidence by domain
 
@@ -70,7 +70,9 @@ The wider portfolio also includes practical AI workflow products, cross-model AI
 
 [Case study](../domains/02-compliance-regtech/lodestar.md) · [Public implementation evidence](../evidence/compliance_regtech/lodestar/README.md)
 
-### Practical AI products and workflow systems
+### Independent practical agentic AI products and everyday work tools
+
+These are independent product-building efforts, separate from NUST/CAE employment. They form a growing part of the applied-AI identity and are intended to become usable public/free tools where appropriate.
 
 #### JobLooper — evidence-governed job-application operating system
 
@@ -87,15 +89,15 @@ The wider portfolio also includes practical AI workflow products, cross-model AI
 
 [Case study](../domains/03-practical-ai-products/buildsignal-ai.md)
 
-### AI assurance, evaluation and research infrastructure
-
-#### Adversarial Review Lite — cross-model assurance for AI-written software
+#### Adversarial Review Lite — everyday agentic review tools with assurance built in
 
 - Two public companion tools implement **Claude builds → Codex reviews** and **Codex builds → Claude reviews**.
-- Frozen review scope, tests/fixtures/rubrics, self-test and model fallback, repo mutation/hash checks, structured findings, builder-side re-verification and human approval before fixes.
-- Designed for non-trivial AI-coded changes where auth, billing, migrations, data writes, API hallucinations or multi-file scope drift create material risk.
+- Primary product identity is practical utility for normal AI-assisted coding; frozen review scope, tests/fixtures/rubrics, self-test/model fallback, repository mutation/hash checks and human approval provide the assurance layer.
+- The bounded-agent / independent-check / human-approval pattern also transfers into compliance and regulated AI products.
 
-[Case study](../domains/04-assurance-digital-engineering/adversarial-review-lite.md)
+[Case study](../domains/03-practical-ai-products/adversarial-review-lite.md)
+
+### Cross-cutting AI assurance, evaluation and research infrastructure
 
 #### ATLAS — GPU/HPC research infrastructure
 
