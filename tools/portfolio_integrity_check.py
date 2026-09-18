@@ -138,6 +138,35 @@ def check_claim_boundaries() -> None:
     assert "does not yet establish closed-loop physical goal delivery" in clear_run
 
 
+def check_final_release_authenticity() -> None:
+    root = (ROOT / "README.md").read_text(encoding="utf-8")
+    impact = (ROOT / "docs" / "IMPACT_MODEL.md").read_text(encoding="utf-8")
+    final_audit = (ROOT / "docs" / "FINAL_RELEASE_AUDIT_2026-09-18.md").read_text(encoding="utf-8")
+    tir = (ROOT / "projects" / "tir-fod-clear-run.md").read_text(encoding="utf-8")
+    lodestar = (ROOT / "projects" / "lodestar.md").read_text(encoding="utf-8")
+
+    assert "What “impact” means in this portfolio" in root
+    assert "What is deliberately not claimed" in root
+    assert "measured improvement in runway safety or mission effectiveness" in root
+    assert "completed autonomous physical FOD recovery" in root
+    assert "self-awarded recruiter score" in final_audit
+    assert "Release decision: PASS" in final_audit
+    assert "Technical risk retired" in impact
+    assert "What does not count by itself" in impact
+    assert "Engineering impact and decision value" in tir
+    assert "What is not claimed" in tir
+    assert "Engineering impact and decision value" in lodestar
+    assert "What is not claimed" in lodestar
+
+    forbidden_root = (
+        "safety-critical AI system",
+        "fully autonomous FOD recovery",
+        "production-proven Lodestar",
+        "measurably improved runway safety",
+    )
+    assert not any(term in root for term in forbidden_root)
+
+
 def main() -> None:
     checks = [
         check_internal_markdown_links,
@@ -150,6 +179,7 @@ def main() -> None:
         check_repository_metadata_contract,
         check_audit_closure_state,
         check_claim_boundaries,
+        check_final_release_authenticity,
     ]
     for check in checks:
         check()
