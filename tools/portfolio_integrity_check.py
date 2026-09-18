@@ -106,6 +106,16 @@ def check_lodestar_assessment_eval_contract() -> None:
     assert "FIVE_STATES" in guard
     assert "approval_probability" not in guard
 
+
+def check_repository_metadata_contract() -> None:
+    spec = json.loads((ROOT / "docs" / "REPOSITORY_METADATA_CONTRACT.json").read_text(encoding="utf-8"))
+    assert spec["desired_description"].startswith("Applied AI portfolio:")
+    assert len(spec["desired_topics"]) == 12
+    assert "computer-vision" in spec["desired_topics"]
+    assert "rag" in spec["desired_topics"]
+    license_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
+    assert "All rights reserved" in license_text
+
 def check_claim_boundaries() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "Evidence boundary." in readme
@@ -125,6 +135,7 @@ def main() -> None:
         check_lodestar_db_fixture_contract,
         check_jetson_historical_boundary,
         check_lodestar_assessment_eval_contract,
+        check_repository_metadata_contract,
         check_claim_boundaries,
     ]
     for check in checks:
