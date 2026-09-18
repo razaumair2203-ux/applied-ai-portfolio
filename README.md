@@ -1,6 +1,6 @@
 # Muhammad Umair Raza — Applied AI & Autonomous Systems Engineering Leader
 
-**Autonomous & Edge AI · Compliance / Regulatory Intelligence · Practical Agentic AI Products · AI Assurance & Aerospace Digital Engineering**
+**Autonomous / Embedded / Edge AI · Compliance / Regulatory Intelligence · Practical Agentic AI Products · AI Assurance / Evaluation / Digital Engineering**
 
 **Current role:** Officer In Charge Projects / R&D & Systems Engineering Lead, College of Aeronautical Engineering, NUST · NUTECH assignments · **2023–present**
 
