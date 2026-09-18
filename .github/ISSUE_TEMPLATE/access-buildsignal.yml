@@ -1,5 +1,5 @@
-name: "Private repository access — BuildSignal AI"
-description: "Request reviewer access to the private BuildSignal AI product repository."
+name: "Technical review — BuildSignal AI"
+description: "Request release-safe technical review of the private BuildSignal AI product repository."
 title: "[ACCESS][BuildSignal AI] "
 assignees:
   - razaumair2203-ux
@@ -11,7 +11,7 @@ body:
 
         The public portfolio contains a release-safe product case study and source-derived interface evidence. The complete working product remains private because it contains unreleased application code, research/content workflows and product operations material.
 
-        This request is visible publicly in the portfolio repository. **Do not include confidential, proprietary or personal information.** Approval is discretionary and repository access is granted separately after review.
+        This request is visible publicly in the portfolio repository. **Do not include confidential, proprietary or personal information.** Approval is discretionary. Review may be provided through a curated release-safe package or branch, a narrower evidence set, or complete repository access when appropriate.
   - type: input
     id: github_username
     attributes:
@@ -53,5 +53,5 @@ body:
     attributes:
       label: Request acknowledgement
       options:
-        - label: "I understand this public request does not automatically grant access and that access may be limited to release-safe material."
+        - label: "I understand this public request does not automatically grant raw repository access and that technical review may use a curated release-safe package, branch or evidence set."
           required: true
