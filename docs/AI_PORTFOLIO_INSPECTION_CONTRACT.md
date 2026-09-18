@@ -111,3 +111,53 @@ The largest remaining deficit is **public verification mechanics**, not AI bread
 4. Tighten integration boundaries and over-broad stack keywords.
 5. Surface engineering failures, trade-offs and unresolved limits.
 6. Add a claim-to-evidence matrix and re-score.
+
+
+## 8. Remediation outcome
+
+| Finding | Status | Remediation |
+|---|---|---|
+| F01 Lodestar public/private retrieval mismatch | **Resolved** | Public `hybrid_search` now exposes the same `visa_class` / `criterion_tags` filtering path used by the authoritative implementation and evaluation. |
+| F02 No public reproduction path | **Resolved within disclosure limits** | Added `public_smoke_test.py` and GitHub Actions CI. The public checks exercise RRF, authority weighting, metadata filters, legal-structure chunking and the frozen evaluation specification. |
+| F03 Stale SAHI identifier | **Resolved** | Updated the public detector excerpt to current `model_type="ultralytics"` usage. |
+| F04 Headline precision vs proof scope | **Resolved** | Added explicit public/private evidence boundaries and a claim-to-evidence matrix. |
+| F05 Reranker described as a literal near-tie mechanism | **Resolved** | Documentation now describes the implemented bounded multiplicative authority adjustment. |
+| F06 GCS→UGV hand-off overstatement | **Resolved** | Portfolio now states that physical goal delivery / end-to-end hand-off and retention remain validation items. |
+| F07 Over-broad root stack | **Resolved** | Removed weaker headline keywords (for example Supabase and ROS/ROS2) from the root stack while preserving deeper project-specific context where relevant. |
+| F08 Missing trade-offs/failures | **Resolved** | Added explicit Clear Run and Lodestar engineering trade-offs, negative findings and unresolved limits. |
+| F09 Authentic visual evidence | **Retained as strength** | Existing non-synthetic Clear Run, TIR-FOD, Lodestar and public-tool evidence remains unchanged. |
+| F10 Clear Run ownership | **Retained as strength** | Team-development and systems/technical-leadership boundaries remain explicit. |
+| F11 Reproducibility language | **Resolved** | Public runnable checks are separated from private full-corpus/programme measurements. |
+| F12 No CI for public evidence | **Resolved** | Added a lightweight compile + smoke-test workflow. |
+| Lodestar personal contribution clarity | **Resolved** | Case study now states the product/specification ownership and AI-assisted development model without claiming manual authorship of every source line. |
+
+## 9. Post-remediation score
+
+| Dimension | Score |
+|---|---:|
+| Truth / evidence integrity | **14 / 15** |
+| 60-second role signal | **9 / 10** |
+| Ownership clarity | **8 / 8** |
+| AI/ML technical depth | **11 / 12** |
+| Evaluation / data rigor | **9 / 10** |
+| Reproducibility / runnability | **8 / 12** |
+| Production / deployment depth | **9 / 10** |
+| Software / MLOps engineering | **6 / 7** |
+| Impact / system outcome | **4 / 5** |
+| Visual / demo proof | **5 / 5** |
+| Repository hygiene | **3 / 3** |
+| External verification | **2 / 3** |
+| **Total** | **88 / 100** |
+
+**Post-remediation assessment: recruiter-ready and technically persuasive, with deliberate limits rather than hidden gaps.**
+
+The score is not higher because the two most impressive systems intentionally remain partly private. A reviewer can execute representative Lodestar logic and inspect sanitized Clear Run source/visual evidence, but cannot independently recreate the full 209-document RAG measurement or the complete flight/mission test environment from this repository alone.
+
+## 10. Highest-value remaining upgrades
+
+These are not release blockers:
+
+1. Publish a small, non-sensitive Lodestar fixture corpus that exercises the real Postgres/pgvector retrieval path end-to-end.
+2. Publish a sanitized Clear Run benchmark CSV/log extract plus a tiny script that recomputes the 10-run FPS/latency summaries.
+3. When integrated UAV→GCS→UGV retrieval trials close, add mission-level KPI tables with denominators, inclusion rules and failure cases rather than only a success video.
+4. Add external-record links for each paper/dataset once stable indexing pages are available and verified.
