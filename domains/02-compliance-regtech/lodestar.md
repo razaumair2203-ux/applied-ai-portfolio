@@ -1,6 +1,8 @@
 # Lodestar — EB-2 NIW / EB-1A evidence-assessment SaaS
 
-![Lodestar product landing surface](../../visuals/compliance-regtech/lodestar/product-surface.svg)
+**Complete working product repository:** private · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml)
+
+[![Lodestar product landing surface](../../visuals/compliance-regtech/lodestar/product-surface.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml)
 
 *Source-derived rendering of the current Lodestar frontend landing page. The private project defines the interface but has no separate distributable logo asset.*
 
@@ -35,7 +37,7 @@ Lodestar's product shape is an **evidence-assessment workflow, not a legal chatb
 
 ## Retrieval architecture
 
-![Lodestar retrieval architecture](../../visuals/compliance-regtech/lodestar/architecture.svg)
+[![Lodestar retrieval architecture](../../visuals/compliance-regtech/lodestar/architecture.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml)
 
 The retrieval path uses structure-aware chunking, local embeddings, PostgreSQL full-text search and vector search in parallel. Ordinary lexical/vector lanes are supplemented by high-authority lanes so controlling sources remain represented in the candidate pool. Results are fused with **Reciprocal Rank Fusion**, hydrated into citable evidence objects and passed through a deterministic authority-sensitive reranker.
 
@@ -43,7 +45,7 @@ This avoids inventing one numeric scale for lexical relevance and vector distanc
 
 ## Execution / evaluation trace
 
-![Lodestar public execution and evaluation trace](../../visuals/compliance-regtech/lodestar/execution-trace.svg)
+[![Lodestar public execution and evaluation trace](../../visuals/compliance-regtech/lodestar/execution-trace.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml)
 
 The execution visual is derived from the published regression record and adversarial output fixtures: the frozen retrieval set records **1 miss in 34 top-5 expected-source queries**, and the `hallucinated_citation_forces_refusal` fixture asserts that a model response claiming `documented` with a nonexistent citation is reduced to **unsupported + no citations + refusal**.
 
