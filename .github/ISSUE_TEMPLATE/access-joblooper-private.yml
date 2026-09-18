@@ -1,0 +1,57 @@
+name: "Private repository access — JobLooper development lineage"
+description: "Request reviewer access to the private JobLooper development and evaluation lineage."
+title: "[ACCESS][JobLooper private lineage] "
+assignees:
+  - razaumair2203-ux
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your interest in **JobLooper**.
+
+        The public implementation is openly inspectable. A separate private development/evaluation lineage contains additional experiments, frozen evaluation material and development records that are not published with the public release.
+
+        This request is visible publicly in the portfolio repository. **Do not include confidential, proprietary or personal information.** Approval is discretionary and repository access is granted separately after review.
+  - type: input
+    id: github_username
+    attributes:
+      label: GitHub username
+      description: "The GitHub account that should receive access if the request is approved."
+      placeholder: "@username"
+    validations:
+      required: true
+  - type: dropdown
+    id: context
+    attributes:
+      label: Review context
+      options:
+        - Recruiter / hiring manager
+        - Technical interviewer / engineering reviewer
+        - AI evaluation / assurance reviewer
+        - Potential collaborator
+        - Other professional review
+    validations:
+      required: true
+  - type: input
+    id: organization
+    attributes:
+      label: Organization
+      description: "Company, university or organization (optional)."
+      placeholder: "Organization name"
+    validations:
+      required: false
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What would you like to review?
+      description: "Briefly state the technical areas or evidence you want to inspect."
+      placeholder: "Example: evaluation harness, provenance controls, release gates, document build pipeline, or outcome-learning workflow."
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Request acknowledgement
+      options:
+        - label: "I understand this public request does not automatically grant access and that access may be limited to release-safe material."
+          required: true
