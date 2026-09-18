@@ -1,24 +1,49 @@
-# Private repository access
+# Private technical review access
 
-Some portfolio projects are represented publicly through release-safe case studies, authentic visuals, reproducibility material and selected implementation evidence while their complete working repositories remain private.
+Some projects in this portfolio are represented publicly through release-safe case studies, authentic visuals, reproducibility material and selected implementation evidence while complete working material remains private.
 
-Private repositories may contain active research, unreleased product code, original programme records, internal evaluation material or other content that is not appropriate for unrestricted publication.
+Private working repositories can contain active research, unreleased product code, internal operating notes, original programme records, private evaluation material or other content that is inappropriate for unrestricted recruiter access. **A technical-review request therefore does not automatically expose the raw working repository.**
 
-## Requesting technical review access
+## Review model
 
-Recruiters, hiring managers, technical interviewers, research reviewers and potential collaborators can request access to a specific project below.
+The default response to an approved request is the **smallest useful review surface** for the reviewer:
 
-| Project | Public evidence | Request private review access |
+1. a curated release-safe technical package or review branch containing the relevant architecture, code, tests, evaluation evidence and setup notes;
+2. a narrower evidence set when source or programme restrictions require it; or
+3. complete repository access only when the repository itself is suitable for external review.
+
+This keeps the review technically meaningful without exposing unrelated internal working material.
+
+## Requesting a review
+
+Recruiters, hiring managers, technical interviewers, research reviewers and potential collaborators can request review of a specific project below.
+
+| Project | Public evidence | Request technical review |
 |---|---|---|
-| Clear Run / TIR-FOD | [Case study](domains/01-autonomy-edge-ai/clear-run-tir-fod.md) | [Request access](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml) |
-| Counter-UAS Phase I | [Case study](domains/01-autonomy-edge-ai/counter-uas.md) | [Request access](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml) |
-| i-MSHA | [Case study](domains/02-compliance-regtech/i-msha.md) | [Request access](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml) |
-| Lodestar | [Case study](domains/02-compliance-regtech/lodestar.md) | [Request access](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml) |
-| JobLooper private development/evaluation lineage | [Public implementation and case study](domains/03-practical-ai-products/joblooper-jobpilot.md) | [Request access](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-joblooper-private.yml) |
-| BuildSignal AI | [Case study](domains/03-practical-ai-products/buildsignal-ai.md) | [Request access](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-buildsignal.yml) |
+| Clear Run / TIR-FOD | [Case study](domains/01-autonomy-edge-ai/clear-run-tir-fod.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml) |
+| Counter-UAS Phase I | [Case study](domains/01-autonomy-edge-ai/counter-uas.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml) |
+| i-MSHA | [Case study](domains/02-compliance-regtech/i-msha.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml) |
+| Lodestar | [Case study](domains/02-compliance-regtech/lodestar.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml) |
+| JobLooper private development/evaluation lineage | [Public implementation and case study](domains/03-practical-ai-products/joblooper-jobpilot.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-joblooper-private.yml) |
+| BuildSignal AI | [Case study](domains/03-practical-ai-products/buildsignal-ai.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-buildsignal.yml) |
 
-Requests are reviewed individually. A request does **not** automatically expose a private repository or grant permissions. Depending on the material, review access may be provided to the repository itself or to a narrower release-safe technical evidence set.
+GitHub requests are public issues in this portfolio repository. **Do not include confidential, proprietary, export-controlled, security-sensitive or personal information.** A GitHub username plus a short review purpose is sufficient.
 
-**Privacy note:** access requests are GitHub Issues in this public portfolio repository. Do not include confidential, proprietary, export-controlled, security-sensitive or personal information. A GitHub username is sufficient to identify the account that would receive approved access.
+For a discreet request, contact me through [LinkedIn](https://www.linkedin.com/in/mumairaza/) and identify the project and technical area you want to inspect.
 
-Projects that already have public source repositories continue to link directly to those repositories rather than using this request process.
+## Review-package standard
+
+Where a curated package is used, it should contain only material needed for technical evaluation and should normally include:
+
+- a concise system/problem statement and current maturity;
+- architecture and key interface boundaries;
+- selected implementation relevant to the review purpose;
+- tests, evaluation fixtures or measurement records;
+- setup/reproduction instructions where release-safe;
+- explicit ownership and team-development boundaries;
+- open limitations and unverified claims;
+- no career-planning notes, funding administration, personal data, secrets or unrelated internal operating instructions.
+
+Projects that already have public source repositories continue to link directly to those repositories rather than using this process.
+
+[Back to portfolio](README.md)
