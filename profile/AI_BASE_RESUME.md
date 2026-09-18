@@ -1,4 +1,4 @@
-# Muhammad Umair Raza — Applied AI Systems & Aerospace Engineering Profile
+# Muhammad Umair Raza — Applied AI & Autonomous Systems Engineering Leader
 
 **Autonomous & Edge AI · Computer Vision · Compliance / Regulatory Intelligence · Practical Agentic AI Products · Aerospace Digital Engineering**
 
@@ -10,7 +10,7 @@ Applied-AI systems and aerospace-engineering leader with **18+ years** across ai
 
 My primary current technical domain is **autonomous / embedded / edge AI**, especially computer vision, UAV/UGV systems, RGB/LWIR sensing, Jetson/TensorRT deployment and system-level verification. In parallel, I am building a deliberate product niche in **compliance and regulatory intelligence**, applying retrieval, structured evidence models, analytics and bounded AI reasoning to regulated decision environments.
 
-The wider portfolio also includes an **independent and growing practical-agentic product stream** for everyday engineering, career, research and knowledge work, alongside cross-cutting AI assurance, evaluation/release controls, GPU/HPC research infrastructure and aerospace digital engineering. The common thread is **Applied AI Systems Engineering**: AI treated as part of a complete engineered system with explicit data, interfaces, configuration, verification and operational boundaries.
+My current work also includes an **independent and growing practical-agentic product stream** for everyday engineering, career, research and knowledge work, alongside cross-cutting AI assurance, evaluation/release controls, GPU/HPC research infrastructure and aerospace digital engineering. The common thread is **Applied AI Systems Engineering**: AI treated as part of a complete engineered system with explicit data, interfaces, configuration, verification and operational boundaries.
 
 ## Applied AI evidence by domain
 
