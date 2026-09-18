@@ -66,32 +66,34 @@ The original workflow compiled four Lodestar files and ran one pure-logic smoke 
 
 **Treatment:** CI now compiles all published Python evidence and runs repository-wide checks for Markdown links, JSON validity, frozen evaluation-contract consistency and key evidence-boundary assertions.
 
-### R05 — S2 — Public model-training reproducibility remains thin
-TIR-FOD shows strong reported methodology and result evidence but the portfolio does not expose a small training/evaluation harness, experiment configuration, partition manifest or aggregate recomputation path.
+### R05 — S2 — Public model-training reproducibility remains thin — **RESOLVED**
+TIR-FOD previously showed strong reported methodology and result evidence without an executable public aggregate-verification path.
 
-**Status:** open. This is now one of the highest-value upgrades.
+**Resolution:** published a sanitized current-revision reproducibility bundle containing 29 seed-level scalar run records, the exact training/evaluation contract, the current acquisition-block split manifest, the recorded relevant environment, a GPU training harness and a zero-dependency recomputation script. CI now recomputes the manuscript headline means/SDs and seed-paired effects and validates the training contract in dry-run mode. Full 29-run GPU retraining is deliberately not performed in portfolio CI.
 
-### R06 — S2 — Full Lodestar retrieval remains non-reproducible publicly
-The portfolio correctly says this, but a senior RAG reviewer still cannot run the real PostgreSQL/pgvector retrieval path with a small fixture corpus.
+### R06 — S2 — Full Lodestar retrieval remains non-reproducible publicly — **RESOLVED**
+A senior RAG reviewer previously could inspect the SQL but could not execute the published hybrid path against a public database fixture.
 
-**Status:** open. Publish a non-sensitive fixture database/bootstrap and end-to-end retrieval test.
+**Resolution:** added a non-sensitive PostgreSQL + pgvector fixture using the same `pgvector/pgvector:pg16` database family as the authoritative development setup. CI now executes the published hybrid retrieval implementation end to end across PostgreSQL FTS, 1024-dimensional pgvector ordering, metadata filters, four candidate lanes, RRF, hydration, authority reranking and non-precedent labeling. Only the heavyweight embedding model is substituted by deterministic fixture query vectors; the private 209-document corpus remains correctly bounded as private.
 
-### R07 — S2 — Clear Run performance evidence needs machine-readable recomputation
-25.0 FPS / 15.6 FPS and thermal/power figures are well bounded as private measurements, but a public CSV/log extract plus a tiny aggregation script would materially increase trust.
+### R07 — S2 — Clear Run performance evidence needs machine-readable recomputation — **RESOLVED BY EVIDENCE DOWNGRADE**
+The initial remediation assumed a sanitized raw run-log extract could be published. Inspection of the authoritative flight/reviewer archive showed that the historical ten-run logs and deployed TensorRT engine were **not retained**. Creating a reconstructed CSV from means/ranges would fabricate evidence.
 
-**Status:** open.
+**Resolution:** corrected the portfolio rather than manufacturing data. The 25.0 FPS TensorRT-stage and 15.6 FPS end-to-end values are now explicitly labelled **author-confirmed ten-run historical summaries**; the retained 25.12/15.07 runtime display is distinguished from those means; historical checkpoint identity is marked unavailable; the power wording is corrected so the 16–18 W range is not mislabelled as compute-and-camera-only power; and a machine-readable evidence-status file enforces these boundaries. A separate named-checkpoint measurement protocol is published for future/returned reproducible Jetson evidence, with engine/checkpoint hashes, repeated runs, CUDA-synchronized per-frame timing, separate telemetry and refusal gates.
 
-### R08 — S2 — Answer-level RAG evaluation is missing
-Retrieval is evaluated independently, which is good, but citation faithfulness, answer correctness, abstention behavior and retrieval-to-generation failure propagation are not yet publicly demonstrated.
+### R08 — S2 — Answer-level RAG evaluation is missing — **RESOLVED AT THE REAL PRODUCT OUTPUT CONTRACT**
+Inspection of the authoritative Lodestar implementation showed that the downstream surface is not a generic free-form QA chatbot; it is a structured per-criterion evidence assessment with a five-state schema and hard grounding gates.
 
-**Status:** open.
+**Resolution:** published a 10-case adversarial evaluation derived from the real assessment invariants. CI now verifies post-gate citation validity, hallucinated/ambiguous citation dropping, unambiguous prefix recovery, refusal when grounding disappears, preservation of `not_applicable` where appropriate, filtering of invented evidence IDs, five-state enforcement, and removal of unauthorized numeric approval/score fields. The portfolio explicitly does **not** convert this into a claim of semantic legal correctness; that remains a human/domain evaluation problem.
 
-### R09 — S3 — Repository metadata under-sells the work
-The GitHub repository description is only "Applied Ai portfolio", topics are empty, and there is no repository license. These do not weaken the engineering itself, but they reduce discoverability and polish.
+### R09 — S3 — Repository metadata under-sells the work — **CONTENT RESOLVED / TWO SERVER FIELDS TOOL-BLOCKED**
+The GitHub repository description is only "Applied Ai portfolio", topics are empty, and the repository previously had no explicit rights notice.
 
-**Status:** open; repository-level metadata must be changed through GitHub settings/API outside the file-content workflow.
+**Resolution applied:** added an explicit repository-wide rights notice in `LICENSE`, plus a machine-readable [repository metadata contract](REPOSITORY_METADATA_CONTRACT.json) containing the exact recruiter-facing description and 12 GitHub topics. CI validates description length, topic syntax/uniqueness/count and the license policy.
 
-## Score after this remediation branch
+**Tool boundary:** the connected GitHub interface used for this remediation exposes repository content/branch/PR writes but no administration mutation for the live repository description or topics. Those two server-side About-panel fields therefore cannot honestly be marked changed from this session. The desired values are committed and tested so the remaining action is deterministic rather than interpretive.
+
+## First re-audit score before sequential R05–R09 remediation
 
 | Dimension | Score |
 |---|---:|
@@ -109,13 +111,30 @@ The GitHub repository description is only "Applied Ai portfolio", topics are emp
 | External verification | **2 / 3** |
 | **Total** | **85 / 100** |
 
-## Highest-value next work
+## Current score after sequential R05–R09 remediation
 
-1. Publish a tiny Lodestar Postgres/pgvector fixture and end-to-end retrieval test.
-2. Publish a TIR-FOD experiment-config / partition-manifest excerpt plus an aggregate recomputation script.
-3. Publish a sanitized Clear Run latency/FPS CSV and deterministic summary script.
-4. Add answer-level RAG evaluation with citation faithfulness, unsupported-claim rate and failure examples.
-5. Add environment/dependency contracts for any evidence intended to be runnable beyond the zero-dependency checks.
-6. Improve GitHub repository description/topics/license through repository settings.
+| Dimension | Score |
+|---|---:|
+| Truth / evidence integrity | **15 / 15** |
+| 60-second role signal | **9 / 10** |
+| Ownership clarity | **8 / 8** |
+| AI/ML technical depth | **11 / 12** |
+| Evaluation / data rigor | **9 / 10** |
+| Reproducibility / runnability | **10 / 12** |
+| Production / deployment depth | **9 / 10** |
+| Software / MLOps engineering | **7 / 7** |
+| Impact / system outcome | **4 / 5** |
+| Visual / demo proof | **5 / 5** |
+| Repository hygiene | **2 / 3** |
+| External verification | **2 / 3** |
+| **Total** | **91 / 100** |
 
-The portfolio is already differentiated for **applied AI + aerospace/autonomy + edge deployment**. The remaining gains come from converting high-quality private evidence into small, safe, independently executable public proof.
+**Why it is not higher:** the full Lodestar corpus/product remains private; historical Jetson raw logs/engine were not retained; current Clear Run mission-level retrieval KPIs are still under validation; and the live GitHub description/topics remain unchanged because the connected GitHub interface does not expose repository-administration mutation. Those are explicit boundaries, not hidden gaps.
+
+## Remaining work after sequential remediation
+
+The technical observations R05–R08 are closed with public executable evidence or, where historical raw data no longer exists, an explicit evidence downgrade. R09's repository-content/licensing portion is closed. The only unresolved audit action is applying the already-defined **live GitHub description and topics** through an administration-capable repository-settings interface.
+
+Further improvements are optional depth rather than audit blockers: publish named-checkpoint Jetson run logs if/when the new protocol is executed, extend the structured Lodestar assessment evaluation with human/domain-rated real-provider outputs, and add external records as publications/datasets mature.
+
+The portfolio remains differentiated for **applied AI + aerospace/autonomy + edge deployment**, but now asks a reviewer to trust materially less of the core technical story.

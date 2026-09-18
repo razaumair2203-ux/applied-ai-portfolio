@@ -73,7 +73,7 @@ The repo provides source excerpts and measured summaries but no zero-dependency 
 The public excerpt uses `AutoDetectionModel.from_pretrained(model_type="yolov8", ...)`. Current SAHI/Ultralytics integration uses the `"ultralytics"` framework identifier. Either pin a historical dependency that accepts the old identifier or publish the current API form.
 
 ### F04 — S1 — Headline precision is stronger than public reproduction scope
-Exact values—25.0 FPS, 15.6 FPS, 2.9% grounding error, 53 tests, 12/12 concurrent flows—are legitimate recorded results, but the landing page does not clearly distinguish private/team-system measurements from public reproducible checks.
+Exact values—25.0 FPS, 15.6 FPS, 2.9% grounding error, 53 tests, 12/12 concurrent flows—were originally grouped too loosely as recorded results. The later independent re-audit established that the Jetson 25.0/15.6 values are author-confirmed historical ten-run summaries whose raw per-run logs and engine were not retained, while the Lodestar figures are private-system recorded measurements. The landing page must distinguish these evidence classes.
 
 ### F05 — S2 — Authority reranking is described imprecisely
 The public Lodestar prose calls authority a “near-tie preference,” but the published code applies a continuous multiplicative score adjustment. It behaves as a bounded nudge, not a literal tie-window mechanism.

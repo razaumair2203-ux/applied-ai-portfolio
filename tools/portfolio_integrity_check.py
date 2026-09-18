@@ -50,6 +50,72 @@ def check_lodestar_eval_contract() -> None:
     assert "1 / 34 misses (2.9%)" in log
 
 
+
+def check_tir_fod_reproducibility() -> None:
+    base = ROOT / "evidence" / "tir-fod" / "reproducibility"
+    raw = json.loads((base / "raw_seed_metrics.json").read_text(encoding="utf-8"))
+    protocol = json.loads((base / "training_protocol.json").read_text(encoding="utf-8"))
+    split = json.loads((base / "current_v2_split_manifest.json").read_text(encoding="utf-8"))
+    assert len(raw["runs"]) == 29
+    assert protocol["full_benchmark_split"]["images"]["train"] == 18221
+    assert protocol["full_benchmark_split"]["source_frames"] == {
+        "train": 2450, "validation": 529, "test": 520
+    }
+    assert split["xsession_block_overlap"] == []
+    assert set(split["classes"]) == {
+        "HeadSet", "MetalShard", "Screw", "Nut", "PaperCup", "SafetyGoggle",
+        "Scissor", "ScrewDriver", "SprayCan", "Tape", "SodaCan", "Wire"
+    }
+
+
+def check_lodestar_db_fixture_contract() -> None:
+    base = ROOT / "evidence" / "lodestar" / "fixture"
+    assert (base / "schema.sql").exists()
+    assert (base / "postgres_fixture_test.py").exists()
+    schema = (base / "schema.sql").read_text(encoding="utf-8")
+    test = (base / "postgres_fixture_test.py").read_text(encoding="utf-8")
+    assert "vector(1024)" in schema
+    assert "websearch_to_tsquery" not in schema  # query logic stays in published retrieval module
+    assert "from evidence.lodestar.hybrid_retrieval import hybrid_search" in test
+    assert "criterion_tags" in test and "visa_class" in test
+
+
+def check_jetson_historical_boundary() -> None:
+    path = ROOT / "evidence" / "tir-fod" / "deployment" / "historical_measurement_status.json"
+    rec = json.loads(path.read_text(encoding="utf-8"))
+    assert rec["provenance"]["raw_per_run_logs_retained"] is False
+    assert rec["provenance"]["deployed_tensorrt_engine_retained"] is False
+    assert rec["provenance"]["historical_checkpoint_identifiable"] is False
+    root = (ROOT / "README.md").read_text(encoding="utf-8")
+    case = (ROOT / "projects" / "tir-fod-clear-run.md").read_text(encoding="utf-8")
+    matrix = (ROOT / "docs" / "HEADLINE_EVIDENCE_MATRIX.md").read_text(encoding="utf-8")
+    assert "raw per-run logs not retained" in root
+    assert "author-confirmed ten-run" in case
+    assert "Raw per-run logs and historical engine were not retained" in matrix
+    assert "compute-and-camera subsystem power" not in case
+
+
+def check_lodestar_assessment_eval_contract() -> None:
+    base = ROOT / "evidence" / "lodestar" / "assessment_eval"
+    spec = json.loads((base / "evaluation_cases.json").read_text(encoding="utf-8"))
+    assert len(spec["cases"]) == 10
+    readme = (base / "README.md").read_text(encoding="utf-8")
+    assert "100% post-gate citation validity" in readme
+    assert "not a claim of legal correctness" in readme
+    guard = (base / "assessment_guardrail.py").read_text(encoding="utf-8")
+    assert "FIVE_STATES" in guard
+    assert "approval_probability" not in guard
+
+
+def check_repository_metadata_contract() -> None:
+    spec = json.loads((ROOT / "docs" / "REPOSITORY_METADATA_CONTRACT.json").read_text(encoding="utf-8"))
+    assert spec["desired_description"].startswith("Applied AI portfolio:")
+    assert len(spec["desired_topics"]) == 12
+    assert "computer-vision" in spec["desired_topics"]
+    assert "rag" in spec["desired_topics"]
+    license_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
+    assert "All rights reserved" in license_text
+
 def check_claim_boundaries() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "Evidence boundary." in readme
@@ -65,6 +131,11 @@ def main() -> None:
         check_internal_markdown_links,
         check_json_evidence,
         check_lodestar_eval_contract,
+        check_tir_fod_reproducibility,
+        check_lodestar_db_fixture_contract,
+        check_jetson_historical_boundary,
+        check_lodestar_assessment_eval_contract,
+        check_repository_metadata_contract,
         check_claim_boundaries,
     ]
     for check in checks:

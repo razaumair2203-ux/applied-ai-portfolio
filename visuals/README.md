@@ -44,7 +44,7 @@ Original project artefacts used include:
 - training curves;
 - confusion matrix.
 
-The displayed deployment figures correspond to the reported ten-run means: **25.0 FPS TensorRT inference** and **15.6 FPS end-to-end** on the 640 × 512 LWIR stream.
+The underlying runtime screen is direct retained evidence of a historical display reading (**25.12 FPS TensorRT / 15.07 FPS end-to-end**). The portfolio's **25.0 / 15.6 FPS** values are separate author-confirmed ten-run summaries; they are not reconstructed from the screenshot, and the raw per-run logs were not retained. See the [deployment evidence boundary](../evidence/tir-fod/deployment/README.md).
 
 ### `counter_uas_phase1_evidence.jpg`
 

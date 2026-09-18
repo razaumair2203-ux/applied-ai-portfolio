@@ -1,6 +1,6 @@
 # Lodestar — grounded RAG and evidence assessment
 
-**Working private full-stack RAG system with public sanitized implementation, a runnable pure-logic smoke check, and a public evaluation specification.**
+**Working private full-stack RAG system with public sanitized implementation, a runnable pure-logic smoke check, a real PostgreSQL/pgvector fixture integration test, and a public evaluation specification.**
 
 ## At a glance
 
@@ -66,11 +66,13 @@ Authority currently enters at two stages: the high-authority lexical/vector lane
 
 ## Evaluation
 
-The hand-checked grounding set currently contains **34 query / expected-source pairs**. The evaluation asks whether an accepted authority/citation marker appears in the top five retrieved results.
+The hand-checked retrieval set currently contains **34 query / expected-source pairs**. It asks whether an accepted authority/citation marker appears in the top five retrieved results.
 
-**Recorded full-system result: 1 miss in 34 frozen queries (2.9% top-5 expected-source miss rate)** on the private **209-document / 2,945-chunk** corpus. The public portfolio includes the frozen 34-pair evaluation set and evaluation code; it does not publish the complete corpus/database, so this exact full-system result is not presented as independently reproducible from the portfolio alone.
+The downstream product surface is a structured evidence assessment rather than a generic chatbot answer. A separate [public adversarial output-contract evaluation](../evidence/lodestar/assessment_eval/README.md) now tests how model-shaped outputs behave after retrieval: fabricated citations are dropped, unsupported conclusions fall onto a refusal path, unknown evidence IDs are removed, only five states survive, and numeric approval/score fields cannot enter the canonical output.
 
-This metric is intentionally separated from answer-generation quality so fluent text cannot hide a retrieval miss.
+**Recorded full-system result: 1 miss in 34 frozen queries (2.9% top-5 expected-source miss rate)** on the private **209-document / 2,945-chunk** corpus. The public portfolio includes the frozen 34-pair evaluation set and evaluation code; it does not publish the complete corpus/database, so this exact full-system result is not presented as independently reproducible from the portfolio alone. Separately, a [public PostgreSQL/pgvector fixture](../evidence/lodestar/fixture/README.md) executes the real published lexical/vector/filter/RRF/hydration/reranking path end to end on a non-sensitive mini-corpus.
+
+Retrieval and downstream assessment are evaluated separately so fluent text cannot hide a retrieval miss. The public assessment evaluation establishes grounding/control behavior, **not semantic legal correctness**; the latter remains a human/domain-review problem rather than being disguised as an automated score.
 
 ## Engineering trade-offs, failures and current limits
 
@@ -108,6 +110,8 @@ A technical reviewer can inspect representative sanitized implementation directl
 - [`retrieval_integration_test.py`](../evidence/lodestar/retrieval_integration_test.py) — database-backed retrieval test;
 - [`grounding-eval.md`](../evidence/lodestar/grounding-eval.md) — recorded full-system evaluation result.
 - [`public_smoke_test.py`](../evidence/lodestar/public_smoke_test.py) — zero-dependency public checks for retrieval-control logic and the frozen evaluation specification.
+- [`fixture/postgres_fixture_test.py`](../evidence/lodestar/fixture/postgres_fixture_test.py) — public real-DB integration path using PostgreSQL full-text search and pgvector.
+- [`assessment_eval/run_eval.py`](../evidence/lodestar/assessment_eval/run_eval.py) — public adversarial evaluation of citation grounding, refusal behavior, evidence-ID filtering and five-state output constraints.
 
 ## Current engineering direction
 

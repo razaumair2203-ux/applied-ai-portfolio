@@ -9,14 +9,14 @@
 | **Problem** | Detect, geolocate and ultimately retrieve runway Foreign Object Debris using unmanned aerial and ground systems |
 | **Dataset / benchmark** | **3,499 LWIR source frames · 5,593 annotated objects · 23 classes · 29 completed training runs** |
 | **Model work** | YOLOv8 / YOLO11 / YOLO12 comparative experiments + current **multi-model LWIR fusion** |
-| **Edge deployment** | Jetson Orin Nano · FP16 TensorRT · UAV flight trials · **25.0 FPS inference / 15.6 FPS end-to-end** |
+| **Edge deployment** | Jetson Orin Nano · FP16 TensorRT · UAV flight trials · historical **25.0 FPS inference / 15.6 FPS end-to-end** ten-run summaries *(author-confirmed; raw per-run logs not retained)* |
 | **Integrated AI runtime** | Concurrent RGB + passive-IR inference · Ultralytics YOLO + SAHI sliced inference · geolocation · MAVLink/REST · GCS mission integration |
 | **Current systems focus** | Closing and quantitatively validating target hand-off, terminal alignment, collection and retention |
 | **My role** | Technical direction, systems architecture/interfaces, experiment and evaluation strategy, deployment review, integration gates and team leadership |
 
-**Public dataset:** [TIR-FOD v1.2 — Zenodo DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586) · **Result extract:** [benchmark snapshot](../evidence/tir-fod/benchmark_results.json) · **Deployment-code extract:** [Clear Run evidence](../evidence/clear-run/README.md)
+**Public dataset:** [TIR-FOD v1.2 — Zenodo DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586) · **Reproducible results:** [29-run public recomputation bundle](../evidence/tir-fod/reproducibility/README.md) · **Deployment-code extract:** [Clear Run evidence](../evidence/clear-run/README.md)
 
-**Evidence boundary:** the dataset record, benchmark extract and sanitized detector code are public. Full dual-camera mission source, flight logs and programme integration records remain private/team material. The field throughput, power and thermal figures below are recorded programme measurements, not a benchmark that can be rerun from this portfolio alone.
+**Evidence boundary:** the dataset record, 29-run scalar result set, training/evaluation contract, split evidence and sanitized detector code are public. The public recomputation reproduces the reported seed summaries and paired effects; GPU retraining requires the released dataset and compatible ML environment. The historical flight-test raw per-run logs and TensorRT engine were not retained. Accordingly, the 25.0/15.6 FPS figures below are presented only as author-confirmed ten-run summaries, with the retained single runtime display treated separately. The historical checkpoint is not inferred. See the [machine-readable deployment evidence boundary](../evidence/tir-fod/deployment/README.md).
 
 ![Authentic Clear Run system evidence](../visuals/clear_run_system_evidence.jpg)
 
@@ -78,15 +78,18 @@ This is the practical loop: **train → compare → select → package → deplo
 
 The thermal detector was deployed onboard **Jetson Orin Nano** with a thermal payload and GNSS/Pixhawk flight stack and exercised through repeated runway UAV trials.
 
-Measured system evidence includes:
+Historical deployment evidence includes:
 
 - onboard TensorRT inference from the airborne LWIR stream;
 - transmission of detections into the operator workflow;
 - captured successful detections, misses, false detections and misclassifications;
-- ten-run mean **25.0 FPS TensorRT inference**;
-- ten-run mean **15.6 FPS end-to-end** on the 640 × 512 LWIR stream;
-- approximately **16–18 W** compute-and-camera subsystem power during the reported trials;
-- reported Jetson module temperatures of approximately **55–70 °C**.
+- author-confirmed ten-run mean **25.0 FPS TensorRT-stage throughput**; the reported **4% variation** is retained without relabelling it as a standard deviation;
+- author-confirmed ten-run **15.6 FPS end-to-end**, with reported range **15.07–16.0 FPS**, on the 640 × 512 LWIR stream;
+- retained single runtime display evidence of **25.12 FPS TensorRT / 15.07 FPS end-to-end**;
+- author-confirmed **15 W nvpmodel** mode, reported Jetson module draw **11–12 W**, two cameras at about **4 W total**, and a broader non-propulsion system total around **17 W** with **16–18 W** reported range;
+- reported device temperature range of approximately **55–70 °C**.
+
+The raw ten-run logs and historical TensorRT engine were not retained, so the historical summaries are not presented as publicly recomputable or checkpoint-attributable. A separate [named-checkpoint measurement protocol](../evidence/tir-fod/deployment/named_checkpoint_protocol.json) defines how future device evidence is captured with hashes, per-frame timing and telemetry.
 
 This is field-deployed edge AI rather than workstation-only inference.
 
@@ -128,7 +131,7 @@ The AI inference, dual-camera processing, telemetry/GCS integration, day/night d
 
 - **Data leakage materially changes the apparent result.** A size-matched contamination experiment increased mAP@[.50:.95] by **8.52 ± 0.19 percentage points**. Source lineage is therefore treated as an evaluation control, not dataset bookkeeping.
 - **Frame-level generalisation was optimistic.** On the shared 12-class experiment, acquisition-block-disjoint evaluation produced **0.7410 ± 0.0423**, compared with **0.8223 ± 0.0070** under frame-level partitioning. The harder split is more informative for deployment across new acquisition conditions.
-- **Model FPS is not system FPS.** The flight stack measured **25.0 FPS TensorRT inference** but **15.6 FPS end-to-end**. Camera I/O, preprocessing/postprocessing and mission-pipeline overhead therefore matter to system sizing; both values are retained instead of presenting model latency as mission throughput.
+- **Model FPS is not system FPS, but historical provenance is limited.** The author-confirmed flight summary reports **25.0 FPS TensorRT-stage** versus **15.6 FPS end-to-end**, showing why camera/pipeline overhead matters. Because the per-run logs and engine were not retained, these figures are kept as historical system evidence rather than promoted to a reproducible benchmark. The named-checkpoint protocol now requires hashes, separate inference/live-stream timing and retained telemetry.
 - **The autonomy loop is not yet claimed complete.** Detection, dual-camera processing, telemetry/GCS functions, UGV hardware and the retrieval subsystem exist in the active programme, while physical target hand-off, terminal alignment, capture and verified retention are still being quantitatively closed.
 
 ## My role

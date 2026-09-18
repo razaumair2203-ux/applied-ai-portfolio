@@ -1,0 +1,56 @@
+{
+  "record_type": "historical deployment measurement status",
+  "date_interpreted": "2026-09-06",
+  "platform": "NVIDIA Jetson Orin Nano",
+  "run_count": 10,
+  "historical_summary": {
+    "tensorrt_stage_fps": {
+      "mean": 25,
+      "reported_variation_percent": 4,
+      "variation_definition": "not retained; do not relabel as standard deviation"
+    },
+    "end_to_end_fps": {
+      "min": 15.07,
+      "mean": 15.6,
+      "max": 16
+    },
+    "retained_single_display": {
+      "tensorrt_fps": 25.12,
+      "end_to_end_fps": 15.07
+    }
+  },
+  "power_thermal": {
+    "nvpmodel_mode_w": 15,
+    "jetson_module_w_range": [
+      11,
+      12
+    ],
+    "two_cameras_total_w": 4,
+    "broader_non_propulsion_system_total_w": {
+      "mean": 17,
+      "range": [
+        16,
+        18
+      ]
+    },
+    "reported_temperature_c_range": [
+      55,
+      70
+    ]
+  },
+  "provenance": {
+    "ten_run_summary": "author-confirmed historical summary",
+    "single_display": "retained visual record",
+    "raw_per_run_logs_retained": false,
+    "deployed_tensorrt_engine_retained": false,
+    "historical_checkpoint_identifiable": false,
+    "deterministic_recomputation_possible": false
+  },
+  "reporting_rules": [
+    "Do not describe the 25.0/15.6 historical ten-run summaries as log-backed public measurements.",
+    "Do not infer the historical checkpoint from throughput or engine size.",
+    "Do not describe 16-18 W as compute-and-camera power; it is the broader reported non-propulsion system range.",
+    "Do not infer absence of thermal throttling from the reported 55-70 C range alone.",
+    "Keep future named-checkpoint benchmark results separate from historical flight-test summaries."
+  ]
+}

@@ -21,7 +21,7 @@ The active Clear Run stack includes Jetson Orin Nano aerial compute, RGB and pas
 
 ### TIR-FOD thermal UAV deployment
 
-The TIR-FOD detector was converted to TensorRT and flight-tested on Jetson Orin Nano over runway surfaces. Ten-run means were 25.0 FPS inference and 15.6 FPS end-to-end on the 640 × 512 thermal stream, with power and thermal observations recorded during system testing.
+The TIR-FOD detector was converted to TensorRT and flight-tested on Jetson Orin Nano over runway surfaces. Historical author-confirmed ten-run summaries are 25.0 FPS TensorRT-stage and 15.6 FPS end-to-end on the 640 × 512 thermal stream. The raw per-run logs and historical engine were not retained, so those figures are explicitly separated from the reproducible model-benchmark evidence and from the newer named-checkpoint measurement protocol.
 
 ### Counter-UAS Phase I
 

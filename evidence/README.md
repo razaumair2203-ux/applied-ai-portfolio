@@ -17,12 +17,15 @@ Inspectable evidence includes:
 - hand-checked grounding pairs;
 - retrieval evaluation code;
 - representative DB-backed integration testing;
-- a **zero-dependency public smoke check** for RRF, authority weighting, metadata filters, structure-aware chunking and the frozen evaluation specification.
+- a **zero-dependency public smoke check** for RRF, authority weighting, metadata filters, structure-aware chunking and the frozen evaluation specification;
+- a **real PostgreSQL/pgvector integration fixture** over the published hybrid retrieval path;
+- a **10-case adversarial structured-assessment evaluation** for citation grounding, refusal behavior, evidence-ID validity and schema/authority constraints.
 
 Run from the repository root:
 
 ```bash
 python -m evidence.lodestar.public_smoke_test
+python -m evidence.lodestar.assessment_eval.run_eval
 ```
 
 Measured state recorded in the working private system: **209 source documents, 2,945 embedded chunks, 34 hand-checked retrieval queries, 1/34 top-5 expected-source misses (2.9%), 53 backend tests, 17/17 stress/abuse cases and 12/12 concurrent full flows.**
@@ -45,11 +48,17 @@ This public extract traces the deployment claims to working team-developed sourc
 
 ## 3. TIR-FOD — benchmark/result evidence
 
-**Result snapshot:** [`tir-fod/benchmark_results.json`](tir-fod/benchmark_results.json)
+**Start here:** [`tir-fod/README.md`](tir-fod/README.md)
 
-The public portfolio summarizes the larger private research record: real-runway LWIR acquisition, 23 classes, 29 controlled training runs, repeated-seed testing, contamination/leakage analysis, acquisition-block generalisation and Jetson/TensorRT flight deployment.
+The public reproducibility slice now includes **29 sanitized seed-level run records**, the exact current training/evaluation protocol, the current 12-class acquisition-block split manifest, the recorded relevant environment, a GPU training harness and a zero-dependency recomputation script. Run:
 
-The public dataset record is linked from the [TIR-FOD / Clear Run case study](../projects/tir-fod-clear-run.md).
+```bash
+python evidence/tir-fod/reproducibility/recompute_results.py
+```
+
+That public check independently recomputes the multi-seed means/SDs and paired contamination/generalisation effects used by the current revision. Full GPU retraining still requires the public dataset, frozen split files, pretrained weights and compatible ML hardware/software.
+
+The older [single-run benchmark snapshot](tir-fod/benchmark_results.json) is retained for historical traceability. Historical Jetson flight performance is separately documented in the [deployment evidence boundary](tir-fod/deployment/README.md), which records the author-confirmed ten-run summaries while explicitly stating that the raw per-run logs and historical engine were not retained. The public dataset record is linked from the [TIR-FOD / Clear Run case study](../projects/tir-fod-clear-run.md).
 
 ## 4. Public source repositories
 

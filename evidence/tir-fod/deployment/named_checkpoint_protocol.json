@@ -1,0 +1,43 @@
+{
+  "purpose": "named-checkpoint Jetson deployment measurement protocol for future/returned device evidence",
+  "primary_candidate": {
+    "model": "YOLOv8n",
+    "seed": 42,
+    "selection_reason": "lowest parameter count among benchmark configurations not separated meaningfully by held-out accuracy"
+  },
+  "fixed_input": {
+    "frames": 520,
+    "source": "frozen held-out test split",
+    "order": "fixed",
+    "decode": "outside inference timing"
+  },
+  "per_run": {
+    "warmup_frames": 30,
+    "minimum_runs": 5,
+    "preferred_runs": 10,
+    "gpu_timing": "CUDA synchronized before/after inference timestamp",
+    "telemetry_interval_ms": 200,
+    "telemetry_process": "separate tegrastats process",
+    "measured": [
+      "per-frame inference latency",
+      "inference throughput",
+      "power rails",
+      "temperature zones",
+      "environment"
+    ]
+  },
+  "integrity_gates": [
+    "same TensorRT engine SHA-256 across run set",
+    "same checkpoint SHA-256 across run set",
+    "same power mode and cooling",
+    "no silent overwrite of completed run numbers",
+    "reject truncated runs",
+    "reject missing telemetry unless explicitly waived and reported"
+  ],
+  "aggregation": {
+    "across_run_statistics": "computed over per-run means, not pooled frames",
+    "inference_and_live_stream": "kept separate",
+    "live_stream_scope": "capture + decode + inference end-to-end supplementary path"
+  },
+  "historical_boundary": "This protocol measures a named checkpoint today; it does not reconstruct the non-retained historical flight engine."
+}
