@@ -1,8 +1,10 @@
-# JobLooper — deterministic controls around AI-assisted document generation
+# JobLooper — evidence-governed job-application operating system
 
 **Public implementation:** [Pub-JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper)
 
-JobLooper applies a simple design principle: a model may assist with interpretation or drafting, while **truth, provenance, workflow state and release authority remain deterministic software responsibilities**.
+JobLooper is a local-first system for managing the **entire evidence-bearing job-application lifecycle**, not an AI CV generator. It starts with a candidate-approved record of career truth, captures the exact employer advert, exposes unresolved fit gaps before drafting, allows AI assistance only inside that governed context, requires complete human review, builds deterministic employer-facing documents, records the exact files submitted, and carries observed outcomes forward into later applications.
+
+The design principle is simple but demanding: **truth, provenance, workflow state, release authority and observed outcomes are software responsibilities; the model may assist reasoning but does not own those states.**
 
 <p align="center">
   <img src="../visuals/joblooper/app-icon.svg" alt="Official JobLooper project mark" width="13%">
@@ -12,36 +14,43 @@ JobLooper applies a simple design principle: a model may assist with interpretat
 
 *The official project mark comes from the public JobLooper project; the dashboard surface is rendered from the current public dashboard source.*
 
-## Governed workflow
+## End-to-end governed lifecycle
 
 ![JobLooper governed workflow](../visuals/joblooper/workflow.svg)
 
+The implemented lifecycle is:
+
+**signed career truth → exact JD capture → JD confirmation → requirement/gap preflight → evidence-bounded drafting → complete document review → explicit approval → deterministic DOCX/PDF build → hash-bound submission record → employer response → outcome/lesson history**.
+
+That architecture addresses a recurring failure mode in AI-assisted career tools: a chat can generate plausible text, but it usually does not know which facts are authorized, which advert was actually used, which file was finally submitted, or whether later “lessons” are evidence or speculation.
+
 ## Public implementation
 
-The application is a local-first **Python 3.10+** system built primarily on the standard library. It can operate without an AI provider and adds optional assistant integration rather than making a model a hard runtime dependency.
+The application is a local-first **Python 3.10+** system built primarily on the standard library. It can operate without an AI provider; optional Codex assistance is additive rather than a hard runtime dependency.
 
-Implemented workflow elements include:
+Implemented controls include:
 
-- reviewed career truth represented as approved anchors with provenance;
+- candidate-reviewed career truth represented as approved anchors with provenance;
 - exact job-description capture rather than an inferred summary;
-- deterministic requirement/preflight state;
-- optional AI assistance inside the workflow rather than as generation authority;
-- complete document review and user sign-off before build;
-- deterministic DOCX/PDF generation and validation gates;
-- provenance, content hashes and generation fingerprints;
-- exact submission records and outcome tracking;
-- stale-input detection when truth, JD, code or feedback changes.
+- deterministic requirement/preflight state and explicit proceed/stop decisions;
+- AI assistance that cannot silently rewrite approved truth;
+- complete CV/letter presentation before user sign-off;
+- deterministic DOCX/PDF generation and text/package validation;
+- content hashes, generation fingerprints and stale-input detection;
+- exact submission receipts bound to the files actually sent;
+- employer response and outcome records separated from inferred explanations;
+- retained lessons only after evidence/counter-evidence review.
 
-## Evaluation programme
+## Evaluation and release discipline
 
-The wider private development record also includes a historical evaluation harness with frozen train/validation/held-out cases, explicit fabrication/date/metric checks, parser rescoring, prompt-version comparison and release safeguards. A public-safe aggregate is documented in **[Evaluation-Driven AI Workflow Engineering](ai-evaluation-workflows.md)**.
+The wider private development record includes a frozen **20 train / 15 validation / 15 held-out** evaluation harness with fabrication/date/metric checks, parser rescoring, prompt-version comparison and release safeguards. One retained candidate optimization was **blocked** because its measured improvement was not statistically significant—an example of release governance overriding the assumption that a newer AI prompt must be better.
 
-The important point is not a single score: one retained candidate optimization was **blocked** because the measured improvement was not statistically significant, preserving human release authority instead of assuming a newer prompt was better.
+A public-safe aggregate is documented in **[Evaluation-Driven AI Workflow Engineering](ai-evaluation-workflows.md)**.
 
-## AI-system relevance
+## Why this is an AI systems project
 
-The technical point is **model containment**. AI can reason over an application, but it cannot silently rewrite truth, convert a hypothesis into fact, release a document, or change submission state. Those transitions are explicit software state changes.
+The central engineering problem is **model containment inside a traceable state machine**. AI can interpret a role and propose wording, but it cannot convert a hypothesis into candidate truth, claim unsupported experience, release a document, mutate submission state, or turn an employer outcome into a causal story without evidence.
 
-Hiring predictions, ATS-score claims and unverified model output remain outside the authority model.
+Hiring predictions, synthetic ATS scores and unverified recruiter explanations remain outside the authority model.
 
 [Back to project inventory](README.md)
