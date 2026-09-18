@@ -76,10 +76,10 @@ A senior RAG reviewer previously could inspect the SQL but could not execute the
 
 **Resolution:** added a non-sensitive PostgreSQL + pgvector fixture using the same `pgvector/pgvector:pg16` database family as the authoritative development setup. CI now executes the published hybrid retrieval implementation end to end across PostgreSQL FTS, 1024-dimensional pgvector ordering, metadata filters, four candidate lanes, RRF, hydration, authority reranking and non-precedent labeling. Only the heavyweight embedding model is substituted by deterministic fixture query vectors; the private 209-document corpus remains correctly bounded as private.
 
-### R07 — S2 — Clear Run performance evidence needs machine-readable recomputation
-25.0 FPS / 15.6 FPS and thermal/power figures are well bounded as private measurements, but a public CSV/log extract plus a tiny aggregation script would materially increase trust.
+### R07 — S2 — Clear Run performance evidence needs machine-readable recomputation — **RESOLVED BY EVIDENCE DOWNGRADE**
+The initial remediation assumed a sanitized raw run-log extract could be published. Inspection of the authoritative flight/reviewer archive showed that the historical ten-run logs and deployed TensorRT engine were **not retained**. Creating a reconstructed CSV from means/ranges would fabricate evidence.
 
-**Status:** open.
+**Resolution:** corrected the portfolio rather than manufacturing data. The 25.0 FPS TensorRT-stage and 15.6 FPS end-to-end values are now explicitly labelled **author-confirmed ten-run historical summaries**; the retained 25.12/15.07 runtime display is distinguished from those means; historical checkpoint identity is marked unavailable; the power wording is corrected so the 16–18 W range is not mislabelled as compute-and-camera-only power; and a machine-readable evidence-status file enforces these boundaries. A separate named-checkpoint measurement protocol is published for future/returned reproducible Jetson evidence, with engine/checkpoint hashes, repeated runs, CUDA-synchronized per-frame timing, separate telemetry and refusal gates.
 
 ### R08 — S2 — Answer-level RAG evaluation is missing
 Retrieval is evaluated independently, which is good, but citation faithfulness, answer correctness, abstention behavior and retrieval-to-generation failure propagation are not yet publicly demonstrated.
