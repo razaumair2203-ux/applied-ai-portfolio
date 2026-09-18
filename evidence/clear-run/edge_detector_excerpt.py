@@ -85,7 +85,7 @@ class FODDetector:
     def _load_model(self) -> None:
         if self.use_sahi and AutoDetectionModel is not None:
             self.sahi_model = AutoDetectionModel.from_pretrained(
-                model_type="yolov8",
+                model_type="ultralytics",
                 model_path=self.model_path,
                 confidence_threshold=self.conf_thresh,
                 device=(

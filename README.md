@@ -16,16 +16,18 @@ I build and lead AI-enabled engineering systems that have to work outside the no
 
 | Capability | What is actually implemented | Evidence |
 |---|---|---|
-| **Deployed edge AI / computer vision** | LWIR model development; multi-model YOLO work; TensorRT deployment on Jetson Orin Nano; RGB + passive-IR concurrent inference; YOLO + SAHI sliced inference; geolocation; MAVLink/REST; GCS integration | **3,499 LWIR source frames · 5,593 objects · 23 classes · 29 controlled training runs · 25.0 FPS TensorRT inference · 15.6 FPS end-to-end** → [case study](projects/tir-fod-clear-run.md) · [deployment-code evidence](evidence/clear-run/README.md) |
-| **Grounded RAG / GenAI systems** | FastAPI; BGE embeddings; PostgreSQL + `pgvector`; HNSW + lexical retrieval; RRF; authority-aware reranking; citable evidence objects; LLM-provider abstraction; full-stack testing | **209 documents · 2,945 embedded chunks · 2.9% top-5 retrieval-grounding error · 53 backend tests · 12/12 concurrent flows** → [case study](projects/lodestar.md) · [implementation evidence](evidence/lodestar/README.md) |
+| **Deployed edge AI / computer vision** | LWIR model development; multi-model YOLO work; TensorRT deployment on Jetson Orin Nano; RGB + passive-IR concurrent inference; YOLO + SAHI sliced inference; geolocation; MAVLink/REST; GCS mission-interface integration | **3,499 LWIR source frames · 5,593 objects · 23 classes · 29 controlled training runs · 25.0 FPS TensorRT inference · 15.6 FPS end-to-end** → [case study](projects/tir-fod-clear-run.md) · [benchmark extract](evidence/tir-fod/benchmark_results.json) · [deployment-code evidence](evidence/clear-run/README.md) |
+| **Grounded RAG / GenAI systems** | FastAPI; BGE embeddings; PostgreSQL + `pgvector`; HNSW + lexical retrieval; RRF; authority-weighted reranking; citable evidence objects; LLM-provider abstraction; full-stack testing | **209 documents · 2,945 embedded chunks · 2.9% top-5 retrieval-grounding error · 53 backend tests · 12/12 concurrent flows** → [case study](projects/lodestar.md) · [implementation + public smoke check](evidence/lodestar/README.md) |
 | **AI assurance / governed workflows** | Independent builder-reviewer model workflow; mutation checks; deterministic evidence/provenance gates around AI-assisted generation | **Two public working tools** → [Codex Adversarial Review Lite](projects/codex-adversarial-review-lite.md) · [JobLooper](projects/joblooper-jobpilot.md) |
+
+**Evidence boundary.** Public code, visuals and result extracts are linked directly. The TIR-FOD field-performance figures and Lodestar full-corpus/test counts are recorded measurements from working private/team systems; where the complete corpus or programme repository cannot be published, this portfolio does not describe those exact numbers as independently reproducible. Lodestar includes a [zero-dependency public smoke check](evidence/lodestar/public_smoke_test.py), and the [headline evidence matrix](docs/HEADLINE_EVIDENCE_MATRIX.md) maps major claims to their proof class.
 
 ## Start here by role
 
 | If you are hiring for… | Review first | Why |
 |---|---|---|
 | **Aerospace AI / Applied AI Lead** | [Clear Run / TIR-FOD](projects/tir-fod-clear-run.md), then [Lodestar](projects/lodestar.md) | Shows model development, deployment, physical integration, evaluation and broader AI systems depth |
-| **Computer Vision / Edge AI / Autonomy** | [Clear Run / TIR-FOD](projects/tir-fod-clear-run.md) | Strongest evidence from dataset design through Jetson/TensorRT flight deployment and UAV–GCS–UGV integration |
+| **Computer Vision / Edge AI / Autonomy** | [Clear Run / TIR-FOD](projects/tir-fod-clear-run.md) | Strongest evidence from dataset design through Jetson/TensorRT flight deployment, aerial/GCS integration and an actively closing UAV–GCS–UGV autonomy loop |
 | **GenAI / RAG / AI Platform** | [Lodestar](projects/lodestar.md), then [AI assurance](projects/codex-adversarial-review-lite.md) | Retrieval, grounding, APIs, evaluation, testing and responsible model integration |
 | **AI Engineering Manager / Systems Architect** | [Project inventory](projects/README.md) | Breadth across AI software, embedded deployment, autonomy, HPC and aerospace systems |
 
@@ -37,8 +39,8 @@ I build and lead AI-enabled engineering systems that have to work outside the no
 - **29 controlled training runs** across YOLOv8, YOLO11 and YOLO12 configurations, plus current multi-model LWIR fusion work.
 - Source-lineage leakage controls, repeated seeds, contamination studies and acquisition-block generalisation—not just a best-checkpoint result.
 - Detector converted to **TensorRT** and flight-tested onboard **Jetson Orin Nano**.
-- Clear Run expands the deployed stack to **concurrent RGB + passive-IR FP16 TensorRT inference**, small-object sliced inference, geolocation, MAVLink/REST telemetry, synchronized recording and GCS mission integration.
-- Current system work closes the final UAV–GCS–UGV target hand-off, terminal alignment and physical-retention validation loop.
+- Clear Run expands the deployed stack to **concurrent RGB + passive-IR FP16 TensorRT inference**, small-object sliced inference, geolocation, MAVLink/REST telemetry, synchronized recording and GCS mission-interface integration.
+- Current system work is closing the final GCS→UGV target hand-off, terminal alignment and physical-retention validation loop; those end-to-end steps are not presented as complete.
 
 ![Authentic TIR-FOD evidence: real LWIR detections, UAV payload, Jetson runtime, class coverage, training curves and confusion matrix](visuals/tir_fod_evidence.jpg)
 
@@ -46,14 +48,14 @@ I build and lead AI-enabled engineering systems that have to work outside the no
 
 ## Flagship 2 — grounded RAG as an engineering system
 
-**Lodestar** is a working private full-stack RAG/evidence system with public sanitized implementation evidence.
+**Lodestar** is a working private full-stack RAG/evidence system with public sanitized implementation, a frozen evaluation specification and runnable pure-logic checks.
 
 ![Authentic Lodestar product UI captured from the working application](visuals/lodestar_product_ui.jpg)
 
 - Python / FastAPI backend with PostgreSQL and `pgvector`.
 - Legal-structure-aware chunking and BGE query/passage embeddings.
 - Hybrid vector + lexical retrieval with HNSW, PostgreSQL FTS and Reciprocal Rank Fusion.
-- Deterministic authority-aware reranking and citable evidence objects.
+- Deterministic authority-weighted reranking and citable evidence objects.
 - Independent retrieval-grounding evaluation so fluent LLM output cannot hide weak retrieval.
 - Reliability work includes pooled DB connections, guarded embedding initialization, citation checks, audit paths, browser tests, stress/abuse tests and concurrent flows.
 
@@ -92,9 +94,9 @@ That background changes how I approach AI: deployment constraints, interfaces, f
 
 **ML lifecycle / evaluation:** configuration-driven experiment orchestration · deterministic multi-seed training · checkpoint selection · held-out evaluation · leakage/generalisation testing · manifests/checksums · model conversion · edge profiling · field validation
 
-**Backend / product:** FastAPI · PostgreSQL · Supabase · REST APIs · Next.js/TypeScript · Flask · Git/GitHub · Playwright · automated/concurrency/stress testing
+**Backend / product:** FastAPI · PostgreSQL · REST APIs · Next.js/TypeScript · Flask · Git/GitHub · Playwright · automated/concurrency/stress testing
 
-**Edge / autonomy / systems:** NVIDIA Jetson Orin Nano / Jetson Nano · FP16 TensorRT · ROS/ROS2 · MAVLink · Pixhawk/GNSS · Linux/containers · MATLAB · GPU/HPC · embedded/real-time systems · requirements/interfaces · V&V · configuration control
+**Edge / autonomy / systems:** NVIDIA Jetson Orin Nano · FP16 TensorRT · MAVLink · Pixhawk/GNSS · Linux · MATLAB · GPU/HPC · embedded/real-time systems · requirements/interfaces · V&V · configuration control
 
 ## Technical evidence index
 

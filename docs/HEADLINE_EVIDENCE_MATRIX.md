@@ -1,0 +1,22 @@
+# Headline Claim Evidence Matrix
+
+This page maps the portfolio's strongest recruiter-facing claims to the strongest evidence that can be published without exposing private programme/product repositories. Evidence grades are defined in the [AI portfolio inspection contract](AI_PORTFOLIO_INSPECTION_CONTRACT.md).
+
+| Headline claim | Grade | Public proof | Boundary |
+|---|---|---|---|
+| TIR-FOD scale: **3,499 LWIR frames, 5,593 objects, 23 classes** | **B/C** | [benchmark extract](../evidence/tir-fod/benchmark_results.json) and public dataset link in the [case study](../projects/tir-fod-clear-run.md) | Full acquisition/research workspace is not mirrored here. |
+| **29 controlled TIR-FOD training runs** plus repeated-seed/generalisation studies | **D + B result extract** | Methods/results summarized in the [case study](../projects/tir-fod-clear-run.md); selected benchmark fields are public | Full manifests, checkpoints and run history remain in the research programme. |
+| Jetson Orin Nano **25.0 FPS inference / 15.6 FPS end-to-end** | **D + B visual evidence** | Measurement context in the [case study](../projects/tir-fod-clear-run.md) and authentic runtime evidence described in [visual provenance](../visuals/README.md) | Recorded programme flight measurement; raw complete trial logs are not public in this portfolio. |
+| Clear Run Ultralytics/SAHI detector implementation | **B** | [sanitized detector excerpt](../evidence/clear-run/edge_detector_excerpt.py) | Representative team-developed source, not the entire private runtime. |
+| Clear Run UAV/GCS/UGV system evidence | **B/D** | [authentic system composite](../visuals/clear_run_system_evidence.jpg), [deployment evidence](../evidence/clear-run/README.md) | GCS→UGV physical goal delivery, terminal retrieval and verified retention remain end-to-end validation items. |
+| Lodestar RRF, metadata filters and authority-weighted reranking | **A/B** | [public smoke check](../evidence/lodestar/public_smoke_test.py), [hybrid retrieval](../evidence/lodestar/hybrid_retrieval.py), [reranker](../evidence/lodestar/rerank.py) | Public checks validate the sanitized pure logic, not the complete private product. |
+| Lodestar **34-pair evaluation specification** | **A/B** | [frozen pair set](../evidence/lodestar/grounding_pairs.json) and [evaluation code](../evidence/lodestar/grounding_eval.py) | Full evaluation execution requires the private application package/corpus. |
+| Lodestar **2.9% top-5 retrieval-grounding error** on **209 docs / 2,945 chunks** | **D + B methodology** | [recorded evaluation summary](../evidence/lodestar/grounding-eval.md), frozen public pair set and evaluation logic | Exact result depends on the private corpus/database and is not presented as independently reproducible here. |
+| Lodestar **53 backend tests / 17 of 17 stress cases / 12 of 12 concurrent flows** | **D** | Recorded private-system verification summarized in the [case study](../projects/lodestar.md) | Full private product test tree/runtime is not published. |
+| Codex Adversarial Review Lite | **A** | Complete public project linked from the [case study](../projects/codex-adversarial-review-lite.md) | Public repository is directly inspectable. |
+| JobLooper / JobPilot governance workflow | **A** | Complete public project linked from the [case study](../projects/joblooper-jobpilot.md) | Public repository is directly inspectable. |
+| 2025 ICoDT2 publications | **C** | DOI records listed in the [research record](../research/README.md) | External publication record; separate from code reproducibility. |
+
+## How to interpret this portfolio
+
+The strongest signal is the combination of **publicly inspectable implementation/architecture** and **bounded field or private-system measurements**. Private evidence is deliberately not upgraded to “public reproducibility.” Conversely, the public excerpts are checked against the private authoritative Lodestar and Clear Run repositories so that sanitization does not change the technical story.

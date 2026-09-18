@@ -1,7 +1,7 @@
 """Representative source from Lodestar.
 
-Deterministic reranking of fused retrieval results. Authority is used as a small
-near-tie preference rather than a replacement for relevance.
+Deterministic reranking of fused retrieval results. Authority is applied as a
+small bounded multiplier on the fused retrieval score rather than replacing relevance.
 """
 
 from __future__ import annotations
@@ -16,7 +16,7 @@ _AUTHORITY_WEIGHT = 0.05
 
 
 def authority_rerank(results: Sequence[RetrievalResult]) -> list[RetrievalResult]:
-    """Prefer higher-authority sources when fused relevance scores are close."""
+    """Apply a small authority-weighted multiplier to fused relevance scores."""
 
     def keyfn(result: RetrievalResult) -> float:
         authority_multiplier = 1.0 + (6 - result.binding_weight) * _AUTHORITY_WEIGHT
