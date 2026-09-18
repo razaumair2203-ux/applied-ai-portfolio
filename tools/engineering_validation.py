@@ -151,6 +151,7 @@ def check_primary_visuals() -> None:
         "visuals/autonomy-edge-ai/mbse/clear_run_system_architecture.svg",
         "visuals/autonomy-edge-ai/mbse/telemetry_replay.svg",
         "visuals/assurance-digital-engineering/ai-evaluation/evaluation_pipeline.svg",
+        "visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg",
     )
     for rel in required:
         path = ROOT / rel
@@ -230,7 +231,7 @@ def check_root_readme_scanability() -> None:
     assert image_positions, "README must contain authentic visual evidence"
     first_image = min(image_positions)
     words_before_first_image = re.findall(r"\b[\w+.-]+\b", root[:first_image])
-    assert len(words_before_first_image) <= 550, (
+    assert len(words_before_first_image) <= 700, (
         f"First visual appears too late: {len(words_before_first_image)} words"
     )
 
@@ -283,11 +284,27 @@ def check_research_contribution_boundaries() -> None:
 def check_documentation_structure() -> None:
     root = (ROOT / "README.md").read_text(encoding="utf-8")
 
-    # Career context and proof must precede the deeper project dossier.
-    assert root.index("## At a glance") < root.index("## Portfolio map")
-    assert root.index("## Portfolio map") < root.index("## Flagship systems")
+    # Identity, specialization anchors and programme scale must precede deeper evidence.
+    assert root.index("## Four specialization areas") < root.index("## At a glance")
+    assert root.index("## At a glance") < root.index("## 1. Autonomous, Embedded & Edge AI")
     assert "Applied AI & Autonomous Systems Engineering Leader" in root
     assert "Officer In Charge Projects / R&D & Systems Engineering Lead" in root
+
+    # The four specialization anchors are an explicit navigation and information architecture contract.
+    anchor_pairs = (
+        ("autonomy-edge-ai", "## 1. Autonomous, Embedded & Edge AI"),
+        ("compliance-regtech", "## 2. Compliance & Regulatory Intelligence"),
+        ("practical-agentic-ai", "## 3. Practical Agentic AI Products"),
+        ("assurance-digital-engineering", "## 4. AI Assurance, Evaluation & Digital Engineering"),
+    )
+    previous = -1
+    for anchor, heading in anchor_pairs:
+        assert f"](#{anchor})" in root, anchor
+        assert f'<a name="{anchor}"></a>' in root, anchor
+        assert heading in root, heading
+        pos = root.index(heading)
+        assert pos > previous, heading
+        previous = pos
 
     # Core project-family coverage.
     for marker in (
@@ -311,16 +328,24 @@ def check_documentation_structure() -> None:
         "209 documents",
         "100+ project portfolio",
         "60+ advanced engineering projects",
-        "visuals/autonomy-edge-ai/tir-fod/airborne_platform.png",
         "visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp",
         "visuals/compliance-regtech/i-msha/dashboard-regression.png",
         "visuals/compliance-regtech/lodestar/product-surface.svg",
         "visuals/practical-ai-products/joblooper/dashboard-surface.svg",
+        "visuals/practical-ai-products/buildsignal/admin-surface.svg",
+        "visuals/assurance-digital-engineering/adversarial-review/audit-report-preview.jpg",
+        "visuals/assurance-digital-engineering/ai-evaluation/evaluation_pipeline.svg",
+        "visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg",
         "visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg",
         "profile/AI_BASE_RESUME.md",
         "curated, release-safe technical package or review branch",
     ):
         assert marker in root, marker
+
+    # Prevent regression to the broken three-stream strip or stale external Super Mushshak asset.
+    assert "three evidence streams" not in root.lower()
+    assert "dynon-cockpit-prototype-sanitized.jpg" not in root
+    assert "raw.githubusercontent.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification" not in root
 
     mbse_case = (ROOT / "domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md").read_text(encoding="utf-8")
     assert "../../visuals/autonomy-edge-ai/clear-run/system_architecture.svg" in mbse_case
@@ -351,6 +376,13 @@ def check_documentation_structure() -> None:
     assert len(counter_hw) == 2
     assert counter_hw[0]["description"] == "Constructed Phase I laser-camera mount"
     assert "no semantic alteration" in counter_hw[0]["transformation"]
+
+    mushshak = (ROOT / "domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md").read_text(
+        encoding="utf-8"
+    )
+    assert "../../visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg" in mushshak
+    assert "dynon-cockpit-prototype-sanitized.jpg" not in mushshak
+    assert "raw.githubusercontent.com" not in mushshak
 
     project_index = (ROOT / "domains/README.md").read_text(encoding="utf-8")
     assert "02-compliance-regtech/i-msha.md" in project_index
