@@ -1,5 +1,7 @@
 # AI Portfolio Audit Closure Matrix — 2026-09-18
 
+**Final release status:** [PASS — recruiter-ready with explicit evidence boundaries](FINAL_RELEASE_AUDIT_2026-09-18.md). This matrix remains the finding-level history.
+
 This is the authoritative status page for the two portfolio audit passes. It prevents historical findings from being mistaken for current open defects.
 
 ## First inspection findings
@@ -42,7 +44,7 @@ This is the authoritative status page for the two portfolio audit passes. It pre
 - Human/domain-rated semantic assessment quality is a future depth improvement, not silently represented by the software guardrail score.
 - New publication/indexing links should be added when independently verifiable records become available.
 
-## Only remaining external action
+## Remaining external repository-setting action
 
 Apply the repository About-panel values already frozen in [`REPOSITORY_METADATA_CONTRACT.json`](REPOSITORY_METADATA_CONTRACT.json):
 
