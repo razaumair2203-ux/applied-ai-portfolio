@@ -1,6 +1,6 @@
 {
   "repository": "razaumair2203-ux/applied-ai-portfolio",
-  "desired_description": "Applied AI portfolio: computer vision, RAG, edge AI, Jetson/TensorRT, autonomous systems, aerospace V&V, and reproducible technical evidence.",
+  "desired_description": "Applied AI engineering: edge vision, RAG, autonomous systems, Jetson/TensorRT deployment, evaluation, aerospace V&V, and public technical evidence.",
   "desired_topics": [
     "applied-ai",
     "machine-learning",
@@ -20,5 +20,5 @@
     "type": "explicit all-rights-reserved portfolio notice",
     "rationale": "Do not silently grant reuse rights over private-programme extracts, project evidence, photographs, research records or portfolio prose. Linked public projects retain their own licenses."
   },
-  "server_setting_note": "Description/topics must be applied through GitHub repository settings or an administration-capable API token. The connected content/PR tool used for this remediation does not expose that mutation."
+  "server_setting_note": "Description/topics remain live GitHub About-panel settings. The connected GitHub tool in this session exposes repository content and PR writes but no repository-settings mutation."
 }
