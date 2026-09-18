@@ -69,7 +69,8 @@ This directory contains original project media, recorded UI/test evidence, offic
 - [evaluation pipeline](assurance-digital-engineering/ai-evaluation/evaluation_pipeline.svg)
 
 ### Super Mushshak
-Original cockpit and flight/test media remain in the public [Super Mushshak Glass-Cockpit Retrofit](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification) source repository.
+- [installed Dynon SkyView prototype](assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg) — authentic project photograph copied from the current public source repository for stable portfolio rendering.
+- Additional cockpit and flight/test media remain in the public [Super Mushshak Glass-Cockpit Retrofit](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification) source repository.
 
 ## Provenance rule
 
