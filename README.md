@@ -191,8 +191,6 @@ BuildSignal is an **AI-native publishing operations system**, not an article gen
 
 [Open the BuildSignal AI case →](domains/03-practical-ai-products/buildsignal-ai.md)
 
-### AI assurance and aerospace digital-engineering evidence
-
 #### Adversarial Review Lite — everyday agentic review tools with assurance built in
 
 ![Adversarial Review Lite report preview](visuals/assurance-digital-engineering/adversarial-review/audit-report-preview.jpg)
