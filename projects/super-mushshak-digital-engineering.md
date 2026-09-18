@@ -1,4 +1,4 @@
-# Super Mushshak — aircraft retrofit to evidence-linked digital engineering
+# Super Mushshak — first three glass-cockpit prototypes to evidence-linked digital engineering
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/main/assets/dynon-cockpit-prototype-sanitized.jpg" alt="Original Super Mushshak Dynon SkyView prototype cockpit" width="76%">
@@ -6,7 +6,7 @@
 
 *Original project photograph from the public Super Mushshak retrofit record; cropped/redacted only where needed for release.*
 
-This project family connects two distinct maturity states: a **completed aircraft glass-cockpit retrofit programme** and a **current, bounded digital-engineering follow-on** that reconstructs releasable requirements, interfaces, configurations, verification records and decisions into a public digital thread.
+This project family starts with a **completed aircraft-level glass-cockpit integration programme for the first three Super Mushshak prototypes** and extends it into a current, bounded digital-engineering follow-on. The original work included avionics/sensor trade studies, Dynon/Garmin integration, aircraft electrical and wiring-harness changes, ARINC-429 and other interfaces, configuration/database work, installed-aircraft checks, flight-test feedback and customer evaluation—not simply display replacement.
 
 **Public source record:** [Super Mushshak Glass-Cockpit Retrofit](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification)
 
@@ -25,6 +25,10 @@ This project family connects two distinct maturity states: a **completed aircraf
 The original programme covered more than display replacement. The surviving public record documents sensor and avionics integration, Dynon/Garmin evaluation, aircraft electrical and wiring-harness changes, ARINC-429 and other interfaces, databases/configuration, maintainability, installed-aircraft functional checks, flight-test feedback and customer-facing technical evaluation.
 
 The public source intentionally keeps the Dynon SkyView prototype, Garmin G900X/G950-family evaluation track and Garmin G3X comparison material separate rather than merging distinct configurations.
+
+## Downstream programme scale
+
+The wider aircraft programme later achieved a documented foreign customer/service footprint across **at least eight countries**. The source repository also records publicly estimable aircraft value above **US$114 million for the Nigeria and Türkiye deals alone**. Those figures are included to show downstream programme scale; they are **not** presented as a claim that one engineer or the prototype team solely caused later export sales.
 
 ## Evidence-linked model
 
