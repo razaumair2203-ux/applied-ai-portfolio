@@ -4,9 +4,9 @@
 
 *Selected Clear Run Research Outreach architecture: actual UAV photograph, native GCS interface capture and actual UGV photograph embedded in the reviewed functional system view.*
 
-Clear Run is useful not only as an edge-AI/autonomy programme, but as an **AI-enabled system assurance case**: detection, geolocation, communications, operator review, ground-vehicle tasking, terminal approach, physical capture and retained removal are separate claims with separate evidence obligations.
+This is the assurance layer around a real AI/autonomy programme. Clear Run can only claim mission success if **detection, geolocation, communications, operator review, ground-vehicle tasking, terminal approach, physical capture and retained removal** each work at the correct system boundary and in the correct configuration. The case therefore links architecture, interfaces, requirements and evidence instead of letting a successful model output stand in for system verification.
 
-A retrospective **Capella 7.1.0 / Arcadia** reconstruction was built in September 2026 to make those boundaries explicit. The underlying submission package contains the native model and evidence register; this public case exposes the architecture, verification logic and a machine-readable software-boundary example without publishing restricted programme material.
+A retrospective **Capella 7.1.0 / Arcadia** reconstruction was built in September 2026 to make those dependencies explicit. It then went beyond documentation: a bounded producer-consumer replay of the telemetry path exposed a concrete truncation behavior that could turn a coordinate message into a plausible but wrong downstream value, and that observation was converted into explicit rejection/coordinate-origin requirements. The public case exposes that engineering logic without publishing restricted programme material.
 
 ## Physical system context
 
