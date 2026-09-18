@@ -12,6 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
+HTML_REF_RE = re.compile(r'(?:href|src)="([^"]+)"')
 
 
 def check_internal_markdown_links() -> None:
@@ -21,6 +22,25 @@ def check_internal_markdown_links() -> None:
         for raw in LINK_RE.findall(text):
             href = raw.strip().split("#", 1)[0]
             if not href or href.startswith(("http://", "https://", "mailto:", "#")):
+                continue
+            target = (path.parent / href).resolve()
+            try:
+                target.relative_to(ROOT)
+            except ValueError:
+                failures.append(f"{path.relative_to(ROOT)} -> {raw} escapes repository")
+                continue
+            if not target.exists():
+                failures.append(f"{path.relative_to(ROOT)} -> {raw} missing")
+    assert not failures, "\n".join(failures)
+
+
+def check_internal_html_refs() -> None:
+    failures: list[str] = []
+    for path in ROOT.rglob("*.md"):
+        text = path.read_text(encoding="utf-8")
+        for raw in HTML_REF_RE.findall(text):
+            href = raw.strip().split("#", 1)[0]
+            if not href or raw.startswith(("#", "http://", "https://", "mailto:")):
                 continue
             target = (path.parent / href).resolve()
             try:
@@ -410,6 +430,7 @@ def check_documentation_structure() -> None:
 def main() -> None:
     checks = [
         check_internal_markdown_links,
+        check_internal_html_refs,
         check_json_files,
         check_lodestar_retrieval_spec,
         check_lodestar_reliability_regression,
