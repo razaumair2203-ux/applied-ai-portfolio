@@ -1,5 +1,7 @@
 # AI Portfolio Independent Re-Audit — 2026-09-18
 
+> **Current closure status:** see [AUDIT_CLOSURE_MATRIX.md](AUDIT_CLOSURE_MATRIX.md) for the authoritative resolved/open state across both audit passes.
+
 This re-audit intentionally does **not** inherit the portfolio's previous 88/100 self-score. It evaluates the current public repository as a cold reviewer would: what is visible, technically defensible and independently checkable.
 
 ## Inspection contract
