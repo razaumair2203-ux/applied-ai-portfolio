@@ -1,80 +1,77 @@
-# Visual evidence register
+# Visual evidence register — organized by domain
 
-This directory contains original project media, recorded UI/test evidence, official project assets and labelled source-derived renders used by the case studies. Each entry states what the asset represents.
+This directory contains original project media, recorded UI/test evidence, official project assets and clearly labelled source-derived renders. Visuals follow the same hierarchy as the portfolio.
 
-## Clear Run
+## Autonomous, embedded and edge AI
 
-- [clear-run/video_thumbnail.png](clear-run/video_thumbnail.png) — thumbnail built from recorded IR/RGB trial detections
-- [clear-run/overview.png](clear-run/overview.png) — programme overview
-- [clear-run/system_architecture.svg](clear-run/system_architecture.svg) — UAV–GCS–UGV architecture with project imagery
-- [clear-run/aerial_unit_architecture.svg](clear-run/aerial_unit_architecture.svg) — dedicated aerial-unit functional architecture with authentic project imagery
-- [clear-run/gcs_architecture.svg](clear-run/gcs_architecture.svg) — dedicated GCS architecture with the actual interface capture embedded
-- [clear-run/ugv_architecture.svg](clear-run/ugv_architecture.svg) — dedicated UGV functional architecture
-- [clear-run/field_trial_evidence.png](clear-run/field_trial_evidence.png) — RGB/passive-IR trial outputs
-- [clear-run/gcs_integration.png](clear-run/gcs_integration.png) — ground-control integration
-- [clear-run/retrieval_development.png](clear-run/retrieval_development.png) — UGV and retrieval development
+### Clear Run
+- [system architecture](autonomy-edge-ai/clear-run/system_architecture.svg)
+- [aerial-unit architecture](autonomy-edge-ai/clear-run/aerial_unit_architecture.svg)
+- [GCS architecture](autonomy-edge-ai/clear-run/gcs_architecture.svg)
+- [UGV architecture](autonomy-edge-ai/clear-run/ugv_architecture.svg)
+- [field-trial evidence](autonomy-edge-ai/clear-run/field_trial_evidence.png)
+- [GCS integration](autonomy-edge-ai/clear-run/gcs_integration.png)
+- [retrieval development](autonomy-edge-ai/clear-run/retrieval_development.png)
+- [programme overview](autonomy-edge-ai/clear-run/overview.png)
+- [trial thumbnail](autonomy-edge-ai/clear-run/video_thumbnail.png)
 
-## TIR-FOD
+### TIR-FOD
+- [airborne platform](autonomy-edge-ai/tir-fod/airborne_platform.png)
+- [Jetson installation](autonomy-edge-ai/tir-fod/jetson_mounted.png)
+- [camera mount](autonomy-edge-ai/tir-fod/camera_mount.png)
+- [capture sessions](autonomy-edge-ai/tir-fod/capture_sessions.png)
+- [Jetson runtime](autonomy-edge-ai/tir-fod/jetson_runtime.png)
+- [graphical abstract](autonomy-edge-ai/tir-fod/graphical_abstract.png)
+- [dataset/project cover](autonomy-edge-ai/tir-fod/cover.png)
 
-- [tir-fod/airborne_platform.png](tir-fod/airborne_platform.png) — complete UAV used for the airborne edge-AI programme
-- [tir-fod/jetson_mounted.png](tir-fod/jetson_mounted.png) — Jetson Orin Nano installed on the UAV
-- [tir-fod/camera_mount.png](tir-fod/camera_mount.png) — physical camera payload mount
-- [tir-fod/graphical_abstract.png](tir-fod/graphical_abstract.png) — submission graphical abstract: data → evaluation finding → flight deployment
-- [tir-fod/cover.png](tir-fod/cover.png) — project/dataset cover built from real LWIR examples
-- [tir-fod/capture_sessions.png](tir-fod/capture_sessions.png) — acquisition-session structure used in source-aware evaluation
-- [tir-fod/jetson_runtime.png](tir-fod/jetson_runtime.png) — retained Jetson thermal-inference runtime
+### Counter-UAS
+- [constructed Phase-I mount](autonomy-edge-ai/counter-uas/phase1_original_mount.jpg)
+- [trial-video mount](autonomy-edge-ai/counter-uas/phase1_video_mount.jpg)
+- [outdoor detection](autonomy-edge-ai/counter-uas/outdoor_detection.png)
+- [indoor detection](autonomy-edge-ai/counter-uas/indoor_detection.png)
+- [training curves](autonomy-edge-ai/counter-uas/training_curves.png)
+- [programme evolution](autonomy-edge-ai/counter-uas/framework_evolution.svg)
 
-## Lodestar
+### AI Systems Assurance / MBSE
+- [submitted system-summary figure](autonomy-edge-ai/mbse/clear_run_system_architecture.svg)
+- [telemetry replay](autonomy-edge-ai/mbse/telemetry_replay.svg)
 
-- [lodestar_product_surface.svg](lodestar_product_surface.svg) — labelled source-derived rendering of the current Lodestar landing-page source
-- [lodestar_architecture.svg](lodestar_architecture.svg) — retrieval/control architecture
-- [lodestar_execution_trace.svg](lodestar_execution_trace.svg) — retrieval-regression and adversarial output-control trace
+## Compliance and regulatory intelligence
 
-## i-MSHA / MSHA Compliance SaaS
+### i-MSHA
+- [official wordmark](compliance-regtech/i-msha/logo-wordmark.svg)
+- [authentic dashboard regression snapshot](compliance-regtech/i-msha/dashboard-regression.png)
 
-- [msha/logo-wordmark.svg](msha/logo-wordmark.svg) — original project wordmark from the active product
-- [msha/dashboard-regression.png](msha/dashboard-regression.png) — authentic browser-regression snapshot from the product test suite
+### Lodestar
+- [product surface](compliance-regtech/lodestar/product-surface.svg)
+- [retrieval architecture](compliance-regtech/lodestar/architecture.svg)
+- [execution trace](compliance-regtech/lodestar/execution-trace.svg)
 
-## JobLooper
+## Practical AI products
 
-- [joblooper/app-icon.svg](joblooper/app-icon.svg) — official JobLooper project mark from the public project
-- [joblooper/dashboard-surface.svg](joblooper/dashboard-surface.svg) — labelled source-derived rendering of the current public dashboard
-- [joblooper/workflow.svg](joblooper/workflow.svg) — governed-workflow explanatory diagram
+### JobLooper
+- [official app icon](practical-ai-products/joblooper/app-icon.svg)
+- [dashboard surface](practical-ai-products/joblooper/dashboard-surface.svg)
+- [governed workflow](practical-ai-products/joblooper/workflow.svg)
 
-## Adversarial Review Lite
+### BuildSignal AI
+- [admin surface](practical-ai-products/buildsignal/admin-surface.svg)
+- [AI judge-loop system](practical-ai-products/buildsignal/ai-judge-loop-system.svg)
 
-- [codex/audit-report-preview.jpg](codex/audit-report-preview.jpg) — original report preview from the public Codex Adversarial Review Lite project
-- [codex/audit_report_anatomy.svg](codex/audit_report_anatomy.svg) — explanatory report anatomy
+## AI assurance and digital engineering
 
-## Counter-UAS
+### Adversarial Review Lite
+- [original report preview](assurance-digital-engineering/adversarial-review/audit-report-preview.jpg)
+- [report anatomy](assurance-digital-engineering/adversarial-review/audit_report_anatomy.svg)
 
-- [counter-uas/phase1_original_mount.jpg](counter-uas/phase1_original_mount.jpg) — publication-sized derivative of the original constructed Phase-I laser–camera mount photograph
-- [counter-uas/phase1_video_mount.jpg](counter-uas/phase1_video_mount.jpg) — publication-sized derivative of the original trial-video frame showing the mount at 00:34
-- [counter-uas/outdoor_detection.png](counter-uas/outdoor_detection.png) — outdoor Phase-I trial
-- [counter-uas/indoor_detection.png](counter-uas/indoor_detection.png) — indoor Phase-I trial
-- [counter-uas/training_curves.png](counter-uas/training_curves.png) — preserved training curves
-- [counter-uas/framework_evolution.svg](counter-uas/framework_evolution.svg) — Phase-I-to-future-research maturity map; later stages are not completed claims
+### AI workflow evaluation
+- [evaluation pipeline](assurance-digital-engineering/ai-evaluation/evaluation_pipeline.svg)
 
-## BuildSignal AI
+### Super Mushshak
+Original cockpit and flight/test media remain in the public [Super Mushshak Glass-Cockpit Retrofit](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification) source repository.
 
-- [buildsignal/admin-surface.svg](buildsignal/admin-surface.svg) — rendering derived from the current private admin-page source and documented review states
-- [buildsignal/ai-judge-loop-system.svg](buildsignal/ai-judge-loop-system.svg) — source editorial visual retained as supporting material
+## Provenance rule
 
-## AI systems assurance / MBSE
+Original project media is retained wherever releasable. Source-derived renders are labelled as such and are not used as evidence of field trials, production deployment or original screenshots.
 
-The physical-system context uses the image-rich Clear Run architecture set above: the actual UAV and UGV photographs plus the native GCS interface capture are embedded in the vector compositions.
-
-- [mbse/clear_run_system_architecture.svg](mbse/clear_run_system_architecture.svg) — exact system-summary figure retained from the submitted practitioner-case release
-- [mbse/telemetry_replay.svg](mbse/telemetry_replay.svg) — analytical visualization of the constructed formatter/parser replay and derived controls
-
-## AI workflow evaluation
-
-- [ai-evaluation/evaluation_pipeline.svg](ai-evaluation/evaluation_pipeline.svg) — frozen-case evaluation, failure checks, statistical safeguard and human release gate
-
-## Super Mushshak digital engineering
-
-Original cockpit and flight/test media are maintained in the public [Super Mushshak Glass-Cockpit Retrofit](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification) record and linked from the case study.
-
-## Provenance
-
-Original project media is retained where releasable. A source-derived render is labelled as such and is not used as evidence of a field trial, production deployment or original screenshot.
+[Domain map](../domains/README.md) · [Back to portfolio](../README.md)

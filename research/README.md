@@ -54,7 +54,7 @@ Verified dataset/study scope includes:
 
 A public dataset is treated here as an engineering output in its own right: acquisition design, annotation, curation, source lineage, leakage control, versioning, reproducible partitions and deployment testing are part of the work.
 
-[Technical case study](../projects/tir-fod-clear-run.md) · [Inspectable benchmark result snapshot](../evidence/tir-fod/benchmark_results.json)
+[Technical case study](../domains/01-autonomy-edge-ai/clear-run-tir-fod.md) · [Inspectable benchmark result snapshot](../evidence/autonomy_edge_ai/tir_fod/benchmark_results.json)
 
 ## Submitted systems-engineering case
 
@@ -64,7 +64,7 @@ A public dataset is treated here as an engineering output in its own right: acqu
 
 Status: **submitted; editorial acknowledgement/review pending**. The case documents a bounded retrospective Capella/Arcadia reconstruction, evidence-applicability gates and a reproducible producer-consumer telemetry replay. Submission is not represented as acceptance or publication.
 
-[Public portfolio case study](../projects/mbse-ai-assurance.md)
+[Public portfolio case study](../domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md)
 
 ## Active manuscript
 

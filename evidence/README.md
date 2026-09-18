@@ -1,60 +1,45 @@
-# Technical implementation and reproducibility
+# Technical evidence — organized by domain
 
-This directory contains the public implementation slices, evaluation fixtures and reproducibility records behind the main project pages.
+This directory contains public implementation slices, evaluation fixtures and reproducibility records behind the portfolio. Evidence is grouped by the same technical hierarchy used in the recruiter-facing domain map.
 
-## Lodestar — RAG / retrieval
+## Autonomous, embedded and edge AI
 
-Published components include structure-aware chunking, BGE embedding behaviour, PostgreSQL/pgvector schema, hybrid lexical/vector retrieval, RRF, authority-aware reranking, retrieval evaluation, a real PostgreSQL + pgvector fixture and adversarial structured-output evaluation.
+- **[Clear Run](autonomy_edge_ai/clear_run/README.md)** — sanitized edge-runtime extract, field-evidence snapshot and detection-to-retention verification matrix.
+- **[TIR-FOD](autonomy_edge_ai/tir_fod/README.md)** — 29-run reproducibility bundle, source-aware split records and historical Jetson/TensorRT deployment provenance.
+- **[Counter-UAS Phase I](autonomy_edge_ai/counter_uas/hardware_provenance.json)** — hardware provenance and publication-derivative hashes.
+- **[AI Systems Assurance / MBSE](autonomy_edge_ai/mbse/telemetry_replay_cases.json)** — producer-consumer replay cases and validation logic.
 
-Run from the repository root:
+## Compliance and regulatory intelligence
 
-```bash
-python -m evidence.lodestar.public_smoke_test
-python -m evidence.lodestar.reliability_regression
-python -m evidence.lodestar.fixture.postgres_fixture_test
-python -m evidence.lodestar.fixture.authority_ablation
-python -m evidence.lodestar.assessment_eval.run_eval
-```
+- **[Lodestar](compliance_regtech/lodestar/README.md)** — structure-aware chunking, PostgreSQL/pgvector retrieval, RRF, authority-aware reranking, reliability regression, real-DB fixture and adversarial structured-output evaluation.
 
-The working private system records **209 source documents, 2,945 embedded chunks and 34 hand-checked retrieval queries with 1 top-5 expected-source miss (2.9%)**. Public evidence now includes an **11-invariant zero-dependency reliability regression**, the real PostgreSQL/pgvector fixture, an authority-policy ablation and the structured-output adversarial evaluation. These validate mechanisms and controls without recreating the private corpus.
-
-## Clear Run — edge deployment and field verification
-
-[evidence/clear-run](clear-run/README.md) publishes a sanitized detector/runtime slice plus a non-location-sensitive field-evidence snapshot and machine-readable detection-to-retention verification matrix. The snapshot covers **8 unique trial videos** and **12 structured RGB events across 8 reported classes**; the verification matrix keeps geolocation accuracy, GCS→UGV acknowledgement, terminal approach, capture and retention explicitly open until measured.
-
-## Counter-UAS Phase I — hardware provenance
-
-The public hardware views are traced to the original Phase-I project archive in [hardware_provenance.json](counter-uas/hardware_provenance.json). The record carries the source and publication-derivative SHA-256 hashes, dimensions and the exact non-semantic image transformations applied for web presentation.
-
-## TIR-FOD — repeated experiments and deployment records
-
-The [reproducibility bundle](tir-fod/reproducibility/README.md) contains **29 sanitized seed-level run records**, the training/evaluation protocol, source-aware split manifest, recorded environment, a GPU training harness and a zero-dependency result recomputation script.
+Run the Lodestar public checks from the repository root:
 
 ```bash
-python evidence/tir-fod/reproducibility/recompute_results.py
+python -m evidence.compliance_regtech.lodestar.public_smoke_test
+python -m evidence.compliance_regtech.lodestar.reliability_regression
+python -m evidence.compliance_regtech.lodestar.fixture.postgres_fixture_test
+python -m evidence.compliance_regtech.lodestar.fixture.authority_ablation
+python -m evidence.compliance_regtech.lodestar.assessment_eval.run_eval
 ```
 
-Historical Jetson measurements are documented separately in [deployment provenance](tir-fod/deployment/README.md). The raw historical ten-run logs and engine were not retained, so those summaries remain historical measurements rather than reconstructed benchmarks.
+## AI assurance and digital engineering
+
+- **[AI workflow evaluation](assurance_digital_engineering/ai_evaluation/evaluation_summary.json)** — public-safe frozen train/validation/held-out, sensitivity, parser-rescore and release-safeguard aggregates.
+- Public Adversarial Review Lite implementation remains in its dedicated public repositories and is linked from the domain case study.
+
+## Practical AI products
+
+JobLooper and BuildSignal are represented primarily through public/source-derived product surfaces and their case studies. JobLooper's public implementation is maintained in its dedicated repository.
 
 ## Public source repositories
 
 - **Codex Adversarial Review Lite:** <https://github.com/razaumair2203-ux/codex-adversarial-review-lite>
+- **Claude Adversarial Review Lite:** <https://github.com/razaumair2203-ux/claude-adversarial-review-lite>
 - **JobLooper:** <https://github.com/razaumair2203-ux/Pub-JobLooper>
 
-## Public / private implementation scope
+## Scope boundary
 
-The repository publishes enough code, fixtures and measured artefacts to inspect the engineering path without exposing private programme, institutional or personal material. Team-developed work is identified as such, and private-corpus or historical-device measurements are separated from results that can be rerun directly from this repository.
+The repository publishes enough code, fixtures and measured artefacts to inspect the engineering path without exposing private programme, institutional or personal material. Team-developed work is identified as such, and private-corpus or historical-device measurements are separated from results that can be rerun directly here.
 
-[Back to main page](../README.md)
-
-
-## AI systems assurance / MBSE
-
-- [Telemetry replay evidence](mbse/telemetry_replay_cases.json) — three constructed formatter/parser boundary cases and the derived R-COORD / R-ORIGIN requirements.
-- [Validator](mbse/validate_mbse_evidence.py) — CI guard for schema, claim boundary, replay classifications and required controls.
-
-
-## AI workflow evaluation
-
-- [Aggregate historical evaluation summary](ai-evaluation/evaluation_summary.json) — public-safe train/validation/held-out, sensitivity, parser-rescore and safeguard aggregates from the retained JobLoop-AI evaluation workspace.
-- [Validator](ai-evaluation/validate_evaluation_summary.py) — CI guard for split counts, disclosed limitations and retained release-blocking safeguard.
+[Domain map](../domains/README.md) · [Back to portfolio](../README.md)

@@ -28,7 +28,7 @@ The wider portfolio also includes practical AI workflow products, cross-model AI
 - Current field-evidence snapshot: **8 unique trial videos** and **12 structured RGB events across 8 reported classes**; target-coordinate, image-location, UAV-pose and altitude fields are recorded.
 - GCS→UGV acknowledgement, terminal alignment, physical capture and post-movement retention remain explicit quantitative verification gates.
 
-[Case study](../projects/tir-fod-clear-run.md) · [Dataset DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586)
+[Case study](../domains/01-autonomy-edge-ai/clear-run-tir-fod.md) · [Dataset DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586)
 
 #### Counter-UAS Phase I — physical AI-vision research prototype
 
@@ -38,7 +38,7 @@ The wider portfolio also includes practical AI workflow products, cross-model AI
 - Historical experiment record: approximately **14,000 training images**, **1,500-image test set**, **200 epochs** at 640×640 input.
 - Follow-on visual/RF/acoustic multisensor work remains a research direction and is not back-claimed as completed Phase-I capability.
 
-[Case study](../projects/counter-uas.md)
+[Case study](../domains/01-autonomy-edge-ai/counter-uas.md)
 
 ### Compliance and regulatory intelligence
 
@@ -54,7 +54,7 @@ The wider portfolio also includes practical AI workflow products, cross-model AI
 - A retained performance audit covered **152 surfaces**; cumulative cold latency improved from **100.1 s to 50.8 s** and warm latency from **66.8 s to 18.3 s** after query-batching work.
 - Current maturity is pre-deployment hardening; production deployment/UAT are not claimed.
 
-[Case study](../projects/msha-compliance-ai.md)
+[Case study](../domains/02-compliance-regtech/i-msha.md)
 
 #### Lodestar — EB-2 NIW / EB-1A evidence-assessment SaaS
 
@@ -68,7 +68,7 @@ The wider portfolio also includes practical AI workflow products, cross-model AI
 - Hybrid lexical + vector retrieval uses Reciprocal Rank Fusion and deterministic authority-sensitive reranking so source authority is a system concern, not prompt decoration.
 - Public evidence includes a real PostgreSQL + pgvector fixture, authority-policy ablation, an **11-invariant reliability regression** and adversarial structured-output evaluation with citation/refusal controls.
 
-[Case study](../projects/lodestar.md) · [Public implementation evidence](../evidence/lodestar/README.md)
+[Case study](../domains/02-compliance-regtech/lodestar.md) · [Public implementation evidence](../evidence/compliance_regtech/lodestar/README.md)
 
 ### Practical AI products and workflow systems
 
@@ -78,14 +78,14 @@ The wider portfolio also includes practical AI workflow products, cross-model AI
 - Truth, provenance, workflow state and release authority remain deterministic; AI can assist reasoning but cannot silently rewrite facts, approve documents or manufacture outcome explanations.
 - Public local-first implementation plus a private frozen **20 train / 15 validation / 15 held-out** evaluation lineage with fabrication/date/metric checks and release safeguards.
 
-[Case study](../projects/joblooper-jobpilot.md)
+[Case study](../domains/03-practical-ai-products/joblooper-jobpilot.md)
 
 #### BuildSignal AI — governed research-to-publication operations
 
 - Active AI-native workflow platform spanning research/source capture, articles, media, video, audio, YouTube, social variants, QA, rights/provenance, review and explicit owner-controlled publication.
 - Treats generative AI as one worker inside a governed content-production system rather than allowing generated output to move directly to publication.
 
-[Case study](../projects/buildsignal-ai.md)
+[Case study](../domains/03-practical-ai-products/buildsignal-ai.md)
 
 ### AI assurance, evaluation and research infrastructure
 
@@ -95,7 +95,7 @@ The wider portfolio also includes practical AI workflow products, cross-model AI
 - Frozen review scope, tests/fixtures/rubrics, self-test and model fallback, repo mutation/hash checks, structured findings, builder-side re-verification and human approval before fixes.
 - Designed for non-trivial AI-coded changes where auth, billing, migrations, data writes, API hallucinations or multi-file scope drift create material risk.
 
-[Case study](../projects/codex-adversarial-review-lite.md)
+[Case study](../domains/04-assurance-digital-engineering/adversarial-review-lite.md)
 
 #### ATLAS — GPU/HPC research infrastructure
 
