@@ -1,6 +1,8 @@
-# BuildSignal AI — AI research, editorial and media operations platform
+# BuildSignal AI — governed research-to-publication operations platform
 
-BuildSignal AI is an active private **Next.js / TypeScript / MDX** platform for AI, SaaS and technical publishing. The engineering problem is not article generation alone; it is the workflow around research, media, review, QA, source provenance and explicit publication authority.
+BuildSignal AI is an active private **AI-native publishing operations system** for technical research and multi-format content. The difficult part is not asking a model to write an article; it is maintaining source provenance, research state, media rights, review status, QA, derivative assets and a clear human publication authority across a pipeline that can produce articles, audio, video, YouTube-supported essays and social variants.
+
+The platform is built with **Next.js / TypeScript / MDX**, but its value is the operating model around those tools: AI-generated or AI-assisted material cannot move directly from generation to publication without passing through explicit research, review and release states.
 
 ![BuildSignal AI admin workspace](../visuals/buildsignal/admin-surface.svg)
 
@@ -8,21 +10,21 @@ BuildSignal AI is an active private **Next.js / TypeScript / MDX** platform for 
 
 ## Current product scope
 
-- local editorial/admin workspace for articles, research, media, video, audio and social variants;
-- source registry and research logging;
+- local editorial/admin workspaces for **Today, Articles, Media, Video, Audio, YouTube, Social, Research, Comments, QA, Tools and Publish**;
+- source registry and research logging rather than untraceable model memory;
 - per-item review and approval states;
 - article/editorial, pipeline and operations validation commands;
 - media-source and rights tracking;
 - explicit owner-controlled publication gate;
 - planned/partial visual and media QA automation.
 
+## Why this is an AI systems project
+
+BuildSignal treats generative AI as one worker inside a broader content-production system. The engineering problem is to preserve **source hierarchy, asset state, transformation history, review decisions, QA and publication authority** as content moves across formats. That is a different problem from a chat-based writing assistant.
+
 ## Current maturity boundary
 
 The local admin workflow is implemented, but the project documentation explicitly requires authentication before any hosted admin preview. Visual/media editing integrations and some automated QA remain under development.
-
-## AI-engineering relevance
-
-BuildSignal demonstrates how AI-enabled content work can be treated as an **operational system** rather than a chat transcript: source hierarchy, review loops, asset state, QA, human approval and publication remain explicit.
 
 ## My role
 
