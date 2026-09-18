@@ -24,8 +24,16 @@ jobs:
             evidence/lodestar/retrieval_integration_test.py \
             evidence/lodestar/public_smoke_test.py \
             evidence/clear-run/edge_detector_excerpt.py \
+            evidence/tir-fod/reproducibility/recompute_results.py \
+            evidence/tir-fod/reproducibility/train_public.py \
             tools/portfolio_integrity_check.py
       - name: Run zero-dependency Lodestar smoke checks
         run: python -m evidence.lodestar.public_smoke_test
+      - name: Recompute TIR-FOD multi-seed evidence
+        run: python evidence/tir-fod/reproducibility/recompute_results.py
+      - name: Validate TIR-FOD training contract
+        run: |
+          python evidence/tir-fod/reproducibility/train_public.py \
+            --config baseline_n --data /tmp/frozen-data.yaml --seed 42 --dry-run
       - name: Run portfolio evidence integrity checks
         run: python tools/portfolio_integrity_check.py
