@@ -63,7 +63,7 @@ def check_lodestar_db_fixture() -> None:
     schema = (base / "schema.sql").read_text(encoding="utf-8")
     test = (base / "postgres_fixture_test.py").read_text(encoding="utf-8")
     assert "vector(1024)" in schema
-    assert "from evidence.lodestar.hybrid_retrieval import hybrid_search" in test
+    assert "from evidence.compliance_regtech.lodestar.hybrid_retrieval import hybrid_search" in test
     assert "criterion_tags" in test and "visa_class" in test
 
 
