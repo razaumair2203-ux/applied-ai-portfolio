@@ -1,12 +1,12 @@
 # Muhammad Umair Raza — Applied AI Systems Engineer & R&D Programme Leader
 
-**Autonomous & Edge AI · Compliance / Regulatory Intelligence · AI Assurance · Aerospace Digital Engineering**
+**Autonomous & Edge AI · Compliance / Regulatory Intelligence · Practical Agentic AI Products · Aerospace Digital Engineering**
 
 **Current role:** Officer In Charge Projects / R&D & Systems Engineering Lead, College of Aeronautical Engineering, NUST · NUTECH assignments · **2023–present**
 
 I build and lead **applied-AI systems**, not isolated models: sensing, data, models, retrieval, backend services, interfaces, edge deployment, verification and field/product evidence are engineered as one system.
 
-My strongest current technical domain is **AI for autonomous and embedded systems**, especially **computer vision, UAV/UGV systems, RGB/LWIR sensing, Jetson/TensorRT deployment and system-level verification**. In parallel, I am deliberately building a second product niche in **compliance and regulatory intelligence**: AI systems that consolidate fragmented evidence, retrieve governing authority and support bounded, traceable decisions in regulated domains.
+My strongest current technical domain is **AI for autonomous and embedded systems**, especially **computer vision, UAV/UGV systems, RGB/LWIR sensing, Jetson/TensorRT deployment and system-level verification**. In parallel, I am aggressively building two independent product directions: a niche in **compliance and regulatory intelligence**—AI systems that consolidate fragmented evidence, retrieve governing authority and support bounded, traceable decisions in regulated domains—and **practical agentic AI tools** for recurring engineering, career, research and knowledge work.
 
 That work is grounded in **18+ years of aerospace systems engineering, avionics integration, V&V, configuration/lifecycle engineering and technical programme delivery**. I remain hands-on in Python/backend implementation and review, computer vision, RAG/retrieval, AI evaluation, edge deployment, interfaces, MBSE and release controls while leading multidisciplinary programmes.
 
