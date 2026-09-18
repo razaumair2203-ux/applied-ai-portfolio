@@ -93,8 +93,10 @@ The working private system also contains API-contract, assessment-grounding, aut
 - **The 2.9% result depends on the private 209-document corpus.** Public fixtures validate the implementation path but do not recreate that corpus.
 - **Generation stays downstream.** Fluent model output cannot substitute for missing source retrieval.
 
-## My role
+## Contribution boundary
 
-System architecture, retrieval/evaluation design, implementation direction, reliability controls, technical validation and product integration.
+- **Direct responsibility:** system architecture, retrieval/evaluation design, implementation direction, reliability controls, technical validation and product integration.
+- **Agent-assisted implementation:** coding-agent assistance is used in the private implementation; architecture, product constraints, evaluation design, acceptance criteria and release decisions remain owner-directed and evidence-gated.
+- **Evidence boundary:** retrieval regression, downstream guardrail tests and legal correctness are treated as separate claims.
 
 [Back to portfolio](../../README.md) · [Implementation bundle](../../evidence/compliance_regtech/lodestar/README.md)
