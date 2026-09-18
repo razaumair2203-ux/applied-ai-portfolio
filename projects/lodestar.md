@@ -11,7 +11,7 @@
 | **Retrieval** | BGE embeddings · HNSW semantic search · PostgreSQL FTS · four retrieval lanes · Reciprocal Rank Fusion |
 | **Grounding** | Citable evidence objects · source metadata · deterministic authority-weighted reranking |
 | **LLM integration** | Provider-swappable generation downstream of retrieval/evidence logic |
-| **Measured state** | **209 documents · 2,945 chunks · 34 hand-checked retrieval queries · 2.9% top-5 retrieval-grounding error** |
+| **Measured state** | **209 documents · 2,945 chunks · 34 hand-checked retrieval queries · 1/34 top-5 expected-source misses (2.9%)** |
 | **Software assurance** | **53 backend tests · 17/17 stress/abuse cases · 3/3 Playwright flows · 12/12 concurrent full flows** |
 
 ![Authentic Lodestar product UI captured from the working application](../visuals/lodestar_product_ui.jpg)
@@ -62,20 +62,20 @@ The implemented system includes:
 - provider-swappable LLM integration;
 - Next.js frontend and FastAPI backend.
 
-Authority is applied as a bounded multiplier on the fused retrieval score; it can favor stronger sources in close rankings without replacing relevance as the primary signal.
+Authority currently enters at two stages: the high-authority lexical/vector lanes contribute to Reciprocal Rank Fusion, and a second small multiplier is applied during reranking. That is stronger than a candidate-inclusion-only design, so it must be treated as a tunable retrieval policy and validated with ablations rather than described as a pure near-tie preference.
 
 ## Evaluation
 
 The hand-checked grounding set currently contains **34 query / expected-source pairs**. The evaluation asks whether an accepted authority/citation marker appears in the top five retrieved results.
 
-**Recorded full-system result: 2.9% top-5 retrieval-grounding error** on the private **209-document / 2,945-chunk** corpus. The public portfolio includes the frozen 34-pair evaluation set and evaluation code; it does not publish the complete corpus/database, so this exact full-system result is not presented as independently reproducible from the portfolio alone.
+**Recorded full-system result: 1 miss in 34 frozen queries (2.9% top-5 expected-source miss rate)** on the private **209-document / 2,945-chunk** corpus. The public portfolio includes the frozen 34-pair evaluation set and evaluation code; it does not publish the complete corpus/database, so this exact full-system result is not presented as independently reproducible from the portfolio alone.
 
 This metric is intentionally separated from answer-generation quality so fluent text cannot hide a retrieval miss.
 
 ## Engineering trade-offs, failures and current limits
 
 - **Vector and lexical scores are not directly comparable.** Reciprocal Rank Fusion combines rank positions rather than inventing a shared numeric scale for cosine distance and PostgreSQL text relevance.
-- **Authority must enter before generation.** In a decision-heavy corpus, non-precedent decisions can crowd the controlling statute/regulation/precedent out of the candidate pool. Separate high-authority retrieval lanes ensure those sources can compete in fusion; the subsequent authority multiplier remains deliberately small so a clear relevance advantage still wins.
+- **Authority weighting is stronger than a single rerank nudge.** High-authority lexical/vector lanes contribute additional RRF score before the post-fusion multiplier is applied. This helps controlling sources survive candidate selection, but it can also overweight authority. The design therefore needs ablation/regression evidence against a two-lane baseline before making stronger claims that relevance always dominates.
 - **The 34-query set is a targeted regression/evidence-retrieval check, not a universal RAG benchmark.** It measures whether an accepted source appears in the top five; it does not by itself establish answer correctness, legal correctness or user-outcome quality.
 - **The exact 2.9% result depends on the private corpus and database state.** Public files expose the frozen pair set, evaluation logic and runnable pure-logic checks, but not the complete corpus.
 - **Generation is intentionally downstream.** A fluent LLM response cannot substitute for source retrieval. Deeper answer-level evaluation, observability and security hardening remain active engineering work.
