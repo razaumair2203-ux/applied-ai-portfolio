@@ -2,11 +2,11 @@
 
 | Date | Hand-checked query / expected-citation pairs | Retrieval depth | Error rate | Corpus |
 |---|---:|---:|---:|---:|
-| 2026-07-10 | **34** | top-5 | **2.9%** | **209 docs / 2,945 chunks** |
+| 2026-07-10 | **34** | top-5 | **1 / 34 misses (2.9%)** | **209 docs / 2,945 chunks** |
 
 For each query, the expected authority/citation is known in advance. Retrieval succeeds when an accepted source marker appears within the top-5 result set.
 
-This measures **retrieval grounding**, not legal correctness, LLM answer quality, user success, or immigration outcome probability.
+This measures a **top-5 expected-source miss rate on a 34-query frozen regression set**, not legal correctness, LLM answer quality, user success, a statistically representative population error rate, or immigration outcome probability.
 
 ## Representative frozen pairs
 
