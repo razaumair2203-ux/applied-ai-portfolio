@@ -136,9 +136,11 @@ The machine-readable [`mission_verification_matrix.json`](../../evidence/autonom
 - **The programme spans the mission chain:** sensing, inference, geolocation and GCS integration are active while hand-off, terminal alignment, collection and retention remain explicit integration gates.
 - **Reusable engineering assets were created:** public data, split records, repeated-run metrics, training protocols, deployment measurement protocols and sanitized runtime code.
 
-## My role
+## Contribution boundary
 
-I lead the applied R&D / systems-engineering effort: technical direction, architecture and interfaces, experiment design, model/evaluation strategy, deployment review, integration gates, KPI definition, multidisciplinary student/research teams and publication development.
+- **Direct responsibility:** applied-R&D / systems-engineering leadership; technical direction; architecture and interface definition; experiment design; model/evaluation strategy; deployment review; KPI definition; integration and V&V gates; multidisciplinary team leadership; publication development.
+- **Team-developed work:** UAV/airframe integration, GCS/UGV implementation, field execution and mechanical recovery are multidisciplinary outputs and are not represented as sole authorship.
+- **Evidence rule:** model, field and mission claims are accepted only at the boundary actually measured; open end-to-end retrieval gates remain open until verified.
 
 ## Research status
 
