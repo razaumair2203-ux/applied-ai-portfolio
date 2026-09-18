@@ -17,9 +17,9 @@ That work is grounded in **18+ years of aerospace systems engineering, avionics 
 **Core specialization — Applied AI Systems Engineering.** The common thread across the portfolio is taking AI from model or retrieval logic into a governed, testable system with real interfaces, operational constraints and evidence.
 
 - **Primary engineering domain:** autonomous / embedded / edge AI systems, computer vision and sensor-driven autonomy.
-- **Product vertical:** compliance, regulatory and evidence intelligence (RegTech / ComplianceTech).
+- **Independent product niche:** compliance, regulatory and evidence intelligence (RegTech / ComplianceTech), currently represented by i-MSHA and Lodestar and intended to grow across regulated domains.
+- **Independent product stream:** practical agentic work tools for everyday engineering, career, research and knowledge work, with public/free releases where appropriate.
 - **Cross-cutting engineering:** AI assurance, evaluation, retrieval/RAG, deployment, observability/test evidence, MBSE and digital engineering.
-- **Additional product track:** practical AI workflow tools for career, research and everyday knowledge-work use, with public/free releases where appropriate.
 - **Research depth:** peer-reviewed work in multi-stream computer vision and adversarial vision, plus thermal FOD data/research and current UAV-centric applied-AI work.
 
 I use **MLOps practices** where they are relevant—reproducible evaluation, deployment controls, regression tests, data/configuration lineage and release gates—but the portfolio is broader than a pure MLOps role. The stronger description is **Applied AI Systems / Autonomous Systems Engineering** with product depth in compliance intelligence.
@@ -53,20 +53,20 @@ I use **MLOps practices** where they are relevant—reproducible evaluation, dep
 
 These are not generic chatbots. The reusable engineering pattern is **fragmented authoritative data → structured evidence model → retrieval/analytics → bounded AI reasoning → traceable decision support**. That is the compliance-tech capability I am intentionally developing across domains.
 
-### [3. Practical AI products and public utility workflows](domains/03-practical-ai-products/README.md)
+### [3. Practical agentic AI products and everyday work tools](domains/03-practical-ai-products/README.md)
 
 | Project family | System / contribution | Evidence-backed state |
 |---|---|---|
 | **[JobLooper / JobPilot family](domains/03-practical-ai-products/joblooper-jobpilot.md)** | Evidence-governed job-search and application workflow: career truth, JD capture, gap analysis, AI-assisted tailoring, human review, deterministic document build, submission trace and outcome learning. Intended as practical tooling rather than a portfolio-only demo. | public local-first implementation plus private evaluation/development lineage |
 | **[BuildSignal AI](domains/03-practical-ai-products/buildsignal-ai.md)** | Research-to-publication operating system spanning source capture, content/media state, QA, rights/provenance, review and explicit owner-controlled publication. | active private platform; local admin workflow implemented |
+| **[Adversarial Review Lite](domains/03-practical-ai-products/adversarial-review-lite.md)** | Practical agentic review tools for everyday AI-assisted coding: independent builder/reviewer models, mutation checks, structured findings and human approval before fixes. | two public cross-platform companion tools |
 
-This track shows that I also build **usable AI software for recurring everyday work**, with an emphasis on provenance, human control and release quality rather than one-off prompt demos.
+This is a **growing independent product stream**, not a side-project bucket. The common pattern is useful recurring work → explicit state/evidence → bounded agent assistance → independent checks where useful → human-controlled action or release.
 
-### [4. AI assurance, developer controls and digital engineering](domains/04-assurance-digital-engineering/README.md)
+### [4. AI assurance, evaluation and digital engineering — cross-cutting](domains/04-assurance-digital-engineering/README.md)
 
 | Project family | System / contribution | Evidence-backed state |
 |---|---|---|
-| **[Adversarial Review Lite](domains/04-assurance-digital-engineering/adversarial-review-lite.md)** | Cross-model assurance layer for AI-written software: frozen scope, independent model review, mutation/hash checks, re-validation and human approval before code changes. | two public cross-platform companion tools |
 | **[Evaluation-Driven AI Workflow Engineering](domains/04-assurance-digital-engineering/ai-evaluation-workflows.md)** | Frozen evaluation and release-control framework for AI workflow changes, including held-out cases, fabrication/date/metric checks and regression safeguards. | retained engineering evidence from active product-development lineage |
 | **[Super Mushshak digital engineering](domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md)** | Completed first-three-prototype glass-cockpit integration programme now being reconstructed as an evidence-linked digital thread. It is the bridge from legacy aerospace systems engineering into current digital-engineering and future executable-twin work. | retrofit completed; digital-thread backbone implemented; executable twin behaviour remains future work |
 | **ATLAS GPU/HPC** | 22-node research-computing environment supporting AI, simulation and reproducible engineering workflows. | current infrastructure leadership |
@@ -165,7 +165,7 @@ Recorded engineering state includes **209 documents · 2,945 chunks · a 34-quer
 
 [Open the Lodestar case →](domains/02-compliance-regtech/lodestar.md) · [Inspectable implementation evidence →](evidence/compliance_regtech/lodestar/README.md)
 
-### Practical AI product evidence
+### Practical agentic AI product evidence
 
 #### JobLooper — evidence-governed job-application operating system
 
@@ -193,20 +193,24 @@ BuildSignal is an **AI-native publishing operations system**, not an article gen
 
 ### AI assurance and aerospace digital-engineering evidence
 
-#### Adversarial Review Lite — independent AI review as an engineering control
+#### Adversarial Review Lite — everyday agentic review tools with assurance built in
 
 ![Adversarial Review Lite report preview](visuals/assurance-digital-engineering/adversarial-review/audit-report-preview.jpg)
 
 *Original report preview from the public Codex Adversarial Review Lite project.*
 
-The companion public tools support both directions:
+The companion tools support both directions:
 
 - [Claude builds → Codex reviews](https://github.com/razaumair2203-ux/codex-adversarial-review-lite)
 - [Codex builds → Claude reviews](https://github.com/razaumair2203-ux/claude-adversarial-review-lite)
 
-Both turn second-model review into a repeatable assurance workflow: frozen scope, test/fixture/rubric context, cross-platform self-test, reviewer-model fallback, repository mutation/hash checks, structured findings, builder-side re-verification and a human-readable report **before** fixes are authorized.
+Their primary identity is **practical everyday agentic tooling**: make second-model review easy to use during normal AI-assisted coding. Frozen scope, test/fixture/rubric context, self-test, reviewer fallback, repository mutation/hash checks, structured findings, builder-side re-verification and human approval supply the assurance layer.
 
-[Open the AI-assurance case →](domains/04-assurance-digital-engineering/adversarial-review-lite.md)
+The same bounded-agent / independent-check / human-approval pattern also informs compliance and regulated AI products, but Adversarial Review Lite itself belongs to the practical-agentic product stream.
+
+[Open the practical agentic tool case →](domains/03-practical-ai-products/adversarial-review-lite.md)
+
+### AI assurance and aerospace digital-engineering evidence
 
 #### Super Mushshak — first three glass-cockpit prototypes to a traceable digital thread
 
