@@ -1,14 +1,29 @@
 # Muhammad Umair Raza — Applied AI & Autonomous Systems Engineering Leader
 
-**Autonomous & Edge AI · Compliance / Regulatory Intelligence · Practical Agentic AI Products · Aerospace Digital Engineering**
+**Autonomous & Edge AI · Compliance / Regulatory Intelligence · Practical Agentic AI Products · AI Assurance & Aerospace Digital Engineering**
 
 **Current role:** Officer In Charge Projects / R&D & Systems Engineering Lead, College of Aeronautical Engineering, NUST · NUTECH assignments · **2023–present**
 
-I lead and build **applied-AI systems that have to work as complete engineered systems**: sensing and data, models and retrieval, interfaces, deployment, verification, product controls and field evidence. My strongest current technical domain is **autonomous / embedded / edge AI**—computer vision, UAV/UGV systems, RGB/LWIR sensing, Jetson/TensorRT deployment and system-level V&V. In parallel, I am building a specialist product direction in **compliance and regulatory intelligence** and a separate stream of practical agentic AI tools.
+I lead and build **applied-AI systems that have to work as complete engineered systems**: sensing and data, models and retrieval, interfaces, deployment, verification, product controls and field evidence. My strongest current technical domain is **autonomous / embedded / edge AI**—computer vision, UAV/UGV systems, RGB/LWIR sensing, Jetson/TensorRT deployment and system-level V&V.
 
-That work is grounded in **18+ years of aerospace systems engineering, avionics integration, configuration/lifecycle engineering, V&V and technical programme delivery**. I remain hands-on in Python/backend implementation and review, computer vision, RAG/retrieval, AI evaluation, edge deployment, interfaces, MBSE and release controls while leading multidisciplinary programmes.
+That work is grounded in **18+ years of aerospace systems engineering, avionics integration, configuration/lifecycle engineering, V&V and technical programme delivery**. In parallel with autonomous systems, I am building a specialist product direction in **compliance and regulatory intelligence**, an independent stream of **practical agentic AI products**, and a cross-cutting capability in **AI assurance, evaluation and digital engineering**.
 
 **Career profile:** [AI-focused base resume](profile/AI_BASE_RESUME.md) · **LinkedIn:** [Profile](https://www.linkedin.com/in/mumairaza/) · **Research:** [Google Scholar](https://scholar.google.com/citations?user=0EVckyAAAAAJ&hl=en) · **Dataset:** [TIR-FOD v1.2](https://doi.org/10.5281/zenodo.22546586) · **Technical review:** [project-specific access](PRIVATE_REPOSITORY_ACCESS.md)
+
+## Four specialization areas
+
+| | |
+|---|---|
+| **[1. Autonomous, Embedded & Edge AI](#autonomy-edge-ai)**  
+Primary engineering domain: computer vision, edge deployment, sensing, UAV/UGV integration and system-level verification.  
+**Flagships:** Clear Run / TIR-FOD · Counter-UAS · AI Systems Assurance / MBSE | **[2. Compliance & Regulatory Intelligence](#compliance-regtech)**  
+Specialist product niche: authoritative-source consolidation, retrieval, analytics and bounded AI reasoning for regulated decisions.  
+**Flagships:** i-MSHA · Lodestar |
+| **[3. Practical Agentic AI Products](#practical-agentic-ai)**  
+Independent product stream for recurring engineering, career, research and knowledge work with explicit state, provenance and human control.  
+**Flagships:** JobLooper · BuildSignal AI · Adversarial Review Lite | **[4. AI Assurance, Evaluation & Digital Engineering](#assurance-digital-engineering)**  
+Cross-cutting discipline connecting evaluation, release controls, MBSE, research computing and aerospace digital-thread engineering.  
+**Flagships:** Evaluation-driven AI workflows · ATLAS GPU/HPC · Super Mushshak digital engineering |
 
 ## At a glance
 
@@ -18,91 +33,121 @@ That work is grounded in **18+ years of aerospace systems engineering, avionics 
 | Supervised **60+ advanced engineering projects** | RGB/LWIR sensing, YOLO/SAHI, FastAPI, PostgreSQL/pgvector, BGE embeddings, RRF and structured AI workflows | Requirements, architecture, interfaces, V&V, configuration control, qualification and acceptance |
 | Accountable technical leadership for the **22-node ATLAS GPU/HPC environment** | Held-out evaluation, failure analysis, deterministic guardrails, MBSE/Capella and regression criteria | Prototype-to-field engineering across aircraft development, upgrades, sustainment and digital-engineering reconstruction |
 
-<p align="center">
-  <a href="domains/01-autonomy-edge-ai/clear-run-tir-fod.md"><img src="visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" alt="Clear Run airborne edge-AI platform" width="32%"></a>
-  <a href="domains/02-compliance-regtech/i-msha.md"><img src="visuals/compliance-regtech/i-msha/dashboard-regression.png" alt="i-MSHA browser regression dashboard" width="32%"></a>
-  <a href="domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md"><img src="https://raw.githubusercontent.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/main/assets/dynon-cockpit-prototype-sanitized.jpg" alt="Super Mushshak Dynon SkyView prototype cockpit" width="32%"></a>
-</p>
+<a name="autonomy-edge-ai"></a>
+## 1. Autonomous, Embedded & Edge AI
 
-*Physical edge-AI deployment, a governed compliance product surface, and aircraft-level systems integration: three evidence streams behind the same systems-engineering approach.*
+**Primary technical specialization.** This is where the aerospace/systems background most directly converges with current AI work: perception, sensing, embedded compute, UAV/UGV integration, interfaces and system verification.
 
-## Portfolio map
-
-| Domain | Role in my current work | Flagship evidence |
+| Project family | Engineering contribution | Evidence-backed state |
 |---|---|---|
-| **[Autonomous, embedded & edge AI](domains/01-autonomy-edge-ai/README.md)** | Primary technical specialization: perception, embedded compute, UAV/UGV integration and system verification | [Clear Run / TIR-FOD](domains/01-autonomy-edge-ai/clear-run-tir-fod.md) · [Counter-UAS Phase I](domains/01-autonomy-edge-ai/counter-uas.md) · [AI Systems Assurance / MBSE](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md) |
-| **[Compliance & regulatory intelligence](domains/02-compliance-regtech/README.md)** | Specialist product direction for evidence-heavy regulated decisions | [i-MSHA](domains/02-compliance-regtech/i-msha.md) · [Lodestar](domains/02-compliance-regtech/lodestar.md) |
-| **[Practical agentic AI products](domains/03-practical-ai-products/README.md)** | Independent product stream for recurring engineering, career, research and knowledge work | [JobLooper](domains/03-practical-ai-products/joblooper-jobpilot.md) · [BuildSignal AI](domains/03-practical-ai-products/buildsignal-ai.md) · [Adversarial Review Lite](domains/03-practical-ai-products/adversarial-review-lite.md) |
-| **[AI assurance, evaluation & digital engineering](domains/04-assurance-digital-engineering/README.md)** | Cross-cutting verification, evaluation, lifecycle and release discipline | [Evaluation-driven AI workflows](domains/04-assurance-digital-engineering/ai-evaluation-workflows.md) · [ATLAS GPU/HPC](domains/04-assurance-digital-engineering/atlas-hpc.md) · [Super Mushshak digital engineering](domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md) |
+| **[Clear Run / TIR-FOD](domains/01-autonomy-edge-ai/clear-run-tir-fod.md)** | UAV–GCS–UGV airfield robotics; RGB/LWIR perception; Jetson/TensorRT deployment; geolocation; operator tasking; developing physical recovery | flight-tested edge AI; active UAV–GCS–UGV integration; final physical-retention closure remains open |
+| **[Counter-UAS Phase I](domains/01-autonomy-edge-ai/counter-uas.md)** | Physical AI-vision drone-detection prototype taken from model development into constructed sensing hardware and indoor/outdoor trials | Phase I completed; RF/acoustic/multisensor extensions remain research |
+| **[AI Systems Assurance / MBSE](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md)** | Evidence-linked Capella/Arcadia assurance for the Clear Run mission chain, interface boundaries and regression obligations | current assurance case; INCOSE IACS submission pending review |
 
-## Flagship systems
+### Clear Run / TIR-FOD
 
-### Clear Run / TIR-FOD — airfield robotics from detection to verified removal
+**Private technical review available:** [request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
 
-**Private technical review available:** [request Clear Run review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
+[![Clear Run detection-to-removal architecture](visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)](domains/01-autonomy-edge-ai/clear-run-tir-fod.md)
 
-[![Clear Run detection-to-removal architecture](visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
+Clear Run is an integrated airfield robotics programme from **detection → geolocation → operator review/tasking → UGV response → developing physical recovery**. Public evidence deliberately keeps intermediate success separate from verified mission completion.
 
-Clear Run is an integrated UAV–GCS–UGV airfield robotics programme combining RGB/LWIR sensing, small-object computer vision, Jetson/TensorRT inference, target geolocation, operator tasking and developing physical recovery. The public evidence deliberately separates detection, geolocation, task acknowledgement, terminal approach, capture and retained removal rather than treating an intermediate success as mission completion.
+**Evidence:** **3,499 source frames · 5,593 annotations · 23 classes · 29 controlled training runs**; a controlled source-lineage violation produced an invalid **+8.52 percentage-point mAP uplift**; historical Jetson Orin Nano / FP16 TensorRT measurement records **25.0 FPS model-stage and 15.6 FPS complete pipeline**; the current field snapshot contains **8 unique trial videos and 12 structured RGB events across 8 reported classes**.
 
-Key evidence: **3,499 source frames · 5,593 annotations · 23 classes · 29 controlled training runs**; a controlled source-lineage violation produced an invalid **+8.52 percentage-point mAP uplift**; historical Jetson Orin Nano / FP16 TensorRT measurement records **25.0 FPS model-stage and 15.6 FPS complete pipeline**; the current field snapshot contains **8 unique trial videos and 12 structured RGB events across 8 reported classes**.
+**My contribution:** technical direction, architecture/interfaces, experiment and evaluation strategy, deployment review, integration/V&V gates and multidisciplinary team leadership. UAV/airframe integration, GCS/UGV implementation, field execution and mechanical recovery are team-developed outputs rather than sole-authorship claims.
 
-**My contribution:** technical direction, architecture/interfaces, experiment and evaluation strategy, deployment review, integration/V&V gates and multidisciplinary team leadership. Airframe integration, GCS/UGV implementation, field execution and mechanical recovery are team-developed outputs rather than sole-authorship claims.
-
-[Open the Clear Run / TIR-FOD case →](domains/01-autonomy-edge-ai/clear-run-tir-fod.md)
-
-### Counter-UAS Phase I — physical AI-vision prototype
-
-**Private technical review available:** [request Counter-UAS review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml)
+### Counter-UAS Phase I
 
 <p align="center">
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml"><img src="visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" alt="Constructed Counter-UAS Phase-I laser-camera mount" width="49%"></a>
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml"><img src="visuals/autonomy-edge-ai/counter-uas/outdoor_detection.png" alt="Outdoor Counter-UAS Phase-I detection trial" width="49%"></a>
+  <a href="domains/01-autonomy-edge-ai/counter-uas.md"><img src="visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" alt="Constructed Counter-UAS Phase-I laser-camera mount" width="49%"></a>
+  <a href="domains/01-autonomy-edge-ai/counter-uas.md"><img src="visuals/autonomy-edge-ai/counter-uas/outdoor_detection.png" alt="Outdoor Counter-UAS Phase-I detection trial" width="49%"></a>
 </p>
 
-Phase I progressed from model development into a **constructed laser–camera sensing prototype** and preliminary indoor/outdoor trials. The retained historical experiment record includes approximately **14,000 training images** and a **1,500-image test set**. Passive-RF, acoustic and wider multisensor concepts remain follow-on research rather than back-claimed Phase-I capability.
+*Constructed Phase-I sensing hardware and retained outdoor detection evidence.*
 
-**My contribution:** Principal Investigator / research direction and systems-integration oversight. The project is represented as team-developed R&D.
+Phase I progressed from model development into a **constructed laser–camera sensing prototype** and preliminary indoor/outdoor trials. The retained experiment record includes approximately **14,000 training images** and a **1,500-image test set**. My role was Principal Investigator / research direction and systems-integration oversight; later passive-RF, acoustic and multisensor concepts are not back-claimed as completed Phase-I capability.
 
-[Open the Counter-UAS case →](domains/01-autonomy-edge-ai/counter-uas.md)
+[Explore the autonomous / edge-AI domain →](domains/01-autonomy-edge-ai/README.md)
 
-### i-MSHA — mine-safety compliance and decision intelligence
+<a name="compliance-regtech"></a>
+## 2. Compliance & Regulatory Intelligence
 
-**Private product; technical review available:** [request i-MSHA review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
+**Specialist product niche.** The reusable engineering pattern is **authoritative source consolidation → structured evidence model → retrieval / analytics → bounded AI reasoning → cited decision support → human-controlled action**.
 
-i-MSHA consolidates fragmented U.S. MSHA public data into one national→state→mine/controller operating environment covering violations, penalties, inspections, safety/injury, legal outcomes, occupational exposure, contractors and acquisition due diligence. **Next.js + FastAPI + PostgreSQL + DuckDB/Parquet** support the product and analytical layers; Canary AI sits across governed data paths rather than replacing deterministic source logic.
+<table>
+<tr>
+<td width="50%"><a href="domains/02-compliance-regtech/i-msha.md"><img src="visuals/compliance-regtech/i-msha/dashboard-regression.png" alt="i-MSHA authentic browser-regression dashboard"></a></td>
+<td width="50%"><a href="domains/02-compliance-regtech/lodestar.md"><img src="visuals/compliance-regtech/lodestar/product-surface.svg" alt="Lodestar source-derived product surface"></a></td>
+</tr>
+<tr>
+<td><b>i-MSHA</b><br><sub>Mine-safety compliance and decision intelligence built over governed public data.</sub></td>
+<td><b>Lodestar</b><br><sub>Grounded EB-2 NIW / EB-1A evidence assessment with authority-aware retrieval and refusal controls.</sub></td>
+</tr>
+</table>
 
-Current recorded product state: **8 active modules · 25 frontend features · 100 backend handlers · 385 Canary unit tests · 839 full backend tests passing** in the retained May 2026 source-of-truth state. A site-wide latency audit covered **152 surfaces** and recorded cumulative cold latency improving from **100.1 s to 50.8 s** and warm latency from **66.8 s to 18.3 s** after query-batching work.
+### i-MSHA
+
+i-MSHA consolidates fragmented U.S. MSHA public data into one national→state→mine/controller environment covering violations, penalties, inspections, safety/injury, legal outcomes, occupational exposure, contractors and acquisition due diligence. Current recorded product state includes **8 active modules · 25 frontend features · 100 backend handlers · 385 Canary unit tests · 839 full backend tests passing** in the retained May 2026 source-of-truth state.
 
 **My contribution:** product/programme direction, systems architecture, AI/data workflow definition, feature prioritisation, technical review and validation framing.
 
-[Open the i-MSHA case →](domains/02-compliance-regtech/i-msha.md)
+### Lodestar
 
-### Lodestar — grounded immigration evidence assessment
-
-**Private technical review available:** [request Lodestar review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml)
-
-[![Lodestar product surface](visuals/compliance-regtech/lodestar/product-surface.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml)
-
-Lodestar maps applicant evidence to EB-2 NIW / EB-1A legal criteria, retrieves governing authority, exposes evidence gaps and constrains outputs to cited assessment states. The implementation uses FastAPI, PostgreSQL/pgvector, BGE embeddings, FTS/HNSW and RRF with explicit authority policy and refusal controls.
-
-Recorded engineering state includes **209 documents · 2,945 chunks · a 34-query frozen retrieval regression set · 1 top-5 expected-source miss**. Public fixtures exercise PostgreSQL + pgvector retrieval, authority-policy ablation, an 11-invariant reliability regression and adversarial structured-output controls.
+Lodestar maps applicant evidence to EB-2 NIW / EB-1A legal criteria, retrieves governing authority, exposes evidence gaps and constrains outputs to cited assessment states. Recorded engineering state includes **209 documents · 2,945 chunks · a 34-query frozen retrieval regression set · 1 top-5 expected-source miss**. Public fixtures exercise PostgreSQL + pgvector retrieval, authority-policy ablation, an 11-invariant reliability regression and adversarial structured-output controls.
 
 **My contribution:** system architecture, retrieval/evaluation design, implementation direction, reliability controls, technical validation and product integration. Coding-agent assistance is used in implementation; architecture, constraints, evaluation design, acceptance criteria and release decisions remain owner-directed and evidence-gated.
 
-[Open the Lodestar case →](domains/02-compliance-regtech/lodestar.md) · [Inspectable implementation evidence →](evidence/compliance_regtech/lodestar/README.md)
+[Explore compliance / regulatory intelligence →](domains/02-compliance-regtech/README.md)
 
-### Practical agentic AI products
+<a name="practical-agentic-ai"></a>
+## 3. Practical Agentic AI Products
 
-[![JobLooper application workspace](visuals/practical-ai-products/joblooper/dashboard-surface.svg)](https://github.com/razaumair2203-ux/Pub-JobLooper)
+**Independent product stream.** These systems turn recurring work into explicit state, provenance, bounded agent action, independent checks where useful and human-controlled release.
 
-**[JobLooper](domains/03-practical-ai-products/joblooper-jobpilot.md)** governs the job-application lifecycle from signed career truth and exact JD capture through gap/preflight decisions, AI-assisted tailoring, complete human review, deterministic DOCX/PDF build, hash-bound submission records and outcome learning. A public local-first implementation is available at [Pub-JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper).
+<table>
+<tr>
+<td width="33%"><a href="domains/03-practical-ai-products/joblooper-jobpilot.md"><img src="visuals/practical-ai-products/joblooper/dashboard-surface.svg" alt="JobLooper application workspace"></a></td>
+<td width="33%"><a href="domains/03-practical-ai-products/buildsignal-ai.md"><img src="visuals/practical-ai-products/buildsignal/admin-surface.svg" alt="BuildSignal AI admin workspace"></a></td>
+<td width="33%"><a href="domains/03-practical-ai-products/adversarial-review-lite.md"><img src="visuals/assurance-digital-engineering/adversarial-review/audit-report-preview.jpg" alt="Adversarial Review Lite audit report"></a></td>
+</tr>
+<tr>
+<td><b>JobLooper</b><br><sub>Evidence-governed job-application operating system.</sub></td>
+<td><b>BuildSignal AI</b><br><sub>Governed research-to-publication operations.</sub></td>
+<td><b>Adversarial Review Lite</b><br><sub>Independent second-model review with mutation and approval controls.</sub></td>
+</tr>
+</table>
 
-**[BuildSignal AI](domains/03-practical-ai-products/buildsignal-ai.md)** is a private AI-native research-to-publication operating system with explicit source, rights, QA, review and owner-controlled release states across text and media.
+**[JobLooper](domains/03-practical-ai-products/joblooper-jobpilot.md)** governs the application lifecycle from signed career truth and exact JD capture through gap/preflight decisions, AI-assisted tailoring, complete human review, deterministic DOCX/PDF build, hash-bound submission records and outcome learning. The implementation is publicly inspectable at [Pub-JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper).
 
-**[Adversarial Review Lite](domains/03-practical-ai-products/adversarial-review-lite.md)** provides two public companion tools for Claude→Codex and Codex→Claude independent review, with frozen scope, mutation checks, structured findings, re-verification and human approval before fixes.
+**[BuildSignal AI](domains/03-practical-ai-products/buildsignal-ai.md)** is an AI-native publishing operations system spanning research/source capture, text/media state, rights/provenance, QA, review and explicit owner-controlled publication.
 
-Across these products, my role is product/system design, workflow governance, control/evaluation architecture and technical validation; implementation may use coding agents, but truth, provenance, acceptance and release authority remain explicit system states.
+**[Adversarial Review Lite](domains/03-practical-ai-products/adversarial-review-lite.md)** provides public Claude→Codex and Codex→Claude review tools with frozen review scope, structured findings, repository mutation checks, builder-side re-verification and human approval before fixes.
+
+[Explore practical agentic AI products →](domains/03-practical-ai-products/README.md)
+
+<a name="assurance-digital-engineering"></a>
+## 4. AI Assurance, Evaluation & Digital Engineering
+
+**Cross-cutting engineering discipline.** This area carries verification, evidence, lifecycle, evaluation and release discipline across the autonomy work, compliance products and practical agentic tools, while connecting current AI engineering to earlier aerospace systems experience.
+
+<table>
+<tr>
+<td width="50%"><a href="domains/04-assurance-digital-engineering/ai-evaluation-workflows.md"><img src="visuals/assurance-digital-engineering/ai-evaluation/evaluation_pipeline.svg" alt="Evaluation-driven AI workflow"></a></td>
+<td width="50%"><a href="domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md"><img src="visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg" alt="Authentic Super Mushshak Dynon SkyView installed prototype"></a></td>
+</tr>
+<tr>
+<td><b>Evaluation-driven AI workflows</b><br><sub>Frozen cases, failure-mode checks, release safeguards and human approval.</sub></td>
+<td><b>Super Mushshak digital engineering</b><br><sub>Completed aircraft retrofit engineering reconstructed into a traceable digital thread.</sub></td>
+</tr>
+</table>
+
+### Evaluation-driven AI workflows
+
+A retained development lineage uses frozen train/validation/held-out cases, fabrication/date/metric checks, parser rescoring and materiality/statistical safeguards. One recorded prompt candidate was **blocked** because the measured improvement did not justify release.
+
+### ATLAS GPU/HPC
+
+**[ATLAS](domains/04-assurance-digital-engineering/atlas-hpc.md)** is a **22-node GPU/HPC research-computing environment** supporting AI, simulation and reproducible engineering workflows on Linux/Ubuntu, SLURM, CUDA and Docker. My role is accountable technical leadership for the environment and associated technical staff; individual research jobs remain team/project outputs.
 
 ### Super Mushshak — aerospace integration to digital engineering
 
@@ -110,7 +155,7 @@ The completed programme covered the **first three glass-cockpit prototypes** and
 
 **My contribution:** lead systems engineer / avionics integration engineer on the historical retrofit and current retrospective systems modelling / digital-thread reconstruction.
 
-[Open the digital-engineering case →](domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md) · [Public source repository →](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification)
+[Public source repository →](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification) · [Explore assurance & digital engineering →](domains/04-assurance-digital-engineering/README.md)
 
 ## Research and external technical validation
 
@@ -155,7 +200,7 @@ This foundation is why the work consistently separates **model output from syste
 
 The public CI exercises PostgreSQL + pgvector integration, Lodestar retrieval/control regressions, Clear Run field-evidence consistency, MBSE replay evidence, aggregate AI-evaluation evidence and TIR-FOD reproducibility/measurement boundaries.
 
-Private review requests are handled **project by project**. The default review surface is a curated, release-safe technical package or review branch containing the evidence relevant to the reviewer; access to a complete raw working repository is provided only when appropriate. GitHub issue requests are available, with a [LinkedIn message route](https://www.linkedin.com/in/mumairaza/) for reviewers who do not want to post a public request.
+Private review requests are handled **project by project**. The default review surface is a curated, release-safe technical package or review branch containing the evidence relevant to the reviewer; access to a complete raw working repository is provided only when appropriate. Reviewers can use the project-specific GitHub forms or the [LinkedIn message route](https://www.linkedin.com/in/mumairaza/) for a discreet request.
 
 [Technical-review options →](PRIVATE_REPOSITORY_ACCESS.md)
 
@@ -170,7 +215,5 @@ Private review requests are handled **project by project**. The default review s
 ## Provenance and claim boundary
 
 Public implementation, dataset records, experiment summaries and sanitized code are linked directly where disclosure permits. Measurements that depend on private corpora or historical hardware runs are identified as such. Team-developed work is not presented as sole authorship, active work is separated from completed results, and private programme material remains outside the public repository.
-
-Execution instructions for published evidence support technical inspection and verification; they do not grant redistribution, sublicensing or derivative-use rights beyond the repository's stated license.
 
 **License / rights:** [LICENSE](LICENSE)
