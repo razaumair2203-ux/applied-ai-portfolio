@@ -62,7 +62,7 @@ The implemented system includes:
 - provider-swappable LLM integration;
 - Next.js frontend and FastAPI backend.
 
-Authority currently enters at two stages: the high-authority lexical/vector lanes contribute to Reciprocal Rank Fusion, and a second small multiplier is applied during reranking. That is stronger than a candidate-inclusion-only design, so it must be treated as a tunable retrieval policy and validated with ablations rather than described as a pure near-tie preference.
+Authority currently enters at two stages: the high-authority lexical/vector lanes contribute to Reciprocal Rank Fusion, and a second small multiplier is applied during reranking. A [public mechanistic ablation](../evidence/lodestar/fixture/authority_ablation.py) now compares ordinary two-lane RRF, four-lane RRF and four-lane RRF plus reranking. It confirms that the candidate lanes materially increase the controlling-source score advantage and that the final multiplier increases it again. This characterizes the policy honestly; it does **not** claim the policy improves retrieval quality on the private 209-document corpus.
 
 ## Evaluation
 
@@ -77,7 +77,7 @@ Retrieval and downstream assessment are evaluated separately so fluent text cann
 ## Engineering trade-offs, failures and current limits
 
 - **Vector and lexical scores are not directly comparable.** Reciprocal Rank Fusion combines rank positions rather than inventing a shared numeric scale for cosine distance and PostgreSQL text relevance.
-- **Authority weighting is stronger than a single rerank nudge.** High-authority lexical/vector lanes contribute additional RRF score before the post-fusion multiplier is applied. This helps controlling sources survive candidate selection, but it can also overweight authority. The design therefore needs ablation/regression evidence against a two-lane baseline before making stronger claims that relevance always dominates.
+- **Authority weighting is stronger than a single rerank nudge.** The public fixture ablation shows that high-authority lexical/vector lanes already increase the controlling-source RRF advantage before the final multiplier adds a second preference. That resolves the earlier ambiguity about mechanism. The fixture is intentionally not used to claim a quality win on the private corpus; any such claim would still require corpus-level regression evidence.
 - **The 34-query set is a targeted regression/evidence-retrieval check, not a universal RAG benchmark.** It measures whether an accepted source appears in the top five; it does not by itself establish answer correctness, legal correctness or user-outcome quality.
 - **The exact 2.9% result depends on the private corpus and database state.** Public files expose the frozen pair set, evaluation logic and runnable pure-logic checks, but not the complete corpus.
 - **Generation is intentionally downstream.** A fluent LLM response cannot substitute for source retrieval. Deeper answer-level evaluation, observability and security hardening remain active engineering work.
@@ -111,6 +111,7 @@ A technical reviewer can inspect representative sanitized implementation directl
 - [`grounding-eval.md`](../evidence/lodestar/grounding-eval.md) — recorded full-system evaluation result.
 - [`public_smoke_test.py`](../evidence/lodestar/public_smoke_test.py) — zero-dependency public checks for retrieval-control logic and the frozen evaluation specification.
 - [`fixture/postgres_fixture_test.py`](../evidence/lodestar/fixture/postgres_fixture_test.py) — public real-DB integration path using PostgreSQL full-text search and pgvector.
+- [`fixture/authority_ablation.py`](../evidence/lodestar/fixture/authority_ablation.py) — public two-lane vs four-lane vs reranked authority-policy ablation.
 - [`assessment_eval/run_eval.py`](../evidence/lodestar/assessment_eval/run_eval.py) — public adversarial evaluation of citation grounding, refusal behavior, evidence-ID filtering and five-state output constraints.
 
 ## Current engineering direction

@@ -116,6 +116,18 @@ def check_repository_metadata_contract() -> None:
     license_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
     assert "All rights reserved" in license_text
 
+
+def check_audit_closure_state() -> None:
+    first = (ROOT / "docs" / "AI_PORTFOLIO_INSPECTION_CONTRACT.md").read_text(encoding="utf-8")
+    reaudit = (ROOT / "docs" / "AI_PORTFOLIO_REAUDIT_2026-09-18.md").read_text(encoding="utf-8")
+    closure = (ROOT / "docs" / "AUDIT_CLOSURE_MATRIX.md").read_text(encoding="utf-8")
+    assert "**Status:** open" not in first
+    assert "**Status:** open" not in reaudit
+    assert "RESOLVED / CHARACTERIZED" in reaudit
+    assert "Content closed; live About fields external-admin pending" in closure
+    assert "No code/content remediation remains open" in closure
+    assert (ROOT / "evidence" / "lodestar" / "fixture" / "authority_ablation.py").exists()
+
 def check_claim_boundaries() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "Evidence boundary." in readme
@@ -136,6 +148,7 @@ def main() -> None:
         check_jetson_historical_boundary,
         check_lodestar_assessment_eval_contract,
         check_repository_metadata_contract,
+        check_audit_closure_state,
         check_claim_boundaries,
     ]
     for check in checks:

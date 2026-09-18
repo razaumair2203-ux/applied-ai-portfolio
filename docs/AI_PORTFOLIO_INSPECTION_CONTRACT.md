@@ -155,11 +155,13 @@ The largest remaining deficit is **public verification mechanics**, not AI bread
 
 The score is not higher because the two most impressive systems intentionally remain partly private. A reviewer can execute representative Lodestar logic and inspect sanitized Clear Run source/visual evidence, but cannot independently recreate the full 209-document RAG measurement or the complete flight/mission test environment from this repository alone.
 
-## 10. Highest-value remaining upgrades
+## 10. Status of the first audit's proposed upgrades
 
-These are not release blockers:
+These items were originally listed as non-blocking next steps. Their current status is:
 
-1. Publish a small, non-sensitive Lodestar fixture corpus that exercises the real Postgres/pgvector retrieval path end-to-end.
-2. Publish a sanitized Clear Run benchmark CSV/log extract plus a tiny script that recomputes the 10-run FPS/latency summaries.
-3. When integrated UAV→GCS→UGV retrieval trials close, add mission-level KPI tables with denominators, inclusion rules and failure cases rather than only a success video.
-4. Add external-record links for each paper/dataset once stable indexing pages are available and verified.
+1. **Completed:** a non-sensitive Lodestar PostgreSQL/pgvector fixture now exercises the real published retrieval path end to end, including a separate authority-policy ablation.
+2. **Superseded by evidence correction:** inspection showed that the historical Jetson ten-run raw logs and engine were not retained. No synthetic CSV was created. The portfolio instead publishes a machine-readable historical evidence boundary and a named-checkpoint protocol for future reproducible runs.
+3. **Programme milestone, not an unresolved portfolio defect:** integrated UAV→GCS→UGV mission KPIs remain under active validation and are explicitly not claimed as complete. When the programme produces defensible denominators and failure logs, they should be added.
+4. **Completed where records exist:** the two ICoDT2 papers and the TIR-FOD dataset link to DOI records; IBCAST 2026 remains bounded as accepted/presented because no independently verified DOI/indexing record is claimed.
+
+No item in this historical list remains a hidden technical-audit observation.

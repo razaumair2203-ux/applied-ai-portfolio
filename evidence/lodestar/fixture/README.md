@@ -41,3 +41,18 @@ GitHub Actions runs the same test against a `pgvector/pgvector:pg16` service con
 ## Boundary
 
 This is a non-sensitive miniature corpus. It proves that the published retrieval implementation executes end to end against real PostgreSQL/pgvector; it does **not** reproduce the private 209-document corpus or upgrade the recorded 1/34 full-corpus result into a public measurement.
+
+
+## Authority-weighting ablation
+
+The earlier audit identified that authority enters twice: once through dedicated high-authority lexical/vector lanes and again through the final reranking multiplier. This is now characterized explicitly rather than left as a future test.
+
+Run:
+
+```bash
+python -m evidence.lodestar.fixture.authority_ablation
+```
+
+The fixture compares ordinary two-lane RRF, four-lane RRF, and four-lane RRF plus the final authority multiplier. CI asserts that the high-authority lanes increase the controlling-source score advantage and that the reranker increases it again.
+
+This is a **mechanistic ablation**, not evidence that the policy improves retrieval quality on the private 209-document corpus. It proves how strong the policy is and prevents the portfolio from describing it as merely a near-tie tiebreaker.
