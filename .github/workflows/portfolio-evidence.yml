@@ -40,6 +40,7 @@ jobs:
             evidence/lodestar/retrieval_integration_test.py \
             evidence/lodestar/public_smoke_test.py \
             evidence/lodestar/fixture/postgres_fixture_test.py \
+            evidence/lodestar/fixture/authority_ablation.py \
             evidence/lodestar/assessment_eval/assessment_guardrail.py \
             evidence/lodestar/assessment_eval/run_eval.py \
             evidence/clear-run/edge_detector_excerpt.py \
@@ -54,6 +55,8 @@ jobs:
         run: pip install -r evidence/lodestar/fixture/requirements.txt
       - name: Run Lodestar PostgreSQL + pgvector integration fixture
         run: python -m evidence.lodestar.fixture.postgres_fixture_test
+      - name: Run Lodestar authority-weighting ablation
+        run: python -m evidence.lodestar.fixture.authority_ablation
       - name: Run Lodestar structured-assessment adversarial evaluation
         run: python -m evidence.lodestar.assessment_eval.run_eval
       - name: Recompute TIR-FOD multi-seed evidence
