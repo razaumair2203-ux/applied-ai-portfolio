@@ -1,10 +1,12 @@
 # BuildSignal AI — governed research-to-publication operations platform
 
+**Complete working product repository:** private · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-buildsignal.yml)
+
 BuildSignal AI is an active private **AI-native publishing operations system** for technical research and multi-format content. The difficult part is not asking a model to write an article; it is maintaining source provenance, research state, media rights, review status, QA, derivative assets and a clear human publication authority across a pipeline that can produce articles, audio, video, YouTube-supported essays and social variants.
 
 The platform is built with **Next.js / TypeScript / MDX**, but its value is the operating model around those tools: AI-generated or AI-assisted material cannot move directly from generation to publication without passing through explicit research, review and release states.
 
-![BuildSignal AI admin workspace](../../visuals/practical-ai-products/buildsignal/admin-surface.svg)
+[![BuildSignal AI admin workspace](../../visuals/practical-ai-products/buildsignal/admin-surface.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-buildsignal.yml)
 
 *Public-safe rendering of the current BuildSignal admin-page source, showing the local review workspace, publication gates and owner-controlled approval flow.*
 
