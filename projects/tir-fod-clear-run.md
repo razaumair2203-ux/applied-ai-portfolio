@@ -14,9 +14,9 @@
 | **Current systems focus** | Closing and quantitatively validating target hand-off, terminal alignment, collection and retention |
 | **My role** | Technical direction, systems architecture/interfaces, experiment and evaluation strategy, deployment review, integration gates and team leadership |
 
-**Public dataset:** [TIR-FOD v1.2 — Zenodo DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586) · **Result extract:** [benchmark snapshot](../evidence/tir-fod/benchmark_results.json) · **Deployment-code extract:** [Clear Run evidence](../evidence/clear-run/README.md)
+**Public dataset:** [TIR-FOD v1.2 — Zenodo DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586) · **Reproducible results:** [29-run public recomputation bundle](../evidence/tir-fod/reproducibility/README.md) · **Deployment-code extract:** [Clear Run evidence](../evidence/clear-run/README.md)
 
-**Evidence boundary:** the dataset record, benchmark extract and sanitized detector code are public. Full dual-camera mission source, flight logs and programme integration records remain private/team material. The field throughput, power and thermal figures below are recorded programme measurements, not a benchmark that can be rerun from this portfolio alone.
+**Evidence boundary:** the dataset record, 29-run scalar result set, training/evaluation contract, split evidence and sanitized detector code are public. The public recomputation reproduces the reported seed summaries and paired effects; GPU retraining requires the released dataset and compatible ML environment. Full dual-camera mission source, flight logs and programme integration records remain private/team material. The field throughput, power and thermal figures below remain recorded programme measurements until the separate deployment-log evidence path is published.
 
 ![Authentic Clear Run system evidence](../visuals/clear_run_system_evidence.jpg)
 
