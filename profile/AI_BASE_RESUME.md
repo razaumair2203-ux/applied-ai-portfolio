@@ -8,7 +8,7 @@
 
 Applied-AI and aerospace systems-engineering leader with **18+ years** across aircraft development, avionics integration, flight-line MRO, international OEM integration, fleet-scale programme governance and current multidisciplinary R&D leadership.
 
-Current work combines modern AI engineering with the requirements, interfaces, configuration, verification, qualification, safety and lifecycle discipline of high-integrity aerospace systems. The portfolio spans edge computer vision and autonomy, grounded retrieval/RAG, AI-assurance workflows and GPU/HPC research infrastructure.
+Current work combines modern AI engineering with the requirements, interfaces, configuration, verification, qualification, safety and lifecycle discipline of high-integrity aerospace systems. The portfolio spans **airfield robotics and edge vision, EB-2 NIW/EB-1A evidence assessment, U.S. mine-safety intelligence, governed AI workflow products, cross-model AI assurance and GPU/HPC research infrastructure**.
 
 ## AI / ML / autonomy evidence
 
@@ -26,24 +26,71 @@ Current work combines modern AI engineering with the requirements, interfaces, c
 
 [Case study](../projects/tir-fod-clear-run.md) · [Dataset DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586)
 
-### Lodestar — grounded RAG / evidence assessment
+### i-MSHA — U.S. mine-safety intelligence and MSHA decision platform
 
-**Role:** system architecture, retrieval/evaluation design, implementation direction, reliability controls, technical validation and product integration.
+**Role:** product/programme direction, systems architecture, AI/data workflow definition, technical review, feature prioritisation and validation framing.
 
-- Python / FastAPI / PostgreSQL / pgvector / HNSW / PostgreSQL FTS / BGE embeddings.
-- Hybrid lexical + vector retrieval with Reciprocal Rank Fusion and deterministic authority-sensitive reranking.
+- Consolidates fragmented MSHA public data into a national→state→mine/controller decision environment across **8 active modules, 25 frontend features and 100 backend handlers**.
+- Scope spans mine/controller profiles, violations, penalties, inspections, injury/safety, legal intelligence, occupational exposure, contractor intelligence, acquisition due diligence, comparison and Weekly Pulse.
+- Full-stack architecture: **Next.js / TypeScript · FastAPI / Python · PostgreSQL · DuckDB over typed Parquet**, with scheduled ingestion/validation and refresh workflows.
+- **Canary AI** operates across the governed product data paths using context-first routing and deterministic feature handlers rather than acting as the regulatory source of truth.
+- Recorded validation state: **385 Canary unit tests and 839 full backend tests passing** (20 May 2026).
+- A retained performance audit covered **152 surfaces**; cumulative cold latency improved from **100.1 s to 50.8 s** and warm latency from **66.8 s to 18.3 s** after query-batching work.
+- Current maturity is pre-deployment hardening; production deployment/UAT are not claimed.
+
+[Case study](../projects/msha-compliance-ai.md)
+
+### Lodestar — EB-2 NIW / EB-1A evidence-assessment SaaS
+
+**Role:** system architecture, legal-RAG retrieval/evaluation design, implementation direction, reliability controls, technical validation and product integration.
+
+- Working browser product for applicant evidence assessment against **Matter of Dhanasar** (EB-2 NIW) and **Kazarian** (EB-1A) legal frameworks.
+- User flow: onboarding → PDF/DOCX/TXT evidence upload → targeted gap questions → user-confirmed evidence mapping → grounded assessment.
+- Produces evidence matrices, gap analysis, cited assessment states and drafting aids; deliberately excludes fabricated approval probabilities, numeric legal scores and finished petition generation.
+- **Next.js / TypeScript · FastAPI / Python · PostgreSQL / pgvector · HNSW · PostgreSQL FTS · BGE embeddings**.
 - Recorded private-system state: **209 documents**, **2,945 embedded chunks**, **34 frozen retrieval queries**, **1/34 top-5 expected-source misses (2.9%)**.
-- Public evidence includes a real PostgreSQL + pgvector fixture, authority-policy ablation, an **11-invariant reliability regression**, and a **10-case adversarial structured-output evaluation**.
-- Output controls include citation validation, evidence-ID filtering, five canonical states, refusal behavior and rejection of unsupported numeric approval fields.
+- Hybrid lexical + vector retrieval uses Reciprocal Rank Fusion and deterministic authority-sensitive reranking so source authority is a system concern, not prompt decoration.
+- Public evidence includes a real PostgreSQL + pgvector fixture, authority-policy ablation, an **11-invariant reliability regression** and adversarial structured-output evaluation with citation/refusal controls.
 
 [Case study](../projects/lodestar.md) · [Public implementation evidence](../evidence/lodestar/README.md)
 
-### AI assurance and governed AI workflows
+### JobLooper — evidence-governed job-application operating system
 
-- **Codex Adversarial Review Lite:** independent builder/reviewer workflow with frozen scope, environment checks, mutation detection, rubrics, structured findings and human approval before fixes.
-- **JobLooper:** local-first evidence-governed system in which candidate truth, provenance, workflow state, deterministic validation and release authority remain outside unconstrained model output.
-- **Counter-UAS Phase I:** completed computer-vision demonstrator with physical sensor integration and indoor/outdoor trials.
-- **ATLAS:** accountable technical leadership for a **22-node GPU/HPC** research environment using SLURM, Linux, CUDA and Docker workflows.
+- Governs the lifecycle from **signed career truth and exact JD capture through gap/preflight decisions, AI-assisted tailoring, full human review, deterministic DOCX/PDF build, hash-bound submission records and outcome learning**.
+- Truth, provenance, workflow state and release authority remain deterministic; AI can assist reasoning but cannot silently rewrite facts, approve documents or manufacture outcome explanations.
+- Public local-first implementation plus a private frozen **20 train / 15 validation / 15 held-out** evaluation lineage with fabrication/date/metric checks and release safeguards.
+
+[Case study](../projects/joblooper-jobpilot.md)
+
+### Adversarial Review Lite — cross-model assurance for AI-written software
+
+- Two public companion tools implement **Claude builds → Codex reviews** and **Codex builds → Claude reviews**.
+- Frozen review scope, tests/fixtures/rubrics, self-test and model fallback, repo mutation/hash checks, structured findings, builder-side re-verification and human approval before fixes.
+- Designed for non-trivial AI-coded changes where auth, billing, migrations, data writes, API hallucinations or multi-file scope drift create material risk.
+
+[Case study](../projects/codex-adversarial-review-lite.md)
+
+### Counter-UAS Phase I — physical AI-vision research prototype
+
+**Role:** Principal Investigator / research direction and systems-integration oversight.
+
+- Constructed laser–camera sensing mount and visual drone-detection prototype taken from model development into preliminary indoor/outdoor trials.
+- Historical experiment record: approximately **14,000 training images**, **1,500-image test set**, **200 epochs** at 640×640 input.
+- Follow-on visual/RF/acoustic multisensor work remains a research direction and is not back-claimed as completed Phase-I capability.
+
+[Case study](../projects/counter-uas.md)
+
+### BuildSignal AI — governed research-to-publication operations
+
+- Active AI-native workflow platform spanning research/source capture, articles, media, video, audio, YouTube, social variants, QA, rights/provenance, review and explicit owner-controlled publication.
+- Treats generative AI as one worker inside a governed content-production system rather than allowing generated output to move directly to publication.
+
+[Case study](../projects/buildsignal-ai.md)
+
+### ATLAS — GPU/HPC research infrastructure
+
+- Accountable technical leadership for a **22-node GPU/HPC** research environment supporting AI, simulation and reproducible engineering workflows.
+- Operating stack includes **Linux / Ubuntu, SLURM, CUDA and Docker**, with responsibility extending to research-computing operations and associated technical staff.
 
 ## Current engineering / R&D leadership
 
