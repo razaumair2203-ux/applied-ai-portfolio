@@ -1,6 +1,6 @@
 # Counter-UAS Phase I — physical AI-vision prototype and multisensor research foundation
 
-**Historical technical repository:** private · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml)
+**Private technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml)
 
 Phase I is a completed **physical drone-detection research prototype**, led by M. Umair Raza as **Principal Investigator**. The work progressed from dataset/model development into a constructed laser–camera sensing mount and preliminary indoor/outdoor trials, using approximately **14,000 training images**, a **1,500-image test set**, **200 training epochs** and 640×640 inputs. Later passive-RF, acoustic and multisensor work remains a separate research direction rather than being back-claimed as completed capability.
 
