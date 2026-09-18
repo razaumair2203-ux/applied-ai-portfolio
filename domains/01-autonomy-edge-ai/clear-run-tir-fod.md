@@ -1,6 +1,6 @@
 # TIR-FOD / Clear Run — edge AI and airfield robotics from detection to physical recovery
 
-**Full working repository:** private · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
+**Private technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
 
 [![Clear Run detection-to-removal architecture](../../visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
 
