@@ -1,22 +1,33 @@
-# Lodestar — grounded RAG and structured evidence assessment
+# Lodestar — EB-2 NIW / EB-1A evidence-assessment SaaS
 
 ![Lodestar product landing surface](../visuals/lodestar_product_surface.svg)
 
 *Source-derived rendering of the current Lodestar frontend landing page. The private project defines the interface but has no separate distributable logo asset.*
 
-Lodestar is a working full-stack RAG system designed for source-sensitive evidence retrieval and structured assessment. Retrieval quality, source authority and output constraints are explicit system concerns rather than implicit prompts.
+Lodestar is a working browser product for **EB-2 National Interest Waiver (NIW) and EB-1A evidence assessment**. A candidate can upload CV/evidence material, answer targeted gap questions, confirm the evidence mapping, and run a grounded assessment against the **Matter of Dhanasar** three-prong NIW test or the **Kazarian** two-step EB-1A framework.
+
+The product is deliberately narrower and more defensible than a generic immigration chatbot: it produces **evidence matrices, gap analysis, cited assessment states and drafting aids**, but it does **not** emit an approval probability, invent a legal score, or generate a finished petition. If the retrieved authority or applicant evidence does not support a conclusion, the system is designed to say so.
 
 ## At a glance
 
 | Dimension | Current implementation |
 |---|---|
+| User workflow | browser onboarding → PDF/DOCX/TXT evidence upload → gap questions → user-confirmed evidence mapping → grounded assessment |
+| Legal scope | EB-2 NIW / Dhanasar and EB-1A / Kazarian only |
+| Frontend | Next.js / TypeScript |
 | Backend | Python · FastAPI · PostgreSQL |
+| Legal corpus | recorded **209-document / 2,945-chunk** private corpus including primary authority and AAO decision material |
 | Embeddings | sentence-transformers / BGE with explicit query/passage behaviour |
 | Retrieval | PostgreSQL FTS + pgvector HNSW · lexical/vector candidate lanes · Reciprocal Rank Fusion |
-| Source policy | high-authority candidate lanes + deterministic reranking |
-| Output layer | citable evidence objects, citation filtering, five-state assessment schema, refusal path |
-| Recorded private-system state | **209 documents · 2,945 chunks · 34 frozen retrieval queries · 1/34 top-5 expected-source misses (2.9%)** |
-| Public execution | pure-logic tests, **11-invariant reliability regression**, PostgreSQL/pgvector fixture, authority ablation, adversarial structured-output evaluation |
+| Source policy | authority-aware candidate lanes + deterministic reranking so controlling sources are not treated like ordinary semantic matches |
+| Output controls | citable evidence objects · citation filtering · five-state assessment taxonomy · invalid-state rejection · refusal path |
+| Retrieval regression | **34 frozen query/source pairs · 1/34 top-5 expected-source misses (2.9%)** |
+| Public execution | pure-logic tests · **11-invariant reliability regression** · real PostgreSQL/pgvector fixture · authority ablation · adversarial output evaluation |
+| Maturity | working private full-stack system; public-safe implementation/evaluation slice; production legal service is not claimed |
+
+## Product problem
+
+Immigration evidence assessment is a **domain-reasoning and authority problem**, not simply “ask an LLM about my CV.” Applicant facts have to be mapped to specific legal tests; controlling and non-binding sources must remain distinguishable; evidence gaps must stay visible; and fluent generation must not outrun what the record actually supports. Lodestar treats those constraints as software and retrieval architecture rather than prompt wording.
 
 ## Retrieval architecture
 
