@@ -232,6 +232,13 @@ def check_documentation_structure() -> None:
     assert "Super-Mushshak-Glass-Cockpit-Modification/main/assets/dynon-cockpit-prototype-sanitized.jpg" in root
 
 
+    mbse_case = (ROOT / "projects/mbse-ai-assurance.md").read_text(encoding="utf-8")
+    assert "../visuals/clear-run/system_architecture.svg" in mbse_case
+    assert "../visuals/clear-run/aerial_unit_architecture.svg" in mbse_case
+    assert "../visuals/clear-run/gcs_architecture.svg" in mbse_case
+    assert "../visuals/clear-run/ugv_architecture.svg" in mbse_case
+    assert "../visuals/mbse/clear_run_system_architecture.svg" not in mbse_case
+
     clear_run = (ROOT / "projects/tir-fod-clear-run.md").read_text(encoding="utf-8")
     assert "final detection-to-physical-retention chain is still being quantitatively closed" in clear_run
     assert "mission_verification_matrix.json" in clear_run

@@ -46,6 +46,10 @@ Original hardware, field media, product UI and public technical evidence are sho
 
 **Scope:** thermal/RGB perception, dataset engineering, source-aware evaluation, TensorRT/Jetson deployment, target geolocation, GCS integration and developing UGV retrieval.
 
+![Clear Run system architecture with authentic project assets](visuals/clear-run/system_architecture.svg)
+
+*Current Clear Run architecture from the reviewed Research Outreach/NRPU set. The composition embeds the actual UAV photograph, the native Clear Run GCS interface capture and the actual UGV photograph while keeping open assignment/retrieval validation paths explicit.*
+
 <p align="center">
   <img src="visuals/tir-fod/airborne_platform.png" alt="TIR-FOD airborne edge-AI UAV platform" width="49%">
   <img src="visuals/clear-run/field_trial_evidence.png" alt="Representative Clear Run recorded RGB and passive-IR field detections" width="49%">
@@ -66,9 +70,16 @@ Key engineering evidence:
 
 ### AI Systems Assurance / MBSE — evidence linked to system boundaries
 
-![Clear Run evidence-linked system architecture](visuals/mbse/clear_run_system_architecture.svg)
+<p align="center">
+  <img src="visuals/clear-run/aerial_unit_architecture.svg" alt="Clear Run aerial-unit architecture with authentic UAV project photograph" width="49%">
+  <img src="visuals/clear-run/gcs_architecture.svg" alt="Clear Run ground-control architecture with native GCS interface capture" width="49%">
+</p>
 
-*Evidence-linked Clear Run architecture from the current Capella/Arcadia assurance case.*
+<p align="center">
+  <img src="visuals/clear-run/ugv_architecture.svg" alt="Clear Run UGV architecture with authentic ground-unit project photograph" width="72%">
+</p>
+
+*Subsystem views from the selected Research Outreach architecture set. They retain the real project UAV and UGV photographs and the native GCS interface capture; the architecture overlays show functions, interfaces and still-open validation paths.*
 
 The assurance case separates detection, geolocation, operator review, ground-vehicle tasking, terminal approach, capture and retained removal into distinct claims with distinct evidence obligations. The current model records **3 mission components · 14 allocated logical functions · 13 logical functional exchanges** and a reproducible formatter/parser replay that exposed interface failure modes without treating constructed software cases as flight incidents. The practitioner case was submitted to **INCOSE Applications & Case Studies on 16 September 2026**; review remains pending.
 

@@ -60,8 +60,10 @@ This directory contains original project media, recorded UI/test evidence, offic
 
 ## AI systems assurance / MBSE
 
-- [mbse/clear_run_system_architecture.svg](mbse/clear_run_system_architecture.svg) — evidence-linked Clear Run architecture from the submitted practitioner-case release
-- [mbse/telemetry_replay.svg](mbse/telemetry_replay.svg) — visualization of the constructed formatter/parser replay and derived controls
+The physical-system context uses the image-rich Clear Run architecture set above: the actual UAV and UGV photographs plus the native GCS interface capture are embedded in the vector compositions.
+
+- [mbse/clear_run_system_architecture.svg](mbse/clear_run_system_architecture.svg) — exact system-summary figure retained from the submitted practitioner-case release
+- [mbse/telemetry_replay.svg](mbse/telemetry_replay.svg) — analytical visualization of the constructed formatter/parser replay and derived controls
 
 ## AI workflow evaluation
 

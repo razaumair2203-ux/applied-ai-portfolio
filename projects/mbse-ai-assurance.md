@@ -1,10 +1,25 @@
 # AI Systems Assurance & Evidence-Linked MBSE — Clear Run
 
-![Clear Run evidence-linked system architecture](../visuals/mbse/clear_run_system_architecture.svg)
+![Clear Run system architecture with authentic project assets](../visuals/clear-run/system_architecture.svg)
+
+*Selected Clear Run Research Outreach architecture: actual UAV photograph, native GCS interface capture and actual UGV photograph embedded in the reviewed functional system view.*
 
 Clear Run is useful not only as an edge-AI/autonomy programme, but as an **AI-enabled system assurance case**: detection, geolocation, communications, operator review, ground-vehicle tasking, terminal approach, physical capture and retained removal are separate claims with separate evidence obligations.
 
 A retrospective **Capella 7.1.0 / Arcadia** reconstruction was built in September 2026 to make those boundaries explicit. The underlying submission package contains the native model and evidence register; this public case exposes the architecture, verification logic and a machine-readable software-boundary example without publishing restricted programme material.
+
+## Physical system context
+
+<p align="center">
+  <img src="../visuals/clear-run/aerial_unit_architecture.svg" alt="Clear Run aerial-unit functional architecture with authentic UAV photograph" width="49%">
+  <img src="../visuals/clear-run/gcs_architecture.svg" alt="Clear Run GCS functional architecture with native interface capture" width="49%">
+</p>
+
+<p align="center">
+  <img src="../visuals/clear-run/ugv_architecture.svg" alt="Clear Run UGV functional architecture with authentic project ground-unit photograph" width="72%">
+</p>
+
+These are the selected **1600 × 900 Research Outreach architecture compositions**. Their text and connectors remain vector-based while the project photographs/interface capture are embedded from the real Clear Run evidence set. The aerial unit, GCS and ground unit are therefore shown as the system that actually exists, not replaced by illustrative hardware icons.
 
 ## Maintained modelling scope
 
