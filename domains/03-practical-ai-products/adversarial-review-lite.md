@@ -48,7 +48,7 @@ The public repository includes the report template, sample artifact, cross-platf
 
 This project belongs primarily to the **Practical Agentic Work Tools** stream alongside other independent everyday AI utilities. The same control pattern—independent review, bounded action, provenance and human approval—also supports the compliance/regulatory AI products, but the tool is not itself a compliance product.
 
-The broader direction is to release small, useful agentic tools that improve recurring knowledge and engineering work rather than remain portfolio-only demonstrations.
+The broader direction is to release small, useful agentic tools that improve recurring knowledge and engineering work rather than remain one-off demonstrations.
 
 ## Engineering scope
 
