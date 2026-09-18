@@ -83,9 +83,9 @@ Original hardware, field media, product UI and public technical evidence are sho
 
 **System value:** a real detection-to-removal airfield robotics chain: thermal/RGB sensing, dataset and model engineering, Jetson/TensorRT deployment, target geolocation, operator/GCS decision support, UGV dispatch and developing physical recovery. The portfolio separates every intermediate success from verified end-to-end removal.
 
-![Clear Run system architecture with authentic project assets](visuals/autonomy-edge-ai/clear-run/system_architecture.svg)
+![Clear Run detection-to-removal architecture](visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)
 
-*Current Clear Run architecture from the reviewed Research Outreach/NRPU set. The composition embeds the actual UAV photograph, the native Clear Run GCS interface capture and the actual UGV photograph while keeping open assignment/retrieval validation paths explicit.*
+*Clear Run detection-to-removal architecture combining the actual aerial unit, GCS interface and ground unit with the mission hand-off and validation state. It makes the implemented aerial↔GCS path and the still-open GCS↔ground end-to-end validation boundary explicit.*
 
 <p align="center">
   <img src="visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" alt="TIR-FOD airborne edge-AI UAV platform" width="49%">

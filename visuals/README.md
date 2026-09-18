@@ -5,7 +5,8 @@ This directory contains original project media, recorded UI/test evidence, offic
 ## Autonomous, embedded and edge AI
 
 ### Clear Run
-- [system architecture](autonomy-edge-ai/clear-run/system_architecture.svg)
+- [detection-to-removal architecture](autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)
+- [previous system architecture](autonomy-edge-ai/clear-run/system_architecture.svg)
 - [aerial-unit architecture](autonomy-edge-ai/clear-run/aerial_unit_architecture.svg)
 - [GCS architecture](autonomy-edge-ai/clear-run/gcs_architecture.svg)
 - [UGV architecture](autonomy-edge-ai/clear-run/ugv_architecture.svg)

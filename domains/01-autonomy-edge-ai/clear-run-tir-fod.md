@@ -1,6 +1,6 @@
 # TIR-FOD / Clear Run — edge AI and airfield robotics from detection to physical recovery
 
-![Clear Run system architecture](../../visuals/autonomy-edge-ai/clear-run/system_architecture.svg)
+![Clear Run detection-to-removal architecture](../../visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)
 
 Clear Run is an **airfield robotics programme**, not a standalone object detector. It connects **dataset/model development → airborne edge deployment → target geolocation and operator review → UAV–GCS–UGV mission integration → physical FOD capture and retained removal**. The programme is valuable precisely because it forces perception, avionics, communications, human supervision, ground autonomy and mechanical recovery to work as one traceable mission chain.
 
