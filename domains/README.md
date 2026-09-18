@@ -52,7 +52,7 @@ This is a **cross-cutting capability layer**, not a separate product stream. It 
 |---|---|---|---|
 | **[Evaluation-Driven AI Workflow Engineering](04-assurance-digital-engineering/ai-evaluation-workflows.md)** | Frozen evaluation and release-control framework for AI workflow changes rather than intuition-led prompt iteration | train/validation/held-out cases · fabrication/date/metric checks · parser rescoring · release safeguards | retained engineering evidence |
 | **[Super Mushshak digital engineering](04-assurance-digital-engineering/super-mushshak-digital-engineering.md)** | Completed first-three-prototype glass-cockpit integration programme now reconstructed into an evidence-linked digital thread | requirements · interfaces · configurations · verification · decisions · historical prototype evidence | retrofit completed; digital-thread backbone implemented; executable-twin functions remain future work |
-| **ATLAS GPU/HPC environment** | Research-computing platform supporting AI, simulation and reproducible engineering workflows | 22-node GPU/HPC environment · Linux/Ubuntu · SLURM · CUDA · Docker | current accountable technical leadership |
+| **[ATLAS GPU/HPC environment](04-assurance-digital-engineering/atlas-hpc.md)** | Research-computing platform supporting AI, simulation and reproducible engineering workflows | 22-node GPU/HPC environment · Linux/Ubuntu · SLURM · CUDA · Docker | current accountable technical leadership |
 
 ## How the domains fit together
 
