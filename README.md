@@ -109,3 +109,5 @@ For reviewers who want code and measured artefacts rather than narrative, start 
 ---
 
 **GitHub:** [razaumair2203-ux](https://github.com/razaumair2203-ux) · **Google Scholar:** [Muhammad Umair Raza](https://scholar.google.com/citations?user=0EVckyAAAAAJ&hl=en) · **LinkedIn:** [M. Umair Raza](https://www.linkedin.com/in/mumairaza)
+
+**Repository rights:** [portfolio evidence license / rights notice](LICENSE)
