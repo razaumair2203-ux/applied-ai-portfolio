@@ -1,6 +1,6 @@
 # Technical evidence — organized by domain
 
-This directory contains public implementation slices, evaluation fixtures and reproducibility records behind the portfolio. Evidence is grouped by the same technical hierarchy used in the recruiter-facing domain map.
+This directory contains public implementation slices, evaluation fixtures and reproducibility records behind the portfolio. Evidence is grouped by the same technical hierarchy used in the public domain map.
 
 ## Autonomous, embedded and edge AI
 
