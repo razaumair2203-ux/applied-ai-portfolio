@@ -22,7 +22,7 @@ The through-line is **programme leadership + hands-on AI engineering + aerospace
 
 ## Applied AI, autonomy and digital engineering
 
-The work spans deployed edge vision, grounded RAG, AI assurance, regulatory intelligence, local-first AI workflows, autonomy integration and digital engineering. Each case states the current system maturity and the verification that remains open.
+The portfolio spans **airfield robotics, immigration evidence-assessment, U.S. mine-safety intelligence, governed career automation, cross-model AI assurance, research-to-publication operations and evidence-linked digital engineering**. Each case leads with the system/problem first, then shows the AI/data/software stack, measurable evidence, current maturity and verification still open.
 
 | Project family | What was built / why it matters | My role | Evidence-backed state |
 |---|---|---|---|
@@ -107,7 +107,7 @@ Recorded engineering state includes **209 documents · 2,945 chunks · a 34-quer
 
 *Official project wordmark and an authentic browser-regression dashboard snapshot from the product test suite.*
 
-The product consolidates fragmented U.S. MSHA public data into one national→state→mine operating environment covering mine/controller intelligence, violations, penalties, inspections, safety/injury, legal outcomes, occupational exposure, contractors, acquisition due diligence, comparisons and weekly pulse. **Next.js + FastAPI + PostgreSQL + DuckDB/Parquet** support the application and analytical layers; Canary AI sits across the system rather than replacing deterministic data logic. Current source-of-truth status records **8 active modules · 25 frontend features · 100 backend handlers**, with **385 Canary unit tests and 839 full backend tests passing** as of 20 May 2026.
+The product consolidates fragmented U.S. MSHA public data into one national→state→mine operating environment covering mine/controller intelligence, violations, penalties, inspections, safety/injury, legal outcomes, occupational exposure, contractors, acquisition due diligence, comparisons and weekly pulse. **Next.js + FastAPI + PostgreSQL + DuckDB/Parquet** support the application and analytical layers; Canary AI sits across the system rather than replacing deterministic data logic. Current source-of-truth status records **8 active modules · 25 frontend features · 100 backend handlers**, with **385 Canary unit tests and 839 full backend tests passing** as of 20 May 2026. A retained site-wide latency audit covered **152 surfaces** and recorded cumulative cold latency improving from **100.1 s to 50.8 s** and warm latency from **66.8 s to 18.3 s** after query-batching work.
 
 **Current boundary:** deployment work remains open in the product plan; production deployment, customer UAT and regulatory certification are not claimed.
 
@@ -123,7 +123,7 @@ The product consolidates fragmented U.S. MSHA public data into one national→st
 
 *Official JobLooper mark and a source-derived rendering of the current public dashboard.*
 
-The public system keeps career truth, provenance, workflow state and release authority outside unconstrained model output. The wider development/evaluation lineage includes frozen **20 train / 15 validation / 15 held-out** cases, separate fabrication/date/metric checks, parser rescoring and safeguards that can block statistically unsupported changes.
+The system governs the application lifecycle from **signed career truth and exact JD capture through gap/preflight decisions, AI-assisted tailoring, full human review, deterministic DOCX/PDF build, hash-bound submission records and outcome learning**. Career truth, provenance, workflow state and release authority remain outside unconstrained model output. The wider development/evaluation lineage includes frozen **20 train / 15 validation / 15 held-out** cases, separate fabrication/date/metric checks, parser rescoring and safeguards that can block statistically unsupported changes.
 
 [Open the JobLooper case →](projects/joblooper-jobpilot.md) · [Evaluation case →](projects/ai-evaluation-workflows.md) · [Public repository →](https://github.com/razaumair2203-ux/Pub-JobLooper)
 
@@ -138,7 +138,7 @@ The companion public tools support both directions:
 - [Claude builds → Codex reviews](https://github.com/razaumair2203-ux/codex-adversarial-review-lite)
 - [Codex builds → Claude reviews](https://github.com/razaumair2203-ux/claude-adversarial-review-lite)
 
-Both retain frozen review scope, mutation checks, structured findings, builder verification and human authority before fixes.
+Both turn second-model review into a repeatable assurance workflow: frozen scope, test/fixture/rubric context, cross-platform self-test, reviewer-model fallback, repository mutation/hash checks, structured findings, builder-side re-verification and a human-readable report **before** fixes are authorized.
 
 [Open the AI-assurance case →](projects/codex-adversarial-review-lite.md)
 
@@ -155,7 +155,9 @@ Phase I progressed from model training into a **constructed laser–camera sensi
 
 [Open the Counter-UAS case →](projects/counter-uas.md)
 
-### BuildSignal AI — governed AI research / editorial operations
+### BuildSignal AI — governed research-to-publication operations
+
+BuildSignal is an **AI-native publishing operations system**, not an article generator. It carries technical work through research/source capture, article and derivative-media state, rights/provenance, QA, review and explicit owner-controlled publication across articles, audio, video, YouTube-supported essays and social variants. The admin surface exposes dedicated Today, Articles, Media, Video, Audio, YouTube, Social, Research, Comments, QA, Tools and Publish workspaces.
 
 ![BuildSignal AI admin workspace](visuals/buildsignal/admin-surface.svg)
 
@@ -171,7 +173,7 @@ Phase I progressed from model training into a **constructed laser–camera sensi
 
 *Original Dynon SkyView prototype cockpit from the public project record.*
 
-The completed retrofit covered aircraft-level sensing, avionics/display integration, interfaces, electrical installation, configuration, installed-aircraft checks and flight-test feedback. The current follow-on has converted releasable historical records into a structured public digital thread linking requirements, interfaces, configurations, verification and decisions; executable twin behaviour remains future work.
+The completed programme covered the **first three glass-cockpit prototypes** and aircraft-level sensing, avionics/display integration, electrical/wiring changes, ARINC and other interfaces, configuration, installed-aircraft checks, flight-test feedback and customer evaluation. The wider aircraft programme later achieved a documented foreign customer/service footprint across **at least eight countries**; the public source record identifies **more than US$114 million in publicly estimable aircraft value for the Nigeria and Türkiye deals alone**, presented as downstream programme scale rather than sole-causation. The current follow-on converts releasable historical records into a structured digital thread linking requirements, interfaces, configurations, verification and decisions; executable twin behaviour remains future work.
 
 [Open the digital-engineering case →](projects/super-mushshak-digital-engineering.md) · [Public source repository →](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification)
 
