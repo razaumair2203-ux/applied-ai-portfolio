@@ -36,6 +36,12 @@ The archived project evidence includes:
 
 The engineering value is the **prototype-to-experiment transition**: model development, physical sensing hardware, camera/mount integration, manual/automatic operating modes and real indoor/outdoor trial conditions were brought together under one Phase-I programme. It is not represented as an operational counter-drone weapon or fielded C-UAS product.
 
+## Contribution boundary
+
+- **Direct responsibility:** Principal Investigator / research direction, experiment framing and systems-integration oversight.
+- **Team-developed work:** model development, prototype construction and trial execution are represented as programme outputs rather than sole-authorship claims.
+- **Scope boundary:** Phase-I visual detection evidence is separated from later passive-RF, acoustic and multisensor research directions.
+
 ## Evidence provenance and programme evolution
 
 The private source archive retains the full-resolution original mount photograph, the original Phase-I trial video and the historical presentation/poster material. The public portfolio now carries publication-sized derivatives of the hardware photograph and video frame alongside the original-size-derived detection outputs and training curves.
