@@ -43,6 +43,12 @@ Implemented controls include:
 - employer response and outcome records separated from inferred explanations;
 - retained lessons only after evidence/counter-evidence review.
 
+## Contribution boundary
+
+- **Direct responsibility:** product/system design, truth and provenance model, workflow governance, evaluation/release controls and technical validation.
+- **Implementation model:** deterministic application state remains authoritative; optional model assistance is additive and cannot approve facts, release documents or manufacture outcome explanations.
+- **Public inspectability:** the main implementation is public; private development lineage is reserved for evaluation and development records that are unsuitable for unrestricted release.
+
 ## Evaluation and release discipline
 
 The wider private development record includes a frozen **20 train / 15 validation / 15 held-out** evaluation harness with fabrication/date/metric checks, parser rescoring, prompt-version comparison and release safeguards. One retained candidate optimization was **blocked** because its measured improvement was not statistically significant—an example of release governance overriding the assumption that a newer AI prompt must be better.
