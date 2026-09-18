@@ -1,6 +1,6 @@
 # Muhammad Umair Raza — Applied AI & Autonomous Systems Engineering Leader
 
-**Autonomous & Edge AI · Computer Vision · Compliance / Regulatory Intelligence · Practical Agentic AI Products · Aerospace Digital Engineering**
+**Autonomous / Embedded / Edge AI · Compliance / Regulatory Intelligence · Practical Agentic AI Products · AI Assurance / Evaluation / Digital Engineering**
 
 [LinkedIn](https://www.linkedin.com/in/mumairaza/) · [GitHub](https://github.com/razaumair2203-ux) · [Google Scholar](https://scholar.google.com/citations?user=0EVckyAAAAAJ&hl=en) · [Applied AI portfolio](../README.md)
 
