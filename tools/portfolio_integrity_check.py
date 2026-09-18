@@ -1,0 +1,77 @@
+"""Public portfolio integrity checks.
+
+Zero-dependency checks for recruiter-facing evidence consistency.
+Run from repository root:
+    python tools/portfolio_integrity_check.py
+"""
+
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
+
+
+def check_internal_markdown_links() -> None:
+    failures: list[str] = []
+    for path in ROOT.rglob("*.md"):
+        text = path.read_text(encoding="utf-8")
+        for raw in LINK_RE.findall(text):
+            href = raw.strip().split("#", 1)[0]
+            if not href or href.startswith(("http://", "https://", "mailto:", "#")):
+                continue
+            target = (path.parent / href).resolve()
+            try:
+                target.relative_to(ROOT)
+            except ValueError:
+                failures.append(f"{path.relative_to(ROOT)} -> {raw} escapes repository")
+                continue
+            if not target.exists():
+                failures.append(f"{path.relative_to(ROOT)} -> {raw} missing")
+    assert not failures, "\n".join(failures)
+
+
+def check_json_evidence() -> None:
+    for path in ROOT.rglob("*.json"):
+        json.loads(path.read_text(encoding="utf-8"))
+
+
+def check_lodestar_eval_contract() -> None:
+    spec_path = ROOT / "evidence" / "lodestar" / "grounding_pairs.json"
+    spec = json.loads(spec_path.read_text(encoding="utf-8"))
+    assert spec["k"] == 5
+    assert len(spec["pairs"]) == 34
+    assert all(pair.get("q") and pair.get("accepted") for pair in spec["pairs"])
+
+    log = (ROOT / "evidence" / "lodestar" / "grounding-eval.md").read_text(encoding="utf-8")
+    assert "1 / 34 misses (2.9%)" in log
+
+
+def check_claim_boundaries() -> None:
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert "Evidence boundary." in readme
+    assert "team-developed Clear Run" in readme
+    assert "1/34 top-5 expected-source misses (2.9%)" in readme
+
+    clear_run = (ROOT / "projects" / "tir-fod-clear-run.md").read_text(encoding="utf-8")
+    assert "does not yet establish closed-loop physical goal delivery" in clear_run
+
+
+def main() -> None:
+    checks = [
+        check_internal_markdown_links,
+        check_json_evidence,
+        check_lodestar_eval_contract,
+        check_claim_boundaries,
+    ]
+    for check in checks:
+        check()
+        print(f"PASS {check.__name__}")
+    print(f"PASS {len(checks)} portfolio integrity checks")
+
+
+if __name__ == "__main__":
+    main()
