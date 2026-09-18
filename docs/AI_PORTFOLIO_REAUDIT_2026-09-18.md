@@ -86,10 +86,12 @@ Inspection of the authoritative Lodestar implementation showed that the downstre
 
 **Resolution:** published a 10-case adversarial evaluation derived from the real assessment invariants. CI now verifies post-gate citation validity, hallucinated/ambiguous citation dropping, unambiguous prefix recovery, refusal when grounding disappears, preservation of `not_applicable` where appropriate, filtering of invented evidence IDs, five-state enforcement, and removal of unauthorized numeric approval/score fields. The portfolio explicitly does **not** convert this into a claim of semantic legal correctness; that remains a human/domain evaluation problem.
 
-### R09 — S3 — Repository metadata under-sells the work
-The GitHub repository description is only "Applied Ai portfolio", topics are empty, and there is no repository license. These do not weaken the engineering itself, but they reduce discoverability and polish.
+### R09 — S3 — Repository metadata under-sells the work — **CONTENT RESOLVED / TWO SERVER FIELDS TOOL-BLOCKED**
+The GitHub repository description is only "Applied Ai portfolio", topics are empty, and the repository previously had no explicit rights notice.
 
-**Status:** open; repository-level metadata must be changed through GitHub settings/API outside the file-content workflow.
+**Resolution applied:** added an explicit repository-wide rights notice in `LICENSE`, plus a machine-readable [repository metadata contract](REPOSITORY_METADATA_CONTRACT.json) containing the exact recruiter-facing description and 12 GitHub topics. CI validates description length, topic syntax/uniqueness/count and the license policy.
+
+**Tool boundary:** the connected GitHub interface used for this remediation exposes repository content/branch/PR writes but no administration mutation for the live repository description or topics. Those two server-side About-panel fields therefore cannot honestly be marked changed from this session. The desired values are committed and tested so the remaining action is deterministic rather than interpretive.
 
 ## Score after this remediation branch
 
@@ -109,13 +111,10 @@ The GitHub repository description is only "Applied Ai portfolio", topics are emp
 | External verification | **2 / 3** |
 | **Total** | **85 / 100** |
 
-## Highest-value next work
+## Remaining work after sequential remediation
 
-1. Publish a tiny Lodestar Postgres/pgvector fixture and end-to-end retrieval test.
-2. Publish a TIR-FOD experiment-config / partition-manifest excerpt plus an aggregate recomputation script.
-3. Publish a sanitized Clear Run latency/FPS CSV and deterministic summary script.
-4. Add answer-level RAG evaluation with citation faithfulness, unsupported-claim rate and failure examples.
-5. Add environment/dependency contracts for any evidence intended to be runnable beyond the zero-dependency checks.
-6. Improve GitHub repository description/topics/license through repository settings.
+The technical observations R05–R08 are closed with public executable evidence or, where historical raw data no longer exists, an explicit evidence downgrade. R09's repository-content/licensing portion is closed. The only unresolved audit action is applying the already-defined **live GitHub description and topics** through an administration-capable repository-settings interface.
 
-The portfolio is already differentiated for **applied AI + aerospace/autonomy + edge deployment**. The remaining gains come from converting high-quality private evidence into small, safe, independently executable public proof.
+Further improvements are optional depth rather than audit blockers: publish named-checkpoint Jetson run logs if/when the new protocol is executed, extend the structured Lodestar assessment evaluation with human/domain-rated real-provider outputs, and add external records as publications/datasets mature.
+
+The portfolio remains differentiated for **applied AI + aerospace/autonomy + edge deployment**, but now asks a reviewer to trust materially less of the core technical story.
