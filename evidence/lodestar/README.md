@@ -9,13 +9,13 @@ This folder is a sanitized evidence bundle extracted from the working private **
 | Real source corpus | **209 documents** |
 | Embedded retrieval units | **2,945 chunks** |
 | Hand-checked retrieval evaluation | **34 query / expected-source pairs** |
-| Top-5 retrieval-grounding error | **2.9%** |
+| Top-5 expected-source miss rate | **1 / 34 (2.9%)** |
 | Python/backend tests | **53 green** |
 | Stress / abuse cases | **17 / 17 passed** |
 | Browser E2E | **3 / 3 Playwright flows passed** |
 | Concurrent full flows after hardening | **12 / 12 passed** |
 
-The retrieval metric asks a specific engineering question: **did hybrid retrieval surface an accepted authority/citation marker within the top five results?** Retrieval is evaluated independently from generation so fluent model output cannot hide weak evidence retrieval.
+The retrieval metric asks a specific engineering question: **did hybrid retrieval surface an accepted authority/citation marker within the top five results?** The recorded result is **1 miss in 34 frozen queries (2.9%)**. This is a targeted regression set, not a population estimate of general RAG error. Retrieval is evaluated independently from generation so fluent model output cannot hide weak evidence retrieval.
 
 ## Public reproduction boundary
 
@@ -27,7 +27,7 @@ python -m evidence.lodestar.public_smoke_test
 
 That zero-dependency check exercises RRF fusion, authority-weighted reranking, retrieval metadata filters, structure-aware chunking and the frozen 34-pair evaluation specification. CI runs the same check on pull requests.
 
-The reported **2.9% top-5 retrieval-grounding error** is a recorded full-system measurement from the private **209-document / 2,945-chunk** corpus. The public repository exposes the frozen query/expected-source set and evaluation logic, but it does **not** publish the complete corpus/database and therefore does not claim that the 2.9% full-system result can be reproduced from this repository alone.
+The reported **1/34 top-5 expected-source miss rate (2.9%)** is a recorded full-system measurement from the private **209-document / 2,945-chunk** corpus. The public repository exposes the frozen query/expected-source set and evaluation logic, but it does **not** publish the complete corpus/database and therefore does not claim that the 2.9% full-system result can be reproduced from this repository alone.
 
 ## Representative implementation
 
