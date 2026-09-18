@@ -79,6 +79,21 @@ def check_lodestar_db_fixture_contract() -> None:
     assert "from evidence.lodestar.hybrid_retrieval import hybrid_search" in test
     assert "criterion_tags" in test and "visa_class" in test
 
+
+def check_jetson_historical_boundary() -> None:
+    path = ROOT / "evidence" / "tir-fod" / "deployment" / "historical_measurement_status.json"
+    rec = json.loads(path.read_text(encoding="utf-8"))
+    assert rec["provenance"]["raw_per_run_logs_retained"] is False
+    assert rec["provenance"]["deployed_tensorrt_engine_retained"] is False
+    assert rec["provenance"]["historical_checkpoint_identifiable"] is False
+    root = (ROOT / "README.md").read_text(encoding="utf-8")
+    case = (ROOT / "projects" / "tir-fod-clear-run.md").read_text(encoding="utf-8")
+    matrix = (ROOT / "docs" / "HEADLINE_EVIDENCE_MATRIX.md").read_text(encoding="utf-8")
+    assert "raw per-run logs not retained" in root
+    assert "author-confirmed ten-run" in case
+    assert "Raw per-run logs and historical engine were not retained" in matrix
+    assert "compute-and-camera subsystem power" not in case
+
 def check_claim_boundaries() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "Evidence boundary." in readme
@@ -96,6 +111,7 @@ def main() -> None:
         check_lodestar_eval_contract,
         check_tir_fod_reproducibility,
         check_lodestar_db_fixture_contract,
+        check_jetson_historical_boundary,
         check_claim_boundaries,
     ]
     for check in checks:
