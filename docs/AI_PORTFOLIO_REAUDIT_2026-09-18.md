@@ -1,6 +1,6 @@
 # AI Portfolio Independent Re-Audit — 2026-09-18
 
-> **Current closure status:** see [AUDIT_CLOSURE_MATRIX.md](AUDIT_CLOSURE_MATRIX.md) for the authoritative resolved/open state across both audit passes.
+> **Historical re-audit note:** this file preserves the quantitative re-audit and remediation history. The current repository release decision is [FINAL_RELEASE_AUDIT_2026-09-18.md](FINAL_RELEASE_AUDIT_2026-09-18.md), which intentionally uses pass/bounded release criteria instead of a self-awarded recruiter score. See [AUDIT_CLOSURE_MATRIX.md](AUDIT_CLOSURE_MATRIX.md) for finding closure.
 
 This re-audit intentionally does **not** inherit the portfolio's previous 88/100 self-score. It evaluates the current public repository as a cold reviewer would: what is visible, technically defensible and independently checkable.
 
