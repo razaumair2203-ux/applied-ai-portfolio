@@ -44,6 +44,12 @@ The design does not treat a second model as proof of correctness. It creates an 
 
 The public repository includes the report template, sample artifact, cross-platform installer/self-test and operating rules for the builder/reviewer workflow.
 
+## Contribution boundary
+
+- **Direct responsibility:** product/workflow design, builder-reviewer contract, assurance logic, human-control model and public operating rules.
+- **Implementation boundary:** the companion tools orchestrate external coding/reviewer agents; they do not treat either model as an authority and do not claim that second-model review proves correctness.
+- **Release authority:** mutation remains blocked until findings are re-verified and the human approves the action.
+
 ## Product identity
 
 This project belongs primarily to the **Practical Agentic Work Tools** stream alongside other independent everyday AI utilities. The same control pattern—independent review, bounded action, provenance and human approval—also supports the compliance/regulatory AI products, but the tool is not itself a compliance product.
