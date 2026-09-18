@@ -93,7 +93,7 @@ The GitHub repository description is only "Applied Ai portfolio", topics are emp
 
 **Tool boundary:** the connected GitHub interface used for this remediation exposes repository content/branch/PR writes but no administration mutation for the live repository description or topics. Those two server-side About-panel fields therefore cannot honestly be marked changed from this session. The desired values are committed and tested so the remaining action is deterministic rather than interpretive.
 
-## Score after this remediation branch
+## First re-audit score before sequential R05–R09 remediation
 
 | Dimension | Score |
 |---|---:|
@@ -110,6 +110,26 @@ The GitHub repository description is only "Applied Ai portfolio", topics are emp
 | Repository hygiene | **2 / 3** |
 | External verification | **2 / 3** |
 | **Total** | **85 / 100** |
+
+## Current score after sequential R05–R09 remediation
+
+| Dimension | Score |
+|---|---:|
+| Truth / evidence integrity | **15 / 15** |
+| 60-second role signal | **9 / 10** |
+| Ownership clarity | **8 / 8** |
+| AI/ML technical depth | **11 / 12** |
+| Evaluation / data rigor | **9 / 10** |
+| Reproducibility / runnability | **10 / 12** |
+| Production / deployment depth | **9 / 10** |
+| Software / MLOps engineering | **7 / 7** |
+| Impact / system outcome | **4 / 5** |
+| Visual / demo proof | **5 / 5** |
+| Repository hygiene | **2 / 3** |
+| External verification | **2 / 3** |
+| **Total** | **91 / 100** |
+
+**Why it is not higher:** the full Lodestar corpus/product remains private; historical Jetson raw logs/engine were not retained; current Clear Run mission-level retrieval KPIs are still under validation; and the live GitHub description/topics remain unchanged because the connected GitHub interface does not expose repository-administration mutation. Those are explicit boundaries, not hidden gaps.
 
 ## Remaining work after sequential remediation
 
