@@ -55,7 +55,7 @@ python evidence/tir-fod/reproducibility/recompute_results.py
 
 That public check independently recomputes the multi-seed means/SDs and paired contamination/generalisation effects used by the current revision. Full GPU retraining still requires the public dataset, frozen split files, pretrained weights and compatible ML hardware/software.
 
-The older [single-run benchmark snapshot](tir-fod/benchmark_results.json) is retained for historical traceability. The public dataset record is linked from the [TIR-FOD / Clear Run case study](../projects/tir-fod-clear-run.md).
+The older [single-run benchmark snapshot](tir-fod/benchmark_results.json) is retained for historical traceability. Historical Jetson flight performance is separately documented in the [deployment evidence boundary](tir-fod/deployment/README.md), which records the author-confirmed ten-run summaries while explicitly stating that the raw per-run logs and historical engine were not retained. The public dataset record is linked from the [TIR-FOD / Clear Run case study](../projects/tir-fod-clear-run.md).
 
 ## 4. Public source repositories
 
