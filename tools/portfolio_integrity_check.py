@@ -94,6 +94,18 @@ def check_jetson_historical_boundary() -> None:
     assert "Raw per-run logs and historical engine were not retained" in matrix
     assert "compute-and-camera subsystem power" not in case
 
+
+def check_lodestar_assessment_eval_contract() -> None:
+    base = ROOT / "evidence" / "lodestar" / "assessment_eval"
+    spec = json.loads((base / "evaluation_cases.json").read_text(encoding="utf-8"))
+    assert len(spec["cases"]) == 10
+    readme = (base / "README.md").read_text(encoding="utf-8")
+    assert "100% post-gate citation validity" in readme
+    assert "not a claim of legal correctness" in readme
+    guard = (base / "assessment_guardrail.py").read_text(encoding="utf-8")
+    assert "FIVE_STATES" in guard
+    assert "approval_probability" not in guard
+
 def check_claim_boundaries() -> None:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "Evidence boundary." in readme
@@ -112,6 +124,7 @@ def main() -> None:
         check_tir_fod_reproducibility,
         check_lodestar_db_fixture_contract,
         check_jetson_historical_boundary,
+        check_lodestar_assessment_eval_contract,
         check_claim_boundaries,
     ]
     for check in checks:
