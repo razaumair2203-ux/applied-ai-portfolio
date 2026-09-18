@@ -1,7 +1,9 @@
 # i-MSHA — U.S. mine-safety intelligence and MSHA decision platform
 
+**Complete working product repository:** private · [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
+
 <p align="center">
-  <img src="../../visuals/compliance-regtech/i-msha/logo-wordmark.svg" alt="i-MSHA project wordmark" width="34%">
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml"><img src="../../visuals/compliance-regtech/i-msha/logo-wordmark.svg" alt="i-MSHA project wordmark" width="34%"></a>
 </p>
 
 i-MSHA is an active full-stack product programme built around a difficult data problem in U.S. mining: **MSHA publishes extensive authoritative public data, but the operational picture is fragmented across datasets, entities, time periods and regulatory workflows**. i-MSHA consolidates that information into one national→state→mine/controller decision environment and then layers governed analytics and AI assistance on top of the source data.
@@ -44,7 +46,7 @@ The system-level differentiator is the **breadth of decisions supported by one g
 
 ## Product surface
 
-![i-MSHA dashboard regression snapshot](../../visuals/compliance-regtech/i-msha/dashboard-regression.png)
+[![i-MSHA dashboard regression snapshot](../../visuals/compliance-regtech/i-msha/dashboard-regression.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
 
 *Authentic browser-regression snapshot from the project repository. It is shown as product/UI evidence, not as a production-deployment claim.*
 
