@@ -1,18 +1,22 @@
-# Muhammad Umair Raza — AI Systems & Aerospace Engineering Profile
+# Muhammad Umair Raza — Applied AI Systems & Aerospace Engineering Profile
 
-**Applied AI · Edge Computer Vision · Autonomous Systems · Grounded RAG · AI Assurance · Aerospace Systems Engineering · V&V**
+**Autonomous & Edge AI · Computer Vision · Compliance / Regulatory Intelligence · AI Assurance · Aerospace Digital Engineering**
 
 [LinkedIn](https://www.linkedin.com/in/mumairaza/) · [GitHub](https://github.com/razaumair2203-ux) · [Google Scholar](https://scholar.google.com/citations?user=0EVckyAAAAAJ&hl=en) · [Applied AI portfolio](../README.md)
 
 ## Profile
 
-Applied-AI and aerospace systems-engineering leader with **18+ years** across aircraft development, avionics integration, flight-line MRO, international OEM integration, fleet-scale programme governance and current multidisciplinary R&D leadership.
+Applied-AI systems and aerospace-engineering leader with **18+ years** across aircraft development, avionics integration, flight-line MRO, international OEM integration, fleet-scale programme governance and current multidisciplinary R&D leadership.
 
-Current work combines modern AI engineering with the requirements, interfaces, configuration, verification, qualification, safety and lifecycle discipline of high-integrity aerospace systems. The portfolio spans **airfield robotics and edge vision, EB-2 NIW/EB-1A evidence assessment, U.S. mine-safety intelligence, governed AI workflow products, cross-model AI assurance and GPU/HPC research infrastructure**.
+My primary current technical domain is **autonomous / embedded / edge AI**, especially computer vision, UAV/UGV systems, RGB/LWIR sensing, Jetson/TensorRT deployment and system-level verification. In parallel, I am building a deliberate product niche in **compliance and regulatory intelligence**, applying retrieval, structured evidence models, analytics and bounded AI reasoning to regulated decision environments.
 
-## AI / ML / autonomy evidence
+The wider portfolio also includes practical AI workflow products, cross-model AI assurance, evaluation/release controls, GPU/HPC research infrastructure and aerospace digital engineering. The common thread is **Applied AI Systems Engineering**: AI treated as part of a complete engineered system with explicit data, interfaces, configuration, verification and operational boundaries.
 
-### TIR-FOD / Clear Run
+## Applied AI evidence by domain
+
+### Autonomous, embedded and edge AI
+
+#### TIR-FOD / Clear Run
 
 **Role:** technical direction, experiment/evaluation strategy, systems architecture/integration, deployment review and multidisciplinary team leadership. Clear Run is team-developed work.
 
@@ -26,7 +30,19 @@ Current work combines modern AI engineering with the requirements, interfaces, c
 
 [Case study](../projects/tir-fod-clear-run.md) · [Dataset DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586)
 
-### i-MSHA — U.S. mine-safety intelligence and MSHA decision platform
+#### Counter-UAS Phase I — physical AI-vision research prototype
+
+**Role:** Principal Investigator / research direction and systems-integration oversight.
+
+- Constructed laser–camera sensing mount and visual drone-detection prototype taken from model development into preliminary indoor/outdoor trials.
+- Historical experiment record: approximately **14,000 training images**, **1,500-image test set**, **200 epochs** at 640×640 input.
+- Follow-on visual/RF/acoustic multisensor work remains a research direction and is not back-claimed as completed Phase-I capability.
+
+[Case study](../projects/counter-uas.md)
+
+### Compliance and regulatory intelligence
+
+#### i-MSHA — U.S. mine-safety intelligence and MSHA decision platform
 
 **Role:** product/programme direction, systems architecture, AI/data workflow definition, technical review, feature prioritisation and validation framing.
 
@@ -40,7 +56,7 @@ Current work combines modern AI engineering with the requirements, interfaces, c
 
 [Case study](../projects/msha-compliance-ai.md)
 
-### Lodestar — EB-2 NIW / EB-1A evidence-assessment SaaS
+#### Lodestar — EB-2 NIW / EB-1A evidence-assessment SaaS
 
 **Role:** system architecture, legal-RAG retrieval/evaluation design, implementation direction, reliability controls, technical validation and product integration.
 
@@ -54,7 +70,9 @@ Current work combines modern AI engineering with the requirements, interfaces, c
 
 [Case study](../projects/lodestar.md) · [Public implementation evidence](../evidence/lodestar/README.md)
 
-### JobLooper — evidence-governed job-application operating system
+### Practical AI products and workflow systems
+
+#### JobLooper — evidence-governed job-application operating system
 
 - Governs the lifecycle from **signed career truth and exact JD capture through gap/preflight decisions, AI-assisted tailoring, full human review, deterministic DOCX/PDF build, hash-bound submission records and outcome learning**.
 - Truth, provenance, workflow state and release authority remain deterministic; AI can assist reasoning but cannot silently rewrite facts, approve documents or manufacture outcome explanations.
@@ -62,7 +80,16 @@ Current work combines modern AI engineering with the requirements, interfaces, c
 
 [Case study](../projects/joblooper-jobpilot.md)
 
-### Adversarial Review Lite — cross-model assurance for AI-written software
+#### BuildSignal AI — governed research-to-publication operations
+
+- Active AI-native workflow platform spanning research/source capture, articles, media, video, audio, YouTube, social variants, QA, rights/provenance, review and explicit owner-controlled publication.
+- Treats generative AI as one worker inside a governed content-production system rather than allowing generated output to move directly to publication.
+
+[Case study](../projects/buildsignal-ai.md)
+
+### AI assurance, evaluation and research infrastructure
+
+#### Adversarial Review Lite — cross-model assurance for AI-written software
 
 - Two public companion tools implement **Claude builds → Codex reviews** and **Codex builds → Claude reviews**.
 - Frozen review scope, tests/fixtures/rubrics, self-test and model fallback, repo mutation/hash checks, structured findings, builder-side re-verification and human approval before fixes.
@@ -70,24 +97,7 @@ Current work combines modern AI engineering with the requirements, interfaces, c
 
 [Case study](../projects/codex-adversarial-review-lite.md)
 
-### Counter-UAS Phase I — physical AI-vision research prototype
-
-**Role:** Principal Investigator / research direction and systems-integration oversight.
-
-- Constructed laser–camera sensing mount and visual drone-detection prototype taken from model development into preliminary indoor/outdoor trials.
-- Historical experiment record: approximately **14,000 training images**, **1,500-image test set**, **200 epochs** at 640×640 input.
-- Follow-on visual/RF/acoustic multisensor work remains a research direction and is not back-claimed as completed Phase-I capability.
-
-[Case study](../projects/counter-uas.md)
-
-### BuildSignal AI — governed research-to-publication operations
-
-- Active AI-native workflow platform spanning research/source capture, articles, media, video, audio, YouTube, social variants, QA, rights/provenance, review and explicit owner-controlled publication.
-- Treats generative AI as one worker inside a governed content-production system rather than allowing generated output to move directly to publication.
-
-[Case study](../projects/buildsignal-ai.md)
-
-### ATLAS — GPU/HPC research infrastructure
+#### ATLAS — GPU/HPC research infrastructure
 
 - Accountable technical leadership for a **22-node GPU/HPC** research environment supporting AI, simulation and reproducible engineering workflows.
 - Operating stack includes **Linux / Ubuntu, SLURM, CUDA and Docker**, with responsibility extending to research-computing operations and associated technical staff.
