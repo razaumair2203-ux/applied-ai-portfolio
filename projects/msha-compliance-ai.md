@@ -20,7 +20,7 @@ It is therefore not just an “MSHA chatbot” or a dashboard wrapper. The syste
 | Source pipeline | scheduled MSHA public-data ingestion, validation, typed transformation and refresh workflows |
 | AI layer | **Canary AI** across the product, with context-first routing and deterministic feature-handler access to live data |
 | Validation | **385 Canary unit tests · 839 full backend tests passing** in the 20 May 2026 source-of-truth state |
-| Performance engineering | site-wide latency audit covered **152 surfaces**; query-batching work cut cumulative recorded cold/warm latency materially |
+| Performance engineering | **152 surfaces** audited; retained cumulative cold latency improved **100.1 s → 50.8 s (-49.3%)** and warm latency **66.8 s → 18.3 s (-72.6%)** after query-batching work |
 | Current maturity | private product in pre-deployment hardening; production deployment/UAT are not claimed |
 
 ## What the platform consolidates
@@ -37,6 +37,10 @@ The active module set covers:
 - **Contractor Intelligence** — consolidated contractor safety/enforcement analysis.
 
 Cross-cutting tools include **mine comparison, Weekly Pulse intelligence, export/download workflows, entity search, tier controls and drill-down navigation**.
+
+## Product differentiation
+
+The system-level differentiator is the **breadth of decisions supported by one governed data model**. Mine identity, enforcement history, inspections, penalties, legal outcomes, exposure, contractor performance and acquisition context are not isolated demos; they are traversable parts of the same product, with Canary providing a natural-language interface across those deterministic data paths. That product shape is more important than any single model or framework.
 
 ## Product surface
 
