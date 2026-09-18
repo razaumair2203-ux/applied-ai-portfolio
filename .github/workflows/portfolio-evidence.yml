@@ -8,6 +8,22 @@ on:
 jobs:
   public-evidence:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: eb
+          POSTGRES_PASSWORD: eb
+          POSTGRES_DB: eb
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U eb -d eb"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      LODESTAR_FIXTURE_DSN: postgresql://eb:eb@localhost:5432/eb
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -23,12 +39,17 @@ jobs:
             evidence/lodestar/grounding_eval.py \
             evidence/lodestar/retrieval_integration_test.py \
             evidence/lodestar/public_smoke_test.py \
+            evidence/lodestar/fixture/postgres_fixture_test.py \
             evidence/clear-run/edge_detector_excerpt.py \
             evidence/tir-fod/reproducibility/recompute_results.py \
             evidence/tir-fod/reproducibility/train_public.py \
             tools/portfolio_integrity_check.py
       - name: Run zero-dependency Lodestar smoke checks
         run: python -m evidence.lodestar.public_smoke_test
+      - name: Install lightweight Lodestar DB fixture dependency
+        run: pip install -r evidence/lodestar/fixture/requirements.txt
+      - name: Run Lodestar PostgreSQL + pgvector integration fixture
+        run: python -m evidence.lodestar.fixture.postgres_fixture_test
       - name: Recompute TIR-FOD multi-seed evidence
         run: python evidence/tir-fod/reproducibility/recompute_results.py
       - name: Validate TIR-FOD training contract
