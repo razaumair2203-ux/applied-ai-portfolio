@@ -1,0 +1,34 @@
+[
+  {
+    "source": "assets/phase1_original_mount.jpeg",
+    "source_sha256": "1bb8e16752bb5b63ccef5b8a0ae8d0342e4039cce3e807e9954c937c31e66a59",
+    "source_dimensions": [
+      3715,
+      2477
+    ],
+    "output": "assets/phase1_original_mount_web.jpg",
+    "output_sha256": "b49847ea9f638378f11dee51f85f610e91003820316e7ab81255da7aaf27d883",
+    "output_dimensions": [
+      1600,
+      1067
+    ],
+    "transformation": "EXIF orientation correction; proportional resize to max 1600x1200; JPEG quality 88; contrast 1.04x; sharpness 1.08x; no semantic alteration",
+    "description": "Constructed Phase I laser-camera mount"
+  },
+  {
+    "source": "assets/phase1_video_mount_0034.png",
+    "source_sha256": "df74ef104a3cd5bf9430510b6781304d1dab339e2c9385400704a909099e5fdf",
+    "source_dimensions": [
+      1920,
+      1080
+    ],
+    "output": "assets/phase1_video_mount_0034_web.jpg",
+    "output_sha256": "2970592717c2877952e7b23f00e937f2e1cb5297f56258a858eac944b2198d0b",
+    "output_dimensions": [
+      1600,
+      900
+    ],
+    "transformation": "EXIF orientation correction; proportional resize to max 1600x1200; JPEG quality 88; contrast 1.04x; sharpness 1.08x; no semantic alteration",
+    "description": "Constructed Phase I mount shown in the original trial video at 00:34"
+  }
+]

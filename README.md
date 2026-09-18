@@ -145,13 +145,13 @@ Both retain frozen review scope, mutation checks, structured findings, builder v
 ### Counter-UAS Phase I — physical computer vision demonstrator
 
 <p align="center">
+  <img src="visuals/counter-uas/phase1_original_mount.jpg" alt="Constructed Counter-UAS Phase-I laser-camera mount" width="49%">
   <img src="visuals/counter-uas/outdoor_detection.png" alt="Outdoor Counter-UAS Phase-I detection trial" width="49%">
-  <img src="visuals/counter-uas/indoor_detection.png" alt="Indoor Counter-UAS Phase-I detection trial" width="49%">
 </p>
 
-*Indoor and outdoor outputs retained from the completed Phase-I computer-vision demonstrator.*
+*Left: the constructed Phase-I laser–camera sensing mount from the original project record. Right: retained outdoor detection output from the completed demonstrator.*
 
-Phase I demonstrates model training moved into a physical sensing setup with real trial conditions and hardware integration. Passive-RF, acoustic and wider multisensor concepts remain separate future research directions.
+Phase I progressed from model training into a **constructed physical sensing setup** and indoor/outdoor trials. The hardware photograph is a publication-sized derivative of the original project image; only orientation, resize, compression and minor photographic correction were applied. Passive-RF, acoustic and wider multisensor concepts remain separate future research directions.
 
 [Open the Counter-UAS case →](projects/counter-uas.md)
 

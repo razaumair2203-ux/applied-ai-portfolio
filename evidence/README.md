@@ -22,6 +22,10 @@ The working private system records **209 source documents, 2,945 embedded chunks
 
 [evidence/clear-run](clear-run/README.md) publishes a sanitized detector/runtime slice plus a non-location-sensitive field-evidence snapshot and machine-readable detection-to-retention verification matrix. The snapshot covers **8 unique trial videos** and **12 structured RGB events across 8 reported classes**; the verification matrix keeps geolocation accuracy, GCS→UGV acknowledgement, terminal approach, capture and retention explicitly open until measured.
 
+## Counter-UAS Phase I — hardware provenance
+
+The public hardware views are traced to the original Phase-I project archive in [hardware_provenance.json](counter-uas/hardware_provenance.json). The record carries the source and publication-derivative SHA-256 hashes, dimensions and the exact non-semantic image transformations applied for web presentation.
+
 ## TIR-FOD — repeated experiments and deployment records
 
 The [reproducibility bundle](tir-fod/reproducibility/README.md) contains **29 sanitized seed-level run records**, the training/evaluation protocol, source-aware split manifest, recorded environment, a GPU training harness and a zero-dependency result recomputation script.

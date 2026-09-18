@@ -130,6 +130,8 @@ def check_primary_visuals() -> None:
         "visuals/tir-fod/camera_mount.png",
         "visuals/tir-fod/capture_sessions.png",
         "visuals/tir-fod/jetson_runtime.png",
+        "visuals/counter-uas/phase1_original_mount.jpg",
+        "visuals/counter-uas/phase1_video_mount.jpg",
         "visuals/counter-uas/outdoor_detection.png",
         "visuals/counter-uas/indoor_detection.png",
         "visuals/counter-uas/training_curves.png",
@@ -227,6 +229,7 @@ def check_documentation_structure() -> None:
     assert "visuals/msha/dashboard-regression.png" in root
     assert "visuals/joblooper/dashboard-surface.svg" in root
     assert "visuals/codex/audit-report-preview.jpg" in root
+    assert "visuals/counter-uas/phase1_original_mount.jpg" in root
     assert "profile/AI_BASE_RESUME.md" in root
     assert "private product in pre-deployment hardening" in root
     assert "Super-Mushshak-Glass-Cockpit-Modification/main/assets/dynon-cockpit-prototype-sanitized.jpg" in root
@@ -246,6 +249,17 @@ def check_documentation_structure() -> None:
     lodestar = (ROOT / "projects/lodestar.md").read_text(encoding="utf-8")
     assert "34-query set is a regression set" in lodestar
     assert "11-invariant reliability regression" in lodestar
+
+    counter_uas = (ROOT / "projects/counter-uas.md").read_text(encoding="utf-8")
+    assert "../visuals/counter-uas/phase1_original_mount.jpg" in counter_uas
+    assert "../visuals/counter-uas/phase1_video_mount.jpg" in counter_uas
+    assert "../evidence/counter-uas/hardware_provenance.json" in counter_uas
+    counter_hw = json.loads(
+        (ROOT / "evidence/counter-uas/hardware_provenance.json").read_text(encoding="utf-8")
+    )
+    assert len(counter_hw) == 2
+    assert counter_hw[0]["description"] == "Constructed Phase I laser-camera mount"
+    assert "no semantic alteration" in counter_hw[0]["transformation"]
 
     project_index = (ROOT / "projects/README.md").read_text(encoding="utf-8")
     assert "msha-compliance-ai.md" in project_index

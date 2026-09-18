@@ -48,6 +48,8 @@ This directory contains original project media, recorded UI/test evidence, offic
 
 ## Counter-UAS
 
+- [counter-uas/phase1_original_mount.jpg](counter-uas/phase1_original_mount.jpg) — publication-sized derivative of the original constructed Phase-I laser–camera mount photograph
+- [counter-uas/phase1_video_mount.jpg](counter-uas/phase1_video_mount.jpg) — publication-sized derivative of the original trial-video frame showing the mount at 00:34
 - [counter-uas/outdoor_detection.png](counter-uas/outdoor_detection.png) — outdoor Phase-I trial
 - [counter-uas/indoor_detection.png](counter-uas/indoor_detection.png) — indoor Phase-I trial
 - [counter-uas/training_curves.png](counter-uas/training_curves.png) — preserved training curves

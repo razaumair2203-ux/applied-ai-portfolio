@@ -2,7 +2,18 @@
 
 Phase I is a completed computer-vision demonstrator with hardware integration and indoor/outdoor trials. Later passive-RF, acoustic and multisensor work remains a separate research direction.
 
-## Demonstrated work
+## Physical system evidence
+
+<p align="center">
+  <img src="../visuals/counter-uas/phase1_original_mount.jpg" alt="Constructed Counter-UAS Phase-I laser-camera mount" width="49%">
+  <img src="../visuals/counter-uas/phase1_video_mount.jpg" alt="Counter-UAS Phase-I mount shown in the original trial video" width="49%">
+</p>
+
+*Authentic Phase-I hardware. Left: the constructed laser–camera mount extracted byte-identically from the original project presentation before publication resizing. Right: the same mount shown in the original project video at 00:34.*
+
+The public images are presentation derivatives only: EXIF orientation correction, proportional resize, JPEG compression and conservative contrast/sharpness adjustment. **No hardware, people, background or scene content was added, removed or regenerated.** The source and output SHA-256 records are published in [hardware provenance](../evidence/counter-uas/hardware_provenance.json).
+
+## Demonstrated detection work
 
 <p align="center">
   <img src="../visuals/counter-uas/outdoor_detection.png" alt="Outdoor Counter-UAS Phase I detection trial" width="49%">
@@ -23,11 +34,9 @@ The archived project evidence includes:
 
 The value of the work is not a claim of an operational counter-drone system. It demonstrates the transition from model training into a physical sensing setup, with real trial conditions and hardware integration rather than notebook-only inference.
 
-## Physical evidence and provenance
+## Evidence provenance and programme evolution
 
-The private source archive retains the **original camera/mount photograph** plus frames extracted losslessly from the original Phase-I trial video, with SHA-256 provenance in the asset manifest. Those large source images remain in the programme archive rather than being replaced here with generated imagery.
-
-The public case therefore uses the transferable authentic evidence already available at publication size: indoor/outdoor detection outputs, training curves and the programme-evolution figure below.
+The private source archive retains the full-resolution original mount photograph, the original Phase-I trial video and the historical presentation/poster material. The public portfolio now carries publication-sized derivatives of the hardware photograph and video frame alongside the original-size-derived detection outputs and training curves.
 
 ![Counter-UAS programme evolution](../visuals/counter-uas/framework_evolution.svg)
 
