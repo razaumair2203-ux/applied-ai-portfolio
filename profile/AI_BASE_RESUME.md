@@ -8,7 +8,7 @@
 
 Applied-AI systems and aerospace-engineering leader with **18+ years** across aircraft development, avionics integration, flight-line MRO, international OEM integration, fleet-scale programme governance and current multidisciplinary R&D leadership.
 
-My primary current technical domain is **autonomous / embedded / edge AI**, especially computer vision, UAV/UGV systems, RGB/LWIR sensing, Jetson/TensorRT deployment and system-level verification. In parallel, I am building a deliberate product niche in **compliance and regulatory intelligence**, applying retrieval, structured evidence models, analytics and bounded AI reasoning to regulated decision environments.
+My primary current technical domain is **autonomous / embedded / edge AI**, especially computer vision, UAV/UGV systems, RGB/LWIR sensing, Jetson/TensorRT deployment, **ROS2/Nav2/SLAM ground robotics** and system-level verification. In parallel, I am building a deliberate product niche in **compliance and regulatory intelligence**, applying retrieval, structured evidence models, analytics and bounded AI reasoning to regulated decision environments.
 
 My current work also includes an **independent and growing practical-agentic product stream** for everyday engineering, career, research and knowledge work, alongside cross-cutting AI assurance, evaluation/release controls, GPU/HPC research infrastructure and aerospace digital engineering. The common thread is **Applied AI Systems Engineering**: AI treated as part of a complete engineered system with explicit data, interfaces, configuration, verification and operational boundaries.
 
@@ -24,9 +24,10 @@ My current work also includes an **independent and growing practical-agentic pro
 - Source-lineage and leakage analysis includes a controlled contamination experiment producing an invalid **+8.52 percentage-point** mAP@[.50:.95] uplift.
 - Acquisition-block-disjoint evaluation produced **0.7410 ± 0.0423** versus **0.8223 ± 0.0070** under frame-level partitioning on the shared 12-class experiment.
 - Jetson Orin Nano / FP16 TensorRT UAV deployment with historical **25.0 FPS TensorRT-stage** and **15.6 FPS end-to-end** ten-run summaries.
-- Clear Run integrates RGB + passive-IR inference, YOLO/SAHI, geolocation, MAVLink/REST, synchronized recording, GCS handling and a developing UGV retrieval layer.
+- Clear Run integrates RGB + passive-IR inference, YOLO/SAHI, geolocation, MAVLink/REST and synchronized GCS handling with a **hybrid ROS1/ROS2 Jetson Nano UGV stack using RPLidar SLAM Toolbox, wheel/IMU odometry, Nav2 Mecanum navigation/costmaps and terminal visual alignment**.
 - Current field-evidence snapshot: **8 unique trial videos** and **12 structured RGB events across 8 reported classes**; target-coordinate, image-location, UAV-pose and altitude fields are recorded.
 - GCS→UGV acknowledgement, terminal alignment, physical capture and post-movement retention remain explicit quantitative verification gates.
+- Clear Run is being progressed toward **national-scale field trials**; patent filing is planned after field-trial maturation. Neither national deployment/adoption nor filed/pending/granted IP is claimed.
 
 [Case study](../domains/01-autonomy-edge-ai/clear-run-tir-fod.md) · [Dataset DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586)
 
@@ -169,7 +170,7 @@ These are independent product-building efforts, separate from NUST/CAE employmen
 
 **AI / computer vision:** Python · PyTorch / Ultralytics YOLO · SAHI · OpenCV · RGB/LWIR sensing
 
-**Edge / autonomy:** NVIDIA Jetson Orin Nano · TensorRT · CUDA · GStreamer · Pixhawk · MAVLink · GNSS · UAV/UGV integration
+**Edge / autonomy:** NVIDIA Jetson Orin Nano / Jetson Nano · TensorRT · CUDA · GStreamer · Pixhawk · MAVLink · GNSS · ROS2 · Nav2 · SLAM Toolbox · RPLidar · wheel/IMU odometry · Mecanum navigation · ROS1/rosserial bridging · UAV/UGV integration
 
 **RAG / backend:** FastAPI · PostgreSQL · pgvector · HNSW · PostgreSQL FTS · BGE / sentence-transformers · REST APIs
 
