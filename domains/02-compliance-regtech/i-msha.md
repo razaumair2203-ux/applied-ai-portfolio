@@ -2,6 +2,8 @@
 
 **Private product; technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
 
+**Public evidence snapshot:** 19 September 2026. Quantitative product/test counts cited below remain tied to the retained 20 May 2026 source-of-truth state where specified.
+
 <p align="center">
   <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml"><img src="../../visuals/compliance-regtech/i-msha/logo-wordmark.svg" alt="i-MSHA project wordmark" width="34%"></a>
 </p>
