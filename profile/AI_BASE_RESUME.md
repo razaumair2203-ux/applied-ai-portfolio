@@ -152,7 +152,7 @@ These are independent product-building efforts, separate from NUST/CAE employmen
 **Pakistan Aeronautical Complex Kamra / Pakistan Air Force · 2008–2013**
 
 - Developed and fielded an indigenous backup computer subsystem for JF-17 from requirements/design through qualification, airworthiness evidence, flight-test support and production handover; **135+ units fielded**.
-- Led avionics integration of the **first three Super Mushshak glass-cockpit prototypes**, including Dynon/Garmin evaluation, interface analysis, installation, testing, compliance evidence, configuration control and production handover.
+- Led aircraft-level systems integration of the **first three Super Mushshak glass-cockpit prototypes** across revised sensing, Dynon/Garmin avionics, aircraft power/electrical changes, the complete modification wiring harness, retained NAV/COM/audio/data interfaces, installed-aircraft V&V, OEM discrepancy closure, configuration control, production handover and international customer evaluation.
 - Delivered avionics development/integration across trainer and fighter platforms from requirements and interfaces through ground/functional testing and configuration control.
 
 ## Systems-engineering depth
