@@ -76,6 +76,8 @@ Phase I progressed from model development into a **constructed laser–camera se
 </tr>
 </table>
 
+*Visual provenance: i-MSHA is an authentic browser-regression snapshot from the project repository; Lodestar is a source-derived rendering from the current frontend code, not an original product screenshot.*
+
 ### i-MSHA
 
 i-MSHA consolidates fragmented U.S. MSHA public data into one national→state→mine/controller environment covering violations, penalties, inspections, safety/injury, legal outcomes, occupational exposure, contractors and acquisition due diligence. Current recorded product state includes **8 active modules · 25 frontend features · 100 backend handlers · 385 Canary unit tests · 839 full backend tests passing** in the retained May 2026 source-of-truth state.
@@ -107,6 +109,8 @@ Lodestar maps applicant evidence to EB-2 NIW / EB-1A legal criteria, retrieves g
 <td><b>Adversarial Review Lite</b><br><sub>Independent second-model review with mutation and approval controls.</sub></td>
 </tr>
 </table>
+
+*Visual provenance: JobLooper and BuildSignal AI surfaces are source-derived renderings from their current application code; Adversarial Review Lite uses retained report evidence. These renderings are not presented as original product screenshots.*
 
 **[JobLooper](domains/03-practical-ai-products/joblooper-jobpilot.md)** governs the application lifecycle from signed career truth and exact JD capture through gap/preflight decisions, AI-assisted tailoring, complete human review, deterministic DOCX/PDF build, hash-bound submission records and outcome learning. The implementation is publicly inspectable at [Pub-JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper).
 
