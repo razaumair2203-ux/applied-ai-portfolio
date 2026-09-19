@@ -503,6 +503,20 @@ def check_portfolio_guardrails() -> None:
     assert "completed national deployment/adoption" in root
     assert "filed/pending/granted IP" in root
 
+    # Counter-UAS and historical aircraft-integration depth must not regress
+    # back to detector-only or display-only descriptions.
+    counter_uas_case = (ROOT / "domains/01-autonomy-edge-ai/counter-uas.md").read_text(encoding="utf-8")
+    public_cv = (ROOT / "profile/AI_BASE_RESUME.md").read_text(encoding="utf-8")
+    for marker in ("centroid-driven", "multi-target", "Kalman-filter"):
+        assert marker in counter_uas_case, marker
+    assert "manual human-in-loop" in root
+    assert "Kalman stabilization" in root
+    assert "centroid-driven automatic single/multi-target tracking" in public_cv
+    assert "complete modification wiring harness" in public_cv
+    assert "NAV/COM/audio/data interfaces" in public_cv
+    assert "aircraft-level retrofit" in root
+    assert "customer evaluation" in root
+
     # Source-derived visuals must be visibly labelled on the landing page.
     assert "Lodestar is a source-derived rendering from the current frontend code" in root
     assert "JobLooper and BuildSignal AI surfaces are source-derived renderings" in root
