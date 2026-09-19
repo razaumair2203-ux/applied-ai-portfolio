@@ -2,6 +2,8 @@
 
 **Private product; technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-buildsignal.yml)
 
+**Public evidence snapshot:** 19 September 2026. The local operating workflow is implemented; hosted-admin authentication and selected media/QA integrations remain open work.
+
 BuildSignal AI is an active private **AI-native publishing operations system** for technical research and multi-format content. The difficult part is not asking a model to write an article; it is maintaining source provenance, research state, media rights, review status, QA, derivative assets and a clear human publication authority across a pipeline that can produce articles, audio, video, YouTube-supported essays and social variants.
 
 The platform is built with **Next.js / TypeScript / MDX**, but its value is the operating model around those tools: AI-generated or AI-assisted material cannot move directly from generation to publication without passing through explicit research, review and release states.
