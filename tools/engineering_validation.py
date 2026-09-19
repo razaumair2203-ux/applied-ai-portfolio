@@ -486,6 +486,23 @@ def check_portfolio_guardrails() -> None:
     assert "AI Systems Assurance / MBSE" in evidence_assurance
     assert "Adversarial Review Lite" in evidence_practical
 
+    # Clear Run robotics depth must remain visible and must not regress to
+    # the old ROS1-only simplification.
+    clear_run_case = (ROOT / "domains/01-autonomy-edge-ai/clear-run-tir-fod.md").read_text(encoding="utf-8")
+    clear_run_cv = (ROOT / "profile/AI_BASE_RESUME.md").read_text(encoding="utf-8")
+    ugv_arch = (ROOT / "visuals/autonomy-edge-ai/clear-run/ugv_architecture.svg").read_text(encoding="utf-8")
+    for marker in ("ROS2", "Nav2", "SLAM Toolbox"):
+        assert marker in root, marker
+        assert marker in clear_run_case, marker
+        assert marker in clear_run_cv, marker
+        assert marker in ugv_arch, marker
+    assert "ROS 1 navigation" not in ugv_arch
+    assert "hybrid ROS1/ROS2" in clear_run_case
+    assert "national-scale field trials" in root
+    assert "patent filing planned after field-trial maturation" in root
+    assert "completed national deployment/adoption" in root
+    assert "filed/pending/granted IP" in root
+
     # Source-derived visuals must be visibly labelled on the landing page.
     assert "Lodestar is a source-derived rendering from the current frontend code" in root
     assert "JobLooper and BuildSignal AI surfaces are source-derived renderings" in root
