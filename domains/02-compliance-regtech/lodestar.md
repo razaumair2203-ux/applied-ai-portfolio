@@ -2,6 +2,8 @@
 
 **Private product; technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml)
 
+**Public evidence snapshot:** 19 September 2026. Corpus and evaluation counts are recorded engineering state; production legal-service operation is not claimed.
+
 [![Lodestar product landing surface](../../visuals/compliance-regtech/lodestar/product-surface.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml)
 
 *Source-derived rendering of the current Lodestar frontend landing page. The private project defines the interface but has no separate distributable logo asset.*
