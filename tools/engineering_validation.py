@@ -457,6 +457,35 @@ def check_portfolio_guardrails() -> None:
     assert "AI Systems Assurance / MBSE" not in area1
     assert "AI Systems Assurance / MBSE — Clear Run" in area4
 
+    # Domain ownership must stay consistent in the public visual/evidence indexes
+    # even when the underlying asset paths remain near their originating projects.
+    visual_index = (ROOT / "visuals/README.md").read_text(encoding="utf-8")
+    visual_autonomy = visual_index.split("## Autonomous, embedded and edge AI", 1)[1].split(
+        "## Compliance and regulatory intelligence", 1
+    )[0]
+    visual_practical = visual_index.split("## Practical AI products", 1)[1].split(
+        "## AI assurance and digital engineering", 1
+    )[0]
+    visual_assurance = visual_index.split("## AI assurance and digital engineering", 1)[1]
+    assert "### AI Systems Assurance / MBSE" not in visual_autonomy
+    assert "### AI Systems Assurance / MBSE" in visual_assurance
+    assert "### Adversarial Review Lite" in visual_practical
+    assert "### Adversarial Review Lite" not in visual_assurance
+
+    evidence_index = (ROOT / "evidence/README.md").read_text(encoding="utf-8")
+    evidence_autonomy = evidence_index.split("## Autonomous, embedded and edge AI", 1)[1].split(
+        "## Compliance and regulatory intelligence", 1
+    )[0]
+    evidence_practical = evidence_index.split("## Practical AI products", 1)[1].split(
+        "## Public source repositories", 1
+    )[0]
+    evidence_assurance = evidence_index.split("## AI assurance and digital engineering", 1)[1].split(
+        "## Practical AI products", 1
+    )[0]
+    assert "AI Systems Assurance / MBSE" not in evidence_autonomy
+    assert "AI Systems Assurance / MBSE" in evidence_assurance
+    assert "Adversarial Review Lite" in evidence_practical
+
     # Source-derived visuals must be visibly labelled on the landing page.
     assert "Lodestar is a source-derived rendering from the current frontend code" in root
     assert "JobLooper and BuildSignal AI surfaces are source-derived renderings" in root
