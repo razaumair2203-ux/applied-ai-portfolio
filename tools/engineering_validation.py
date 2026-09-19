@@ -509,8 +509,9 @@ def check_portfolio_guardrails() -> None:
     public_cv = (ROOT / "profile/AI_BASE_RESUME.md").read_text(encoding="utf-8")
     for marker in ("centroid-driven", "multi-target", "Kalman-filter"):
         assert marker in counter_uas_case, marker
-    assert "manual human-in-loop" in root
+    assert "manual/automatic single/multi-target centroid tracking" in root
     assert "Kalman stabilization" in root
+    assert "manual human-in-loop" in counter_uas_case
     assert "centroid-driven automatic single/multi-target tracking" in public_cv
     assert "complete modification wiring harness" in public_cv
     assert "NAV/COM/audio/data interfaces" in public_cv
