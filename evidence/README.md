@@ -7,7 +7,6 @@ This directory contains public implementation slices, evaluation fixtures and re
 - **[Clear Run](autonomy_edge_ai/clear_run/README.md)** — sanitized edge-runtime extract, field-evidence snapshot and detection-to-retention verification matrix.
 - **[TIR-FOD](autonomy_edge_ai/tir_fod/README.md)** — 29-run reproducibility bundle, source-aware split records and historical Jetson/TensorRT deployment provenance.
 - **[Counter-UAS Phase I](autonomy_edge_ai/counter_uas/hardware_provenance.json)** — hardware provenance and publication-derivative hashes.
-- **[AI Systems Assurance / MBSE](autonomy_edge_ai/mbse/telemetry_replay_cases.json)** — producer-consumer replay cases and validation logic.
 
 ## Compliance and regulatory intelligence
 
@@ -25,12 +24,13 @@ python -m evidence.compliance_regtech.lodestar.assessment_eval.run_eval
 
 ## AI assurance and digital engineering
 
+- **[AI Systems Assurance / MBSE](autonomy_edge_ai/mbse/telemetry_replay_cases.json)** — producer-consumer replay cases and validation logic for the Clear Run assurance case.
 - **[AI workflow evaluation](assurance_digital_engineering/ai_evaluation/evaluation_summary.json)** — public-safe frozen train/validation/held-out, sensitivity, parser-rescore and release-safeguard aggregates.
-- Public Adversarial Review Lite implementation remains in its dedicated public repositories and is linked from the domain case study.
 
 ## Practical AI products
 
 JobLooper and BuildSignal are represented primarily through public/source-derived product surfaces and their case studies. JobLooper's public implementation is maintained in its dedicated repository.
+- **Adversarial Review Lite** is implemented in dedicated public repositories and linked from its Area 3 case study; its assurance pattern is cross-cutting, but its primary product home remains Practical Agentic AI Products.
 
 ## Public source repositories
 
