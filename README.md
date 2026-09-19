@@ -39,7 +39,7 @@ I lead and build **applied-AI systems as complete engineered systems**—from se
 | Project family | Engineering contribution | Evidence-backed state |
 |---|---|---|
 | **[Clear Run / TIR-FOD](domains/01-autonomy-edge-ai/clear-run-tir-fod.md)** | UAV–GCS–UGV airfield robotics; RGB/LWIR perception; Jetson/TensorRT; geolocation; **ROS2/Nav2/SLAM UGV autonomy**; operator tasking; developing physical recovery | flight-tested edge AI; active UAV–GCS–UGV/robotics integration; final physical-retention closure remains open |
-| **[Counter-UAS Phase I](domains/01-autonomy-edge-ai/counter-uas.md)** | Physical AI-vision drone-detection prototype taken from model development into constructed sensing hardware and indoor/outdoor trials | Phase I completed; RF/acoustic/multisensor extensions remain research |
+| **[Counter-UAS Phase I](domains/01-autonomy-edge-ai/counter-uas.md)** | Physical AI tracking prototype: YOLO, articulated sensing, centroid tracking, Kalman stabilization, indoor/outdoor trials | Phase I completed; RF/acoustic/multisensor extensions remain research |
 
 ### Clear Run / TIR-FOD
 
@@ -64,7 +64,7 @@ Clear Run is an integrated airfield robotics programme from **detection → geol
 
 *Constructed Phase-I sensing hardware and retained outdoor detection evidence.*
 
-Phase I produced a **constructed laser–camera sensing prototype** and preliminary indoor/outdoor trials using approximately **14,000 training images** and a **1,500-image test set**. My role was Principal Investigator / research direction and systems-integration oversight; RF/acoustic/multisensor extensions remain research.
+Phase I produced a **constructed laser–camera tracking prototype** with manual/automatic single/multi-target centroid tracking and Kalman stabilization, tested indoors/outdoors. Retained evidence: **~14,000 training images · 1,500-image test set**. I served as Principal Investigator; later multisensor extensions remain research.
 
 [Explore the autonomous / edge-AI domain →](domains/01-autonomy-edge-ai/README.md)
 
@@ -158,7 +158,7 @@ A retained development lineage uses frozen train/validation/held-out cases, fabr
 
 ### Super Mushshak — aerospace integration to digital engineering
 
-The completed programme covered the **first three glass-cockpit prototypes** and aircraft-level avionics/display, electrical, interface, configuration and flight-test integration. The current follow-on reconstructs releasable records into a traceable digital thread; executable twin behaviour remains future work.
+The completed programme covered the **first three glass-cockpit prototypes** as an aircraft-level retrofit: revised sensing, modification harness, power/data/audio interfaces, configuration, flight V&V and customer evaluation. Current digital-thread reconstruction is retrospective; executable twin behaviour remains future work.
 
 **My contribution:** lead systems engineer / avionics integration engineer on the historical retrofit and current retrospective systems modelling / digital-thread reconstruction.
 
