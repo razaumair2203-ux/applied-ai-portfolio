@@ -38,7 +38,7 @@ I lead and build **applied-AI systems as complete engineered systems**—from se
 
 | Project family | Engineering contribution | Evidence-backed state |
 |---|---|---|
-| **[Clear Run / TIR-FOD](domains/01-autonomy-edge-ai/clear-run-tir-fod.md)** | UAV–GCS–UGV airfield robotics; RGB/LWIR perception; Jetson/TensorRT deployment; geolocation; operator tasking; developing physical recovery | flight-tested edge AI; active UAV–GCS–UGV integration; final physical-retention closure remains open |
+| **[Clear Run / TIR-FOD](domains/01-autonomy-edge-ai/clear-run-tir-fod.md)** | UAV–GCS–UGV airfield robotics; RGB/LWIR perception; Jetson/TensorRT; geolocation; **ROS2/Nav2/SLAM UGV autonomy**; operator tasking; developing physical recovery | flight-tested edge AI; active UAV–GCS–UGV/robotics integration; final physical-retention closure remains open |
 | **[Counter-UAS Phase I](domains/01-autonomy-edge-ai/counter-uas.md)** | Physical AI-vision drone-detection prototype taken from model development into constructed sensing hardware and indoor/outdoor trials | Phase I completed; RF/acoustic/multisensor extensions remain research |
 
 ### Clear Run / TIR-FOD
@@ -49,9 +49,11 @@ I lead and build **applied-AI systems as complete engineered systems**—from se
 
 Clear Run is an integrated airfield robotics programme from **detection → geolocation → operator review/tasking → UGV response → developing physical recovery**. Public evidence deliberately keeps intermediate success separate from verified mission completion.
 
-**Evidence:** **3,499 source frames · 5,593 annotations · 23 classes · 29 controlled training runs**; field-tested Jetson Orin Nano/TensorRT deployment; current public field snapshot: **8 trial videos · 12 structured RGB events across 8 classes**. End-to-end physical-retention verification remains open.
+**Evidence:** **3,499 source frames · 5,593 annotations · 23 classes · 29 controlled training runs**; field-tested Jetson Orin Nano/TensorRT deployment; the UGV programme uses a hybrid ROS1/ROS2 stack with **ROS2 Nav2, RPLidar SLAM Toolbox, wheel/IMU odometry and Mecanum navigation**; current public field snapshot: **8 trial videos · 12 structured RGB events across 8 classes**. End-to-end physical-retention verification remains open.
 
-**My contribution:** technical direction, architecture/interfaces, experiment and evaluation strategy, deployment review, integration/V&V gates and multidisciplinary team leadership. UAV/airframe integration, GCS/UGV implementation, field execution and mechanical recovery are team-developed outputs rather than sole-authorship claims.
+**My contribution:** technical direction, architecture/interfaces, experiment and evaluation strategy, deployment review, integration/V&V gates and multidisciplinary team leadership. UAV/airframe integration, ROS/UGV implementation, GCS software, field execution and mechanical recovery are team-developed outputs rather than sole-authorship claims.
+
+**Programme transition:** Clear Run is being progressed toward **national-scale field trials**, with patent filing planned after field-trial maturation. This is a forward programme path—not a claim of completed national deployment/adoption or filed/pending/granted IP.
 
 ### Counter-UAS Phase I
 
@@ -191,7 +193,7 @@ This foundation is why the work consistently separates **model output from syste
 
 **AI / computer vision:** Python · PyTorch / Ultralytics YOLO · SAHI · OpenCV · RGB/LWIR sensing · adversarial/evaluation workflows
 
-**Edge / autonomy:** NVIDIA Jetson Orin Nano · TensorRT · CUDA · GStreamer · Pixhawk · MAVLink · GNSS · UAV/UGV integration
+**Edge / autonomy:** NVIDIA Jetson Orin Nano / Jetson Nano · TensorRT · CUDA · GStreamer · Pixhawk · MAVLink · GNSS · **ROS2 · Nav2 · SLAM Toolbox · RPLidar · wheel/IMU odometry · Mecanum navigation · ROS1/rosserial bridging** · UAV/UGV integration
 
 **RAG / backend / data:** FastAPI · PostgreSQL · pgvector · HNSW · PostgreSQL FTS · BGE / sentence-transformers · RRF · DuckDB · Parquet · REST APIs
 
