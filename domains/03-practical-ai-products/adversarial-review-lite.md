@@ -2,6 +2,8 @@
 
 **Public tools:** [Codex Adversarial Review Lite](https://github.com/razaumair2203-ux/codex-adversarial-review-lite) · [Claude Adversarial Review Lite](https://github.com/razaumair2203-ux/claude-adversarial-review-lite)
 
+**Public evidence snapshot:** 19 September 2026. Current maturity: two public companion tools with frozen review scope, mutation checks, builder-side re-verification and explicit human approval before fixes.
+
 The two public repositories turn an informal “ask another model to look at it” habit into a **practical agentic work tool** for people using coding agents in everyday software development. Assurance is a core capability of the tool, but its primary product identity is utility: make independent second-model review easy, repeatable and human-controlled during normal AI-assisted work. They support both directions—**Claude builds → Codex reviews** and **Codex builds → Claude reviews**—while keeping mutation and release authority with the human.
 
 The system freezes review scope, carries relevant tests/fixtures/rubrics into the review contract, snapshots repository state, dispatches an independent reviewer, validates reviewer output, re-checks each finding instead of obeying it blindly, and presents a report **before** any fix is allowed. It is aimed at changes where hallucinated APIs, weak tests, auth/billing mistakes, migrations or multi-file scope drift can create real engineering cost.
