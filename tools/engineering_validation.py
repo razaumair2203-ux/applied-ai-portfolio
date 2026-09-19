@@ -470,6 +470,7 @@ def check_portfolio_guardrails() -> None:
         "domains/02-compliance-regtech/lodestar.md",
         "domains/03-practical-ai-products/joblooper-jobpilot.md",
         "domains/03-practical-ai-products/buildsignal-ai.md",
+        "domains/03-practical-ai-products/adversarial-review-lite.md",
     )
     for rel in dated_pages:
         text = (ROOT / rel).read_text(encoding="utf-8")
