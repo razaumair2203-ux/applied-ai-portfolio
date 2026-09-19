@@ -4,9 +4,7 @@
 
 **Current role:** Officer In Charge Projects / R&D & Systems Engineering Lead, College of Aeronautical Engineering, NUST · NUTECH assignments · **2023–present**
 
-I lead and build **applied-AI systems that have to work as complete engineered systems**: sensing and data, models and retrieval, interfaces, deployment, verification, product controls and field evidence. My strongest current technical domain is **autonomous / embedded / edge AI**—computer vision, UAV/UGV systems, RGB/LWIR sensing, Jetson/TensorRT deployment and system-level V&V.
-
-That work is grounded in **18+ years of aerospace systems engineering, avionics integration, configuration/lifecycle engineering, V&V and technical programme delivery**. In parallel with autonomous systems, I am building a specialist product direction in **compliance and regulatory intelligence**, an independent stream of **practical agentic AI products**, and a cross-cutting capability in **AI assurance, evaluation and digital engineering**.
+I lead and build **applied-AI systems as complete engineered systems**—from sensing/data and models/retrieval through interfaces, deployment, verification and field evidence. My primary current specialization is **autonomous / embedded / edge AI**, grounded in **18+ years of aerospace systems engineering and technical programme delivery**. In parallel, I am building specialist work in **compliance and regulatory intelligence**, **practical agentic AI products**, and cross-cutting **AI assurance, evaluation and digital engineering**.
 
 **Career profile:** [AI-focused base resume](profile/AI_BASE_RESUME.md) · **LinkedIn:** [Profile](https://www.linkedin.com/in/mumairaza/) · **Research:** [Google Scholar](https://scholar.google.com/citations?user=0EVckyAAAAAJ&hl=en) · **Dataset:** [TIR-FOD v1.2](https://doi.org/10.5281/zenodo.22546586) · **Technical review:** [project-specific access](PRIVATE_REPOSITORY_ACCESS.md)
 
@@ -24,6 +22,12 @@ That work is grounded in **18+ years of aerospace systems engineering, avionics 
 | Leads R&D / systems-engineering activity across a **100+ project portfolio** spanning AI, autonomy, avionics, radar/RF, communications, sensing and embedded systems | Python/backend implementation and review, computer vision, RAG/retrieval, AI evaluation, Jetson/TensorRT deployment, interfaces and test evidence | **18+ years** across aircraft development, avionics integration, flight-line/MRO engineering, international OEM integration, configuration, qualification and airworthiness |
 | Supervised **60+ advanced engineering projects** | RGB/LWIR sensing, YOLO/SAHI, FastAPI, PostgreSQL/pgvector, BGE embeddings, RRF and structured AI workflows | Requirements, architecture, interfaces, V&V, configuration control, qualification and acceptance |
 | Accountable technical leadership for the **22-node ATLAS GPU/HPC environment** | Held-out evaluation, failure analysis, deterministic guardrails, MBSE/Capella and regression criteria | Prototype-to-field engineering across aircraft development, upgrades, sustainment and digital-engineering reconstruction |
+
+## Inspect the engineering
+
+[**TIR-FOD reproducibility**](evidence/autonomy_edge_ai/tir_fod/reproducibility/README.md) · [**Clear Run field/mission evidence**](evidence/autonomy_edge_ai/clear_run/README.md) · [**Lodestar retrieval & evaluation**](evidence/compliance_regtech/lodestar/README.md) · [**JobLooper source**](https://github.com/razaumair2203-ux/Pub-JobLooper) · [**Adversarial Review Lite**](domains/03-practical-ai-products/adversarial-review-lite.md) · [**research record**](research/README.md) · [**engineering CI**](https://github.com/razaumair2203-ux/applied-ai-portfolio/actions/workflows/engineering-validation.yml)
+
+**Technical review:** project-specific access uses a **curated, release-safe technical package or review branch** rather than automatically exposing raw working repositories. [Review options →](PRIVATE_REPOSITORY_ACCESS.md)
 
 <a name="autonomy-edge-ai"></a>
 ## 1. Autonomous, Embedded & Edge AI
@@ -43,7 +47,7 @@ That work is grounded in **18+ years of aerospace systems engineering, avionics 
 
 Clear Run is an integrated airfield robotics programme from **detection → geolocation → operator review/tasking → UGV response → developing physical recovery**. Public evidence deliberately keeps intermediate success separate from verified mission completion.
 
-**Evidence:** **3,499 source frames · 5,593 annotations · 23 classes · 29 controlled training runs**; a controlled source-lineage violation produced an invalid **+8.52 percentage-point mAP uplift**; historical Jetson Orin Nano / FP16 TensorRT measurement records **25.0 FPS model-stage and 15.6 FPS complete pipeline**; the current field snapshot contains **8 unique trial videos and 12 structured RGB events across 8 reported classes**.
+**Evidence:** **3,499 source frames · 5,593 annotations · 23 classes · 29 controlled training runs**; field-tested Jetson Orin Nano/TensorRT deployment; current public field snapshot: **8 trial videos · 12 structured RGB events across 8 classes**. End-to-end physical-retention verification remains open.
 
 **My contribution:** technical direction, architecture/interfaces, experiment and evaluation strategy, deployment review, integration/V&V gates and multidisciplinary team leadership. UAV/airframe integration, GCS/UGV implementation, field execution and mechanical recovery are team-developed outputs rather than sole-authorship claims.
 
@@ -56,7 +60,7 @@ Clear Run is an integrated airfield robotics programme from **detection → geol
 
 *Constructed Phase-I sensing hardware and retained outdoor detection evidence.*
 
-Phase I progressed from model development into a **constructed laser–camera sensing prototype** and preliminary indoor/outdoor trials. The retained experiment record includes approximately **14,000 training images** and a **1,500-image test set**. My role was Principal Investigator / research direction and systems-integration oversight; later passive-RF, acoustic and multisensor concepts are not back-claimed as completed Phase-I capability.
+Phase I produced a **constructed laser–camera sensing prototype** and preliminary indoor/outdoor trials using approximately **14,000 training images** and a **1,500-image test set**. My role was Principal Investigator / research direction and systems-integration oversight; RF/acoustic/multisensor extensions remain research.
 
 [Explore the autonomous / edge-AI domain →](domains/01-autonomy-edge-ai/README.md)
 
@@ -80,13 +84,13 @@ Phase I progressed from model development into a **constructed laser–camera se
 
 ### i-MSHA
 
-i-MSHA consolidates fragmented U.S. MSHA public data into one national→state→mine/controller environment covering violations, penalties, inspections, safety/injury, legal outcomes, occupational exposure, contractors and acquisition due diligence. Current recorded product state includes **8 active modules · 25 frontend features · 100 backend handlers · 385 Canary unit tests · 839 full backend tests passing** in the retained May 2026 source-of-truth state.
+i-MSHA consolidates fragmented U.S. MSHA public data into a national→state→mine/controller decision environment. Retained May 2026 state: **8 active modules · 25 frontend features · 100 backend handlers · 385 Canary unit tests · 839 full backend tests passing**.
 
 **My contribution:** product/programme direction, systems architecture, AI/data workflow definition, feature prioritisation, technical review and validation framing.
 
 ### Lodestar
 
-Lodestar maps applicant evidence to EB-2 NIW / EB-1A legal criteria, retrieves governing authority, exposes evidence gaps and constrains outputs to cited assessment states. Recorded engineering state includes **209 documents · 2,945 chunks · a 34-query frozen retrieval regression set · 1 top-5 expected-source miss**. Public fixtures exercise PostgreSQL + pgvector retrieval, authority-policy ablation, an 11-invariant reliability regression and adversarial structured-output controls.
+Lodestar maps applicant evidence to EB-2 NIW / EB-1A criteria with authority-aware retrieval, gap analysis and bounded cited assessments. Recorded state: **209 documents · 2,945 chunks · a 34-query frozen retrieval regression set · 1 top-5 expected-source miss**, plus PostgreSQL/pgvector, authority-policy and adversarial-output regression evidence.
 
 **My contribution:** system architecture, retrieval/evaluation design, implementation direction, reliability controls, technical validation and product integration. Coding-agent assistance is used in implementation; architecture, constraints, evaluation design, acceptance criteria and release decisions remain owner-directed and evidence-gated.
 
@@ -112,11 +116,11 @@ Lodestar maps applicant evidence to EB-2 NIW / EB-1A legal criteria, retrieves g
 
 *Visual provenance: JobLooper and BuildSignal AI surfaces are source-derived renderings from their current application code; Adversarial Review Lite uses retained report evidence. These renderings are not presented as original product screenshots.*
 
-**[JobLooper](domains/03-practical-ai-products/joblooper-jobpilot.md)** governs the application lifecycle from signed career truth and exact JD capture through gap/preflight decisions, AI-assisted tailoring, complete human review, deterministic DOCX/PDF build, hash-bound submission records and outcome learning. The implementation is publicly inspectable at [Pub-JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper).
+**[JobLooper](domains/03-practical-ai-products/joblooper-jobpilot.md)** governs career truth, exact JD capture, gap/preflight decisions, AI-assisted tailoring, human approval, deterministic document build and outcome learning. [Public source →](https://github.com/razaumair2203-ux/Pub-JobLooper)
 
-**[BuildSignal AI](domains/03-practical-ai-products/buildsignal-ai.md)** is an AI-native publishing operations system spanning research/source capture, text/media state, rights/provenance, QA, review and explicit owner-controlled publication.
+**[BuildSignal AI](domains/03-practical-ai-products/buildsignal-ai.md)** governs research/source capture, media state, rights/provenance, QA, review and owner-controlled publication.
 
-**[Adversarial Review Lite](domains/03-practical-ai-products/adversarial-review-lite.md)** provides public Claude→Codex and Codex→Claude review tools with frozen review scope, structured findings, repository mutation checks, builder-side re-verification and human approval before fixes.
+**[Adversarial Review Lite](domains/03-practical-ai-products/adversarial-review-lite.md)** provides public cross-model review tools with frozen scope, mutation checks, re-verification and human approval.
 
 [Explore practical agentic AI products →](domains/03-practical-ai-products/README.md)
 
@@ -138,7 +142,7 @@ Lodestar maps applicant evidence to EB-2 NIW / EB-1A legal criteria, retrieves g
 
 ### AI Systems Assurance / MBSE — Clear Run
 
-**[AI Systems Assurance / MBSE](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md)** is the cross-cutting verification layer for Clear Run: Capella/Arcadia architecture, producer-consumer interface replay, evidence applicability and regression obligations. The assurance case is classified here because its reusable discipline is verification and digital engineering; it remains tightly linked to the Clear Run autonomy programme. INCOSE IACS editorial review is pending.
+**[AI Systems Assurance / MBSE](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md)** is Clear Run's cross-cutting verification layer: Capella/Arcadia architecture, producer-consumer replay, evidence applicability and regression obligations. It remains linked to the autonomy programme while classified here as assurance/digital engineering; INCOSE IACS editorial review is pending.
 
 ### Evaluation-driven AI workflows
 
@@ -150,7 +154,7 @@ A retained development lineage uses frozen train/validation/held-out cases, fabr
 
 ### Super Mushshak — aerospace integration to digital engineering
 
-The completed programme covered the **first three glass-cockpit prototypes** and aircraft-level sensing, avionics/display integration, electrical/wiring changes, ARINC and other interfaces, configuration, installed-aircraft checks, flight-test feedback and customer evaluation. The current follow-on converts releasable historical records into a structured digital thread linking requirements, interfaces, configurations, verification and decisions; executable twin behaviour remains future work.
+The completed programme covered the **first three glass-cockpit prototypes** and aircraft-level avionics/display, electrical, interface, configuration and flight-test integration. The current follow-on reconstructs releasable records into a traceable digital thread; executable twin behaviour remains future work.
 
 **My contribution:** lead systems engineer / avionics integration engineer on the historical retrofit and current retrospective systems modelling / digital-thread reconstruction.
 
@@ -193,23 +197,9 @@ This foundation is why the work consistently separates **model output from syste
 
 **Systems / validation:** MBSE / Capella · requirements · interfaces · V&V · configuration management · qualification · test/acceptance evidence
 
-## Engineering evidence and technical review
-
-[![Engineering validation](https://github.com/razaumair2203-ux/applied-ai-portfolio/actions/workflows/engineering-validation.yml/badge.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/actions/workflows/engineering-validation.yml)
-
-The public CI exercises PostgreSQL + pgvector integration, Lodestar retrieval/control regressions, Clear Run field-evidence consistency, MBSE replay evidence, aggregate AI-evaluation evidence and TIR-FOD reproducibility/measurement boundaries.
-
-Private review requests are handled **project by project**. The default review surface is a curated, release-safe technical package or review branch containing the evidence relevant to the reviewer; access to a complete raw working repository is provided only when appropriate. Reviewers can use the project-specific GitHub forms or the [LinkedIn message route](https://www.linkedin.com/in/mumairaza/) for a discreet request.
-
-[Technical-review options →](PRIVATE_REPOSITORY_ACCESS.md)
-
 ## Repository map
 
-- **[profile/AI_BASE_RESUME.md](profile/AI_BASE_RESUME.md)** — AI-focused career profile with full engineering chronology
-- **[domains/](domains/README.md)** — technical domains, project families, roles, maturity and links
-- **[evidence/](evidence/README.md)** — implementation extracts, evaluation fixtures and reproducibility records
-- **[visuals/](visuals/README.md)** — original project media, official assets, product surfaces and engineering visuals
-- **[research/](research/README.md)** — publications, datasets and active research status
+[Career profile](profile/AI_BASE_RESUME.md) · [domains](domains/README.md) · [technical evidence](evidence/README.md) · [visual provenance](visuals/README.md) · [research](research/README.md)
 
 ## Provenance and claim boundary
 
