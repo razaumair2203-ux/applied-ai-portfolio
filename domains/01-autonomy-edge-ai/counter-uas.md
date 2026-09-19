@@ -34,12 +34,13 @@ The archived project evidence includes:
 
 ## Engineering scope
 
-The engineering value is the **prototype-to-experiment transition**: model development, physical sensing hardware, camera/mount integration, manual/automatic operating modes and real indoor/outdoor trial conditions were brought together under one Phase-I programme. It is not represented as an operational counter-drone weapon or fielded C-UAS product.
+The engineering value is the **prototype-to-experiment transition**: model development, physical sensing hardware, camera/mount integration, tracking control and real indoor/outdoor trial conditions were brought together under one Phase-I programme. The retained project record shows **manual human-in-loop tracking, centroid-driven automatic single-target tracking, multi-target tracking using a swarm centroid, pan-tilt actuation, and Kalman-filter reduction of centroid jitter**. Experimental-results material records successful single- and multi-target tracking. It is not represented as an operational counter-drone weapon or fielded C-UAS product.
 
 ## Contribution boundary
 
 - **Direct responsibility:** Principal Investigator / research direction, experiment framing and systems-integration oversight.
 - **Team-developed work:** model development, prototype construction and trial execution are represented as programme outputs rather than sole-authorship claims.
+- **Tracking/control boundary:** the completed Phase-I record supports visual tracking/control integration; it does not establish operational engagement capability, and later RF/acoustic/multisensor or edge/fog/cloud concepts remain separate.
 - **Scope boundary:** Phase-I visual detection evidence is separated from later passive-RF, acoustic and multisensor research directions.
 
 ## Evidence provenance and programme evolution
