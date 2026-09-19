@@ -14,8 +14,8 @@ That work is grounded in **18+ years of aerospace systems engineering, avionics 
 
 | | |
 |---|---|
-| **[1. Autonomous, Embedded & Edge AI](#autonomy-edge-ai)**<br>Primary engineering domain: computer vision, edge deployment, sensing, UAV/UGV integration and system-level verification.<br>**Flagships:** Clear Run / TIR-FOD · Counter-UAS · AI Systems Assurance / MBSE | **[2. Compliance & Regulatory Intelligence](#compliance-regtech)**<br>Specialist product niche: authoritative-source consolidation, retrieval, analytics and bounded AI reasoning for regulated decisions.<br>**Flagships:** i-MSHA · Lodestar |
-| **[3. Practical Agentic AI Products](#practical-agentic-ai)**<br>Independent product stream for recurring engineering, career, research and knowledge work with explicit state, provenance and human control.<br>**Flagships:** JobLooper · BuildSignal AI · Adversarial Review Lite | **[4. AI Assurance, Evaluation & Digital Engineering](#assurance-digital-engineering)**<br>Cross-cutting discipline connecting evaluation, release controls, MBSE, research computing and aerospace digital-thread engineering.<br>**Flagships:** Evaluation-driven AI workflows · ATLAS GPU/HPC · Super Mushshak digital engineering |
+| **[1. Autonomous, Embedded & Edge AI](#autonomy-edge-ai)**<br>Primary engineering domain: computer vision, edge deployment, sensing, UAV/UGV integration and system-level verification.<br>**Flagships:** Clear Run / TIR-FOD · Counter-UAS | **[2. Compliance & Regulatory Intelligence](#compliance-regtech)**<br>Specialist product niche: authoritative-source consolidation, retrieval, analytics and bounded AI reasoning for regulated decisions.<br>**Flagships:** i-MSHA · Lodestar |
+| **[3. Practical Agentic AI Products](#practical-agentic-ai)**<br>Independent product stream for recurring engineering, career, research and knowledge work with explicit state, provenance and human control.<br>**Flagships:** JobLooper · BuildSignal AI · Adversarial Review Lite | **[4. AI Assurance, Evaluation & Digital Engineering](#assurance-digital-engineering)**<br>Cross-cutting discipline connecting evaluation, release controls, MBSE, research computing and aerospace digital-thread engineering.<br>**Flagships:** AI Systems Assurance / MBSE · Evaluation-driven AI workflows · ATLAS GPU/HPC · Super Mushshak digital engineering |
 
 ## At a glance
 
@@ -34,7 +34,6 @@ That work is grounded in **18+ years of aerospace systems engineering, avionics 
 |---|---|---|
 | **[Clear Run / TIR-FOD](domains/01-autonomy-edge-ai/clear-run-tir-fod.md)** | UAV–GCS–UGV airfield robotics; RGB/LWIR perception; Jetson/TensorRT deployment; geolocation; operator tasking; developing physical recovery | flight-tested edge AI; active UAV–GCS–UGV integration; final physical-retention closure remains open |
 | **[Counter-UAS Phase I](domains/01-autonomy-edge-ai/counter-uas.md)** | Physical AI-vision drone-detection prototype taken from model development into constructed sensing hardware and indoor/outdoor trials | Phase I completed; RF/acoustic/multisensor extensions remain research |
-| **[AI Systems Assurance / MBSE](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md)** | Evidence-linked Capella/Arcadia assurance for the Clear Run mission chain, interface boundaries and regression obligations | current assurance case; INCOSE IACS submission pending review |
 
 ### Clear Run / TIR-FOD
 
@@ -132,6 +131,10 @@ Lodestar maps applicant evidence to EB-2 NIW / EB-1A legal criteria, retrieves g
 <td><b>Super Mushshak digital engineering</b><br><sub>Completed aircraft retrofit engineering reconstructed into a traceable digital thread.</sub></td>
 </tr>
 </table>
+
+### AI Systems Assurance / MBSE — Clear Run
+
+**[AI Systems Assurance / MBSE](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md)** is the cross-cutting verification layer for Clear Run: Capella/Arcadia architecture, producer-consumer interface replay, evidence applicability and regression obligations. The assurance case is classified here because its reusable discipline is verification and digital engineering; it remains tightly linked to the Clear Run autonomy programme. INCOSE IACS editorial review is pending.
 
 ### Evaluation-driven AI workflows
 
