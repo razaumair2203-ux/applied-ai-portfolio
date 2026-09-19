@@ -5,7 +5,7 @@
 ## Project families
 
 - **[Clear Run / TIR-FOD](clear-run-tir-fod.md)** — UAV–GCS–UGV airfield robotics, RGB/LWIR perception, Jetson/TensorRT deployment, geolocation and physical-recovery integration.
-- **[Counter-UAS Phase I](counter-uas.md)** — completed physical AI-vision drone-detection prototype with constructed sensing hardware and indoor/outdoor trials.
+- **[Counter-UAS Phase I](counter-uas.md)** — completed physical AI tracking prototype with articulated sensing hardware, manual/automatic centroid tracking, Kalman stabilization and indoor/outdoor trials.
 
 ## Research connection
 
