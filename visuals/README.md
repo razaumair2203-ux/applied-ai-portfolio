@@ -33,10 +33,6 @@ This directory contains original project media, recorded UI/test evidence, offic
 - [training curves](autonomy-edge-ai/counter-uas/training_curves.png)
 - [programme evolution](autonomy-edge-ai/counter-uas/framework_evolution.svg)
 
-### AI Systems Assurance / MBSE
-- [submitted system-summary figure](autonomy-edge-ai/mbse/clear_run_system_architecture.svg)
-- [telemetry replay](autonomy-edge-ai/mbse/telemetry_replay.svg)
-
 ## Compliance and regulatory intelligence
 
 ### i-MSHA
@@ -59,11 +55,15 @@ This directory contains original project media, recorded UI/test evidence, offic
 - [admin surface](practical-ai-products/buildsignal/admin-surface.svg)
 - [AI judge-loop system](practical-ai-products/buildsignal/ai-judge-loop-system.svg)
 
-## AI assurance and digital engineering
-
 ### Adversarial Review Lite
 - [original report preview](assurance-digital-engineering/adversarial-review/audit-report-preview.jpg)
 - [report anatomy](assurance-digital-engineering/adversarial-review/audit_report_anatomy.svg)
+
+## AI assurance and digital engineering
+
+### AI Systems Assurance / MBSE
+- [submitted system-summary figure](autonomy-edge-ai/mbse/clear_run_system_architecture.svg)
+- [telemetry replay](autonomy-edge-ai/mbse/telemetry_replay.svg)
 
 ### AI workflow evaluation
 - [evaluation pipeline](assurance-digital-engineering/ai-evaluation/evaluation_pipeline.svg)
