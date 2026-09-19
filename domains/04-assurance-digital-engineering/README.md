@@ -4,6 +4,7 @@ This is a **cross-cutting engineering layer**, not a separate product identity. 
 
 ## Capability families
 
+- **[AI Systems Assurance / MBSE — Clear Run](../01-autonomy-edge-ai/ai-systems-assurance-mbse.md)** — evidence-linked Capella/Arcadia assurance, producer-consumer replay, verification boundaries and regression obligations for the real Clear Run autonomy chain.
 - **[Evaluation-Driven AI Workflow Engineering](ai-evaluation-workflows.md)** — frozen evaluation, failure checks, statistical safeguards and release gates.
 - **[Super Mushshak Digital Engineering](super-mushshak-digital-engineering.md)** — completed glass-cockpit prototype integration reconstructed into an evidence-linked digital thread; executable-twin behaviour remains future work.
 - **[ATLAS GPU/HPC](atlas-hpc.md)** — 22-node research-computing environment supporting AI, simulation and reproducible engineering workflows.
