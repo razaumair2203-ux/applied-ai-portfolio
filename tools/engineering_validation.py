@@ -234,6 +234,7 @@ def check_presentation_integrity() -> None:
         "why it matters to the ai/autonomy portfolio",
         "aggressively building",
         "recruiter-facing",
+        "msha v2",
     )
     failures: list[str] = []
     for base in public_paths:
@@ -249,7 +250,7 @@ def check_presentation_integrity() -> None:
 def check_root_readme_scanability() -> None:
     root = (ROOT / "README.md").read_text(encoding="utf-8")
     words = re.findall(r"\b[\w+.-]+\b", root)
-    assert len(words) <= 2400, f"README too long for first-pass scan: {len(words)} words"
+    assert len(words) <= 2200, f"README too long for first-pass scan: {len(words)} words"
 
     image_positions = [pos for pos in (root.find("!["), root.find("<img")) if pos >= 0]
     assert image_positions, "README must contain authentic visual evidence"
@@ -431,6 +432,62 @@ def check_documentation_structure() -> None:
         assert not (ROOT / rel).exists(), rel
 
 
+
+def check_portfolio_guardrails() -> None:
+    root = (ROOT / "README.md").read_text(encoding="utf-8")
+
+    # Four-area taxonomy is stable; Clear Run MBSE is a cross-cutting Area 4 capability,
+    # not a third autonomy flagship.
+    assert "**Flagships:** Clear Run / TIR-FOD · Counter-UAS" in root
+    assert (
+        "**Flagships:** AI Systems Assurance / MBSE · Evaluation-driven AI workflows · "
+        "ATLAS GPU/HPC · Super Mushshak digital engineering"
+    ) in root
+    assert "### AI Systems Assurance / MBSE — Clear Run" in root
+
+    autonomy_index = (ROOT / "domains/01-autonomy-edge-ai/README.md").read_text(encoding="utf-8")
+    assurance_index = (ROOT / "domains/04-assurance-digital-engineering/README.md").read_text(encoding="utf-8")
+    domain_map = (ROOT / "domains/README.md").read_text(encoding="utf-8")
+    assert "primarily classified under [AI Assurance, Evaluation & Digital Engineering]" in autonomy_index
+    assert "[AI Systems Assurance / MBSE — Clear Run]" in assurance_index
+    area1 = domain_map.split("## 1. Autonomous, embedded and edge AI", 1)[1].split(
+        "## 2. Compliance and regulatory intelligence", 1
+    )[0]
+    area4 = domain_map.split("## 4. AI assurance, evaluation and digital engineering", 1)[1]
+    assert "AI Systems Assurance / MBSE" not in area1
+    assert "AI Systems Assurance / MBSE — Clear Run" in area4
+
+    # Source-derived visuals must be visibly labelled on the landing page.
+    assert "Lodestar is a source-derived rendering from the current frontend code" in root
+    assert "JobLooper and BuildSignal AI surfaces are source-derived renderings" in root
+    assert "These renderings are not presented as original product screenshots." in root
+
+    # Active flagship pages expose dated public-evidence snapshots without rewriting
+    # the date/provenance of underlying measurements.
+    dated_pages = (
+        "domains/01-autonomy-edge-ai/clear-run-tir-fod.md",
+        "domains/02-compliance-regtech/i-msha.md",
+        "domains/02-compliance-regtech/lodestar.md",
+        "domains/03-practical-ai-products/joblooper-jobpilot.md",
+        "domains/03-practical-ai-products/buildsignal-ai.md",
+    )
+    for rel in dated_pages:
+        text = (ROOT / rel).read_text(encoding="utf-8")
+        assert "**Public evidence snapshot:** 19 September 2026." in text, rel
+
+    # Landing page must expose an immediate path from claims to inspectable evidence.
+    assert "## Inspect the engineering" in root
+    for marker in (
+        "TIR-FOD reproducibility",
+        "Clear Run field/mission evidence",
+        "Lodestar retrieval & evaluation",
+        "JobLooper source",
+        "engineering CI",
+        "curated, release-safe technical package or review branch",
+    ):
+        assert marker in root, marker
+
+
 def main() -> None:
     checks = [
         check_internal_markdown_links,
@@ -451,6 +508,7 @@ def main() -> None:
         check_atlas_case,
         check_research_contribution_boundaries,
         check_documentation_structure,
+        check_portfolio_guardrails,
     ]
     for check in checks:
         check()
