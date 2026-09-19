@@ -2,6 +2,8 @@
 
 **Private technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
 
+**Public evidence snapshot:** 19 September 2026. Historical measurements retain their original provenance and limitations where stated.
+
 [![Clear Run detection-to-removal architecture](../../visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
 
 Clear Run is an **airfield robotics programme**, not a standalone object detector. It connects **dataset/model development → airborne edge deployment → target geolocation and operator review → UAV–GCS–UGV mission integration → physical FOD capture and retained removal**. The programme is valuable precisely because it forces perception, avionics, communications, human supervision, ground autonomy and mechanical recovery to work as one traceable mission chain.
