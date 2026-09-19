@@ -31,11 +31,11 @@ My current work also includes an **independent and growing practical-agentic pro
 
 [Case study](../domains/01-autonomy-edge-ai/clear-run-tir-fod.md) · [Dataset DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586)
 
-#### Counter-UAS Phase I — physical AI-vision research prototype
+#### Counter-UAS Phase I — physical AI tracking and control prototype
 
 **Role:** Principal Investigator / research direction and systems-integration oversight.
 
-- Constructed laser–camera sensing mount and visual drone-detection prototype taken from model development into preliminary indoor/outdoor trials.
+- Constructed articulated laser–camera tracking prototype taken from YOLO model development into **manual human-in-loop control, centroid-driven automatic single/multi-target tracking, Kalman-stabilized tracking**, and retained lab/indoor/outdoor trials.
 - Historical experiment record: approximately **14,000 training images**, **1,500-image test set**, **200 epochs** at 640×640 input.
 - Follow-on visual/RF/acoustic multisensor work remains a research direction and is not back-claimed as completed Phase-I capability.
 
