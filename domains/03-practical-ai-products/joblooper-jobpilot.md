@@ -2,6 +2,8 @@
 
 **Public implementation:** [Pub-JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper)
 
+**Public evidence snapshot:** 19 September 2026. Public implementation and private evaluation lineage are kept as separate evidence surfaces.
+
 **Private development / evaluation lineage:** [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-joblooper-private.yml)
 
 JobLooper is a local-first system for managing the **entire evidence-bearing job-application lifecycle**, not an AI CV generator. It starts with a candidate-approved record of career truth, captures the exact employer advert, exposes unresolved fit gaps before drafting, allows AI assistance only inside that governed context, requires complete human review, builds deterministic employer-facing documents, records the exact files submitted, and carries observed outcomes forward into later applications.
