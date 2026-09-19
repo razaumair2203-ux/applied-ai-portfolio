@@ -74,7 +74,7 @@ The raw ten-run logs and historical TensorRT engine were not retained, so those 
 
 ## 3. Clear Run — mission-system integration
 
-Clear Run extends the perception work into an aerial-ground system with RGB and passive-IR streams, independent FP16 TensorRT models, YOLO/SAHI processing, synchronized recording, geolocation, MAVLink/REST interfaces, a purpose-built GCS, and a developing UGV retrieval layer.
+Clear Run extends the perception work into an aerial-ground system with RGB and passive-IR streams, independent FP16 TensorRT models, YOLO/SAHI processing, synchronized recording, geolocation, MAVLink/REST interfaces, a purpose-built GCS, and a **Jetson Nano ground-autonomy stack combining ROS2 Nav2, RPLidar SLAM Toolbox, wheel/IMU odometry, Mecanum navigation and terminal visual-alignment/retrieval integration**.
 
 <p align="center">
   <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/video_thumbnail.png" alt="Clear Run field-trial evidence thumbnail" width="64%"></a>
@@ -93,7 +93,7 @@ The aggregate, non-location-sensitive snapshot is published as [`field_trial_sna
   <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/retrieval_development.png" alt="Clear Run ground vehicle and retrieval development" width="49%"></a>
 </p>
 
-The GCS consolidates aerial telemetry, detection review, target prioritisation and ground-agent dispatch. The UGV layer combines mecanum mobility, embedded compute/navigation and the retrieval mechanism under fabrication/integration.
+The GCS consolidates aerial telemetry, detection review, target prioritisation and ground-agent dispatch. The UGV is a **hybrid ROS1/ROS2 Mecanum platform**: legacy ROS1/rosserial supports the Nexus/Arduino motor-side interface, while ROS2 handles wheel/IMU odometry, RPLidar SLAM Toolbox, Nav2 goal execution, omnidirectional DWB planning/costmaps and the interface into terminal visual alignment. The retrieval mechanism remains under fabrication/integration and quantitative mission closure.
 
 
 ### Subsystem engineering views
@@ -141,7 +141,9 @@ The machine-readable [`mission_verification_matrix.json`](../../evidence/autonom
 ## Contribution boundary
 
 - **Direct responsibility:** applied-R&D / systems-engineering leadership; technical direction; architecture and interface definition; experiment design; model/evaluation strategy; deployment review; KPI definition; integration and V&V gates; multidisciplinary team leadership; publication development.
-- **Team-developed work:** UAV/airframe integration, GCS/UGV implementation, field execution and mechanical recovery are multidisciplinary outputs and are not represented as sole authorship.
+- **Team-developed work:** UAV/airframe integration, GCS/UGV/ROS implementation, field execution and mechanical recovery are multidisciplinary outputs and are not represented as sole authorship.
+- **Robotics contribution boundary:** ROS2/Nav2/SLAM are demonstrated programme/integration experience under technical leadership; the portfolio does not claim original SLAM/Nav2 algorithm authorship or sole coding of the UGV stack.
+- **Transition path:** the programme is progressing toward national-scale field trials, followed by a planned patent filing after field-trial maturation. National deployment/adoption and patent filing/pending/grant are not yet claimed.
 - **Evidence rule:** model, field and mission claims are accepted only at the boundary actually measured; open end-to-end retrieval gates remain open until verified.
 
 ## Research status
