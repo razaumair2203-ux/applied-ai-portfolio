@@ -25,6 +25,8 @@ I lead and build **applied-AI systems as complete engineered systems**—from se
 
 ## Inspect the engineering
 
+[![Engineering validation](https://github.com/razaumair2203-ux/applied-ai-portfolio/actions/workflows/engineering-validation.yml/badge.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/actions/workflows/engineering-validation.yml)
+
 [**TIR-FOD reproducibility**](evidence/autonomy_edge_ai/tir_fod/reproducibility/README.md) · [**Clear Run field/mission evidence**](evidence/autonomy_edge_ai/clear_run/README.md) · [**Lodestar retrieval & evaluation**](evidence/compliance_regtech/lodestar/README.md) · [**JobLooper source**](https://github.com/razaumair2203-ux/Pub-JobLooper) · [**Adversarial Review Lite**](domains/03-practical-ai-products/adversarial-review-lite.md) · [**research record**](research/README.md) · [**engineering CI**](https://github.com/razaumair2203-ux/applied-ai-portfolio/actions/workflows/engineering-validation.yml)
 
 **Technical review:** project-specific access uses a **curated, release-safe technical package or review branch** rather than automatically exposing raw working repositories. [Review options →](PRIVATE_REPOSITORY_ACCESS.md)
