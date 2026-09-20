@@ -101,7 +101,7 @@ The aggregate, non-location-sensitive snapshot is published as [`field_trial_sna
   <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/retrieval_development.png" alt="Clear Run ground vehicle and retrieval development" width="49%"></a>
 </p>
 
-The GCS consolidates aerial telemetry, detection review, target prioritisation and ground-agent dispatch. The UGV is a **hybrid ROS1/ROS2 Mecanum platform**: legacy ROS1/rosserial supports the Nexus/Arduino motor-side interface, while ROS2 handles wheel/IMU odometry, RPLidar SLAM Toolbox, Nav2 goal execution, omnidirectional DWB planning/costmaps and the interface into terminal visual alignment. The retrieval mechanism remains under fabrication/integration and quantitative mission closure.
+The GCS consolidates aerial telemetry, detection review, target prioritisation and ground-agent dispatch. The UGV is a **hybrid ROS1/ROS2 Mecanum platform**: legacy ROS1/rosserial supports the Nexus/Arduino motor-side interface, while ROS2 handles wheel/IMU odometry, RPLidar SLAM Toolbox, Nav2 goal execution, omnidirectional DWB planning/costmaps and the interface into terminal visual alignment. The retrieval mechanism remains under fabrication/integration and quantitative mission closure. No public SLAM trajectory-error, repeatability or autonomous mission-success measurement is available.
 
 
 ### Subsystem engineering views

@@ -12,7 +12,7 @@ i-MSHA is an active full-stack product programme built around a difficult data p
 
 It is therefore not just an “MSHA chatbot” or a dashboard wrapper. The system connects **mine/controller identity, violations, penalties, inspections, injury/safety, legal outcomes, occupational exposure, contractor history and acquisition due diligence** so a user can move from portfolio-level questions to a specific mine, enforcement issue or risk history without rebuilding the data relationship manually.
 
-**Ownership:** independent product development; not a CAE/NUST institutional deliverable. The numerical snapshot is a historical development record, not a current test rerun. [Source and measurement boundaries](../../evidence/claim-sources.md).
+**Ownership:** independent product development; not a CAE/NUST institutional deliverable. The numerical snapshot is a historical development record, not a current test rerun. [Dated development source](../../evidence/compliance_regtech/i_msha/README.md) · [Source and measurement boundaries](../../evidence/claim-sources.md).
 
 ## System scale
 

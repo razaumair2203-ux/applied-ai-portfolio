@@ -14,6 +14,8 @@ My current work also includes an **independent and growing practical-agentic pro
 
 ## Applied AI evidence by domain
 
+Metrics are scoped to their linked project snapshots. Historical throughput lacks retained raw timing logs; private product/test counts are reported snapshots, not tests rerun for this profile. [Claim sources and limitations](../evidence/claim-sources.md).
+
 ### Autonomous, embedded and edge AI
 
 #### TIR-FOD / Clear Run
@@ -108,9 +110,9 @@ These are independent product-building efforts, separate from NUST/CAE employmen
 ## Current engineering / R&D leadership
 
 ### Officer In Charge Projects / R&D & Systems Engineering Lead  
-**Institutional assignments across NUTECH and the College of Aeronautical Engineering, NUST · 2023–present**
+**Current: College of Aeronautical Engineering, NUST. Earlier NUTECH assignments form part of the wider academic/engineering record.**
 
-Current appointment: Officer In Charge Projects at CAE/NUST. This period groups successive institutional assignments; it does not mean the current CAE appointment began in 2023. [Claim sources and ownership](../evidence/claim-sources.md).
+The scale figures in this section are owner-reported career evidence, not independently audited programme metrics. [Sources and scope](../evidence/claim-sources.md).
 
 - Leads governance and engineering delivery across a **100+ project** portfolio covering avionics, radar/RF, communications, embedded systems, sensing, UAV/autonomy and AI.
 - Has supervised **60+ advanced engineering projects** and teaches Systems Engineering, Project Management and Avionics System Design.
@@ -214,4 +216,4 @@ Current appointment: Officer In Charge Projects at CAE/NUST. This period groups 
 
 ---
 
-This public profile summarizes verified career and project evidence. It intentionally omits private contact details, internal evidence identifiers and restricted programme details. Project-specific ownership and maturity boundaries remain authoritative in the linked case studies.
+This public profile combines published project evidence and approved owner-reported career statements. It intentionally omits private contact details, internal evidence identifiers and restricted programme details. Project-specific ownership and maturity boundaries remain authoritative in the linked case studies.

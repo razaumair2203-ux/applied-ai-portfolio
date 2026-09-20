@@ -18,6 +18,8 @@ The 34-query metric asks whether an accepted authority/citation marker appears w
 
 ## Run the public checks
 
+Run from the repository root. The smoke, reliability and structured-output checks use the Python standard library. For the two database checks, install the [fixture requirements](fixture/requirements.txt) and follow the [PostgreSQL/pgvector setup](fixture/README.md).
+
 ```bash
 python -m evidence.compliance_regtech.lodestar.public_smoke_test
 python -m evidence.compliance_regtech.lodestar.reliability_regression

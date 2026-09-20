@@ -2,6 +2,8 @@
 
 ATLAS is a **22-node GPU/HPC research-computing environment** supporting AI, simulation and reproducible engineering workflows.
 
+The node count and leadership scope are owner-reported institutional records. They are not an independently audited infrastructure inventory. [Claim sources](../../evidence/claim-sources.md).
+
 ## Current engineering scope
 
 | Dimension | Evidence-backed state |
