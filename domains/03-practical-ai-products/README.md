@@ -4,7 +4,7 @@ This domain contains **independent AI products and agentic utilities for recurri
 
 ## Project families
 
-- **[JobLooper / JobPilot](joblooper-jobpilot.md)** — governed job-search/application workflow with approved career truth, exact JD capture, AI-assisted tailoring, deterministic document build and outcome learning.
+- **[JobLooper](joblooper-jobpilot.md)** — governed job-search/application workflow with approved career truth, exact JD capture, AI-assisted tailoring, deterministic document build and outcome learning.
 - **[BuildSignal AI](buildsignal-ai.md)** — governed research-to-publication operations across source capture, content/media state, QA, rights, review and owner-controlled release.
 - **[Adversarial Review Lite](adversarial-review-lite.md)** — practical cross-model review tools for everyday AI-assisted coding: independent builder/reviewer roles, mutation checks, structured findings and explicit human approval.
 

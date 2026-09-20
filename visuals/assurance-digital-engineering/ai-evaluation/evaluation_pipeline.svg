@@ -31,5 +31,5 @@
 <text x="850" y="372" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#0f172a">Human release gate</text>
 <text x="850" y="410" font-family="Arial,sans-serif" font-size="17" fill="#334155">review evidence + failure cases</text>
 <text x="850" y="442" font-family="Arial,sans-serif" font-size="17" fill="#334155">approve, revise, or reject</text>
-<text x="60" y="545" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#0f172a">Key signal: the retained safeguard blocked one candidate change because measured improvement was not statistically significant.</text>
+<text x="60" y="545" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#0f172a">One candidate was blocked: improvement did not clear the statistical safeguard.</text>
 </svg>

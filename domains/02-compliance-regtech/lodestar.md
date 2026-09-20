@@ -64,11 +64,11 @@ Retrieval success and downstream assessment behaviour are measured separately. T
 ## Run the public checks
 
 ```bash
-python -m evidence.lodestar.public_smoke_test
-python -m evidence.lodestar.reliability_regression
-python -m evidence.lodestar.fixture.postgres_fixture_test
-python -m evidence.lodestar.fixture.authority_ablation
-python -m evidence.lodestar.assessment_eval.run_eval
+python -m evidence.compliance_regtech.lodestar.public_smoke_test
+python -m evidence.compliance_regtech.lodestar.reliability_regression
+python -m evidence.compliance_regtech.lodestar.fixture.postgres_fixture_test
+python -m evidence.compliance_regtech.lodestar.fixture.authority_ablation
+python -m evidence.compliance_regtech.lodestar.assessment_eval.run_eval
 ```
 
 ## Published implementation slice

@@ -34,7 +34,7 @@ The public source intentionally keeps the Dynon SkyView prototype, Garmin G900X/
 
 ## Downstream programme scale
 
-The wider aircraft programme later achieved a documented foreign customer/service footprint across **at least eight countries**. The source repository also records publicly estimable aircraft value above **US$114 million for the Nigeria and Türkiye deals alone**. Those figures are included to show downstream programme scale; they are **not** presented as a claim that one engineer or the prototype team solely caused later export sales.
+Public reporting records four later customer contracts totalling **80 aircraft** (Qatar 8, Nigeria 10, Türkiye 52 and Azerbaijan 10). See the [dated public sources](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/blob/main/docs/public-operator-evidence.md). This is later product-line context, not the number of aircraft I personally modified or evidence of individual sales causation.
 
 ## Evidence-linked model
 

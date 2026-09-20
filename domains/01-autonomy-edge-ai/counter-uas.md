@@ -36,6 +36,14 @@ The archived project evidence includes:
 
 The engineering value is the **prototype-to-experiment transition**: model development, physical sensing hardware, camera/mount integration, tracking control and real indoor/outdoor trial conditions were brought together under one Phase-I programme. The retained project record shows **manual human-in-loop tracking, centroid-driven automatic single-target tracking, multi-target tracking using a swarm centroid, pan-tilt actuation, and Kalman-filter reduction of centroid jitter**. Experimental-results material records successful single- and multi-target tracking. It is not represented as an operational counter-drone weapon or fielded C-UAS product.
 
+## AI contribution, evaluation and limits
+
+YOLO provides learned visual detection. Centroid selection, pan-tilt commands and Kalman smoothing form the downstream tracking/control layer; they are not separate evidence of learned autonomy. Retained indoor/outdoor frames and training curves show prototype activity under the recorded trial conditions.
+
+The public record does not provide an independently reproducible checkpoint, complete labelled test predictions, angular tracking-error distribution, range envelope or trial denominator. The training-image and test-set counts are archive-reported quantities, not field accuracy. There is no operational engagement or neutralisation claim. [Source record and access](../../evidence/claim-sources.md).
+
+**Role relevance:** PI-level experiment framing and integration oversight for team-developed perception hardware, with physical trial evidence and bounded performance claims.
+
 ## Contribution boundary
 
 - **Direct responsibility:** Principal Investigator / research direction, experiment framing and systems-integration oversight.

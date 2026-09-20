@@ -440,8 +440,8 @@ def check_portfolio_guardrails() -> None:
     # not a third autonomy flagship.
     assert "**Flagships:** Clear Run / TIR-FOD · Counter-UAS" in root
     assert (
-        "**Flagships:** AI Systems Assurance / MBSE · Evaluation-driven AI workflows · "
-        "ATLAS GPU/HPC · Super Mushshak digital engineering"
+        "**Engineering foundation and assurance:** Super Mushshak · AI Systems Assurance / MBSE · "
+        "Evaluation workflows · ATLAS GPU/HPC"
     ) in root
     assert "### AI Systems Assurance / MBSE — Clear Run" in root
 
@@ -550,8 +550,24 @@ def check_portfolio_guardrails() -> None:
         assert marker in root, marker
 
 
+def check_visual_manifest_and_svg() -> None:
+    """Validate actual publication bytes and SVG syntax, not just file presence."""
+    import hashlib
+    import xml.etree.ElementTree as ET
+    manifest = json.loads((ROOT / "visuals/provenance.json").read_text())
+    for item in manifest["assets"]:
+        path = ROOT / item["path"]
+        assert path.is_file(), item["path"]
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == item["sha256"], item["path"]
+    for path in (ROOT / "visuals").rglob("*.svg"):
+        ET.parse(path)
+    for path in ROOT.rglob("*.md"):
+        assert "python -m evidence.lodestar." not in path.read_text(), str(path)
+
+
 def main() -> None:
     checks = [
+        check_visual_manifest_and_svg,
         check_internal_markdown_links,
         check_internal_html_refs,
         check_json_files,

@@ -6,7 +6,7 @@
 <text x="60" y="108" font-family="Arial,sans-serif" font-size="18" fill="#475569">Frozen formatter/parser methods · 49-character message boundary · constructed software cases, not flight incidents</text>
 <rect x="60" y="150" width="1080" height="92" rx="18" fill="#e2e8f0"/>
 <text x="90" y="188" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#0f172a">Aerial formatter</text>
-<text x="275" y="188" font-family="monospace" font-size="17" fill="#334155">lat/lon (5 decimals) + optional event/count → message[:49]</text>
+<text x="90" y="218" font-family="monospace" font-size="15" fill="#334155">lat/lon + event/count → message[:49]</text>
 <path d="M535 218 L665 218" stroke="#64748b" stroke-width="5"/><polygon points="665,218 645,206 645,230" fill="#64748b"/>
 <text x="710" y="188" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#0f172a">GCS parser</text>
 <text x="710" y="218" font-family="Arial,sans-serif" font-size="16" fill="#475569">numeric parse / fallback behaviour</text>

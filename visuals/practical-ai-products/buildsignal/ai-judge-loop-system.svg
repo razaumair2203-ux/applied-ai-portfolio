@@ -11,8 +11,8 @@
   </defs>
   <rect class="bg" width="100%" height="100%"/>
   <rect class="panel" x="32" y="32" width="1216" height="696" rx="8"/>
-  <text x="88" y="92" class="title">AI can judge AI. It cannot be the whole court.</text>
-  <text x="88" y="128" class="sub">Use the judge for scale. Use external anchors so the loop does not start grading its own homework in a blazer.</text>
+  <text x="88" y="92" class="title">AI review with independent checks</text>
+  <text x="88" y="128" class="sub">Human review, tests and references check model judgments.</text>
 
   <rect class="box" x="90" y="235" width="230" height="106" rx="8"/>
   <text x="118" y="277" class="label">Model output</text>
@@ -29,7 +29,7 @@
 
   <rect class="risk" x="476" y="474" width="328" height="100" rx="8"/>
   <text x="506" y="515" class="label">Goodhart zone</text>
-  <text x="506" y="548" class="small">Score goes up. Truth takes the stairs.</text>
+  <text x="506" y="548" class="small">Score can rise without truth.</text>
 
   <path class="arrow" d="M320 288 H400"/>
   <path class="arrow" d="M646 288 H732"/>

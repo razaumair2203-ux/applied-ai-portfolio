@@ -1,0 +1,317 @@
+{
+  "schema": "portfolio-visuals.v1",
+  "assets": [
+    {
+      "path": "visuals/assurance-digital-engineering/adversarial-review/audit-report-preview.jpg",
+      "sha256": "ab0eceff8ef62f753c5886419aae895050ee7eedf1176c246220fa25d4b8efed",
+      "classification": "workflow explainer illustration",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Not an actual completed audit report or execution screenshot."
+    },
+    {
+      "path": "visuals/assurance-digital-engineering/adversarial-review/audit_report_anatomy.svg",
+      "sha256": "704c293217b0213b13fd00ecef67392454868f5138933240b28836a833807950",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/assurance-digital-engineering/ai-evaluation/evaluation_pipeline.svg",
+      "sha256": "ab3c7b0ce70f8e2f1f095a0e32819ef9ba089a574657e5bdad09495e26f4f407",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg",
+      "sha256": "802a0b967662ed9b3aa9a14140e44b648a12b00b355ad38d90e16ee3c9c77c52",
+      "classification": "original photograph or recorded output",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Only visible hardware/UI/output is established; numerical and ownership claims require linked records."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/clear-run/aerial_unit_architecture.svg",
+      "sha256": "3e7e8988b8b5b972d3b81d70aeb3411a547947cde7ae1fd56d21f9f2d524b9ac",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp",
+      "sha256": "cc710ae9ab9c3cbd012e4ac41540960d18f3c4349e11695ed9c78867091fe8f5",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png",
+      "sha256": "23b6f2e9c84b04fcb38fc9137ab90471f13031f31357feaabebbfc4920edc060",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/clear-run/gcs_architecture.svg",
+      "sha256": "c75026978d5af8c27639ad6d991c1a9d5656673e177fe5db164f2613d70eb4a7",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/clear-run/gcs_integration.png",
+      "sha256": "321b5583b519c5783b6d0d00ce0fe7c89bdc49f29adb7665026e64a588288bc7",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/clear-run/overview.png",
+      "sha256": "6294d9cf82b96be84c764830583051f79914b9e30cfb8dcabbfd5a0d8e17b515",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/clear-run/retrieval_development.png",
+      "sha256": "ca33604e7085e669fcc8128685089576c59b229ed4672dd45db83ca613612c24",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/clear-run/system_architecture.svg",
+      "sha256": "15e4924477afa57d3e0893d6562ac0e5ff75e8d47d78ea0727ec41dbcda9f846",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/clear-run/ugv_architecture.svg",
+      "sha256": "475aea6083059d6a8696f414913b99e52ea32f026e23d804457141e4d370d03f",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/clear-run/video_thumbnail.png",
+      "sha256": "289b9cccfc92e522563a01cec33d70f2352e68a8c8b61f62cbf59289e812eb2c",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/counter-uas/framework_evolution.svg",
+      "sha256": "3723f4c9b596d374796d83d6183df3aad9367e73311d089776aa4246f1f61875",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/counter-uas/indoor_detection.png",
+      "sha256": "12c53e7ec5f047f7585052661ecd2e8ec91d6f3973f9777b1affa82d8f1b101d",
+      "classification": "original photograph or recorded output",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Only visible hardware/UI/output is established; numerical and ownership claims require linked records."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/counter-uas/outdoor_detection.png",
+      "sha256": "0c0c229c0272c106ca0157230e740b7484c32e8cbd1d38692815efb975be3091",
+      "classification": "original photograph or recorded output",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Only visible hardware/UI/output is established; numerical and ownership claims require linked records."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg",
+      "sha256": "b49847ea9f638378f11dee51f85f610e91003820316e7ab81255da7aaf27d883",
+      "classification": "original photograph or recorded output",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Only visible hardware/UI/output is established; numerical and ownership claims require linked records."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/counter-uas/phase1_video_mount.jpg",
+      "sha256": "2970592717c2877952e7b23f00e937f2e1cb5297f56258a858eac944b2198d0b",
+      "classification": "original photograph or recorded output",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Only visible hardware/UI/output is established; numerical and ownership claims require linked records."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/counter-uas/training_curves.png",
+      "sha256": "74b0c3ccd92c9e7af8b59c7a90b75fc14090b209d796d2636ef13488b3a77c40",
+      "classification": "recorded research plot",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Interpret with experiment protocol and retained numerical record."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/mbse/clear_run_system_architecture.svg",
+      "sha256": "ac634a9ddec44e5a6a4f3f3cb6447c5a3c4ff85fc6a59c24df5eb81ba41f8a11",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/mbse/telemetry_replay.svg",
+      "sha256": "8f88a5ce1d2eb07c699c6c7b646501fb3f7f9dece41a8fce281e90c133127075",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/tir-fod/airborne_platform.png",
+      "sha256": "fa97e12c7ed542d337949781c538b8459df9e398210ee8b19b2116733d6f5eba",
+      "classification": "original photograph or recorded output",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Only visible hardware/UI/output is established; numerical and ownership claims require linked records."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/tir-fod/camera_mount.png",
+      "sha256": "3cf617a28e6c1da2ebc94268bd555f8f34f3824980cb09e5ae5677da2ccbb28b",
+      "classification": "CAD design view",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Design evidence, not a photograph of fabricated hardware."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/tir-fod/capture_sessions.png",
+      "sha256": "67d0dcec3bafffbfc2a67318354992ee34fef64703fe77b65e79ca1dd5f1be35",
+      "classification": "recorded research plot",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Interpret with experiment protocol and retained numerical record."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/tir-fod/cover.png",
+      "sha256": "b0cba20cdc8b2acafc701b0080927ef78a7f1bae8327d55a6b868f91c302d1af",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/tir-fod/graphical_abstract.png",
+      "sha256": "9c3955ca22eac284909e8ad146ddb2c6ad20f311d3d497080c7ec3e087426eff",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/tir-fod/jetson_mounted.png",
+      "sha256": "668bbdd96187e64b1d7e810f173dc8e7ce5046cefdc2eb70255da8aaa593b4df",
+      "classification": "original photograph or recorded output",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Only visible hardware/UI/output is established; numerical and ownership claims require linked records."
+    },
+    {
+      "path": "visuals/autonomy-edge-ai/tir-fod/jetson_runtime.png",
+      "sha256": "97a49b230831a9fb061b1ff1ade1f8845bb826047bd5211b8753c72107ccd75b",
+      "classification": "original photograph or recorded output",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Only visible hardware/UI/output is established; numerical and ownership claims require linked records."
+    },
+    {
+      "path": "visuals/compliance-regtech/i-msha/dashboard-regression.png",
+      "sha256": "bf61d7cba515f6d39e6927f016ba0b6112c8d49216a5e14d506fa1ccfe39b7f2",
+      "classification": "original photograph or recorded output",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Only visible hardware/UI/output is established; numerical and ownership claims require linked records."
+    },
+    {
+      "path": "visuals/compliance-regtech/i-msha/logo-wordmark.svg",
+      "sha256": "84f15c51c2212e5200bb3949dbd6b06bdef80724967d0fc20124797e96c5cf38",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/compliance-regtech/lodestar/architecture.svg",
+      "sha256": "dc5b0d61f2d568f31e148873f9870f1749414e914de3c6b063324a1cbf6fa7a2",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/compliance-regtech/lodestar/execution-trace.svg",
+      "sha256": "c294990296fd12f34317457cf7cf53a27588c0b9bce940f3677553ad39b4a0cb",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/compliance-regtech/lodestar/product-surface.svg",
+      "sha256": "9a959991943cceea3bcf59c841a93326a3fe8782abfb3a9d4ae633bb723777c5",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/practical-ai-products/buildsignal/admin-surface.svg",
+      "sha256": "8b963e33aea834cc83bbb7d1018ea1c751112a4b91435f07e13f3c2896a4264e",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/practical-ai-products/buildsignal/ai-judge-loop-system.svg",
+      "sha256": "2ec18ed78b909093e03a92fba29a517cf9d8459db29fa2e160be13a98bd85365",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/practical-ai-products/joblooper/app-icon.svg",
+      "sha256": "c68adbb379bd952f2270f83c4e28990b8f4d0c83b3c879396180292dc024d14c",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/practical-ai-products/joblooper/dashboard-surface.svg",
+      "sha256": "71c27d31445c95b00da9e750393498be3876f02e222642621064d18cb7d9c393",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    },
+    {
+      "path": "visuals/practical-ai-products/joblooper/workflow.svg",
+      "sha256": "1b3af4c4e7d99268a8966a5ffe1cbf44662d08e40e179a5f58d246e8888bf27c",
+      "classification": "source-derived diagram or presentation graphic",
+      "source_locator": "Existing public portfolio asset at ed291042ee7939030fbcc024fa71205b40753fdf; related case and sources identify owning project.",
+      "review": "Visual inspection 20 September 2026",
+      "boundary": "Describes architecture/workflow; does not prove execution or deployment."
+    }
+  ]
+}

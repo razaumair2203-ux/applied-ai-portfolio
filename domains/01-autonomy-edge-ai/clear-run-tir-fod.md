@@ -23,6 +23,14 @@ Clear Run is an **airfield robotics programme**, not a standalone object detecto
 
 **Public dataset:** [TIR-FOD v1.2 — DOI 10.5281/zenodo.22546586](https://doi.org/10.5281/zenodo.22546586) · **Reproducibility:** [29-run result bundle](../../evidence/autonomy_edge_ai/tir_fod/reproducibility/README.md) · **Deployment code:** [sanitized Clear Run detector extract](../../evidence/autonomy_edge_ai/clear_run/README.md)
 
+## AI contribution and engineering choices
+
+The learned component is RGB/LWIR object detection. TensorRT FP16 provides the edge inference path; SAHI supports small-object processing at a cost in compute. Geolocation, message exchange, mission state and ROS2/Nav2/SLAM integration are separate software and robotics responsibilities. Detector confidence alone cannot establish coordinate accuracy or successful recovery.
+
+The ground stack retains ROS1/rosserial for the motor interface while ROS2 supplies Nav2 and SLAM Toolbox. This preserves the existing hardware interface but adds bridge, timing and frame-consistency verification obligations. Wheel/IMU odometry and LiDAR mapping require measured drift, repeatability and intervention tests. Source implementation is recorded in the [claim sources](../../evidence/claim-sources.md); mapping accuracy and unattended navigation are not established by code inspection.
+
+**Role relevance:** technical leadership across perception, embedded deployment and system verification, with team-delivered hardware/software and explicit mission acceptance criteria.
+
 ## 1. TIR-FOD — dataset and controlled model evaluation
 
 [![TIR-FOD graphical abstract — data, evaluation finding and flight deployment](../../visuals/autonomy-edge-ai/tir-fod/graphical_abstract.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
@@ -57,10 +65,10 @@ The workflow includes configuration-driven resumable experiment queues, determin
 </p>
 
 <p align="center">
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/tir-fod/camera_mount.png" alt="Physical camera payload mount used by the UAV programme" width="58%"></a>
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/tir-fod/camera_mount.png" alt="CAD view of the camera payload mount design" width="58%"></a>
 </p>
 
-*Authentic programme hardware: complete UAV, installed Jetson compute and camera payload integration. These images are retained from the project evidence set; they are not stock or generated illustrations.*
+*Original programme photographs show the UAV and installed Jetson compute. The camera-mount image is a CAD design view; it does not establish fabrication or installation by itself.*
 
 The thermal detector was deployed on **Jetson Orin Nano** with a thermal payload and GNSS/Pixhawk flight stack and exercised through repeated runway UAV trials.
 
@@ -142,7 +150,7 @@ The machine-readable [`mission_verification_matrix.json`](../../evidence/autonom
 
 - **Direct responsibility:** applied-R&D / systems-engineering leadership; technical direction; architecture and interface definition; experiment design; model/evaluation strategy; deployment review; KPI definition; integration and V&V gates; multidisciplinary team leadership; publication development.
 - **Team-developed work:** UAV/airframe integration, GCS/UGV/ROS implementation, field execution and mechanical recovery are multidisciplinary outputs and are not represented as sole authorship.
-- **Robotics contribution boundary:** ROS2/Nav2/SLAM are demonstrated programme/integration experience under technical leadership; the portfolio does not claim original SLAM/Nav2 algorithm authorship or sole coding of the UGV stack.
+- **Robotics contribution boundary:** ROS2/Nav2/SLAM are documented implementation and ongoing integration work under technical leadership; the portfolio does not claim original SLAM/Nav2 algorithm authorship or sole coding of the UGV stack.
 - **Transition path:** the programme is progressing toward national-scale field trials, followed by a planned patent filing after field-trial maturation. National deployment/adoption and patent filing/pending/grant are not yet claimed.
 - **Evidence rule:** model, field and mission claims are accepted only at the boundary actually measured; open end-to-end retrieval gates remain open until verified.
 

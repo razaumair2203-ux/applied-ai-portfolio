@@ -108,7 +108,9 @@ These are independent product-building efforts, separate from NUST/CAE employmen
 ## Current engineering / R&D leadership
 
 ### Officer In Charge Projects / R&D & Systems Engineering Lead  
-**College of Aeronautical Engineering, NUST / NUTECH assignments · 2023–present**
+**Institutional assignments across NUTECH and the College of Aeronautical Engineering, NUST · 2023–present**
+
+Current appointment: Officer In Charge Projects at CAE/NUST. This period groups successive institutional assignments; it does not mean the current CAE appointment began in 2023. [Claim sources and ownership](../evidence/claim-sources.md).
 
 - Leads governance and engineering delivery across a **100+ project** portfolio covering avionics, radar/RF, communications, embedded systems, sensing, UAV/autonomy and AI.
 - Has supervised **60+ advanced engineering projects** and teaches Systems Engineering, Project Management and Avionics System Design.

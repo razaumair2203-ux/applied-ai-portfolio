@@ -2,7 +2,7 @@
 <title id="t">Lodestar public execution and evaluation trace</title>
 <desc id="d">A real public evaluation trace showing retrieval regression and a hallucinated citation being filtered into a refusal.</desc>
 <rect width="1200" height="650" fill="#f8fafc"/>
-<text x="60" y="70" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#0f172a">Lodestar — execution evidence, not a mock UI</text>
+<text x="60" y="70" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#0f172a">Lodestar — retrieval result and output-control fixture</text>
 <text x="60" y="108" font-family="Arial,sans-serif" font-size="18" fill="#475569">Published regression fixtures + adversarial structured-output case</text>
 
 <rect x="60" y="150" width="510" height="420" rx="24" fill="#ffffff" stroke="#cbd5e1"/>
@@ -36,7 +36,7 @@
 <rect x="660" y="395" width="440" height="110" rx="18" fill="#f1f5f9" stroke="#cbd5e1"/>
 <text x="690" y="435" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#0f172a">Expected controlled output</text>
 <text x="690" y="470" font-family="Arial,sans-serif" font-size="18" fill="#334155">status = unsupported · citations = [] · refusal = true</text>
-<text x="690" y="535" font-family="Arial,sans-serif" font-size="14" fill="#64748b">Fixture asserts the model cannot promote fabricated evidence into authority</text>
+<text x="690" y="535" font-family="Arial,sans-serif" font-size="14" fill="#64748b">Fixture rejects fabricated citation authority</text>
 
-<text x="60" y="615" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#0f172a">Public evidence sources: grounding-eval.md · assessment_eval/evaluation_cases.json · executable guardrail tests</text>
+<text x="60" y="615" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#0f172a">Sources: grounding-eval.md and assessment_eval/evaluation_cases.json</text>
 </svg>

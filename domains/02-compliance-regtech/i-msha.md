@@ -12,9 +12,11 @@ i-MSHA is an active full-stack product programme built around a difficult data p
 
 It is therefore not just an “MSHA chatbot” or a dashboard wrapper. The system connects **mine/controller identity, violations, penalties, inspections, injury/safety, legal outcomes, occupational exposure, contractor history and acquisition due diligence** so a user can move from portfolio-level questions to a specific mine, enforcement issue or risk history without rebuilding the data relationship manually.
 
+**Ownership:** independent product development; not a CAE/NUST institutional deliverable. The numerical snapshot is a historical development record, not a current test rerun. [Source and measurement boundaries](../../evidence/claim-sources.md).
+
 ## System scale
 
-| Dimension | Current project state |
+| Dimension | Retained 20 May 2026 project state |
 |---|---|
 | Product scale | **8 active modules · 25 frontend features · 100 backend handlers** |
 | Analytical scope | national · state · mine/controller · peer/comparison · date/commodity filtering |
@@ -41,6 +43,14 @@ The active module set covers:
 - **Contractor Intelligence** — consolidated contractor safety/enforcement analysis.
 
 Cross-cutting tools include **mine comparison, Weekly Pulse intelligence, export/download workflows, entity search, tier controls and drill-down navigation**.
+
+## Engineering choices and limitations
+
+PostgreSQL holds application state while DuckDB queries typed Parquet analytical data. Deterministic handlers separate numerical/regulatory data operations from the language-model interface. Context-first routing prevents a definition question from being mistaken for a request for mine-specific statistics.
+
+The dated test totals establish development checks reported in the project log. They do not establish regulatory correctness, coverage of all workflows or current passing status. The latency comparison sums multiple surfaces; it is not one request latency or a production SLA. Occupational-exposure review and production deployment remained open in that record.
+
+**Role relevance:** independent product direction and architecture for structured data, bounded AI assistance and validation across a substantial application.
 
 ## Product differentiation
 
