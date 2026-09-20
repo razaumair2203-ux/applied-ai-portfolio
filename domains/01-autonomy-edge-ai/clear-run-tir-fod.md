@@ -57,10 +57,10 @@ The workflow includes configuration-driven resumable experiment queues, determin
 </p>
 
 <p align="center">
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/tir-fod/camera_mount.png" alt="Physical camera payload mount used by the UAV programme" width="58%"></a>
+  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/tir-fod/camera_mount.png" alt="CAD view of the camera payload mount design" width="58%"></a>
 </p>
 
-*Authentic programme hardware: complete UAV, installed Jetson compute and camera payload integration. These images are retained from the project evidence set; they are not stock or generated illustrations.*
+*Original project evidence: photographs of the UAV and installed Jetson compute; the separate camera-mount image is a CAD design view, not a photograph of a fabricated mount.*
 
 The thermal detector was deployed on **Jetson Orin Nano** with a thermal payload and GNSS/Pixhawk flight stack and exercised through repeated runway UAV trials.
 
@@ -93,7 +93,7 @@ The aggregate, non-location-sensitive snapshot is published as [`field_trial_sna
   <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/retrieval_development.png" alt="Clear Run ground vehicle and retrieval development" width="49%"></a>
 </p>
 
-The GCS consolidates aerial telemetry, detection review, target prioritisation and ground-agent dispatch. The UGV is a **hybrid ROS1/ROS2 Mecanum platform**: legacy ROS1/rosserial supports the Nexus/Arduino motor-side interface, while ROS2 handles wheel/IMU odometry, RPLidar SLAM Toolbox, Nav2 goal execution, omnidirectional DWB planning/costmaps and the interface into terminal visual alignment. The retrieval mechanism remains under fabrication/integration and quantitative mission closure.
+The GCS consolidates aerial telemetry, detection review, target prioritisation and ground-agent dispatch. The UGV is a **hybrid ROS1/ROS2 Mecanum platform**: legacy ROS1/rosserial supports the Nexus/Arduino motor-side interface, while ROS2 handles wheel/IMU odometry, RPLidar SLAM Toolbox, Nav2 goal execution, omnidirectional DWB planning/costmaps and the interface into terminal visual alignment. The retrieval mechanism remains under fabrication/integration and quantitative mission closure. The recovered navigation implementation record supports this stack description, but no public SLAM trajectory-error, repeatability or autonomous mission-success measurement is available. See [source and maturity boundaries](../../evidence/claim-sources.md).
 
 
 ### Subsystem engineering views
@@ -142,7 +142,7 @@ The machine-readable [`mission_verification_matrix.json`](../../evidence/autonom
 
 - **Direct responsibility:** applied-R&D / systems-engineering leadership; technical direction; architecture and interface definition; experiment design; model/evaluation strategy; deployment review; KPI definition; integration and V&V gates; multidisciplinary team leadership; publication development.
 - **Team-developed work:** UAV/airframe integration, GCS/UGV/ROS implementation, field execution and mechanical recovery are multidisciplinary outputs and are not represented as sole authorship.
-- **Robotics contribution boundary:** ROS2/Nav2/SLAM are demonstrated programme/integration experience under technical leadership; the portfolio does not claim original SLAM/Nav2 algorithm authorship or sole coding of the UGV stack.
+- **Robotics contribution boundary:** ROS2/Nav2/SLAM are reported ongoing implementation and integration work under technical leadership; the portfolio does not claim original SLAM/Nav2 algorithm authorship or sole coding of the UGV stack.
 - **Transition path:** the programme is progressing toward national-scale field trials, followed by a planned patent filing after field-trial maturation. National deployment/adoption and patent filing/pending/grant are not yet claimed.
 - **Evidence rule:** model, field and mission claims are accepted only at the boundary actually measured; open end-to-end retrieval gates remain open until verified.
 

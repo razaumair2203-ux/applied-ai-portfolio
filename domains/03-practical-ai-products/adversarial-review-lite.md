@@ -8,14 +8,14 @@ The two public repositories turn an informal â€œask another model to look at itâ
 
 The system freezes review scope, carries relevant tests/fixtures/rubrics into the review contract, snapshots repository state, dispatches an independent reviewer, validates reviewer output, re-checks each finding instead of obeying it blindly, and presents a report **before** any fix is allowed. It is aimed at changes where hallucinated APIs, weak tests, auth/billing mistakes, migrations or multi-file scope drift can create real engineering cost.
 
-![Adversarial-review report preview](../../visuals/assurance-digital-engineering/adversarial-review/audit-report-preview.jpg)
+![Adversarial-review workflow explainer](../../visuals/assurance-digital-engineering/adversarial-review/audit-report-preview.jpg)
 
-*Original report preview from the public Codex Adversarial Review Lite project.*
+*Promotional workflow explainer from the public Codex Adversarial Review Lite project. It illustrates the control flow; it is not a captured audit report or evidence that a review passed.*
 
 ## Control flow
 
 ```mermaid
-flowchart LR
+flowchart TD
     A[Builder model] --> B[Plan / code / test contract]
     B --> C[Independent reviewer model]
     C --> D[Structured findings]

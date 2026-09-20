@@ -19,7 +19,7 @@ This directory contains original project media, recorded UI/test evidence, offic
 ### TIR-FOD
 - [airborne platform](autonomy-edge-ai/tir-fod/airborne_platform.png)
 - [Jetson installation](autonomy-edge-ai/tir-fod/jetson_mounted.png)
-- [camera mount](autonomy-edge-ai/tir-fod/camera_mount.png)
+- [camera-mount CAD view](autonomy-edge-ai/tir-fod/camera_mount.png)
 - [capture sessions](autonomy-edge-ai/tir-fod/capture_sessions.png)
 - [Jetson runtime](autonomy-edge-ai/tir-fod/jetson_runtime.png)
 - [graphical abstract](autonomy-edge-ai/tir-fod/graphical_abstract.png)
@@ -56,7 +56,7 @@ This directory contains original project media, recorded UI/test evidence, offic
 - [AI judge-loop system](practical-ai-products/buildsignal/ai-judge-loop-system.svg)
 
 ### Adversarial Review Lite
-- [original report preview](assurance-digital-engineering/adversarial-review/audit-report-preview.jpg)
+- [workflow explainer, not an executed audit report](assurance-digital-engineering/adversarial-review/audit-report-preview.jpg)
 - [report anatomy](assurance-digital-engineering/adversarial-review/audit_report_anatomy.svg)
 
 ## AI assurance and digital engineering

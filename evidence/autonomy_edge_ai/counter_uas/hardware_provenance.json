@@ -6,14 +6,15 @@
       3715,
       2477
     ],
-    "output": "assets/phase1_original_mount_web.jpg",
+    "output": "visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg",
     "output_sha256": "b49847ea9f638378f11dee51f85f610e91003820316e7ab81255da7aaf27d883",
     "output_dimensions": [
       1600,
       1067
     ],
     "transformation": "EXIF orientation correction; proportional resize to max 1600x1200; JPEG quality 88; contrast 1.04x; sharpness 1.08x; no semantic alteration",
-    "description": "Constructed Phase I laser-camera mount"
+    "description": "Constructed Phase I laser-camera mount",
+    "source_archive_output": "assets/phase1_original_mount_web.jpg"
   },
   {
     "source": "assets/phase1_video_mount_0034.png",
@@ -22,13 +23,14 @@
       1920,
       1080
     ],
-    "output": "assets/phase1_video_mount_0034_web.jpg",
+    "output": "visuals/autonomy-edge-ai/counter-uas/phase1_video_mount.jpg",
     "output_sha256": "2970592717c2877952e7b23f00e937f2e1cb5297f56258a858eac944b2198d0b",
     "output_dimensions": [
       1600,
       900
     ],
     "transformation": "EXIF orientation correction; proportional resize to max 1600x1200; JPEG quality 88; contrast 1.04x; sharpness 1.08x; no semantic alteration",
-    "description": "Constructed Phase I mount shown in the original trial video at 00:34"
+    "description": "Constructed Phase I mount shown in the original trial video at 00:34",
+    "source_archive_output": "assets/phase1_video_mount_0034_web.jpg"
   }
 ]

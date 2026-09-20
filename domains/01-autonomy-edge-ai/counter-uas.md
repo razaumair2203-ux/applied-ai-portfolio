@@ -36,6 +36,19 @@ The archived project evidence includes:
 
 The engineering value is the **prototype-to-experiment transition**: model development, physical sensing hardware, camera/mount integration, tracking control and real indoor/outdoor trial conditions were brought together under one Phase-I programme. The retained project record shows **manual human-in-loop tracking, centroid-driven automatic single-target tracking, multi-target tracking using a swarm centroid, pan-tilt actuation, and Kalman-filter reduction of centroid jitter**. Experimental-results material records successful single- and multi-target tracking. It is not represented as an operational counter-drone weapon or fielded C-UAS product.
 
+## AI contribution, decisions and limits
+
+The learned component is the YOLO visual detector. Centroid tracking and Kalman filtering are downstream geometric/control processing; the portfolio does not relabel them as additional learned models. This separation makes detector behaviour, tracking stability and physical integration independently reviewable.
+
+| Engineering choice | Evidence and limitation |
+|---|---|
+| Camera-based Phase I | Retained indoor/outdoor imagery and physical mount demonstrate an experimental setup; no operational detection-range or weather envelope is established. |
+| Separate single-target and swarm-centroid modes | Historical experimental material describes both modes. A group centroid is not evidence of maintaining every target identity. |
+| Training curves plus trial images | Useful development evidence, but insufficient for an independently reproducible benchmark without the frozen split, checkpoint and per-condition test records. |
+| Phase I versus later sensor fusion | Visual prototype work is completed at research-demonstrator level. Passive RF/acoustic integration remains a separate research direction. |
+
+**Evaluation gap:** public evidence does not contain audited false-alarm rates, per-class precision/recall, tracking error, latency distributions or trial denominators. Those quantities are not inferred from selected screenshots or model confidence. This case supports PI and systems-integration experience in experimental AI hardware; it does not establish operational counter-drone effectiveness.
+
 ## Contribution boundary
 
 - **Direct responsibility:** Principal Investigator / research direction, experiment framing and systems-integration oversight.

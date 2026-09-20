@@ -7,12 +7,29 @@ Run from repository root:
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 HTML_REF_RE = re.compile(r'(?:href|src)="([^"]+)"')
+
+
+def check_documented_python_modules() -> None:
+    """Every documented local python -m entry point must exist."""
+    for path in ROOT.rglob("*.md"):
+        for module in re.findall(r"python -m (evidence\.[\w.]+)", path.read_text()):
+            target = ROOT.joinpath(*module.split("."))
+            assert target.with_suffix(".py").exists() or (target / "__main__.py").exists(), (path, module)
+
+
+def check_hardware_publication_hashes() -> None:
+    records = json.loads((ROOT / "evidence/autonomy_edge_ai/counter_uas/hardware_provenance.json").read_text())
+    for record in records:
+        path = ROOT / record["output"]
+        assert path.is_file(), record["output"]
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == record["output_sha256"], record["output"]
 
 
 def check_internal_markdown_links() -> None:
@@ -310,8 +327,8 @@ def check_documentation_structure() -> None:
     root = (ROOT / "README.md").read_text(encoding="utf-8")
 
     # Identity, specialization anchors and programme scale must precede deeper evidence.
-    assert root.index("## Four specialization areas") < root.index("## At a glance")
-    assert root.index("## At a glance") < root.index("## 1. Autonomous, Embedded & Edge AI")
+    assert root.index("## Start with three engineering cases") < root.index("## Four specialization areas")
+    assert root.index("## Four specialization areas") < root.index("## 1. Autonomous, Embedded & Edge AI")
     assert "Applied AI & Autonomous Systems Engineering Leader" in root
     assert "Officer In Charge Projects / R&D & Systems Engineering Lead" in root
 
@@ -351,8 +368,6 @@ def check_documentation_structure() -> None:
         "3,499 source frames",
         "12 structured RGB events",
         "209 documents",
-        "100+ project portfolio",
-        "60+ advanced engineering projects",
         "visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp",
         "visuals/compliance-regtech/i-msha/dashboard-regression.png",
         "visuals/compliance-regtech/lodestar/product-surface.svg",
@@ -438,11 +453,9 @@ def check_portfolio_guardrails() -> None:
 
     # Four-area taxonomy is stable; Clear Run MBSE is a cross-cutting Area 4 capability,
     # not a third autonomy flagship.
-    assert "**Flagships:** Clear Run / TIR-FOD · Counter-UAS" in root
-    assert (
-        "**Flagships:** AI Systems Assurance / MBSE · Evaluation-driven AI workflows · "
-        "ATLAS GPU/HPC · Super Mushshak digital engineering"
-    ) in root
+    assert "primary technical foundation" in root
+    assert "independent specialism" in root
+    assert "evidence/claim-sources.md" in root
     assert "### AI Systems Assurance / MBSE — Clear Run" in root
 
     autonomy_index = (ROOT / "domains/01-autonomy-edge-ai/README.md").read_text(encoding="utf-8")
@@ -552,6 +565,8 @@ def check_portfolio_guardrails() -> None:
 
 def main() -> None:
     checks = [
+        check_documented_python_modules,
+        check_hardware_publication_hashes,
         check_internal_markdown_links,
         check_internal_html_refs,
         check_json_files,

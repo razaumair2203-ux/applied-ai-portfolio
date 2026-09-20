@@ -63,12 +63,14 @@ Retrieval success and downstream assessment behaviour are measured separately. T
 
 ## Run the public checks
 
+Run from the repository root. The smoke, reliability and structured-output checks use the Python standard library. For the two database checks, install the [fixture requirements](../../evidence/compliance_regtech/lodestar/fixture/requirements.txt) and follow the [PostgreSQL/pgvector setup](../../evidence/compliance_regtech/lodestar/fixture/README.md).
+
 ```bash
-python -m evidence.lodestar.public_smoke_test
-python -m evidence.lodestar.reliability_regression
-python -m evidence.lodestar.fixture.postgres_fixture_test
-python -m evidence.lodestar.fixture.authority_ablation
-python -m evidence.lodestar.assessment_eval.run_eval
+python -m evidence.compliance_regtech.lodestar.public_smoke_test
+python -m evidence.compliance_regtech.lodestar.reliability_regression
+python -m evidence.compliance_regtech.lodestar.fixture.postgres_fixture_test
+python -m evidence.compliance_regtech.lodestar.fixture.authority_ablation
+python -m evidence.compliance_regtech.lodestar.assessment_eval.run_eval
 ```
 
 ## Published implementation slice
