@@ -4,6 +4,16 @@ The images below are **actual project photographs, recorded experimental outputs
 
 ## Clear Run
 
+The interface view below is a **functional evidence map**, not an as-built equipment illustration. Each arrow is an interface to verify.
+
+```mermaid
+flowchart LR
+  S["Airborne RGB + passive LWIR<br/>Recorded detections"] --> E["Target event / geolocation<br/>Output logged; surveyed accuracy open"]
+  E --> G["Operator GCS review<br/>Interface implemented"]
+  G -. "Task delivery not quantified" .-> R["Ground collection prototype<br/>Mission demonstration reported"]
+  R -. "Retained outcome not independently closed" .-> V["End-to-end verification<br/>Open evidence gate"]
+```
+
 | Earlier TIR-FOD aerial sensing platform | September field-detection outputs |
 |---|---|
 | <img src="../../visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" width="660" alt="Actual airborne research UAV"> | <img src="../../visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png" width="450" alt="Recorded RGB and infrared detections"> |
@@ -13,6 +23,8 @@ The images below are **actual project photographs, recorded experimental outputs
 
 ## Counter-UAS Phase I
 
+[![Source-backed Counter-UAS engineering card](02-counter-uas.svg)](02-counter-uas.svg)
+
 | Built experimental camera mount | Actual outdoor detection |
 |---|---|
 | <img src="../../visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" width="660" alt="Genuine constructed camera and actuator mount"> | <img src="../../visuals/autonomy-edge-ai/counter-uas/outdoor_detection.png" width="660" alt="Recorded outdoor drone detection output"> |
@@ -21,6 +33,8 @@ The images below are **actual project photographs, recorded experimental outputs
 **Engineering result:** Phase-I experimental visual detection and pan/tilt tracking using detector, centroid/Kalman processing and physical trials. No qualified operational detection range, real-world interception claim or completed RF-fusion assertion. [Counter-UAS case](../../domains/01-autonomy-edge-ai/counter-uas.md).
 
 ## Super Mushshak
+
+[![Source-backed glass-cockpit engineering card](03-super-mushshak.svg)](03-super-mushshak.svg)
 
 | Actual installed Dynon cockpit | Actual in-flight cockpit |
 |---|---|
