@@ -6,7 +6,7 @@ Four areas, one thread: AI built into complete, tested systems.
 
 | Project | What it does | Result | Status |
 |---|---|---|---|
-| [Clear Run](01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) | UAV finds runway debris; rover picks it up | **42/45 objects retrieved (93%)** in 30 day/night trials | Journal manuscript complete (Oct 2026) |
+| [Clear Run](01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) | UAV finds runway debris; rover picks it up | **42/45 objects retrieved (93%)** in 30 day/night trials | Journal article finalised for IEEE Access (Oct 2026) |
 | [TIR-FOD](01-autonomy-edge-ai/clear-run-tir-fod.md) | Public thermal dataset for night debris detection | **3,499 frames, 23 classes**; 27/30 night targets found in flight | Dataset public; paper under review |
 | [Counter-UAS Phase I](01-autonomy-edge-ai/counter-uas.md) | Camera-laser mount that detects and tracks drones | **~14,000** training images; indoor/outdoor trials | Completed demonstrator |
 
@@ -22,7 +22,7 @@ Four areas, one thread: AI built into complete, tested systems.
 | Project | What it does | Result | Status |
 |---|---|---|---|
 | [Adversarial Review Lite](03-practical-ai-products/adversarial-review-lite.md) | Second AI model reviews code before fixes | **58** behavioural tests per package | Public (MIT) |
-| [JobLooper](03-practical-ai-products/joblooper-jobpilot.md) | Job applications from approved career facts | Blocked a non-significant prompt change | Public repo |
+| [JobLooper](03-practical-ai-products/joblooper-jobpilot.md) | Job applications from approved career facts | Evaluation gate blocks unproven AI changes | Public repo |
 | [BuildSignal AI](03-practical-ai-products/buildsignal-ai.md) | Research-to-publication workflow | 12 workspaces, owner-approved release | Private prototype |
 
 ## 4. Assurance and digital engineering

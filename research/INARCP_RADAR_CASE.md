@@ -28,7 +28,7 @@ Each new sample is normalized by its prediction error from recent history. A con
 
 ## Status
 
-Manuscript prepared for IEEE Transactions on Radar Systems; software v0.3.0 public (Sep 2026).
+Under review at IEEE Transactions on Radar Systems (submitted October 2026); software v0.3.0 public.
 
 ## Links
 

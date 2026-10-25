@@ -21,6 +21,7 @@ Airborne perception, radar and GNSS signal processing, multi-UAV autonomy and AI
 |---|---|---|
 | TIR-FOD: A Thermal-Infrared Benchmark Dataset for Foreign Object Debris Detection on Airfields (first author) | IEEE Access | Resubmitted 6 Oct 2026 |
 | From debris detection to verified removal: Evidence-linked MBSE for an evolving airfield robotics system (author) | INCOSE Applications & Case Studies | Submitted 16 Sep 2026 · [Case](../domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md) |
+| Innovation-Normalized Radar Detection in Compound-Gaussian Clutter: Self-Masking Analysis and False-Alarm Control (lead author) | IEEE Transactions on Radar Systems | Submitted Oct 2026 · [Case](INARCP_RADAR_CASE.md) |
 
 ## Conference
 
@@ -31,7 +32,7 @@ Airborne perception, radar and GNSS signal processing, multi-UAV autonomy and AI
 | Work | Highlight | Page |
 |---|---|---|
 | Clear Run: day/night UAV–GCS–rover system for runway debris removal (first author) | **42/45 objects retrieved (93%)** in 30 field trials | [Case](../domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) |
-| IN-ARCP: radar detection in spiky clutter with false-alarm control (lead author) | False alarms held at **0.73–1.47×** nominal on real sea clutter | [Case](INARCP_RADAR_CASE.md) |
+| Monocular acquisition, tracking and pointing for a counter-UAS laser turret: a range-independent bound on the parallax residual (first author) | Laser-marked a flying drone at **17 m** with one camera; parallax miss bounded at any range | [Counter-UAS](../domains/01-autonomy-edge-ai/counter-uas.md) |
 | Pattern-based commands in multi-UAV search and rescue (first author) | **+2.54%** vs **+19.36%** delay at 70% command loss | [Case](MULTI_UAV_SAR_CASE.md) |
 
 ## Ongoing

@@ -36,4 +36,4 @@
 
 Python · PyTorch / Ultralytics YOLO · OpenCV · NVIDIA Jetson / TensorRT / CUDA · Pixhawk / MAVLink · ROS 2 · FastAPI · PostgreSQL / pgvector · Linux / SLURM / Docker · Capella / SysML · IBM DOORS
 
-[Research and publications](../research/README.md) · [LinkedIn](https://www.linkedin.com/in/mumairaza/) · [← Back to portfolio](../README.md)
+[Research and publications](../research/README.md) · [uraza@cae.nust.edu.pk](mailto:uraza@cae.nust.edu.pk) · [LinkedIn](https://www.linkedin.com/in/mumairaza/) · [← Back to portfolio](../README.md)

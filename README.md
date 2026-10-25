@@ -9,7 +9,7 @@ I take new technology from the lab bench to the airframe, and prove it works. **
 |:---|:---|:---|:---|
 | aerospace systems engineering | JF-17 aircraft under the configuration system I built | JF-17 backup computers fielded from a subsystem I developed | runway debris objects retrieved by Clear Run in field trials |
 
-[**LinkedIn**](https://www.linkedin.com/in/mumairaza/) · [**Career & credentials**](profile/README.md) · [**Publications**](research/README.md) · Pakistan-based · transferable Saudi Iqama, available for Saudi Arabia / GCC
+[**uraza@cae.nust.edu.pk**](mailto:uraza@cae.nust.edu.pk) · [**LinkedIn**](https://www.linkedin.com/in/mumairaza/) · [**Career & credentials**](profile/README.md) · [**Publications**](research/README.md) · Pakistan-based · transferable Saudi Iqama, available for Saudi Arabia / GCC
 
 ---
 
@@ -62,7 +62,7 @@ I take new technology from the lab bench to the airframe, and prove it works. **
 | Project | What it shows | Status |
 |---|---|---|
 | [Multi-drone search and rescue](research/MULTI_UAV_SAR_CASE.md) | Which planner gains survive lost commands; validated with **640 ArduPilot SITL flights** | Manuscript ready |
-| [IN-ARCP radar detection](research/INARCP_RADAR_CASE.md) | Keeps radar false alarms on target (0.73–1.47×) where standard rules overshoot up to 60× | Open-source package · manuscript prepared |
+| [IN-ARCP radar detection](research/INARCP_RADAR_CASE.md) | Keeps radar false alarms on target (0.73–1.47×) where standard rules overshoot up to 60× | Open-source package · under review, IEEE Trans. Radar Systems |
 | [Evidence-linked MBSE for Clear Run](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md) | Capella model and telemetry replay tying requirements to test evidence | Under review, INCOSE |
 | [GNSS anti-jamming (8-element CRPA)](research/README.md) | Adaptive antenna-array interference suppression | Presented, IBCAST 2026 |
 | [Adversarial patches vs. detectors](research/CLOAKBENCH_CASE.md) | Measures whether "invisible" patches hide people or just move the box | In progress |
@@ -84,4 +84,4 @@ Peer-reviewed: two IEEE ICoDT2 2025 papers on real-time multi-stream detection a
 
 PMP · PMI-ACP · Professional Engineer · MS Avionics · [Full career →](profile/README.md)
 
-**Open to** senior systems-integration, autonomy, test & verification and R&D leadership roles. [Message me on LinkedIn](https://www.linkedin.com/in/mumairaza/).
+**Open to** senior systems-integration, autonomy, test & verification and R&D leadership roles. Email [uraza@cae.nust.edu.pk](mailto:uraza@cae.nust.edu.pk) or [message me on LinkedIn](https://www.linkedin.com/in/mumairaza/).

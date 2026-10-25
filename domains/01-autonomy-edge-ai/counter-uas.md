@@ -21,7 +21,7 @@ I was principal investigator for Phase I, directing a student engineering team.
 
 - A working **detect → track → lock** loop on physical hardware, indoors and outdoors.
 - Operator selects a target; the mount holds it centred automatically.
-- **Follow-on turret (paper in preparation, I am lead author):** laser-marked a flying quadcopter at **17 m** in a target-designation demo (low-power pointer), using one camera and no radar, RF sensor or rangefinder.
+- **Follow-on turret** (*Monocular acquisition, tracking and pointing for a counter-UAS laser turret: a range-independent bound on the parallax residual*, first author, manuscript ready for submission): laser-marked a flying quadcopter at **17 m** in a target-designation demo (low-power pointer), using one camera and no radar, RF sensor or rangefinder.
 
 <p>
   <img src="../../visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" alt="Built pan-tilt sensing mount" width="49%">
