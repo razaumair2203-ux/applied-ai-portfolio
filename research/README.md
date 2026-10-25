@@ -78,7 +78,7 @@ Status: **submitted; editorial acknowledgement/review pending**. The case docume
 
 ### TIR-FOD: A Thermal-Infrared Benchmark Dataset for Foreign Object Debris Detection on Airfields
 
-**IEEE Access — revision in progress, 2026.**
+**IEEE Access — resubmitted 6 October 2026; editorial decision pending.**
 
 The current manuscript includes repeated training runs, source-aware splitting, controlled contamination testing, acquisition-block generalisation analysis and measured Jetson/TensorRT UAV flight performance. It is **not labelled as published** while the publication process remains open.
 
@@ -95,6 +95,6 @@ The current manuscript includes repeated training runs, source-aware splitting, 
 
 ## Verification boundary
 
-The two 2025 ICoDT2 papers have public DOI records. The TIR-FOD dataset has a public Zenodo DOI. The current TIR-FOD manuscript remains under revision. Citation counts are not copied into this repository because they are mutable, and conference/indexing status is not upgraded without a verifiable public record.
+The two 2025 ICoDT2 papers have public DOI records. The TIR-FOD dataset has a public Zenodo DOI. The current TIR-FOD manuscript remains under editorial consideration; the separate Clear Run integrated-system paper is also author-reported under consideration in October 2026. Citation counts are not copied into this repository because they are mutable, and conference/indexing status is not upgraded without a verifiable public record.
 
 [Back to portfolio](../README.md)
