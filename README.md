@@ -8,13 +8,13 @@
 ## Selected engineering case studies
 
 ### 01 / Clear Run — airborne sensing to physical FOD recovery
-| Original TIR-FOD sensing UAV | Recorded September RGB/LWIR detections |
+| Original earlier TIR-FOD sensing UAV | Recorded onboard Jetson/TensorRT runtime |
 |---|---|
-| [![Actual earlier UAV](visuals/autonomy-edge-ai/tir-fod/airborne_platform.png)](visuals/autonomy-edge-ai/tir-fod/airborne_platform.png) | [![Original field-detection output](visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png)](visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png) |
+| [![Actual earlier UAV](visuals/autonomy-edge-ai/tir-fod/airborne_platform.png)](visuals/autonomy-edge-ai/tir-fod/airborne_platform.png) | [![Original Jetson runtime frame](visuals/autonomy-edge-ai/tir-fod/jetson_runtime.png)](visuals/autonomy-edge-ai/tir-fod/jetson_runtime.png) |
 
-**The engineering problem:** carry foreign-object-debris detections from airborne RGB/LWIR sensors through localization, ground-control review and an actual ground collection prototype. A team-built integration demonstration is reported; configuration-linked end-to-end reliability remains to be independently verified. The photograph shows the earlier **TIR-FOD sensing UAV**, not the subsequent collection rover.
+**The engineering problem:** carry foreign-object-debris detections from airborne RGB/LWIR sensors through localization, ground-control review and an actual ground collection prototype. A team-built integration demonstration is reported; configuration-linked end-to-end reliability remains to be independently verified. The photographs/screenshots are from the earlier **TIR-FOD sensing and edge-inference stage**, not the subsequent collection rover. No release-cleared current collector photo is included.
 
-[Engineering integration and current maturity](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) · [Actual detection outputs](visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png) · [Original hardware and field media](media/showcase/README.md#clear-run)
+[Engineering integration and current maturity](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) · [Recorded TIR-FOD runtime](visuals/autonomy-edge-ai/tir-fod/jetson_runtime.png) · [Original hardware and field media](media/showcase/README.md#clear-run)
 
 ### 02 / Super Mushshak — flight-tested avionics integration
 
