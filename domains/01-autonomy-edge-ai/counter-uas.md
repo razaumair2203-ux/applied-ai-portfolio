@@ -2,6 +2,10 @@
 
 **Private technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml)
 
+[![Authentic built Phase-I camera mount and original indoor/outdoor target captures](../../media/showcase/counter-uas-real-physical-evidence.png)](../../media/showcase/README.md#counter-uas-phase-i--physical-vision-tracking)
+
+*Actual camera/actuator hardware and the original experimental overlays. No rendered drone scene, unrelated stock hardware or completed RF-fusion claim.* [Original photographs and experiment outputs](../../media/showcase/README.md#counter-uas-phase-i--physical-vision-tracking).
+
 Phase I is a completed **physical drone-detection research prototype**, led by M. Umair Raza as **Principal Investigator**. The work progressed from dataset/model development into a constructed laser–camera sensing mount and preliminary indoor/outdoor trials, using approximately **14,000 training images**, a **1,500-image test set**, **200 training epochs** and 640×640 inputs. Later passive-RF, acoustic and multisensor work remains a separate research direction rather than being back-claimed as completed capability.
 
 ## Physical system evidence
