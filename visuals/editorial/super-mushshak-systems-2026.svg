@@ -4,7 +4,7 @@
 <rect width="1200" height="675" fill="#0B1421"/>
 <rect x="37" y="42" width="8" height="40" fill="#37CBD2"/><text x="62" y="69" font-size="22" font-family="Arial,Helvetica,sans-serif" letter-spacing="2" font-weight="700" fill="#B9D0E1">AIRCRAFT SYSTEMS ENGINEERING</text>
 <text x="42" y="162" font-size="51" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#FFFFFF">From requirements</text>
-<text x="42" y="224" font-size="51" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#FFFFFF">to flight verification.</text>
+<text x="42" y="224" font-size="39" font-family="Arial,Helvetica,sans-serif" font-weight="700" fill="#FFFFFF">to flight verification.</text>
 <rect x="42" y="256" width="494" height="1" fill="#476071"/>
 <text x="42" y="305" font-size="27" font-family="Arial,Helvetica,sans-serif" fill="#E0EBF3">Super Mushshak glass-cockpit</text>
 <text x="42" y="345" font-size="27" font-family="Arial,Helvetica,sans-serif" fill="#E0EBF3">prototype integration</text>
