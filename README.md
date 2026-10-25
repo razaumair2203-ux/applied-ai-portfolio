@@ -17,7 +17,7 @@
 
 **My contribution:** programme and systems-integration leadership, interface/test strategy, embedded-AI evaluation, technical acceptance and multidisciplinary coordination. The media above comes from **Clear Run project footage**, not a substituted Phase-I sensing UAV. The frames are one 2.5× edited collection excerpt, not independent trial repetitions.
 
-[**Current engineering case and maturity**](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) · [**Original collector frames**](media/showcase/README.md#clear-run) · [**Programme research record**](research/README.md)
+[**Current engineering case and maturity**](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) · [**Original collector frames**](media/showcase/README.md#clear-run--fabricated-debris-collection-prototype) · [**Programme research record**](research/README.md)
 
 ### 02 · Super Mushshak | Flight-tested avionics retrofit
 
@@ -37,7 +37,7 @@
 
 **My contribution:** experimental design, model/evaluation protocol, deployment and validation review, technical direction and manuscript development. This is the **airborne sensing/edge-AI evidence stream**; it must not be counted as proof of the later ground-retrieval mission.
 
-[**Public dataset (Zenodo DOI)**](https://doi.org/10.5281/zenodo.22546586) · [**Full thermal class montage and original source**](media/showcase/README.md#tir-fod) · [**Research and deployment case**](domains/01-autonomy-edge-ai/clear-run-tir-fod.md)
+[**Public dataset (Zenodo DOI)**](https://doi.org/10.5281/zenodo.22546586) · [**Full thermal class montage and original source**](media/showcase/README.md#tir-fod--all-23-genuine-lwir-fod-classes) · [**Research and deployment case**](domains/01-autonomy-edge-ai/clear-run-tir-fod.md)
 
 ### 04 · Counter-UAS Phase I | Physical AI tracking demonstrator
 
@@ -47,7 +47,7 @@
 
 **My contribution:** principal-investigator and systems-integration leadership; prototype implementation and trials were team-developed.
 
-[**Physical demonstrator case**](domains/01-autonomy-edge-ai/counter-uas.md) · [**Original mount, trial captures and training curves**](media/showcase/README.md#counter-uas-phase-i)
+[**Physical demonstrator case**](domains/01-autonomy-edge-ai/counter-uas.md) · [**Original mount, trial captures and training curves**](media/showcase/README.md#counter-uas-phase-i--physical-vision-tracking)
 
 ---
 
