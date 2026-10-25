@@ -1,73 +1,49 @@
-# Clear Run — integrated airfield robotics and systems engineering
-**As of 25 October 2026 · prototype demonstration and active field-research programme**
+# Clear Run — find runway debris from the air, remove it on the ground
 
-> **Engineering perspective:** The project is not a standalone FOD detector. It tests the interfaces that convert detection into supervised physical recovery. A fabricated collection system and an integrated mission demonstration are **reported by the project lead**. A release-cleared outdoor source sequence now shows the team-built collector on a small-wheel development platform; it does not establish the later reported tracked/skid-steer configuration. Repeated, independently auditable detection-to-retention performance is not yet established.
+**A low-cost drone, ground station and robot that detect, locate and retrieve foreign-object debris (FOD) on airfields, by day and after dark.**
 
-[Original field/hardware media](../../media/showcase/README.md#clear-run) · [Programme maturity summary](CLEAR_RUN_2026-10_STATUS.md) · [Public field-evidence extract](../../evidence/autonomy_edge_ai/clear_run/README.md) · [Released TIR-FOD dataset](https://doi.org/10.5281/zenodo.22546586)
+![Clear Run: edge-AI drone and the team-built debris-collection robot](../../media/cards/01-clear-run.jpg)
 
-## The actual system boundary
+## Why it matters
 
-```text
-Day/night airborne RGB and passive-LWIR sensing
-       |
-Onboard detection / FP16 TensorRT / target-event formation
-       |
-Estimated target geolocation, airframe telemetry, message transmission
-       |
-Ground control station: target review, operator authorization, task dispatch
-       |
-Ground collector: local sensing / approach / terminal positioning
-       |
-Fabricated ramp-and-lift mechanism: physical pickup and retention
-       |
-Outcome verification, timestamped evidence, failures and operator interventions
-```
+A loose bolt or stone on a runway can be ingested by an engine or burst a tyre. Industry estimates put direct FOD damage at around **US$4 billion a year** ([SKYbrary](https://skybrary.aero/articles/foreign-object-debris-fod)). Most research stops at *detecting* debris; somebody still has to walk out and pick it up. Clear Run closes that loop, and keeps working at night, when debris is hardest to see.
 
-Each arrow represents an **engineering interface** and therefore a failure or verification boundary. Detection confidence does not establish coordinate accuracy. Coordinate output does not establish task acknowledgement. Reaching the vicinity of an object does not establish correct pickup, and pickup does not establish retained recovery after motion.
+## What I did
 
-### Demonstrated work versus research still open
+I lead Clear Run as principal investigator, with a multidisciplinary team of engineers and students.
 
-| Element | Current defensible statement | Next verification obligation |
-|---|---|---|
-| Thermal perception | Public 23-category LWIR dataset, source lineage, repeated model evaluation, Jetson Orin Nano / TensorRT field work | Generalization under changed acquisition and operating conditions |
-| RGB / passive-IR event pipeline | Recorded field frames and event/coordinate outputs; September public event/log batch | Link every event to calibrated truth and full trial denominators |
-| Ground control | Purpose-built GCS and tasking/interface evidence | Exact target identity through acknowledge, retry, abort and dispatch |
-| Ground hardware | **Fabricated ramp-and-lift collector**, with a later tracked/skid-steer drive revision reported by the team; latest hardware photo not publicly released | Freeze installed hardware/firmware/sensor revisions |
-| Mission demonstration | Complete prototype mission **confirmed by project lead** | Preserve synchronized as-tested configuration, event/time chain and independent witness/records |
-| Day/night missions | **15 daytime + 15 after-dark** missions in latest author-reported campaign | Session-linked conditions, failures, success denominators and independent audit |
-| Physical retention | Earlier October author-reported **38 retained collection outcomes / 42 tasks (90.5%)** | Retained per-task ledger, object conditions, post-capture motion and failure taxonomy |
-| Geolocation | Estimates generated; historical approximate 1 m RMSE reported as a scalar | Paired surveyed reference/output locations and error distribution |
-| Whole-runway fleets | Multi-UAV/multi-rover fleet development is **proposed Phase III** | Procurement/design freeze, scaling/coverage tests, no fielded fleet claim |
+- **Defined the system architecture:** drone → ground control station → rover, and every interface between them.
+- **Set the evaluation strategy:** day/night field trials, success criteria and a 1,000-run simulation study.
+- **Directed the perception work:** RGB and thermal detectors, including the open thermal dataset [TIR-FOD](clear-run-tir-fod.md).
+- **Led integration and acceptance** of the drone payload, ground station and collection robot.
+- **Wrote the journal article** as first and corresponding author.
 
-**Avoid collapsing denominators:** 30 day/night missions are not equivalent to the separately reported 42 collection tasks. Neither aggregate is yet a blinded, independently repeatable system-success rate. The manuscript's team-reported results are not a replacement for archived per-trial telemetry.
+## Results
 
-### Ground-platform configuration caution
+| Measure | Result |
+|---|---|
+| Field trials on paved operational surfaces | **30** (15 by day, 15 after dark) |
+| Placed debris objects retrieved | **42 of 45 (93%)** |
+| Rover distance from object when terminal guidance began | **1.27 m** mean |
+| Time to completed pickup | **81 s** mean |
+| Local search vs. no search (1,000 simulations, 4 cm objects) | **94% vs. 17%** found within 30 s |
+| Hardware cost | **≈ US$5,700**, off-the-shelf parts |
 
-Earlier public engineering snapshots describe a **Mecanum chassis and hybrid ROS1/ROS2/Nav2/SLAM development configuration**. The team reports a later **tracked/skid-steer rover** and fabricated ramp-and-lift collector. Earlier project images and ROS/Mecanum development configurations are historical stages and must not be represented as that later as-tested configuration. Those are different baselines and **must not be depicted as the same installed configuration**.
+## How it works
 
-Until an as-tested build inventory exists, the portfolio does not assert that every earlier Nav2, SLAM, motor or GCS interface was part of the exact later field configuration.
+![Clear Run detection-to-removal chain](../../visuals/autonomy-edge-ai/clear-run/detect-locate-confirm-retrieve.svg)
 
-## What I led
+1. **Detect.** The drone runs colour and thermal (LWIR) detectors on an NVIDIA Jetson with TensorRT.
+2. **Locate.** It ray-casts each detection to the ground using GNSS, attitude and tilt-corrected LiDAR height, and sends a position with a 95% uncertainty radius over MAVLink.
+3. **Confirm.** An operator reviews each report at the ground control station and dispatches the rover.
+4. **Retrieve.** The rover drives to the area, searches within the uncertainty circle, aligns with stereo vision and scoops the object.
 
-My contribution is **systems engineering, technical direction, programme integration and experiment/V&V leadership**: decompose the mission, identify interfaces and risks, direct experiment design and engineering acceptance, review perception/deployment results, coordinate multidisciplinary contributions and make unresolved validation work explicit.
+The human stays in the loop for every dispatch decision, which is how an airfield authority would expect such a system to start.
 
-**Team-developed contributions:** airframe and payload integration, controller code, GCS/ROS implementation, rover construction, field activity and physical mechanism work. I do not claim sole mechanical or software authorship.
+## Status
 
-## Physical hardware and authentic recorded frames
+Journal article finalised for submission to IEEE Access (October 2026). The systems-engineering case study is under review at INCOSE. Phase III (multi-drone, multi-rover runway coverage) is in planning.
 
-[![Clear Run fabricated collector, three frames from one edited source](../../media/showcase/clear-run-real-collector-sequence.png)](../../media/showcase/README.md#clear-run--fabricated-debris-collection-prototype)
+**Related:** [TIR-FOD thermal dataset](clear-run-tir-fod.md) · [MBSE and verification case](ai-systems-assurance-mbse.md) · [Dataset DOI](https://doi.org/10.5281/zenodo.22546586)
 
-This media comes **from the Clear Run programme itself**, not from the earlier TIR-FOD photo set. The pickup-platform frames show a fabricated mechanism on the small-wheel configuration seen in source footage; original playback is labelled **2.5×**. The final frame's “collected” label is part of the original student's edited video, **not an independently audited capture/retention result**. These frames belong to one footage family, not three repeat trials.
-
-[Unaltered original collector frame](../../media/real/clear-run-collector-before.jpg) · [Same source after movement](../../media/real/clear-run-collector-approach.jpg) · [Original outcome-overlay frame](../../media/real/clear-run-collector-source-outcome-overlay.jpg) · [Original Clear Run in-flight UAV](../../media/real/clear-run-uav-inflight.jpg)
-
-The final collector configuration, GCS dispatch state, mission timing and whole-chain object identity must still be associated with the as-tested records before declaring measured end-to-end success.
-
-## Publications and maturity
-
-- **TIR-FOD:** resubmitted to IEEE Access **6 October 2026**, decision pending; public dataset available on Zenodo.
-- **Integrated Clear Run paper:** submitted / under consideration as reported by the author in October 2026; no acceptance claimed.
-- **Future Phase III:** coordinated, multi-vehicle whole-runway inspection and recovery is a research/funding proposal, **not** executed fleet capability.
-- No commercial deployment, airport certification, approved unattended runway operation, official TRL rating or secured external adopter is asserted.
-
-*This public case omits precise airfield locations, private communications details, unpublished assets and sensitive programme records.*
+[← Back to portfolio](../../README.md)

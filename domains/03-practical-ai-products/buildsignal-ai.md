@@ -1,37 +1,31 @@
-# BuildSignal AI — governed research-to-publication operations platform
+# BuildSignal AI: research-to-publication workflow
 
-**Private product; technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-buildsignal.yml)
+A local publishing platform where AI drafts, but sources, rights, QA and release stay under human control.
 
-**Public evidence snapshot:** 19 September 2026. The local operating workflow is implemented; hosted-admin authentication and selected media/QA integrations remain open work.
+![BuildSignal AI judge loop](../../visuals/practical-ai-products/buildsignal/ai-judge-loop-system.svg)
 
-BuildSignal AI is an active private **AI-native publishing operations system** for technical research and multi-format content. The difficult part is not asking a model to write an article; it is maintaining source provenance, research state, media rights, review status, QA, derivative assets and a clear human publication authority across a pipeline that can produce articles, audio, video, YouTube-supported essays and social variants.
+## Why it matters
 
-The platform is built with **Next.js / TypeScript / MDX**, but its value is the operating model around those tools: AI-generated or AI-assisted material cannot move directly from generation to publication without passing through explicit research, review and release states.
+AI can write an article in seconds. The hard part is knowing where each fact came from, who owns each image, and who approved publication.
 
-**Visual evidence:** the current public case intentionally uses no interface mock-up. An authentic, sanitized running-build screenshot has not been released.
+## What I did
 
-## Current product scope
+- **Designed** the content workflow across articles, audio, video, YouTube and social formats.
+- **Defined** the source policy: every claim links to a logged research source.
+- **Built** per-item review states and an owner-only publish step.
+- **Added** validation commands for articles, pipelines and operations.
 
-- local editorial/admin workspaces for **Today, Articles, Media, Video, Audio, YouTube, Social, Research, Comments, QA, Tools and Publish**;
-- source registry and research logging rather than untraceable model memory;
-- per-item review and approval states;
-- article/editorial, pipeline and operations validation commands;
-- media-source and rights tracking;
-- explicit owner-controlled publication gate;
-- planned/partial visual and media QA automation.
+## Results
 
-## AI systems contribution
+- **12** working areas: Today, Articles, Media, Video, Audio, YouTube, Social, Research, Comments, QA, Tools, Publish.
+- Source registry and media-rights tracking for every item.
 
-BuildSignal treats generative AI as one worker inside a broader content-production system. The engineering problem is to preserve **source hierarchy, asset state, transformation history, review decisions, QA and publication authority** as content moves across formats. That is a different problem from a chat-based writing assistant.
+## How it works
 
-## Current maturity boundary
+Next.js, TypeScript and MDX. AI output moves through research, review and QA states before the owner can publish it.
 
-The local admin workflow is implemented, but the project documentation explicitly requires authentication before any hosted admin preview. Visual/media editing integrations and some automated QA remain under development.
+## Status
 
-## Contribution boundary
+Private prototype, running locally.
 
-- **Direct responsibility:** product direction, AI workflow design, research/source policy, editorial-system architecture and quality/release governance.
-- **Implementation model:** AI/coding assistance may accelerate implementation, but source state, rights/provenance, QA, approval and publication authority remain explicit system controls.
-- **Maturity boundary:** local operating workflow is implemented; hosted-admin authentication and selected media/QA integrations remain open work.
-
-[Back to portfolio](../../README.md) · [Domain index](README.md)
+[Back to portfolio](../../README.md)

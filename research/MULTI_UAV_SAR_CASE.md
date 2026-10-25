@@ -1,15 +1,34 @@
-# Multi-UAV search-and-rescue coordination — simulation research
+# Multi-UAV search and rescue: where planner gains really come from
 
-**Domain:** multi-agent autonomy · mission planning · command systems · SIL/SITL research.
+A simulation study showing which parts of multi-drone search planning actually find people faster.
 
-**Research question.** Can pattern-based tasking be evaluated without conflating coordination quality, command duration and the integrity of recorded search coverage?
+![Simulated multi-UAV search paths on real terrain](../media/cards/05-multi-uav-sar.jpg)
 
-**Approach.** The team has assembled a reproducible, **simulation-only** study titled *Pattern-Based Commands in Multi-UAV Search and Rescue: Separating Coordination, Command Duration and Search-Record Accuracy*. The repository documents MATLAB/Octave and Python benchmarks and an ArduPilot software-in-the-loop (SITL) configuration used for **640 simulated flights**, alongside research packages and verification instructions.
+## Why it matters
 
-**Inspect:** [research source and project state](https://github.com/razaumair2203-ux/NS-Saleha-FYDP/blob/main/README.md).
+Search teams need planners that still work when radio links drop. Published gains often mix three effects, so agencies cannot tell which one to rely on.
 
-**Status, 25 October 2026:** Journal-specific manuscript/submission packages are prepared. The manuscript has **not been submitted or published**.
+## What I did
 
-**My role:** research leadership / co-author in the documented multi-author study, with engineering relevance in experimental design, multi-agent mission evaluation and simulation-based verification. Team-developed simulation and manuscript materials must not be attributed exclusively to me.
+- **Led** the study as first and corresponding author, with co-authors from NDMA and NUST SEECS.
+- **Supervised** the final-year project (Saleha Abid) that built the simulations.
+- **Designed** experiments that separate coordination, command duration and search-record accuracy.
+- **Ran** replications over 800 synthetic scenarios and 50 real geographic sites.
 
-**Evidence boundary:** The 640 runs are simulated flights, **not** 640 aircraft field sorties; no real-world autonomous search effectiveness, unreported planner superiority or field deployment is inferred.
+## Results
+
+- Goal deconfliction alone explains **92%** (synthetic) and **49%** (terrain) of a pattern planner's advantage.
+- At **70% command loss**, detection time worsens **+2.54%** with 30-step commands, against **+19.36%** with single-step commands.
+- Command duration, not pattern geometry, gives the tolerance to link loss.
+- **640 ArduPilot SITL flights**: replayed commands reconstruct detection probability within **5.00 pp**.
+- Checked against **78** public PX4 flight logs from **52** vehicles.
+
+## How it works
+
+MATLAB/Octave and Python benchmarks run the planners on synthetic and terrain maps. ArduPilot software-in-the-loop flights then test whether the search record matches what the drones actually covered.
+
+## Status
+
+Manuscript complete; journal submission in preparation.
+
+[Back to research](README.md) · [Back to portfolio](../README.md)

@@ -1,13 +1,29 @@
-# CloakBench — adversarial perception evaluation (research in progress)
+# CloakBench: do adversarial T-shirts hide people or just move the box?
 
-**Domain:** AI assurance · adversarial computer vision · measurable failure modes.
+A measurement protocol for wearable adversarial patches against person detectors.
 
-**Research question.** When a wearable adversarial patch appears to defeat person detection, is the model actually suppressing the person or merely displacing the bounding box so it misses the annotation?
+## Why it matters
 
-**Approach.** CloakBench separates **suppression** from **detection displacement**, evaluates attack files against calibrated detector operating points, uses matched-occlusion controls and records per-person scores for scripted downstream analyses.
+Security teams rely on published "evasion" rates for adversarial clothing. If those rates count a shifted box as a missed person, the threat is overstated.
 
-**Evidence availability:** the working repository is private and the research remains unfinished. A publication-safe experiment package has not yet been released; no private audit is linked as public evidence.
+## What I did
 
-**Status, 25 October 2026:** **Unfinished research snapshot.** The 14 October session audit notes unresolved reproduction steps, unscored trained reference cases and manuscript build issues. No reliable headline effectiveness metric or accepted paper is claimed.
+- **Supervised** the student research, following our 2025 TK-Patch paper (IEEE ICoDT2).
+- **Framed** the core question: suppression (person vanishes) versus displacement (box moves off the label).
+- **Guided** the test protocol: calibrated detector thresholds and matched-occlusion controls.
+- **Guided** a review of evaluation protocols across **32** published papers.
 
-**Role relevance:** failure-mode taxonomy, adversarial robustness, test protocol design and transparent evaluation of perception systems.
+## Results (pilot)
+
+- **35.7%** of targets were scored as evaded, yet **99.0%** of those still had a person box.
+- Real printed patches correspond to a patch scale of **k = 0.183**; the common k = 0.3 protocol uses **2.7×** the area of any real print.
+
+## Status
+
+Research in progress; manuscript in preparation.
+
+## Links
+
+- [TK-Patch, IEEE ICoDT2 2025](https://doi.org/10.1109/ICoDT269104.2025.11360694)
+
+[Back to research](README.md) · [Back to portfolio](../README.md)

@@ -1,71 +1,36 @@
-# Super Mushshak — first three glass-cockpit prototypes to evidence-linked digital engineering
+# Super Mushshak — glass-cockpit retrofit, integrated and flown
 
-[![Authentic Super Mushshak cockpit integration and flight-test photographs](../../media/showcase/super-mushshak-original-flight-evidence.png)](../../media/showcase/README.md#super-mushshak--original-retrofit-and-flight-photographs)
+**Aircraft-level integration of modern glass-cockpit avionics into an in-service trainer aircraft, from architecture to flight test and customer evaluation.**
 
-*Original installed Dynon SkyView, in-flight cockpit and instrument-stack photographs. No synthetic instruments, no mixing with separate Garmin configurations and no unsupported certification claim.* [Original project photo archive](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/blob/main/docs/media-gallery.md).
+![Super Mushshak retrofit cockpit in flight](../../media/cards/02-super-mushshak.jpg)
 
-This project family starts with a **completed aircraft-level glass-cockpit integration programme for the first three Super Mushshak prototypes** and extends it into a current, bounded digital-engineering follow-on. The original work included avionics/sensor trade studies, Dynon/Garmin integration, aircraft electrical and wiring-harness changes, ARINC-429 and other interfaces, configuration/database work, installed-aircraft checks, flight-test feedback and customer evaluation—not simply display replacement.
+## Why it matters
 
-**Public source record:** [Super Mushshak Glass-Cockpit Retrofit](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification)
+Trainee pilots should learn on the same glass displays they will fly later. Replacing analogue gauges on a flying aircraft is not a display swap: sensors, power, wiring, radios and pilot workload all change together, and every change must be proven on the ground and in the air.
 
-## At a glance
+## What I did
 
-| Dimension | Evidence-backed state |
-|---|---|
-| Historical programme | first three Super Mushshak glass-cockpit prototypes; avionics/systems integration, installed-aircraft testing, flight-test feedback and customer evaluation |
-| Original evidence | period cockpit/in-flight photographs, technical records and surviving integration/OEM material |
-| Structured engineering model | requirements, interfaces, configurations, verification records, decisions and traceability published in the source repository |
-| Current digital-engineering state | first public-safe digital-thread backbone implemented; executable/parametric twin functions remain future work |
-| My role | lead systems engineer / avionics integration engineer on the retrofit; current retrospective systems modelling and digital-thread reconstruction |
+I was lead systems engineer for avionics integration on the **first three prototype aircraft**, working with the OEM, flight-test crews and technicians.
 
-## Contribution boundary
+- **Owned the aircraft-level architecture** and trade studies across two prototype paths: Dynon SkyView and Garmin G900X.
+- **Integrated end to end:** revised flight and engine sensing, aircraft power and protection, a complete modification wiring harness, NAV/COM/audio and data interfaces (including ARINC 429).
+- **Ran verification:** installed ground checks and flight-test feedback, fault isolation, OEM discrepancy closure and re-test.
+- **Controlled configuration** across successive prototype states through to production handover.
+- **Supported international customer evaluation** in Qatar and the Dubai Airshow display.
 
-- **Historical direct role:** lead systems engineer / avionics integration engineer across aircraft-level integration, configuration, installed-aircraft testing, flight-test feedback and customer evaluation.
-- **Programme boundary:** the retrofit was multidisciplinary and OEM/customer-facing; downstream aircraft sales and later product variants are programme outcomes, not sole-causation claims.
-- **Current direct work:** retrospective public-safe systems modelling and digital-thread reconstruction from surviving engineering evidence; executable twin behaviour remains future work.
+## Outcome
 
-## Completed retrofit engineering
+- Three prototypes integrated, flight-tested and handed over for production.
+- **Programme outcome:** after the glass-cockpit upgrade, the aircraft won export orders from **four countries** (Qatar, Nigeria, Türkiye, Azerbaijan; 80 aircraft in 2016–17, per public reporting).
 
-The original programme covered more than display replacement. The surviving public record documents sensor and avionics integration, Dynon/Garmin evaluation, aircraft electrical and wiring-harness changes, ARINC-429 and other interfaces, databases/configuration, maintainability, installed-aircraft functional checks, flight-test feedback and customer-facing technical evaluation.
+<p>
+  <img src="../../visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg" alt="Installed Dynon SkyView prototype panel" width="60%">
+</p>
 
-The public source intentionally keeps the Dynon SkyView prototype, Garmin G900X/G950-family evaluation track and Garmin G3X comparison material separate rather than merging distinct configurations.
+## Today: a digital thread of the retrofit
 
-## Downstream programme scale
+I am rebuilding the programme as a structured engineering model: requirements, interfaces, configurations, verification records and decisions, all linked. It is the foundation for a future digital twin of the modified aircraft.
 
-Public reporting records four later customer contracts totalling **80 aircraft** (Qatar 8, Nigeria 10, Türkiye 52 and Azerbaijan 10). See the [dated public sources](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/blob/main/docs/public-operator-evidence.md). This is later product-line context, not the number of aircraft I personally modified or evidence of individual sales causation.
+**Links:** [Full engineering case, photographs and model](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification)
 
-## Evidence-linked model
-
-The current repository normalises the historical engineering record into linked objects:
-
-```text
-evidence
-  -> requirement / constraint
-  -> interface
-  -> configuration
-  -> verification
-  -> decision
-  -> traceability
-```
-
-The structured model includes public-safe CSV registers for requirements, interfaces, verification, configuration states, decisions and cross-record traceability. This is a retrospective digital-engineering reconstruction grounded in surviving evidence, not an original programme MBSE model.
-
-## Digital-thread maturity
-
-A first digital-thread backbone now exists around:
-
-- system boundary and functional decomposition;
-- public-safe requirements hierarchy;
-- logical interface model;
-- configuration-state history;
-- verification cross-reference;
-- issue / decision history;
-- explicit distinction between measured, documented, derived and unknown information.
-
-The follow-on does **not** claim an executable aircraft digital twin today. Electrical loading, configuration-dependent failure effects, maintenance state and selected data replay are longer-term directions that depend on sufficient releasable source data.
-
-## Connection to current AI/autonomy engineering
-
-This project is the clearest bridge between the earlier aerospace record and current AI-enabled systems work. It demonstrates the same engineering habits used across Clear Run, Lodestar and AI assurance: configuration identity, interface ownership, verification evidence, change history and explicit treatment of unknowns.
-
-[Back to portfolio](../../README.md) · [Domain index](README.md) · [Public source repository](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification)
+[← Back to portfolio](../../README.md)

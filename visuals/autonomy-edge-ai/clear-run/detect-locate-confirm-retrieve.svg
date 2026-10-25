@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="1200" height="300" rx="18" fill="#0b121c"/>
+<text x="40" y="52" fill="#5ed6be" font-size="18" font-weight="600" letter-spacing="2">CLEAR RUN · DETECTION-TO-REMOVAL CHAIN</text>
+<rect x="30" y="90" width="255" height="160" rx="14" fill="#14202e" stroke="#2a3b50"/>
+<text x="50" y="128" fill="#5ed6be" font-size="16" font-weight="700">1 · DETECT</text>
+<text x="50" y="166" fill="#ffffff" font-size="24" font-weight="700">Drone</text>
+<text x="50" y="200" fill="#d6dee6" font-size="17">RGB + thermal AI</text>
+<text x="50" y="224" fill="#d6dee6" font-size="17">on Jetson / TensorRT</text>
+<path d="M291 170 h26" stroke="#5ed6be" stroke-width="3"/><path d="M317 163 l10 7 -10 7z" fill="#5ed6be"/>
+<rect x="325" y="90" width="255" height="160" rx="14" fill="#14202e" stroke="#2a3b50"/>
+<text x="345" y="128" fill="#5ed6be" font-size="16" font-weight="700">2 · LOCATE</text>
+<text x="345" y="166" fill="#ffffff" font-size="24" font-weight="700">Drone</text>
+<text x="345" y="200" fill="#d6dee6" font-size="17">GNSS + LiDAR ray-cast</text>
+<text x="345" y="224" fill="#d6dee6" font-size="17">position + 95% radius</text>
+<path d="M586 170 h26" stroke="#5ed6be" stroke-width="3"/><path d="M612 163 l10 7 -10 7z" fill="#5ed6be"/>
+<rect x="620" y="90" width="255" height="160" rx="14" fill="#14202e" stroke="#2a3b50"/>
+<text x="640" y="128" fill="#5ed6be" font-size="16" font-weight="700">3 · CONFIRM</text>
+<text x="640" y="166" fill="#ffffff" font-size="24" font-weight="700">Ground station</text>
+<text x="640" y="200" fill="#d6dee6" font-size="17">Operator reviews</text>
+<text x="640" y="224" fill="#d6dee6" font-size="17">and dispatches rover</text>
+<path d="M881 170 h26" stroke="#5ed6be" stroke-width="3"/><path d="M907 163 l10 7 -10 7z" fill="#5ed6be"/>
+<rect x="915" y="90" width="255" height="160" rx="14" fill="#14202e" stroke="#2a3b50"/>
+<text x="935" y="128" fill="#5ed6be" font-size="16" font-weight="700">4 · RETRIEVE</text>
+<text x="935" y="166" fill="#ffffff" font-size="24" font-weight="700">Rover</text>
+<text x="935" y="200" fill="#d6dee6" font-size="17">Search, stereo align</text>
+<text x="935" y="224" fill="#d6dee6" font-size="17">scoop and store</text>
+<text x="40" y="282" fill="#8b9bb0" font-size="15">MAVLink telemetry links drone and ground station; a human authorises every dispatch.</text></svg>

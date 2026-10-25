@@ -1,15 +1,37 @@
-# IN-ARCP — radar detection in compound-Gaussian clutter
+# IN-ARCP: keeping radar false alarms in check in spiky clutter
 
-**Domain:** radar/RF signal processing · statistical detection · reproducible research.
+Open-source detection maths and software that hold radar false-alarm rates at their design value in sea and ground clutter.
 
-**Engineering challenge.** Radar detectors must manage false alarms without suppressing genuine targets when the clutter estimate changes or a target contaminates its own adaptation history.
+## Why it matters
 
-**Contribution.** IN-ARCP investigates innovation-normalized, history-aware adaptive matched filtering in compound-Gaussian clutter; develops a post-onset detection law, self-masking/visibility analysis, slow-time guard, order-statistic variant and a conformal false-alarm certificate for bounded integration. The work separates proposed statistical guarantees, simulated evidence and what is established in available radar data.
+Sea and ground clutter is spiky, so standard detectors raise far more false alarms than designed. Operators then lose trust, or thresholds are raised until real targets are missed.
 
-**Inspect:** [public research repository, R22](https://github.com/razaumair2203-ux/inarcp) · [manuscript/source/reproduction notes](https://github.com/razaumair2203-ux/inarcp/blob/main/README.md).
+## What I did
 
-**Status, 25 October 2026:** R22 manuscript submitted to *IEEE Transactions on Radar Systems* on 7 October 2026, according to the linked Phase-II author record; under review, **not published or accepted**. The public R22 repository contains software and reproducibility guidance. The separate private Phase-II work is paused and is **not** a completed capability.
+- **Led** the research as lead author, with four co-authors.
+- **Wrote** all of the software, released as an MIT-licensed `pip` package.
+- **Developed** innovation-normalized detection with conformal thresholds for compound-Gaussian clutter.
+- **Analysed** how persistent targets mask themselves, and designed a slow-time guard against it.
+- **Tested** on real IPIX sea-clutter data and real 77 GHz automotive radar interference.
 
-**Role relevance:** radar algorithm research, signal-processing verification, uncertainty/false-alarm control, reproducible experiments, and technical leadership in sensing systems.
+## Results
 
-**Evidence boundary:** No claims of certified operational radar performance, validated hardware implementation or published journal acceptance are made.
+- Conformal thresholds kept false alarms at **0.73–1.47× nominal** for 12 of 13 statistics, down to **10⁻⁴**.
+- **10 of 11** model-based rules exceeded 2× nominal, some by up to **60×**.
+- An 8-pulse guard raised mean detection from **0.24 to 0.82** at 10 dB signal-to-clutter ratio.
+- With real 77 GHz interference, certified clipping cost **6.4 dB** of SCR.
+- Negative results are reported openly, including self-masking at 48 looks.
+
+## How it works
+
+Each new sample is normalized by its prediction error from recent history. A conformal threshold, calibrated on clutter-only data, sets the false-alarm rate from data rather than from an assumed clutter model.
+
+## Status
+
+Manuscript prepared for IEEE Transactions on Radar Systems; software v0.3.0 public (Sep 2026).
+
+## Links
+
+- [IN-ARCP on GitHub](https://github.com/razaumair2203-ux/inarcp)
+
+[Back to research](README.md) · [Back to portfolio](../README.md)

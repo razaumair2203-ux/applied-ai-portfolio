@@ -1,77 +1,43 @@
-# Counter-UAS Phase I — physical AI-vision prototype and multisensor research foundation
+# Counter-UAS — low-cost, camera-only drone detection and tracking
 
-**Private technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml)
+**A built pan-tilt sensing mount that detects small drones with AI vision, locks on, and follows them in real time.**
 
-[![Authentic built Phase-I camera mount and original indoor/outdoor target captures](../../media/showcase/counter-uas-real-physical-evidence.png)](../../media/showcase/README.md#counter-uas-phase-i--physical-vision-tracking)
+![Counter-UAS: the built pan-tilt mount and a live outdoor lock on a drone](../../media/cards/04-counter-uas.jpg)
 
-*Actual camera/actuator hardware and the original experimental overlays. No rendered drone scene, unrelated stock hardware or completed RF-fusion claim.* [Original photographs and experiment outputs](../../media/showcase/README.md#counter-uas-phase-i--physical-vision-tracking).
+## Why it matters
 
-Phase I is a completed **physical drone-detection research prototype**, led by M. Umair Raza as **Principal Investigator**. The work progressed from dataset/model development into a constructed laser–camera sensing mount and preliminary indoor/outdoor trials, using approximately **14,000 training images**, a **1,500-image test set**, **200 training epochs** and 640×640 inputs. Later passive-RF, acoustic and multisensor work remains a separate research direction rather than being back-claimed as completed capability.
+Small, cheap drones now threaten airports, bases and critical sites. Radar and RF detectors are expensive, and RF sensing fails against drones that use no radio link (for example fibre-optic control). A camera-only tracker built from off-the-shelf parts is an affordable layer that still works in those cases.
 
-## Physical system evidence
+## What I did
 
-<p align="center">
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml"><img src="../../visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" alt="Constructed Counter-UAS Phase-I laser-camera mount" width="49%"></a>
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml"><img src="../../visuals/autonomy-edge-ai/counter-uas/phase1_video_mount.jpg" alt="Counter-UAS Phase-I mount shown in the original trial video" width="49%"></a>
+I was principal investigator for Phase I, directing a student engineering team.
+
+- **Defined the system:** camera, detector, tracker and pan-tilt actuation as one closed loop.
+- **Set the AI approach:** a YOLO drone detector trained on ≈ 14,000 images and tested on a held-out 1,500-image set (640 px, 200 epochs).
+- **Specified the tracking modes:** manual operator control, automatic single- and multi-target tracking, and Kalman-filtered smoothing.
+- **Ran indoor and outdoor trials** against real quadcopters, and set the direction for the follow-on work.
+
+## Results
+
+- A working **detect → track → lock** loop on physical hardware, indoors and outdoors.
+- Operator selects a target; the mount holds it centred automatically.
+- **Follow-on turret (paper in preparation, I am lead author):** laser-marked a flying quadcopter at **17 m** in a target-designation demo (low-power pointer), using one camera and no radar, RF sensor or rangefinder.
+
+<p>
+  <img src="../../visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" alt="Built pan-tilt sensing mount" width="49%">
+  <img src="../../visuals/autonomy-edge-ai/counter-uas/indoor_detection.png" alt="Indoor target lock on a quadcopter" width="49%">
 </p>
 
-*Authentic Phase-I hardware. Left: the constructed laser–camera mount extracted byte-identically from the original project presentation before publication resizing. Right: the same mount shown in the original project video at 00:34.*
+## How it works
 
-The public images are presentation derivatives only: EXIF orientation correction, proportional resize, JPEG compression and conservative contrast/sharpness adjustment. **No hardware, people, background or scene content was added, removed or regenerated.** The source and output SHA-256 records are published in [hardware provenance](../../evidence/autonomy_edge_ai/counter_uas/hardware_provenance.json).
+```text
+camera frame → YOLO drone detector → target selection → Kalman tracker → pan-tilt steppers → camera re-centres
+```
 
-## Demonstrated detection work
+![Training curves of the drone detector](../../visuals/autonomy-edge-ai/counter-uas/training_curves.png)
 
-<p align="center">
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml"><img src="../../visuals/autonomy-edge-ai/counter-uas/outdoor_detection.png" alt="Outdoor Counter-UAS Phase I detection trial" width="49%"></a>
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml"><img src="../../visuals/autonomy-edge-ai/counter-uas/indoor_detection.png" alt="Indoor Counter-UAS Phase I detection trial" width="49%"></a>
-</p>
+## Status
 
-The archived project evidence includes:
+Phase I demonstrator complete. Next steps: longer-range optics, multi-sensor fusion (visual, acoustic, RF) and pointing-accuracy correction.
 
-- computer-vision drone detection in a physical sensing setup;
-- indoor and outdoor experimental trials;
-- camera / hardware integration records;
-- preserved model-training results and trial imagery;
-- original source material catalogued with provenance and hashes.
-
-[![Counter-UAS Phase I training curves](../../visuals/autonomy-edge-ai/counter-uas/training_curves.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml)
-
-## Engineering scope
-
-The engineering value is the **prototype-to-experiment transition**: model development, physical sensing hardware, camera/mount integration, tracking control and real indoor/outdoor trial conditions were brought together under one Phase-I programme. The retained project record shows **manual human-in-loop tracking, centroid-driven automatic single-target tracking, multi-target tracking using a swarm centroid, pan-tilt actuation, and Kalman-filter reduction of centroid jitter**. Experimental-results material records successful single- and multi-target tracking. It is not represented as an operational counter-drone weapon or fielded C-UAS product.
-
-## AI contribution, decisions and limits
-
-The learned component is the YOLO visual detector. Centroid tracking and Kalman filtering are downstream geometric/control processing; the portfolio does not relabel them as additional learned models. This separation makes detector behaviour, tracking stability and physical integration independently reviewable.
-
-| Engineering choice | Evidence and limitation |
-|---|---|
-| Camera-based Phase I | Retained indoor/outdoor imagery and physical mount demonstrate an experimental setup; no operational detection-range or weather envelope is established. |
-| Separate single-target and swarm-centroid modes | Historical experimental material describes both modes. A group centroid is not evidence of maintaining every target identity. |
-| Training curves plus trial images | Useful development evidence, but insufficient for an independently reproducible benchmark without the frozen split, checkpoint and per-condition test records. |
-| Phase I versus later sensor fusion | Visual prototype work is completed at research-demonstrator level. Passive RF/acoustic integration remains a separate research direction. |
-
-**Evaluation gap:** public evidence does not contain audited false-alarm rates, per-class precision/recall, tracking error, latency distributions or trial denominators. Those quantities are not inferred from selected screenshots or model confidence. This case supports PI and systems-integration experience in experimental AI hardware; it does not establish operational counter-drone effectiveness.
-
-## Contribution boundary
-
-- **Direct responsibility:** Principal Investigator / research direction, experiment framing and systems-integration oversight.
-- **Team-developed work:** model development, prototype construction and trial execution are represented as programme outputs rather than sole-authorship claims.
-- **Tracking/control boundary:** the completed Phase-I record supports visual tracking/control integration; it does not establish operational engagement capability, and later RF/acoustic/multisensor or edge/fog/cloud concepts remain separate.
-- **Scope boundary:** Phase-I visual detection evidence is separated from later passive-RF, acoustic and multisensor research directions.
-
-## Evidence provenance and programme evolution
-
-The private source archive retains the full-resolution original mount photograph, the original Phase-I trial video and the historical presentation/poster material. The public portfolio now carries publication-sized derivatives of the hardware photograph and video frame alongside the original-size-derived detection outputs and training curves.
-
-[![Counter-UAS programme evolution](../../visuals/autonomy-edge-ai/counter-uas/framework_evolution.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml)
-
-*Phase I / AI vision is completed evidence. Later RF/acoustic/multisensor stages are research directions, not represented as completed capability.*
-
-## Research evolution
-
-Follow-on work investigates how independently recorded optical, passive-RF and acoustic modalities could be compared and eventually fused while retaining provenance. Those directions are not represented as completed Phase-I capability.
-
-The detailed historical source repository remains private because it contains programme material and original project records.
-
-[Back to domain index](README.md)
+[← Back to portfolio](../../README.md)

@@ -1,21 +1,11 @@
-# Practical Agentic AI Products & Everyday Work Tools
+# Practical AI tools
 
-This domain contains **independent AI products and agentic utilities for recurring real-world work** rather than one-off demonstrations. It is a growing part of my applied-AI identity: build useful tools, keep humans in control, make state/evidence visible, and release public/free utilities where appropriate.
+Small, useful tools for recurring work. The AI assists; people approve.
 
-## Project families
+| Project | What it does | Result | Status |
+|---|---|---|---|
+| [Adversarial Review Lite](adversarial-review-lite.md) | A second AI model reviews code changes; the builder re-checks each finding before any fix | **58** behavioural tests per package; live control caught a seeded defect and approved a correct change | Public, MIT licence (Claude and Codex versions) |
+| [JobLooper](joblooper-jobpilot.md) | Job applications built only from approved career facts and the exact job advert | 50-case held-out evaluation; **1.00** fabrication detection; blocked a non-significant prompt change | Public repo |
+| [BuildSignal AI](buildsignal-ai.md) | Research-to-publication workflow for AI/SaaS articles and media | 12 workspaces with source tracking and owner-approved release | Private prototype, runs locally |
 
-- **[JobLooper](joblooper-jobpilot.md)** — governed job-search/application workflow with approved career truth, exact JD capture, AI-assisted tailoring, deterministic document build and outcome learning.
-- **[BuildSignal AI](buildsignal-ai.md)** — governed research-to-publication operations across source capture, content/media state, QA, rights, review and owner-controlled release.
-- **[Adversarial Review Lite](adversarial-review-lite.md)** — practical cross-model review tools for everyday AI-assisted coding: independent builder/reviewer roles, mutation checks, structured findings and explicit human approval.
-
-## Product direction
-
-These tools form an **independent practical-agentic product stream** alongside the separate compliance/regulatory AI niche.
-
-The shared pattern is:
-
-**recurring work → explicit state/evidence → bounded agent assistance → independent checks where useful → human-controlled action/release.**
-
-Some of the same assurance patterns are reused in compliance products, especially provenance, independent verification, refusal/guardrails and human approval. But the primary identity here is **everyday agentic utility**.
-
-[Visual evidence](../../visuals/README.md) · [Portfolio](../../README.md)
+[Back to portfolio](../../README.md)

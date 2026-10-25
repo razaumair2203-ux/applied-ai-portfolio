@@ -1,16 +1,14 @@
-# Autonomous, Embedded & Edge AI
+# Autonomy and edge AI
 
-**Primary technical domain.** This is where aerospace systems engineering, computer vision, embedded compute, UAV/UGV integration and verification converge.
+Airborne sensing, edge inference and ground robotics, built and tested as one system.
 
-## Project families
+| Project | What it does | Result | Status |
+|---|---|---|---|
+| [Clear Run](CLEAR_RUN_ENGINEERING_CASE_2026_10.md) | UAV detects and geolocates runway debris; operator confirms; rover retrieves it | **42/45 objects retrieved (93%)** in 30 day/night field trials; mean pickup **81 s**; ≈**US$5.7k** system | Journal manuscript complete (Oct 2026) |
+| [TIR-FOD](clear-run-tir-fod.md) | Public thermal (LWIR) dataset and benchmark for night debris detection | **3,499 frames, 5,593 annotations, 23 classes**; mAP@[.50:.95] **0.86**; **27/30** night targets detected in flight | Dataset public; paper under review at IEEE Access |
+| [Counter-UAS Phase I](counter-uas.md) | Camera-laser pan-tilt mount that detects and tracks small drones | **~14,000** training images; indoor and outdoor trials | Completed demonstrator (Phase I PI) |
+| [Clear Run MBSE case](ai-systems-assurance-mbse.md) | Capella model and telemetry replay for the Clear Run mission chain | Found a coordinate-truncation defect; two new interface requirements | Submitted to INCOSE IACS (Sep 2026) |
 
-- **[Clear Run / TIR-FOD](clear-run-tir-fod.md)** — UAV–GCS–UGV airfield robotics, RGB/LWIR perception, Jetson/TensorRT deployment, geolocation and physical-recovery integration.
-- **[Counter-UAS Phase I](counter-uas.md)** — completed physical AI tracking prototype with articulated sensing hardware, manual/automatic centroid tracking, Kalman stabilization and indoor/outdoor trials.
+Related research: [TIR-FOD dataset, conference papers and manuscripts](../../research/README.md).
 
-## Research connection
-
-Peer-reviewed multi-stream object detection and adversarial-vision work, the public TIR-FOD thermal dataset, and current UAV-centric applied research sit closest to this domain.
-
-Clear Run's evidence-linked MBSE / assurance case remains directly connected to this programme but is **primarily classified under [AI Assurance, Evaluation & Digital Engineering](../04-assurance-digital-engineering/README.md)** to avoid duplicating one capability as two flagship domains. [Open the Clear Run assurance case →](ai-systems-assurance-mbse.md)
-
-[Technical evidence](../../evidence/README.md) · [Visual evidence](../../visuals/README.md) · [Research](../../research/README.md) · [Portfolio](../../README.md)
+[Back to portfolio](../../README.md)

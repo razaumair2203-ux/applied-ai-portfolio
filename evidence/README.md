@@ -1,45 +1,21 @@
-# Technical evidence — organized by domain
+# Code and data
 
-This directory contains public implementation slices, evaluation fixtures and reproducibility records behind the portfolio. Evidence is grouped by the same technical hierarchy used in the public domain map.
+Runnable code, test fixtures and result files behind the portfolio. Run everything from the repository root with Python 3.10+.
 
-## Autonomous, embedded and edge AI
+| Project | What is here | Run |
+|---|---|---|
+| [Clear Run](autonomy_edge_ai/clear_run/README.md) | Edge detector excerpt, field-log summary, mission verification matrix | `python evidence/autonomy_edge_ai/clear_run/validate_field_evidence.py` |
+| [TIR-FOD](autonomy_edge_ai/tir_fod/README.md) | 29 training-run results, frozen splits, training harness | `python evidence/autonomy_edge_ai/tir_fod/reproducibility/recompute_results.py` |
+| Clear Run MBSE | [Telemetry replay cases](autonomy_edge_ai/mbse/telemetry_replay_cases.json) | `python evidence/autonomy_edge_ai/mbse/validate_mbse_evidence.py` |
+| [Lodestar](compliance_regtech/lodestar/README.md) | Hybrid retrieval, reranking, guardrails, PostgreSQL/pgvector tests | `python -m evidence.compliance_regtech.lodestar.reliability_regression` |
+| [i-MSHA](compliance_regtech/i_msha/README.md) | v1 development figures | — |
+| AI evaluation | [Aggregate results](assurance_digital_engineering/ai_evaluation/evaluation_summary.json) | `python evidence/assurance_digital_engineering/ai_evaluation/validate_evaluation_summary.py` |
 
-- **[Clear Run](autonomy_edge_ai/clear_run/README.md)** — sanitized edge-runtime extract, field-evidence snapshot and detection-to-retention verification matrix.
-- **[TIR-FOD](autonomy_edge_ai/tir_fod/README.md)** — 29-run reproducibility bundle, source-aware split records and historical Jetson/TensorRT deployment provenance.
-- **[Counter-UAS Phase I](autonomy_edge_ai/counter_uas/hardware_provenance.json)** — hardware provenance and publication-derivative hashes.
+Public repositories:
 
-## Compliance and regulatory intelligence
+- [Claude Adversarial Review Lite](https://github.com/razaumair2203-ux/claude-adversarial-review-lite)
+- [Codex Adversarial Review Lite](https://github.com/razaumair2203-ux/codex-adversarial-review-lite)
+- [JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper)
+- [IN-ARCP radar package](https://github.com/razaumair2203-ux/inarcp)
 
-- **[Lodestar](compliance_regtech/lodestar/README.md)** — structure-aware chunking, PostgreSQL/pgvector retrieval, RRF, authority-aware reranking, reliability regression, real-DB fixture and adversarial structured-output evaluation.
-
-Run the Lodestar public checks from the repository root:
-
-```bash
-python -m evidence.compliance_regtech.lodestar.public_smoke_test
-python -m evidence.compliance_regtech.lodestar.reliability_regression
-python -m evidence.compliance_regtech.lodestar.fixture.postgres_fixture_test
-python -m evidence.compliance_regtech.lodestar.fixture.authority_ablation
-python -m evidence.compliance_regtech.lodestar.assessment_eval.run_eval
-```
-
-## AI assurance and digital engineering
-
-- **[AI Systems Assurance / MBSE](autonomy_edge_ai/mbse/telemetry_replay_cases.json)** — producer-consumer replay cases and validation logic for the Clear Run assurance case.
-- **[AI workflow evaluation](assurance_digital_engineering/ai_evaluation/evaluation_summary.json)** — public-safe frozen train/validation/held-out, sensitivity, parser-rescore and release-safeguard aggregates.
-
-## Practical AI products
-
-JobLooper and BuildSignal are represented primarily through public/source-derived product surfaces and their case studies. JobLooper's public implementation is maintained in its dedicated repository.
-- **Adversarial Review Lite** is implemented in dedicated public repositories and linked from its Area 3 case study; its assurance pattern is cross-cutting, but its primary product home remains Practical Agentic AI Products.
-
-## Public source repositories
-
-- **Codex Adversarial Review Lite:** <https://github.com/razaumair2203-ux/codex-adversarial-review-lite>
-- **Claude Adversarial Review Lite:** <https://github.com/razaumair2203-ux/claude-adversarial-review-lite>
-- **JobLooper:** <https://github.com/razaumair2203-ux/Pub-JobLooper>
-
-## Scope boundary
-
-The repository publishes enough code, fixtures and measured artefacts to inspect the engineering path without exposing private programme, institutional or personal material. Team-developed work is identified as such, and private-corpus or historical-device measurements are separated from results that can be rerun directly here.
-
-[Domain map](../domains/README.md) · [Back to portfolio](../README.md)
+[Project map](../domains/README.md) · [Back to portfolio](../README.md)

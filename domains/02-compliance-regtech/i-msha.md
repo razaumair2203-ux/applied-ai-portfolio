@@ -1,81 +1,38 @@
-# i-MSHA — U.S. mine-safety intelligence and MSHA decision platform
+# i-MSHA: US mine-safety intelligence
 
-**Private product; technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
+One place to see every mine's violations, inspections, penalties and injuries, built from all public MSHA data.
 
-**Public evidence snapshot:** historical v1 source state (May 2026). A separate redesigned private successor remains pre-launch; the historical development metrics below must not be presented as measurements of that successor.
+![i-MSHA v2 interface](../../media/cards/06-i-msha.jpg)
 
-<p align="center">
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml"><img src="../../visuals/compliance-regtech/i-msha/logo-wordmark.svg" alt="i-MSHA project wordmark" width="34%"></a>
-</p>
+## Why it matters
 
-i-MSHA is an active full-stack product programme built around a difficult data problem in U.S. mining: **MSHA publishes extensive authoritative public data, but the operational picture is fragmented across datasets, entities, time periods and regulatory workflows**. i-MSHA consolidates that information into one national→state→mine/controller decision environment and then layers governed analytics and AI assistance on top of the source data.
+MSHA publishes rich safety data, but it is split across 20 weekly files. Consultants, operators, insurers and deal advisers rebuild the same joins by hand, and silent data gaps hide real risk.
 
-It is therefore not just an “MSHA chatbot” or a dashboard wrapper. The system connects **mine/controller identity, violations, penalties, inspections, injury/safety, legal outcomes, occupational exposure, contractor history and acquisition due diligence** so a user can move from portfolio-level questions to a specific mine, enforcement issue or risk history without rebuilding the data relationship manually.
+## What I did
 
-**Ownership:** independent product development; not a CAE/NUST institutional deliverable. The numerical snapshot is a historical development record, not a current test rerun. [Dated development source](../../evidence/compliance_regtech/i_msha/README.md) · [Source and measurement boundaries](../../evidence/claim-sources.md).
+- **Defined** the product and its users as owner and product lead.
+- **Designed** the data architecture: all 20 weekly MSHA files into DuckDB, served by FastAPI.
+- **Ran** a raw-data reconciliation against the source files before trusting any dashboard.
+- **Set** release gates: source verifiers, unit tests and Playwright browser checks must pass.
+- **Built** with AI coding agents, working to my architecture and acceptance tests.
 
-## System scale
+## Results
 
-| Dimension | Retained 20 May 2026 project state |
-|---|---|
-| Product scale | **8 active modules · 25 frontend features · 100 backend handlers** |
-| Analytical scope | national · state · mine/controller · peer/comparison · date/commodity filtering |
-| Frontend | Next.js · TypeScript · component dashboard UI |
-| Backend | FastAPI · Python |
-| Data architecture | PostgreSQL application state + DuckDB over typed Parquet analytics |
-| Source pipeline | scheduled MSHA public-data ingestion, validation, typed transformation and refresh workflows |
-| AI layer | **Canary AI** across the product, with context-first routing and deterministic feature-handler access to live data |
-| Validation | **385 Canary unit tests · 839 full backend tests passing** in the 20 May 2026 source-of-truth state |
-| Performance engineering | **152 surfaces** audited; retained cumulative cold latency improved **100.1 s → 50.8 s (-49.3%)** and warm latency **66.8 s → 18.3 s (-72.6%)** after query-batching work |
-| Current maturity | private product in pre-deployment hardening; production deployment/UAT are not claimed |
+- Reconciliation over **1,145,416 rows** found **1,368 findings across 166 mines** being dropped. Fixed.
+- **281/281** source verifiers pass.
+- **102** tests on the first product module.
+- v2 rebuilds an earlier v1 prototype (8 modules, 839 backend tests) on a leaner stack.
 
-## What the platform consolidates
+## How it works
 
-The active module set covers:
+Weekly MSHA files are downloaded, type-checked and loaded into DuckDB. FastAPI serves mine, controller and national views. Source verifiers check each dataset against the public MSHA files.
 
-- **Mine & Controller Profiles** — mine search, controller/operator portfolio views and acquisition due diligence;
-- **Violation Management** — compliance intelligence, regulation intelligence, good-faith eligibility and normalized violation rates;
-- **Penalty & Assessment Tracking** — Pattern of Violations screening, penalty lifecycle, component breakdown, reduction advisory and mine-size monitoring;
-- **Inspection Management** — outcomes, readiness, activity intelligence and district enforcement context;
-- **Safety & Incidents** — integrated injury intelligence;
-- **Legal Intelligence** — contest outcomes, judge tendencies and conference effectiveness;
-- **Occupational Exposure** — respirable dust/silica, noise/hearing and chemical-exposure views;
-- **Contractor Intelligence** — consolidated contractor safety/enforcement analysis.
+## Status
 
-Cross-cutting tools include **mine comparison, Weekly Pulse intelligence, export/download workflows, entity search, tier controls and drill-down navigation**.
+Pre-launch: staging targeted 9 Nov 2026, paid launch 21 Dec 2026.
 
-## Engineering choices and limitations
+## Links
 
-PostgreSQL holds application state while DuckDB queries typed Parquet analytical data. Deterministic handlers separate numerical/regulatory data operations from the language-model interface. Context-first routing prevents a definition question from being mistaken for a request for mine-specific statistics.
+Private repository; walkthrough available on request.
 
-The dated test totals establish development checks reported in the project log. They do not establish regulatory correctness, coverage of all workflows or current passing status. The latency comparison sums multiple surfaces; it is not one request latency or a production SLA. Occupational-exposure review and production deployment remained open in that record.
-
-**Role relevance:** independent product direction and architecture for structured data, bounded AI assistance and validation across a substantial application.
-
-## Product differentiation
-
-The system-level differentiator is the **breadth of decisions supported by one governed data model**. Mine identity, enforcement history, inspections, penalties, legal outcomes, exposure, contractor performance and acquisition context are not isolated demos; they are traversable parts of the same product, with Canary providing a natural-language interface across those deterministic data paths. That product shape is more important than any single model or framework.
-
-## Product surface
-
-[![i-MSHA dashboard regression snapshot](../../visuals/compliance-regtech/i-msha/dashboard-regression.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
-
-*Authentic archived Chromium development capture of v1 functionality. This is historical UI evidence, not a current v2 screenshot, customer deployment or reliability benchmark.*
-
-## Canary AI — AI as an interface to governed data
-
-Canary is designed to sit **across** the product rather than replace the underlying data model. The current implementation uses context-first routing, intent classification, feature-location knowledge, adversarial/golden-path tests and deterministic handlers so questions such as S&S rate, POV proximity, controller identity, legal outcomes or feature navigation resolve against the relevant product data path.
-
-The engineering boundary matters: **the LLM is not the regulatory database**. Public MSHA records, typed transformations and deterministic feature logic remain the source of truth; AI is used to help a user reach, interpret and navigate that evidence.
-
-## Contribution boundary
-
-- **Direct responsibility:** product/programme direction, systems architecture, AI/data workflow definition, feature prioritisation, technical review and validation framing.
-- **Product-development scope:** the case represents the integrated product and its measured engineering state; individual feature implementation is not presented as sole manual coding.
-- **Decision authority:** source data, deterministic analytics, validation and release gates remain outside unconstrained model output.
-
-## Boundary
-
-The product remains under active development and its own status record still lists deployment work as pending. This case does not claim completed customer UAT, production hosting, regulatory certification or replacement for professional/legal judgment.
-
-[Back to portfolio](../../README.md) · [Domain index](README.md)
+[Back to portfolio](../../README.md)

@@ -1,61 +1,47 @@
-# Adversarial Review Lite — practical agentic review tools for everyday AI-assisted work
+# Adversarial Review Lite: a second AI model checks the first
 
-**Public tools:** [Codex Adversarial Review Lite](https://github.com/razaumair2203-ux/codex-adversarial-review-lite) · [Claude Adversarial Review Lite](https://github.com/razaumair2203-ux/claude-adversarial-review-lite)
+Free tools that make one coding agent review another's work, with the human approving every fix.
 
-**Public evidence snapshot:** 19 September 2026. Current maturity: two public companion tools with frozen review scope, mutation checks, builder-side re-verification and explicit human approval before fixes.
+![Review report anatomy](../../visuals/assurance-digital-engineering/adversarial-review/audit_report_anatomy.svg)
 
-The two public repositories turn an informal “ask another model to look at it” habit into a **practical agentic work tool** for people using coding agents in everyday software development. Assurance is a core capability of the tool, but its primary product identity is utility: make independent second-model review easy, repeatable and human-controlled during normal AI-assisted work. They support both directions—**Claude builds → Codex reviews** and **Codex builds → Claude reviews**—while keeping mutation and release authority with the human.
+## Why it matters
 
-The system freezes review scope, carries relevant tests/fixtures/rubrics into the review contract, snapshots repository state, dispatches an independent reviewer, validates reviewer output, re-checks each finding instead of obeying it blindly, and presents a report **before** any fix is allowed. It is aimed at changes where hallucinated APIs, weak tests, auth/billing mistakes, migrations or multi-file scope drift can create real engineering cost.
+Coding agents produce plausible code with hallucinated APIs, weak tests and scope drift. A second model catches different mistakes, but only if its findings are checked rather than obeyed.
 
-## Control flow
+## What I did
+
+- **Designed** the builder–reviewer protocol: Claude builds and Codex reviews, or the reverse.
+- **Defined** a frozen review scope with tests, fixtures and optional rubrics passed to the reviewer.
+- **Added** file-hash checks so nothing changes until the human approves.
+- **Built** cross-platform install and self-test for Windows, macOS, Linux and WSL.
+- **Released** both tools under the MIT licence.
+
+## Results
+
+- **58** behavioural regression tests per package.
+- In a live control run, the reviewer **found a seeded defect** and **approved a correct change**.
+- Protocol 2 released 10 Oct 2026; reviewer model and effort selection added 11 Oct 2026.
+
+## How it works
 
 ```mermaid
-flowchart TD
-    A[Builder model] --> B[Plan / code / test contract]
-    B --> C[Independent reviewer model]
-    C --> D[Structured findings]
-    D --> E[Builder verifies each finding]
-    E --> F[Human-readable report]
-    F --> G{Human approval}
-    G -->|approve| H[Verified fixes]
-    G -->|reject / defer| I[No mutation]
+flowchart LR
+    A[Builder model] --> B[Frozen scope + tests]
+    B --> C[Reviewer model]
+    C --> D[Builder re-checks each finding]
+    D --> E[Report]
+    E --> F{Human approval}
+    F -->|approve| G[Fixes applied]
+    F -->|reject| H[No change]
 ```
 
-## Engineering controls
+## Status
 
-- separate builder/reviewer roles;
-- Windows/macOS/Linux/WSL execution support;
-- environment/self-test before review;
-- reviewer-model fallback;
-- frozen review scope;
-- test-spec, fixture and optional rubric inputs;
-- file-hash / mutation checks;
-- structured reviewer output and quality classification;
-- human-review floor for higher-consequence changes;
-- strict mode for rubric-driven review;
-- report-before-fix workflow and explicit approval before mutation.
+Released and public (MIT).
 
-The design does not treat a second model as proof of correctness. It creates an independent failure surface and forces findings back through verification and human authority.
+## Links
 
-![Codex Adversarial Review report anatomy](../../visuals/assurance-digital-engineering/adversarial-review/audit_report_anatomy.svg)
+- [Claude Adversarial Review Lite](https://github.com/razaumair2203-ux/claude-adversarial-review-lite)
+- [Codex Adversarial Review Lite](https://github.com/razaumair2203-ux/codex-adversarial-review-lite)
 
-The public repository includes the report template, sample artifact, cross-platform installer/self-test and operating rules for the builder/reviewer workflow.
-
-## Contribution boundary
-
-- **Direct responsibility:** product/workflow design, builder-reviewer contract, assurance logic, human-control model and public operating rules.
-- **Implementation boundary:** the companion tools orchestrate external coding/reviewer agents; they do not treat either model as an authority and do not claim that second-model review proves correctness.
-- **Release authority:** mutation remains blocked until findings are re-verified and the human approves the action.
-
-## Product identity
-
-This project belongs primarily to the **Practical Agentic Work Tools** stream alongside other independent everyday AI utilities. The same control pattern—independent review, bounded action, provenance and human approval—also supports the compliance/regulatory AI products, but the tool is not itself a compliance product.
-
-The broader direction is to release small, useful agentic tools that improve recurring knowledge and engineering work rather than remain one-off demonstrations.
-
-## Engineering scope
-
-The project demonstrates model orchestration, fallback logic, runtime/tool checks, structured outputs, mutation controls, evaluation discipline and human-in-the-loop release authority.
-
-[Back to practical agentic tools](README.md)
+[Back to portfolio](../../README.md)

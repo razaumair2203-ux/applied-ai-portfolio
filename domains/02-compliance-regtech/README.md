@@ -1,14 +1,12 @@
-# Compliance & Regulatory Intelligence
+# Compliance and regulatory data
 
-**Deliberate product vertical.** These systems convert fragmented authoritative data and evidence into traceable, bounded decision support.
+Products that turn scattered official data and documents into cited, checkable answers.
 
-## Project families
+| Project | What it does | Result | Status |
+|---|---|---|---|
+| [i-MSHA](i-msha.md) | Analytics over all 20 weekly US mine-safety (MSHA) open-data files, for consultants, operators, insurers and deal advisers | Reconciliation of **1,145,416 rows** found and fixed **1,368** dropped findings across **166 mines** | Pre-launch; paid launch targeted 21 Dec 2026 |
+| [Lodestar](lodestar.md) | Evidence-assessment assistant for complex immigration petitions | **33/34** retrieval checks pass over a **209-document** corpus; invented citations force a refusal | Working v1 (private) |
 
-- **[i-MSHA](i-msha.md)** — U.S. mine-safety compliance and decision intelligence across MSHA data, enforcement, safety, legal, exposure, contractor and acquisition workflows.
-- **[Lodestar](lodestar.md)** — EB-2 NIW / EB-1A evidence assessment with authority-aware retrieval, cited reasoning and explicit refusal controls.
+**Shared pattern:** official sources → structured data → retrieval or analytics → AI answer with citations → human decision.
 
-## Reusable engineering pattern
-
-**Authoritative source consolidation → structured evidence model → retrieval / analytics → bounded AI reasoning → cited decision support → human-controlled action.**
-
-[Technical evidence](../../evidence/README.md) · [Visual evidence](../../visuals/README.md) · [Portfolio](../../README.md)
+[Code and tests](../../evidence/README.md) · [Back to portfolio](../../README.md)

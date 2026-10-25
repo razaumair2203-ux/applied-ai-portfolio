@@ -1,64 +1,37 @@
-# JobLooper — evidence-governed job-application operating system
+# JobLooper: job applications built from approved facts
 
-**Public implementation:** [Pub-JobLooper](https://github.com/razaumair2203-ux/Pub-JobLooper)
+A local-first app that tailors CVs and letters to the exact job advert, using only career facts the candidate has signed off.
 
-**Public evidence snapshot:** 19 September 2026. Public implementation and private evaluation lineage are kept as separate evidence surfaces.
+![JobLooper workflow](../../visuals/practical-ai-products/joblooper/workflow.svg)
 
-**Private development / evaluation lineage:** [Request technical review access →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-joblooper-private.yml)
+## Why it matters
 
-JobLooper is a local-first system for managing the **entire evidence-bearing job-application lifecycle**, not an AI CV generator. It starts with a candidate-approved record of career truth, captures the exact employer advert, exposes unresolved fit gaps before drafting, allows AI assistance only inside that governed context, requires complete human review, builds deterministic employer-facing documents, records the exact files submitted, and carries observed outcomes forward into later applications.
+AI CV tools invent experience and lose track of which file went to which employer. One fabricated claim can end an application.
 
-The design principle is simple but demanding: **truth, provenance, workflow state, release authority and observed outcomes are software responsibilities; the model may assist reasoning but does not own those states.**
+## What I did
 
-<p align="center">
-  <a href="https://github.com/razaumair2203-ux/Pub-JobLooper"><img src="../../visuals/practical-ai-products/joblooper/app-icon.svg" alt="Official JobLooper project mark" width="13%"></a>
-</p>
+- **Designed** the workflow as a state machine: approved facts → job advert → gap check → draft → review → build → submit → outcome.
+- **Defined** the rule that AI can propose wording but cannot change approved facts or release documents.
+- **Built** deterministic DOCX/PDF output, with each submission tied to the exact files sent.
+- **Ran** a frozen evaluation (20 train / 15 validation / 15 held-out) before accepting prompt changes.
 
-*Official project mark from the public JobLooper repository. No reconstructed application screenshot is presented as runtime evidence.*
+## Results
 
-## End-to-end governed lifecycle
+- Fabrication detection **1.00**; date-error detection **1.00**; metric-preservation detection **0.92**.
+- A candidate prompt change was **blocked** because its gain was not statistically significant.
+- Runs without an AI provider; model help is optional.
 
-[![JobLooper governed workflow](../../visuals/practical-ai-products/joblooper/workflow.svg)](https://github.com/razaumair2203-ux/Pub-JobLooper)
+## How it works
 
-The implemented lifecycle is:
+Python 3.10+, mostly standard library. Content hashes flag stale inputs. Employer responses are logged as outcomes, separate from guesses about why.
 
-**signed career truth → exact JD capture → JD confirmation → requirement/gap preflight → evidence-bounded drafting → complete document review → explicit approval → deterministic DOCX/PDF build → hash-bound submission record → employer response → outcome/lesson history**.
+## Status
 
-That architecture addresses a recurring failure mode in AI-assisted career tools: a chat can generate plausible text, but it usually does not know which facts are authorized, which advert was actually used, which file was finally submitted, or whether later “lessons” are evidence or speculation.
+Public repo; local-first Python app.
 
-## Public implementation
+## Links
 
-The application is a local-first **Python 3.10+** system built primarily on the standard library. It can operate without an AI provider; optional Codex assistance is additive rather than a hard runtime dependency.
+- [Pub-JobLooper on GitHub](https://github.com/razaumair2203-ux/Pub-JobLooper)
+- [Evaluation method](../04-assurance-digital-engineering/ai-evaluation-workflows.md)
 
-Implemented controls include:
-
-- candidate-reviewed career truth represented as approved anchors with provenance;
-- exact job-description capture rather than an inferred summary;
-- deterministic requirement/preflight state and explicit proceed/stop decisions;
-- AI assistance that cannot silently rewrite approved truth;
-- complete CV/letter presentation before user sign-off;
-- deterministic DOCX/PDF generation and text/package validation;
-- content hashes, generation fingerprints and stale-input detection;
-- exact submission receipts bound to the files actually sent;
-- employer response and outcome records separated from inferred explanations;
-- retained lessons only after evidence/counter-evidence review.
-
-## Contribution boundary
-
-- **Direct responsibility:** product/system design, truth and provenance model, workflow governance, evaluation/release controls and technical validation.
-- **Implementation model:** deterministic application state remains authoritative; optional model assistance is additive and cannot approve facts, release documents or manufacture outcome explanations.
-- **Public inspectability:** the main implementation is public; private development lineage is reserved for evaluation and development records that are unsuitable for unrestricted release.
-
-## Evaluation and release discipline
-
-The wider private development record includes a frozen **20 train / 15 validation / 15 held-out** evaluation harness with fabrication/date/metric checks, parser rescoring, prompt-version comparison and release safeguards. One retained candidate optimization was **blocked** because its measured improvement was not statistically significant—an example of release governance overriding the assumption that a newer AI prompt must be better.
-
-A public-safe aggregate is documented in **[Evaluation-Driven AI Workflow Engineering](../04-assurance-digital-engineering/ai-evaluation-workflows.md)**.
-
-## Why this is an AI systems project
-
-The central engineering problem is **model containment inside a traceable state machine**. AI can interpret a role and propose wording, but it cannot convert a hypothesis into candidate truth, claim unsupported experience, release a document, mutate submission state, or turn an employer outcome into a causal story without evidence.
-
-Hiring predictions, synthetic ATS scores and unverified recruiter explanations remain outside the authority model.
-
-[Back to domain index](README.md)
+[Back to portfolio](../../README.md)

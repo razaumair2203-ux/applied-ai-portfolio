@@ -1,15 +1,13 @@
-# AI Assurance, Evaluation & Aerospace Digital Engineering
+# Assurance and digital engineering
 
-This is a **cross-cutting engineering layer**, not a separate product identity. It carries the verification, evidence, lifecycle, evaluation and release discipline that differentiates the portfolio from model-only or prompt-only AI work.
+The verification discipline behind every other project: models, tests and evidence that show a system works.
 
-## Capability families
+| Project | What it does | Result | Status |
+|---|---|---|---|
+| [Clear Run MBSE](../01-autonomy-edge-ai/ai-systems-assurance-mbse.md) | Capella/Arcadia model and telemetry replay for the Clear Run mission chain | Found a coordinate-truncation defect; **2** new interface requirements | Submitted to INCOSE IACS (16 Sep 2026) |
+| [AI evaluation workflows](ai-evaluation-workflows.md) | Frozen train/validation/held-out tests that gate AI prompt changes | Fabrication detection **1.00**; blocked a non-significant change | Method in use |
+| [Super Mushshak](super-mushshak-digital-engineering.md) | Glass-cockpit retrofit of a trainer aircraft; I was Lead Systems Engineer | **80 aircraft across 4 customer orders** (programme outcome, 2016–17) | Completed |
+| [ATLAS GPU/HPC](atlas-hpc.md) | Shared GPU cluster for AI training, simulation and research | **22 nodes**; SLURM, CUDA, Docker | In service |
+| [Adversarial Review Lite](../03-practical-ai-products/adversarial-review-lite.md) | Cross-model code review with human approval | **58** behavioural tests per package | Public (MIT) |
 
-- **[AI Systems Assurance / MBSE — Clear Run](../01-autonomy-edge-ai/ai-systems-assurance-mbse.md)** — evidence-linked Capella/Arcadia assurance, producer-consumer replay, verification boundaries and regression obligations for the real Clear Run autonomy chain.
-- **[Evaluation-Driven AI Workflow Engineering](ai-evaluation-workflows.md)** — frozen evaluation, failure checks, statistical safeguards and release gates.
-- **[Super Mushshak Digital Engineering](super-mushshak-digital-engineering.md)** — completed glass-cockpit prototype integration reconstructed into an evidence-linked digital thread; executable-twin behaviour remains future work.
-- **[ATLAS GPU/HPC](atlas-hpc.md)** — 22-node research-computing environment supporting AI, simulation and reproducible engineering workflows.
-- **[Adversarial Review Lite](../03-practical-ai-products/adversarial-review-lite.md)** — primarily a practical agentic work tool, but also a strong example of cross-model assurance, mutation control and human approval.
-
-Assurance methods recur across the portfolio: Clear Run system verification, compliance/regulatory AI guardrails, JobLooper release controls, Adversarial Review Lite, evaluation harnesses and aerospace digital-thread work. The capability is therefore **horizontal** even when a particular product belongs to another domain.
-
-[Technical evidence](../../evidence/README.md) · [Visual evidence](../../visuals/README.md) · [Portfolio](../../README.md)
+[Code and data](../../evidence/README.md) · [Back to portfolio](../../README.md)
