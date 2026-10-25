@@ -1,5 +1,7 @@
 # Clear Run — public deployment evidence extract
 
+> **Historical measurement baseline, September 2026.** Later hardware and October mission progress are described in the [updated engineering case](../../../domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md). This file's earlier event snapshot and the machine-readable verification matrix do **not** describe the latest maturity or establish independent mission-success statistics.
+
 This folder publishes a **sanitized, non-sensitive evidence extract** from the private Clear Run programme so that edge-AI deployment claims in the portfolio are technically inspectable.
 
 Clear Run is team-developed work at CAE/NUST. **Umair Raza's role is technical direction, systems engineering/integration, experiment and validation framing, and team leadership; this folder does not claim sole authorship of the team source code.**
