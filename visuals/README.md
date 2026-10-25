@@ -1,15 +1,15 @@
 # Public visual evidence — actual project artefacts
 
-The **featured recruiter-facing media** use real project hardware photographs, recorded experiment outputs and archived browser captures. This index does not advertise promotional composites, reconstructed application screens, conceptual hardware or proposed configurations as physical evidence.
+The **featured public media** use real project hardware photographs, recorded experiment outputs and archived browser captures. This index does not advertise promotional composites, reconstructed application screens, conceptual hardware or proposed configurations as physical evidence.
 
 ## Flight hardware, perception and aircraft integration
 
 | Case | Original visual evidence | Boundary |
 |---|---|---|
-| Clear Run / earlier TIR-FOD UAV | [Actual airborne research UAV](autonomy-edge-ai/tir-fod/airborne_platform.png), [recorded Jetson runtime](autonomy-edge-ai/tir-fod/jetson_runtime.png) | These are earlier aerial sensing-stage artefacts. No publicly released photograph of the latest tracked collector is identified. |
-| TIR-FOD embedded implementation | [Mounted Jetson](autonomy-edge-ai/tir-fod/jetson_mounted.png), [original capture-session analysis](autonomy-edge-ai/tir-fod/capture_sessions.png) | Platform/evaluation evidence; no claim about integrated FOD pickup rates. |
-| Counter-UAS Phase I | [Actual pan/tilt hardware mount](autonomy-edge-ai/counter-uas/phase1_original_mount.jpg), [recorded outdoor detection](autonomy-edge-ai/counter-uas/outdoor_detection.png), [recorded indoor detection](autonomy-edge-ai/counter-uas/indoor_detection.png) | Earlier vision-tracking demonstrator; no RF-fusion or operational-interception claim. |
-| Super Mushshak | [Original installed Dynon cockpit photograph](assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg), [original in-flight cockpit](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/blob/main/assets/flight-test/cockpit-overview-inflight.jpg) | Historical installation and evaluation images, not proof that different Dynon/Garmin paths were fitted together. |
+| Clear Run physical retrieval | [Actual collector trial images](../media/showcase/clear-run-real-collector-sequence.png) and [original source frames](../media/real/README.md) | Wheeled collection assembly and one edited pickup excerpt; not the later reported tracked/skid-steer configuration. |
+| TIR-FOD thermal class evidence and edge AI | [Actual 23-class LWIR atlas](../media/showcase/tir-fod-23-class-evidence-atlas.png), [mounted Jetson](autonomy-edge-ai/tir-fod/jetson_mounted.png), [original capture-session analysis](autonomy-edge-ai/tir-fod/capture_sessions.png) | Original thermal annotated crops and deployment evidence; no claim about integrated pickup rates. |
+| Counter-UAS Phase I | [Photographic/recorded evidence board](../media/showcase/counter-uas-real-physical-evidence.png), [actual pan/tilt mount](autonomy-edge-ai/counter-uas/phase1_original_mount.jpg), [recorded outdoor detection](autonomy-edge-ai/counter-uas/outdoor_detection.png) | Earlier vision-tracking demonstrator; no RF-fusion or operational-interception claim. |
+| Super Mushshak | [Genuine installed/flight cockpit board](../media/showcase/super-mushshak-original-flight-evidence.png), [original Dynon photograph](assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg) | Historical installation and evaluation images, not proof that different Dynon/Garmin paths were fitted together. |
 
 ## Research and software outputs
 
