@@ -6,6 +6,8 @@ on:
       - '.github/workflows/authentic-media-preview.yml'
       - 'media/showcase/tir-fod-23-class-evidence-atlas.svg'
       - 'media/showcase/clear-run-real-collector-sequence.svg'
+      - 'media/showcase/counter-uas-real-physical-evidence.svg'
+      - 'media/showcase/super-mushshak-original-flight-evidence.svg'
   workflow_dispatch:
 
 permissions:
@@ -30,6 +32,8 @@ jobs:
           pairs = [
               ('media/showcase/tir-fod-23-class-evidence-atlas.svg','media/showcase/tir-fod-23-class-evidence-atlas.png',(1600,1260)),
               ('media/showcase/clear-run-real-collector-sequence.svg','media/showcase/clear-run-real-collector-sequence.png',(1600,900)),
+              ('media/showcase/counter-uas-real-physical-evidence.svg','media/showcase/counter-uas-real-physical-evidence.png',(1600,900)),
+              ('media/showcase/super-mushshak-original-flight-evidence.svg','media/showcase/super-mushshak-original-flight-evidence.png',(1600,900)),
           ]
           for source, target, expected in pairs:
               cairosvg.svg2png(url=source,write_to=target)
@@ -43,7 +47,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add media/showcase/tir-fod-23-class-evidence-atlas.png media/showcase/clear-run-real-collector-sequence.png
+          git add media/showcase/tir-fod-23-class-evidence-atlas.png media/showcase/clear-run-real-collector-sequence.png media/showcase/counter-uas-real-physical-evidence.png media/showcase/super-mushshak-original-flight-evidence.png
           if ! git diff --cached --quiet; then
             git commit -m "Render verifiable original-media evidence boards to PNG"
             git push
