@@ -2,7 +2,7 @@
 
 **Private product; technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
 
-**Public evidence snapshot:** historical v1 source state (May 2026). The subsequent private i-MSHA v2 is a redesigned pre-launch codebase; the numbers below must not be presented as v2 results.
+**Public evidence snapshot:** historical v1 source state (May 2026). A separate redesigned private successor remains pre-launch; the historical development metrics below must not be presented as measurements of that successor.
 
 <p align="center">
   <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml"><img src="../../visuals/compliance-regtech/i-msha/logo-wordmark.svg" alt="i-MSHA project wordmark" width="34%"></a>
