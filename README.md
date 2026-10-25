@@ -36,7 +36,7 @@
 
 ## Photo-authentic engineering media · October 2026
 
-The following media cards were assembled **only from authentic, already-public project photos or browser/trial captures**, with source Git blob identities retained in each SVG's metadata. Typography and layout are editorial; no equipment or scene was generated.
+The following media cards were assembled **only from authentic, already-public project photographs, trial captures, browser screenshots or research result figures**, with source Git blob identities retained in each SVG's metadata. Typography and layout are editorial; no equipment or scene was generated.
 
 | Media | Evidence represented |
 |---|---|
@@ -44,6 +44,8 @@ The following media cards were assembled **only from authentic, already-public p
 | [Super Mushshak / aircraft integration — installed cockpit](visuals/editorial/super-mushshak-systems-2026.svg) | Original installed prototype photograph and verified engineering scope |
 | [Counter-UAS / physical AI — mount and outdoor frame](visuals/editorial/counter-uas-physical-ai-2026.svg) | Real fabricated mount and experimental visual-tracking capture |
 | [i-MSHA / regulatory intelligence — authentic browser screenshot](visuals/editorial/i-msha-product-engineering-2026.svg) | Genuine development dashboard; not a production-status claim |
+| [IN-ARCP / radar research — real detection-result plot](visuals/editorial/inarcp-radar-evidence-2026.svg) | Actual computed R22 research curve; not operational radar certification |
+| [Multi-UAV SAR / mission simulation — real test-result plot](visuals/editorial/multi-uav-sar-evidence-2026.svg) | Actual command-loss simulation result, not field flight data |
 
 ## Research status and release boundaries
 
