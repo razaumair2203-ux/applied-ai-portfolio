@@ -38,3 +38,20 @@ Photos, screenshots and research plots were inspected as original image files. *
 ## Traceability and next verification
 
 The previous homepage is archived at [the frozen 25 October baseline](../archive/README_2026-10-25_before_repositioning.md). The current Clear Run case is [October engineering case](../domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md). Other repository documentation may still need synchronization; an up-to-date homepage does not make every historical page current.
+
+## Second revision after user poster critique (25 October 2026)
+
+The first change above has since been superseded by a **second visual-direction correction**. The earlier six lightweight editorial cards are no longer linked from the public homepage. Their original numbers are retained as historical audit values, not current landing-page KPIs.
+
+| Structural metric | Pre-restructure | Current homepage | Interpretation |
+|---|---:|---:|---|
+| Homepage words | 1,933 | 786 | **59.3% reduction** in landing-page text; direct evidence links retained |
+| Main portfolio direct selected case links | 8 of 12 | 12 of 12 | Explicit curated coverage; not a full 26-repository audit |
+| Weak old editorial cards featured | 6 at prior checkpoint | 0 now | Withdrawn pending replacement design approval |
+| New review-only technical sheets | 0 | 12 | **6 source-image / result-plot sheets; 6 text/flow evidence sheets**; not yet approved for publicity |
+| Relative links missing from current homepage | — | 0 | Checked against repository tree after second revision |
+| Clear Run poster-derived local PNG layouts | 0 | 2 | Generated in conversation sandbox, **not** uploaded to GitHub; current poster crops need original-camera-file verification |
+
+**Do not interpret** this revision as measured increase in recruiter engagement, conversion, article readership or scientific validation. The 12 current SVGs are openly readable in a clearly labeled review folder, but are intentionally **not** embedded as finished portfolio marketing media.
+
+[Review index](../visuals/review-2026/README.md) · [poster claim audit](CLEAR_RUN_POSTER_CLAIM_AUDIT_2026_10_25.md).
