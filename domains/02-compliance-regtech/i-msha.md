@@ -2,7 +2,7 @@
 
 **Private product; technical review available:** [Request review →](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
 
-**Public evidence snapshot:** 19 September 2026. Quantitative product/test counts cited below remain tied to the retained 20 May 2026 source-of-truth state where specified.
+**Public evidence snapshot:** historical v1 source state (May 2026). The subsequent private i-MSHA v2 is a separate redesigned pre-launch codebase, with owner QA and hosting unresolved in its 2 October checkpoint; the numbers below must not be presented as v2 results.
 
 <p align="center">
   <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml"><img src="../../visuals/compliance-regtech/i-msha/logo-wordmark.svg" alt="i-MSHA project wordmark" width="34%"></a>
@@ -60,7 +60,7 @@ The system-level differentiator is the **breadth of decisions supported by one g
 
 [![i-MSHA dashboard regression snapshot](../../visuals/compliance-regtech/i-msha/dashboard-regression.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
 
-*Authentic browser-regression snapshot from the project repository. It is shown as product/UI evidence, not as a production-deployment claim.*
+*Authentic archived Chromium development capture with a visible developer issue badge. This establishes historical UI implementation, not a clean current test run, operational deployment or the newer private i-MSHA v2 interface.*
 
 ## Canary AI — AI as an interface to governed data
 

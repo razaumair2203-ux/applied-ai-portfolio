@@ -1,54 +1,62 @@
 # Muhammad Umair Raza
-### Aerospace Systems Integration · Autonomous Systems · Applied AI Engineering
+### Aerospace Systems Integration · Autonomous Systems · Applied AI
 
-**Engineering and applied-R&D leader** with 18+ years across aircraft development, avionics integration, testing/acceptance, fleet sustainment and multidisciplinary technical delivery. My current work combines **physical autonomy, embedded/edge AI, sensing, robotics interfaces and systems verification**. I lead engineering architecture, integration decisions and experiment/V&V strategy while working with teams delivering real hardware and software. My wider aircraft record includes JF-17 engineering/integration and fleet programmes, ZDK-03 AEW&C technical operations, and Super Mushshak retrofit integration.
+**Engineering and R&D leader with 18+ years in aircraft programmes, avionics integration, verification, technical programme delivery and fleet sustainment.** I now lead multidisciplinary work connecting edge perception, mission systems, robotics and engineering assurance. My engineering foundation includes JF-17 development and fleet programmes, ZDK-03 AEW&C sustainment and the Super Mushshak glass-cockpit retrofit.
 
-**[LinkedIn](https://www.linkedin.com/in/mumairaza/)** · **[Engineering leadership profile](profile/LEADERSHIP_PROFILE_2026_10.md)** · **[Research & publications](research/README.md)** · **[Technical review requests](PRIVATE_REPOSITORY_ACCESS.md)**
+[**LinkedIn**](https://www.linkedin.com/in/mumairaza/) · [Engineering leadership and programme scale](profile/LEADERSHIP_PROFILE_2026_10.md) · [Publications and research](research/README.md) · [Original photographs and experiment media](media/showcase/README.md)
 
-> **Current flagship:** [Clear Run / TIR-FOD](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) has progressed from airborne FOD perception to a **fabricated tracked/skid-steer retrieval prototype and a project-lead-confirmed integrated mission demonstration**. October day/night and pickup figures are team-reported, with repeatability and independently traceable success still to be established. [October maturity update](domains/01-autonomy-edge-ai/CLEAR_RUN_2026-10_STATUS.md).
+## Selected engineering case studies
 
-## Three engineering cases to start with
+### 01 / Clear Run — airborne sensing to physical FOD recovery
+[![Authentic Clear Run airborne UAV](visuals/autonomy-edge-ai/tir-fod/airborne_platform.png)](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md)
 
-| Applied autonomy / perception | Aircraft-level systems integration | Physical AI tracking |
-|:--|:--|:--|
-| <img src="visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" alt="Authentic airborne thermal-FOD research UAV" width="290"> | <img src="visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg" alt="Actual Super Mushshak installed glass-cockpit prototype" width="290"> | <img src="visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" alt="Actual constructed counter-UAS experimental camera mount" width="290"> |
-| **[Clear Run — UAV–GCS–UGV](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md)**: sensing, localization, GCS tasking and real collection hardware; prototype mission demonstrated, reliability work ongoing. | **[Super Mushshak retrofit](domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md)**: lead systems engineer across avionics/sensor interfaces, modification harness, installed ground/flight testing and OEM actions. | **[Counter-UAS Phase I](domains/01-autonomy-edge-ai/counter-uas.md)**: completed physical visual-tracking research prototype, camera/mount integration and indoor/outdoor trials; later multisensor fusion remains proposed. |
+**The engineering problem:** carry foreign-object-debris detections from airborne RGB/LWIR sensors through localization, ground-control review and an actual ground collection prototype. A team-built integration demonstration is reported; configuration-linked end-to-end reliability remains to be independently verified. The photograph shows the earlier **TIR-FOD sensing UAV**, not the subsequent collection rover.
 
-*The three images above are actual project photographs from already-public evidence, not renders of a proposed system. The UAV is from the earlier TIR-FOD airborne-sensing programme; it is not an image of the later tracked collection rover.*
+[Engineering integration and current maturity](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) · [Actual detection outputs](visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png) · [Original project media](media/showcase/README.md#clear-run)
 
-### Technical evidence that hiring teams can inspect
+### 02 / Super Mushshak — flight-tested avionics integration
 
-- **TIR-FOD:** 3,499 LWIR source frames, 5,593 annotated objects, 23 categories and 29 recorded training runs; [dataset DOI](https://doi.org/10.5281/zenodo.22546586), [reproducibility evidence](evidence/autonomy_edge_ai/tir_fod/reproducibility/README.md). Model-evaluation claims distinguish ordinary frame splits from acquisition-block and leakage-controlled testing.
-- **Clear Run:** RGB/LWIR edge perception, Jetson/TensorRT, mission interfaces, ground-control tasking and fabricated collection hardware; [current maturity](domains/01-autonomy-edge-ai/CLEAR_RUN_2026-10_STATUS.md) and [what the field evidence actually supports](evidence/autonomy_edge_ai/clear_run/README.md).
-- **Aerospace delivery:** aircraft integration, requirements/interfaces, configuration, OEM coordination, installed tests and feedback into the engineering baseline; [retained historical verification case](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification).
+[![Original installed Dynon cockpit](visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg)](domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md)
 
-## Specializations and selected work
+**Lead systems-engineering work:** retrofit design and integration across cockpit displays, sensors, NAV/COM, wiring, configuration control, installed ground checks, flight-test feedback and OEM discrepancy resolution. Three initial prototypes are reported in the programme record; Dynon and Garmin evaluation paths are distinguished.
 
-| Engineering domain | Selected cases | What they demonstrate |
+[Aircraft engineering case](domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md) · [Original flight and cockpit photographs](media/showcase/README.md#super-mushshak)
+
+### 03 / Counter-UAS Phase I — built vision-tracking demonstrator
+
+[![Real constructed Counter-UAS camera mount](visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg)](domains/01-autonomy-edge-ai/counter-uas.md)
+
+**Principal Investigator / integration lead:** physical camera/mount development, YOLO-based perception, centroid/Kalman-based tracking controls and indoor/outdoor experiments. This is an experimental visual-tracking system, not evidence of operational counter-UAS performance or completed passive-RF fusion.
+
+[Physical prototype case](domains/01-autonomy-edge-ai/counter-uas.md) · [Genuine outdoor trial output](visuals/autonomy-edge-ai/counter-uas/outdoor_detection.png) · [Original media](media/showcase/README.md#counter-uas-phase-i)
+
+## Sensing, autonomy and reproducible research
+
+| Engineering case | Concrete evidence | Maturity |
 |---|---|---|
-| **Physical autonomy & embedded AI** | [Clear Run](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) · [Counter-UAS](domains/01-autonomy-edge-ai/counter-uas.md) · [multi-UAV SAR](research/MULTI_UAV_SAR_CASE.md) | Perception, cross-subsystem integration, robotics and simulation-based mission verification |
-| **Aerospace, radar & RF engineering** | [Aircraft retrofit](domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md) · [IN-ARCP radar detection](research/INARCP_RADAR_CASE.md) · [GNSS/CRPA research](research/README.md) | Aircraft lifecycle, high-integrity sensing, statistical detection and interference mitigation research |
-| **Regulated, evidence-driven AI products** | [i-MSHA](domains/02-compliance-regtech/i-msha.md) · [Lodestar](domains/02-compliance-regtech/lodestar.md) | Governed public-data analytics, legal/RAG evidence structures, reliability controls; independent development, not production claims |
-| **Practical agentic software** | [JobLooper](domains/03-practical-ai-products/joblooper-jobpilot.md) · [Adversarial Review Lite](domains/03-practical-ai-products/adversarial-review-lite.md) · [BuildSignal AI](domains/03-practical-ai-products/buildsignal-ai.md) | Human-approved workflows, state/provenance, independent review, controlled tool execution |
-| **AI assurance / digital engineering** | [Evidence-linked MBSE](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md) · [CloakBench](research/CLOAKBENCH_CASE.md) · [ATLAS HPC](domains/04-assurance-digital-engineering/atlas-hpc.md) | Verification, reproducible evaluation, failure-mode analysis and research infrastructure |
+| [TIR-FOD / thermal edge AI](domains/01-autonomy-edge-ai/clear-run-tir-fod.md) | [Public dataset](https://doi.org/10.5281/zenodo.22546586), 3,499 LWIR source frames, 5,593 annotations across 23 classes, 29 recorded training runs and Jetson integration | Field R&D, article under consideration |
+| [IN-ARCP radar detection](research/INARCP_RADAR_CASE.md) | [R22 reproducibility and plotted results](media/showcase/inarcp-r22-detector.png), compound-Gaussian clutter and target self-masking | Manuscript submitted, decision pending |
+| [Multi-UAV search and rescue](research/MULTI_UAV_SAR_CASE.md) | [Original simulated command-loss plot](media/showcase/multi-uav-command-loss.png), separate 640 reported SITL flights | Simulation-only, manuscript awaiting author approval |
+| [Clear Run MBSE and telemetry assurance](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md) | Explicit requirements, interface fault replay and acceptance checks | Bounded software replay, not a certified safety case |
+| [CloakBench](research/CLOAKBENCH_CASE.md) | Displacement-versus-suppression detector evaluation | Research in progress; private unfinished repository |
 
-*These are separate streams: institutional/team aerospace and autonomy work is not portrayed as independently owned software; experimental systems are not described as certified, adopted or commercial deployments.*
+## Independent engineering software
 
-## Evidence gallery
+| Project | Engineering differentiator | Evidence |
+|---|---|---|
+| [i-MSHA](domains/02-compliance-regtech/i-msha.md) | MSHA data modeling, deterministic mining-safety analytics, API architecture and governed AI | Authentic historical UI; newer private v2 remains pre-launch |
+| [Lodestar](domains/02-compliance-regtech/lodestar.md) | Authority-grounded legal evidence retrieval and explicit uncertainty controls | Public-safe code/fixtures and dated private evaluation |
+| [JobLooper / JobPilot](domains/03-practical-ai-products/joblooper-jobpilot.md) | Source-bound CV/advert processing, human review, deterministic document release | [Public JobLooper source](https://github.com/razaumair2203-ux/Pub-JobLooper) |
+| [Adversarial Review Lite](domains/03-practical-ai-products/adversarial-review-lite.md) | Reciprocal cross-model review utilities with read-only/release controls | [Open-source CLI implementations](https://github.com/razaumair2203-ux/codex-adversarial-review-lite) |
+| [BuildSignal AI](domains/03-practical-ai-products/buildsignal-ai.md) | Source and media governance across research-to-publication workflow | Private local development, no hosted-adoption claim |
+| [ATLAS HPC](domains/04-assurance-digital-engineering/atlas-hpc.md) | Accountable leadership for a reported 22-node GPU/HPC research environment | Institutional leadership record, not public topology |
 
-The leading examples above use **actual source photographs of engineering hardware**, not stylized or AI-generated equipment. Further evidence is in the linked project cases: [Clear-Run system and trial records](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md), [Super Mushshak original aircraft photographs](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/blob/main/docs/media-gallery.md), [Counter-UAS prototype photographs](domains/01-autonomy-edge-ai/counter-uas.md), and [IN-ARCP reproducible plots](https://github.com/razaumair2203-ux/inarcp).
+## How I lead engineering
 
-Earlier promotional-style SVG cards have been **withdrawn from the homepage**; they remain only as prior repository artifacts. The next editorial set is being independently reviewed for accuracy and readability and is not yet approved for external marketing.
+I define system boundaries and interfaces, coordinate multidisciplinary hardware/software teams, set verification priorities and manage test evidence and configuration decisions. My contributions are **technical direction, integration, engineering acceptance and experiment/V&V leadership**; team-developed flight software, mechanical systems, student projects and aircraft programmes are credited accordingly.
 
-## Research status and release boundaries
+My career extends beyond these repositories: **JF-17 integration and fleet configuration, ZDK-03 AEW&C flight-line engineering, aircraft acceptance/qualification support, OEM coordination and engineering leadership across lifecycle phases** are documented in the [programme leadership profile](profile/LEADERSHIP_PROFILE_2026_10.md).
 
-- **TIR-FOD:** IEEE Access resubmission confirmed **6 October 2026**, decision pending; [public dataset](https://doi.org/10.5281/zenodo.22546586).
-- **Clear Run integrated-system manuscript:** 22 October internal checkpoint listed the paper submission-ready but not submitted; later author reports it under consideration. Submission receipt/status reconciliation pending; no acceptance claimed.
-- **IN-ARCP:** IEEE Transactions on Radar Systems submission reported **7 October 2026**; [public R22 code and reproducibility record](https://github.com/razaumair2203-ux/inarcp).
-- **Multi-UAV SAR:** simulation study and journal packages prepared; submission outstanding. **CloakBench:** research snapshot unfinished. [Details and supporting work](research/README.md).
+**Public evidence is selective by design.** Sensitive aircraft details, private trials, unreleased source, credentials and personal test data are not published. Claims distinguish recorded tests, author-reported programme progress, proposed capabilities and production-grade validation. A scoped technical review can be requested through [the contact route](PRIVATE_REPOSITORY_ACCESS.md).
 
-**Attribution:** My direct contribution includes engineering/programme direction, systems architecture and interfaces, experimental/evaluation design, integration and verification leadership. Flight, mechanical, ROS, avionics and student team implementation is credited to the respective multidisciplinary contributors. Historical aircraft programmes and independent software products are not conflated.
-
-**Review route:** [Request a scoped, public-safe technical review package](PRIVATE_REPOSITORY_ACCESS.md) or [connect on LinkedIn](https://www.linkedin.com/in/mumairaza/). Detailed working repositories, unreleased trials, personal records and sensitive programme information are not automatically public.
-
-<sub>Current portfolio landing: 25 October 2026 · [Archived previous landing](archive/README_2026-10-25_before_repositioning.md)</sub>
+<sub>Public engineering portfolio · October 2026</sub>

@@ -2,7 +2,7 @@
 
 This page separates **published/indexed work**, **public datasets**, **conference status** and **active manuscripts**. Submitted or in-progress work is not presented as published.
 
-**Public author record:** [Google Scholar — Muhammad Umair Raza](https://scholar.google.com/citations?user=0EVckyAAAAAJ&hl=en) · College of Aeronautical Engineering / NUST affiliation.
+**Public author record:** [Google Scholar — Muhammad Umair Raza](https://scholar.google.com/citations?user=0EVckxAAAAAJ&hl=en) · College of Aeronautical Engineering / NUST affiliation.
 
 ## Published / indexed conference papers
 

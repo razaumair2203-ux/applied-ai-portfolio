@@ -6,7 +6,7 @@
 
 **Approach.** CloakBench separates **suppression** from **detection displacement**, evaluates attack files against calibrated detector operating points, uses matched-occlusion controls and records per-person scores for scripted downstream analyses.
 
-**Inspect:** [public experimental repository and audit](https://github.com/razaumair2203-ux/cloakbench).
+**Evidence availability:** the working repository is private and the research remains unfinished. A publication-safe experiment package has not yet been released; no private audit is linked as public evidence.
 
 **Status, 25 October 2026:** **Unfinished research snapshot.** The 14 October session audit notes unresolved reproduction steps, unscored trained reference cases and manuscript build issues. No reliable headline effectiveness metric or accepted paper is claimed.
 

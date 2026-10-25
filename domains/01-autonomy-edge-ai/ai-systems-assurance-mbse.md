@@ -2,7 +2,7 @@
 
 ![Clear Run system architecture with authentic project assets](../../visuals/autonomy-edge-ai/clear-run/system_architecture.svg)
 
-*Selected Clear Run Research Outreach architecture: actual UAV photograph, native GCS interface capture and actual UGV photograph embedded in the reviewed functional system view.*
+*Historical Clear Run functional architecture containing authentic project photographs and a real GCS interface screenshot. The ground-platform image represents an earlier configuration, and the GCS screenshot is a disconnected/bench state, not live mission proof.*
 
 This is the assurance layer around a real AI/autonomy programme. Clear Run can only claim mission success if **detection, geolocation, communications, operator review, ground-vehicle tasking, terminal approach, physical capture and retained removal** each work at the correct system boundary and in the correct configuration. The case therefore links architecture, interfaces, requirements and evidence instead of letting a successful model output stand in for system verification.
 
@@ -19,7 +19,7 @@ A retrospective **Capella 7.1.0 / Arcadia** reconstruction was built in Septembe
   <img src="../../visuals/autonomy-edge-ai/clear-run/ugv_architecture.svg" alt="Clear Run UGV functional architecture with authentic project ground-unit photograph" width="72%">
 </p>
 
-These are the selected **1600 × 900 Research Outreach architecture compositions**. Their text and connectors remain vector-based while the project photographs/interface capture are embedded from the real Clear Run evidence set. The aerial unit, GCS and ground unit are therefore shown as the system that actually exists, not replaced by illustrative hardware icons.
+These are the selected **1600 × 900 Research Outreach architecture compositions**. Their text and connectors remain vector-based while the project photographs/interface capture are embedded from the real Clear Run evidence set. The diagram includes actual earlier hardware and UI rather than synthetic imagery, but the pictured components are **not** independently matched to a single latest as-tested system revision.
 
 ## Maintained modelling scope
 
