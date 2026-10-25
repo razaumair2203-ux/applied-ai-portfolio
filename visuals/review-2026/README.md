@@ -1,6 +1,6 @@
 # October 2026 media redesign — REVIEW DRAFTS
 
-**Do not circulate externally before owner review.** The previous promotional card set was removed from the public homepage. These are new editorial source files for inspecting message hierarchy, technical evidence and fit.
+**Do not circulate externally before owner review.** The previous promotional card set was removed from the public homepage. **[Technical re-audit (25 October)](../../audit/MEDIA_TECHNICAL_REAUDIT_2026_10_25.md): 0/12 cleared for external promotional use.** These are new editorial source files for inspecting message hierarchy, technical evidence and fit.
 
 ## Real project evidence media
 
@@ -27,6 +27,13 @@
 | ATLAS | [Review](atlas.svg) | Text/flow diagram of HPC research operations and job execution |
 
 These six have **no photographs or interface screenshots** precisely because no independently verified, publication-safe, current captures were available in the inspected public portfolio; they must not be advertised as screenshots of deployed products. Diagrams summarize documented project workflows and should be independently matched to source code/test artifacts before final publication.
+
+## Re-audit priority findings
+
+1. Clear Run collector image from the retained manuscript visibly has wheels, while a later tracked/skid-steer revision is project-lead-reported. Do **not** relabel that wheeled image as the tracked prototype without a revision/build log and a matching release-safe photograph.
+2. The genuine GCS interface screenshot is a disconnected/bench capture, **not** a live integrated mission record. Its aerial basemap must undergo release review before reuse.
+3. The i-MSHA browser-regression image visibly includes a development **“1 Issue”** badge. It is a real development-state snapshot, not proof of a passing production build.
+4. Six pure diagrams are technical schematics and should not displace available original hardware photographs, recorded outputs or actual software test logs.
 
 ## Visual and technical QA
 

@@ -10,8 +10,8 @@ This directory contains original project media, recorded UI/test evidence, offic
 - [aerial-unit architecture](autonomy-edge-ai/clear-run/aerial_unit_architecture.svg)
 - [GCS architecture](autonomy-edge-ai/clear-run/gcs_architecture.svg)
 - [UGV architecture](autonomy-edge-ai/clear-run/ugv_architecture.svg)
-- [field-trial evidence](autonomy-edge-ai/clear-run/field_trial_evidence.png)
-- [GCS integration](autonomy-edge-ai/clear-run/gcs_integration.png)
+- [September detection-frame evidence](autonomy-edge-ai/clear-run/field_trial_evidence.png) — actual detection frames plus early event counts, not rover pickup outcomes
+- [GCS interface composition](autonomy-edge-ai/clear-run/gcs_integration.png) — genuine screenshot of a **disconnected bench state** embedded in editorial layout; not evidence of live task dispatch
 - [retrieval development](autonomy-edge-ai/clear-run/retrieval_development.png)
 - [programme overview](autonomy-edge-ai/clear-run/overview.png)
 - [trial thumbnail](autonomy-edge-ai/clear-run/video_thumbnail.png)

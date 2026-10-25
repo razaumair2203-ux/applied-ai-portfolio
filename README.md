@@ -5,7 +5,7 @@
 
 **[LinkedIn](https://www.linkedin.com/in/mumairaza/)** · **[Engineering leadership profile](profile/LEADERSHIP_PROFILE_2026_10.md)** · **[Research & publications](research/README.md)** · **[Technical review requests](PRIVATE_REPOSITORY_ACCESS.md)**
 
-> **Current flagship:** [Clear Run / TIR-FOD](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) has progressed from airborne FOD perception to a **fabricated tracked/skid-steer retrieval prototype and a project-lead-confirmed integrated mission demonstration**. October day/night and pickup figures are team-reported, with repeatability and independently traceable success still to be established. [October maturity update](domains/01-autonomy-edge-ai/CLEAR_RUN_2026-10_STATUS.md).
+> **Current flagship:** [Clear Run / TIR-FOD](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) has progressed from airborne FOD perception to **reported fabricated collection hardware and a project-lead-confirmed integrated mission demonstration**. The latest tracked/skid-steer revision is team-reported; a retained manuscript collector photograph is wheeled, and the precise as-tested configuration must be reconciled before using either image as proof of the other. October day/night and pickup figures are team-reported, with repeatability and independently traceable success still to be established. [October maturity update](domains/01-autonomy-edge-ai/CLEAR_RUN_2026-10_STATUS.md).
 
 ## Three engineering cases to start with
 
@@ -14,7 +14,7 @@
 | <img src="visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" alt="Authentic airborne thermal-FOD research UAV" width="290"> | <img src="visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg" alt="Actual Super Mushshak installed glass-cockpit prototype" width="290"> | <img src="visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" alt="Actual constructed counter-UAS experimental camera mount" width="290"> |
 | **[Clear Run — UAV–GCS–UGV](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md)**: sensing, localization, GCS tasking and real collection hardware; prototype mission demonstrated, reliability work ongoing. | **[Super Mushshak retrofit](domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md)**: lead systems engineer across avionics/sensor interfaces, modification harness, installed ground/flight testing and OEM actions. | **[Counter-UAS Phase I](domains/01-autonomy-edge-ai/counter-uas.md)**: completed physical visual-tracking research prototype, camera/mount integration and indoor/outdoor trials; later multisensor fusion remains proposed. |
 
-*The three images above are actual project photographs from already-public evidence, not renders of a proposed system. The UAV is from the earlier TIR-FOD airborne-sensing programme; it is not an image of the later tracked collection rover.*
+*The three images above are actual project photographs from already-public evidence, not renders. The first is an earlier TIR-FOD sensing UAV, **not** a photograph of the October ground-collection prototype. For image/claim discrepancies, see the [25 October media re-audit](audit/MEDIA_TECHNICAL_REAUDIT_2026_10_25.md).*
 
 ### Technical evidence that hiring teams can inspect
 

@@ -60,7 +60,7 @@ The system-level differentiator is the **breadth of decisions supported by one g
 
 [![i-MSHA dashboard regression snapshot](../../visuals/compliance-regtech/i-msha/dashboard-regression.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml)
 
-*Authentic browser-regression snapshot from the project repository. It is shown as product/UI evidence, not as a production-deployment claim.*
+*Authentic **archived Chromium development UI snapshot** from the project repository, with a visible “1 Issue” development badge. It documents the interface, not clean test execution, current reliability, customer UAT or production deployment.*
 
 ## Canary AI — AI as an interface to governed data
 

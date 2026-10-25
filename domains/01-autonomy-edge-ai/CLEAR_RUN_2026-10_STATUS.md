@@ -6,9 +6,9 @@ Clear Run addresses the complete foreign-object-debris response workflow: airbor
 
 ## Progress since the September portfolio snapshot
 
-The ground collector has progressed from design/integration to a **fabricated tracked prototype with a functioning collection mechanism**. The project lead reports a complete integrated mission demonstration, followed by additional day/night trial activity. The existing public September field-video/event extracts remain historical snapshots and should not be presented as the latest project state.
+The ground collector has progressed from design/integration to **reported fabricated collection hardware with a functioning mechanism**. The team reports a later tracked/skid-steer version, but the retained manuscript photograph depicts a wheeled collector; without build identification those are separate, unresolved evidence baselines. The project lead reports a complete integrated mission demonstration, followed by additional day/night trial activity. The existing public September field-video/event extracts remain historical snapshots and should not be presented as the latest project state.
 
-Research benchmarks, onboard inference, and the team-reported field campaign are different forms of evidence. In particular, prototype demonstrations do not by themselves establish repeatable field reliability, independently verified geolocation accuracy, safety approval, or readiness for deployment at an operational airport.
+Research benchmarks, onboard inference, and the team-reported field campaign are different forms of evidence. The September mission-verification matrix is a historical stage record and has not been overwritten to represent October tests. In particular, prototype demonstrations do not by themselves establish repeatable field reliability, independently verified geolocation accuracy, safety approval, or readiness for deployment at an operational airport.
 
 ## Engineering contribution
 
