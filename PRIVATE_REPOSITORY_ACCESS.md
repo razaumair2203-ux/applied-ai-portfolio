@@ -1,49 +1,17 @@
-# Private technical review access
+# Technical review and contact
 
-Some projects in this portfolio are represented publicly through release-safe case studies, authentic visuals, reproducibility material and selected implementation evidence while complete working material remains private.
+This portfolio is designed to let engineering hiring managers assess **system responsibility, technical maturity and objective evidence** without exposing private research repositories or restricted programme material.
 
-Private working repositories can contain active research, unreleased product code, internal operating notes, original programme records, private evaluation material or other content that is inappropriate for unrestricted recruiter access. **A technical-review request therefore does not automatically expose the raw working repository.**
+## Public review first
 
-## Review model
+Start with the [selected engineering case studies](README.md), [original project photographs and measured outputs](media/showcase/README.md), [published source code and research record](research/README.md), and [professional leadership experience](profile/LEADERSHIP_PROFILE_2026_10.md).
 
-The default response to an approved request is the **smallest useful review surface** for the reviewer:
+The portfolio deliberately separates measured experiments from team-reported demonstrations, preliminary studies and proposed capabilities.
 
-1. a curated release-safe technical package or review branch containing the relevant architecture, code, tests, evaluation evidence and setup notes;
-2. a narrower evidence set when source or programme restrictions require it; or
-3. complete repository access only when the repository itself is suitable for external review.
+## Request a deeper discussion
 
-This keeps the review technically meaningful without exposing unrelated internal working material.
+For senior aerospace, autonomy, embedded-AI or systems-integration roles, contact me through [LinkedIn](https://www.linkedin.com/in/mumairaza/) with the relevant position and project. I can discuss system architecture, technical responsibilities, experiment design and engineering trade-offs, subject to applicable disclosure constraints.
 
-## Requesting a review
+Confidential aircraft records, private customer data, unpublished partner material, individual employee information, credentials, restricted configurations and unreleased research assets are **not** offered as public downloads.
 
-Recruiters, hiring managers, technical interviewers, research reviewers and potential collaborators can request review of a specific project below.
-
-| Project | Public evidence | Request technical review |
-|---|---|---|
-| Clear Run / TIR-FOD | [Case study](domains/01-autonomy-edge-ai/clear-run-tir-fod.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml) |
-| Counter-UAS Phase I | [Case study](domains/01-autonomy-edge-ai/counter-uas.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-counter-uas.yml) |
-| i-MSHA | [Case study](domains/02-compliance-regtech/i-msha.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-i-msha.yml) |
-| Lodestar | [Case study](domains/02-compliance-regtech/lodestar.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml) |
-| JobLooper private development/evaluation lineage | [Public implementation and case study](domains/03-practical-ai-products/joblooper-jobpilot.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-joblooper-private.yml) |
-| BuildSignal AI | [Case study](domains/03-practical-ai-products/buildsignal-ai.md) | [Request review](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-buildsignal.yml) |
-
-GitHub requests are public issues in this portfolio repository. **Do not include confidential, proprietary, export-controlled, security-sensitive or personal information.** A GitHub username plus a short review purpose is sufficient.
-
-For a discreet request, contact me through [LinkedIn](https://www.linkedin.com/in/mumairaza/) and identify the project and technical area you want to inspect.
-
-## Review-package standard
-
-Where a curated package is used, it should contain only material needed for technical evaluation and should normally include:
-
-- a concise system/problem statement and current maturity;
-- architecture and key interface boundaries;
-- selected implementation relevant to the review purpose;
-- tests, evaluation fixtures or measurement records;
-- setup/reproduction instructions where release-safe;
-- explicit ownership and team-development boundaries;
-- open limitations and unverified claims;
-- no career-planning notes, funding administration, personal data, secrets or unrelated internal operating instructions.
-
-Projects that already have public source repositories continue to link directly to those repositories rather than using this process.
-
-[Back to portfolio](README.md)
+[Return to the engineering portfolio](README.md).
