@@ -6,9 +6,9 @@ This page points to **publicly inspectable engineering evidence**. It does not r
 
 | Portfolio case | Public evidence | What it establishes |
 |---|---|---|
-| [Clear Run — integrated FOD response](../domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) | [Original photos and September detections](../media/showcase/README.md#clear-run) | Earlier airborne sensing hardware and recorded target events; an integrated prototype mission is team-reported. Not an audited current-collector success rate or fielded airport product. |
-| [TIR-FOD thermal dataset](../domains/01-autonomy-edge-ai/clear-run-tir-fod.md) | [Zenodo dataset DOI](https://doi.org/10.5281/zenodo.22546586), [recorded benchmark outputs](autonomy_edge_ai/tir_fod/reproducibility/README.md), [real hardware image](../visuals/autonomy-edge-ai/tir-fod/jetson_mounted.png) | Dataset scale, repeatable model experiments and earlier Jetson integration. No claim that dataset metrics establish end-to-end physical recovery. |
-| [Counter-UAS Phase I](../domains/01-autonomy-edge-ai/counter-uas.md) | [Constructed hardware and original indoor/outdoor captures](../media/showcase/README.md#counter-uas-phase-i) | Experimental vision-based tracking and physical mount integration; no operational engagement, interception or completed passive-RF fusion. |
+| [Clear Run — integrated FOD response](../domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) | [Original collector sequence and source frames](../media/showcase/clear-run-real-collector-sequence.png) | Fabricated collector and one edited pickup excerpt; an integrated prototype mission is separately team-reported. Not an audited current-collector success rate or fielded airport product. |
+| [TIR-FOD thermal dataset](../domains/01-autonomy-edge-ai/clear-run-tir-fod.md) | [Zenodo dataset DOI](https://doi.org/10.5281/zenodo.22546586), [recorded benchmark outputs](autonomy_edge_ai/tir_fod/reproducibility/README.md), [23-class original LWIR atlas](../media/showcase/tir-fod-23-class-evidence-atlas.png) | Dataset scale, repeatable model experiments and earlier Jetson integration. No claim that dataset metrics establish end-to-end physical recovery. |
+| [Counter-UAS Phase I](../domains/01-autonomy-edge-ai/counter-uas.md) | [Constructed hardware and original indoor/outdoor captures](../media/showcase/counter-uas-real-physical-evidence.png) | Experimental vision-based tracking and physical mount integration; no operational engagement, interception or completed passive-RF fusion. |
 | [Multi-UAV search and rescue](../research/MULTI_UAV_SAR_CASE.md) | [Original simulation result](../media/showcase/multi-uav-command-loss.png) | Benchmarked simulated command behaviour and separate SITL activity, not real SAR field operations. |
 
 ## Reproducible algorithms and independently developed software
@@ -24,7 +24,7 @@ This page points to **publicly inspectable engineering evidence**. It does not r
 
 ## Aircraft engineering and professional contributions
 
-[Super Mushshak glass-cockpit engineering](../domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md) uses [original aircraft photographs](../media/showcase/README.md#super-mushshak), a [public source record](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification) and conservative configuration/attribution boundaries.
+[Super Mushshak glass-cockpit engineering](../domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md) uses [original aircraft photographs](../media/showcase/super-mushshak-original-flight-evidence.png), a [public source record](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification) and conservative configuration/attribution boundaries.
 
 [Engineering leadership profile](../profile/LEADERSHIP_PROFILE_2026_10.md) summarizes wider aircraft-integration, sustainment, verification and technical-direction experience. Public summaries deliberately omit restricted programme documents and private personnel/career records.
 
