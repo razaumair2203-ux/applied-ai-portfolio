@@ -364,7 +364,7 @@ def check_documentation_structure() -> None:
     }
     for rel, expected in dimensions.items():
         raw = (ROOT / rel).read_bytes()
-        assert raw[:8] == b"\\x89PNG\\r\\n\\x1a\\n", rel
+        assert raw[:8] == b"\x89PNG\r\n\x1a\n", rel
         assert struct.unpack(">II", raw[16:24]) == expected, rel
         assert len(raw) > 50000, rel
         svg = ROOT / rel.replace(".png", ".svg")
@@ -393,7 +393,7 @@ def check_documentation_structure() -> None:
     }
     for name, expected_sha in origin_hashes.items():
         raw = (ROOT / "media/real" / name).read_bytes()
-        calculated = hashlib.sha1(f"blob {len(raw)}\\0".encode() + raw).hexdigest()
+        calculated = hashlib.sha1(f"blob {len(raw)}\0".encode() + raw).hexdigest()
         assert calculated == expected_sha, name
 
 
