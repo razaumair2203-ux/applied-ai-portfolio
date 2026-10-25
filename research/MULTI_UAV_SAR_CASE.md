@@ -8,7 +8,7 @@
 
 **Inspect:** [research source and project state](https://github.com/razaumair2203-ux/NS-Saleha-FYDP/blob/main/README.md).
 
-**Status, 25 October 2026:** Journal-specific manuscript/submission packages are prepared. The source states that final author approval and submission remain outstanding; **not submitted or published**.
+**Status, 25 October 2026:** Journal-specific manuscript/submission packages are prepared. The manuscript has **not been submitted or published**.
 
 **My role:** research leadership / co-author in the documented multi-author study, with engineering relevance in experimental design, multi-agent mission evaluation and simulation-based verification. Team-developed simulation and manuscript materials must not be attributed exclusively to me.
 
