@@ -59,15 +59,15 @@ I take new technology from the lab bench to the airframe, and prove it works. **
 
 ## More research
 
-| Project | What it shows | Status |
+| Problem | What I showed | Status |
 |---|---|---|
-| [Multi-drone search and rescue](research/MULTI_UAV_SAR_CASE.md) | Which planner gains survive lost commands; validated with **640 ArduPilot SITL flights** | Manuscript ready |
-| [IN-ARCP radar detection](research/INARCP_RADAR_CASE.md) | Keeps radar false alarms on target (0.73–1.47×) where standard rules overshoot up to 60× | Open-source package · under review, IEEE Trans. Radar Systems |
-| [Evidence-linked MBSE for Clear Run](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md) | Capella model and telemetry replay tying requirements to test evidence | Under review, INCOSE |
-| [GNSS anti-jamming (8-element CRPA)](research/README.md) | Adaptive antenna-array interference suppression | Presented, IBCAST 2026 |
-| [Adversarial patches vs. detectors](research/CLOAKBENCH_CASE.md) | Measures whether "invisible" patches hide people or just move the box | In progress |
+| [Drone swarms losing radio contact during search and rescue](research/MULTI_UAV_SAR_CASE.md) | Longer commands keep the search on track: **+2.5% delay vs +19% at 70% command loss**, tested over **640 simulated flights** | Journal manuscript ready |
+| [Radar false alarms in rough sea clutter](research/INARCP_RADAR_CASE.md) | Kept false alarms on target where standard methods overshoot **up to 60×**; released as open-source software | Under review, IEEE |
+| [Proving a robot system meets its requirements](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md) | Linked every Clear Run requirement to test evidence, and found a hidden coordinate defect | Under review, INCOSE |
+| [GPS jamming](research/README.md) | 8-antenna array that suppresses interference | Presented, IBCAST 2026 |
+| [Do "invisibility" patches really fool AI cameras?](research/CLOAKBENCH_CASE.md) | Most "hidden" people are still detected; the box just moves | In progress (supervisor) |
 
-Peer-reviewed: two IEEE ICoDT2 2025 papers on real-time multi-stream detection and adversarial patches. [All publications →](research/README.md)
+Published: two IEEE papers (2025) on real-time video detection and adversarial attacks. [All publications →](research/README.md)
 
 ## I still build software
 
