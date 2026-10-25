@@ -1,9 +1,9 @@
 # Muhammad Umair Raza
 ### Aerospace Systems Integration · Autonomous Systems · Applied AI Engineering
 
-**Engineering and applied-R&D leader** with 18+ years across aircraft development, avionics integration, testing/acceptance, fleet sustainment and multidisciplinary technical delivery. My current work combines **physical autonomy, embedded/edge AI, sensing, robotics interfaces and systems verification**. I lead engineering architecture, integration decisions and experiment/V&V strategy while working with teams delivering real hardware and software.
+**Engineering and applied-R&D leader** with 18+ years across aircraft development, avionics integration, testing/acceptance, fleet sustainment and multidisciplinary technical delivery. My current work combines **physical autonomy, embedded/edge AI, sensing, robotics interfaces and systems verification**. I lead engineering architecture, integration decisions and experiment/V&V strategy while working with teams delivering real hardware and software. My wider aircraft record includes JF-17 engineering/integration and fleet programmes, ZDK-03 AEW&C technical operations, and Super Mushshak retrofit integration.
 
-**[LinkedIn](https://www.linkedin.com/in/mumairaza/)** · **[Engineering career record](profile/AI_BASE_RESUME.md)** · **[Research & publications](research/README.md)** · **[Technical review requests](PRIVATE_REPOSITORY_ACCESS.md)**
+**[LinkedIn](https://www.linkedin.com/in/mumairaza/)** · **[Engineering leadership profile](profile/LEADERSHIP_PROFILE_2026_10.md)** · **[Research & publications](research/README.md)** · **[Technical review requests](PRIVATE_REPOSITORY_ACCESS.md)**
 
 > **Current flagship:** [Clear Run / TIR-FOD](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) has progressed from airborne FOD perception to a **fabricated tracked/skid-steer retrieval prototype and a project-lead-confirmed integrated mission demonstration**. October day/night and pickup figures are team-reported, with repeatability and independently traceable success still to be established. [October maturity update](domains/01-autonomy-edge-ai/CLEAR_RUN_2026-10_STATUS.md).
 
