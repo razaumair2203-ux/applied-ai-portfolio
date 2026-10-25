@@ -1,22 +1,8 @@
 # Engineering media — original photographs and recorded results
 
-The featured cards embed **original project photographs, recorded experiment plots or historical UI screenshots** from the linked evidence. Their headings and boundaries are editorial labels, not new experiment outputs. No AI-generated hardware, invented results or fictional interface screenshots are used. The technical schematics and claims are discussed in the linked engineering cases; one photograph never establishes end-to-end reliability.
+Every image on this page is linked directly to a retained original photograph, recorded experimental output or archived software screenshot. **There are no composite posters or synthetic device/interface images.** An image illustrates only the configuration, event or experiment named in its caption.
 
 ## Clear Run
-
-[![Clear Run — actual airborne hardware and recorded field detections](01-clear-run.svg)](01-clear-run.svg)
-
-*Source-backed visual summary. Both embedded images are original evidence from the **earlier airborne sensing configuration**, not a photograph of the latest ground collector.*
-
-The interface view below is a **functional evidence map**, not an as-built equipment illustration. Each arrow is an interface to verify.
-
-```mermaid
-flowchart LR
-  S["Airborne RGB + passive LWIR<br/>Recorded detections"] --> E["Target event / geolocation<br/>Output logged; surveyed accuracy open"]
-  E --> G["Operator GCS review<br/>Interface implemented"]
-  G -. "Task delivery not quantified" .-> R["Ground collection prototype<br/>Mission demonstration reported"]
-  R -. "Retained outcome not independently closed" .-> V["End-to-end verification<br/>Open evidence gate"]
-```
 
 | Earlier TIR-FOD aerial sensing platform | September field-detection outputs |
 |---|---|
@@ -27,8 +13,6 @@ flowchart LR
 
 ## Counter-UAS Phase I
 
-[![Source-backed Counter-UAS engineering card](02-counter-uas.svg)](02-counter-uas.svg)
-
 | Built experimental camera mount | Actual outdoor detection |
 |---|---|
 | <img src="../../visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" width="660" alt="Genuine constructed camera and actuator mount"> | <img src="../../visuals/autonomy-edge-ai/counter-uas/outdoor_detection.png" width="660" alt="Recorded outdoor drone detection output"> |
@@ -37,8 +21,6 @@ flowchart LR
 **Engineering result:** Phase-I experimental visual detection and pan/tilt tracking using detector, centroid/Kalman processing and physical trials. No qualified operational detection range, real-world interception claim or completed RF-fusion assertion. [Counter-UAS case](../../domains/01-autonomy-edge-ai/counter-uas.md).
 
 ## Super Mushshak
-
-[![Source-backed glass-cockpit engineering card](03-super-mushshak.svg)](03-super-mushshak.svg)
 
 | Actual installed Dynon cockpit | Actual in-flight cockpit |
 |---|---|
@@ -49,8 +31,6 @@ flowchart LR
 
 ## TIR-FOD — thermal sensing and edge deployment
 
-[![TIR-FOD — original mounted Jetson and capture-session plot](04-tir-fod.svg)](04-tir-fod.svg)
-
 | Actual mounted compute | Recorded capture-session analysis |
 |---|---|
 | <img src="../../visuals/autonomy-edge-ai/tir-fod/jetson_mounted.png" width="660" alt="Original Jetson installation photograph"> | <img src="../../visuals/autonomy-edge-ai/tir-fod/capture_sessions.png" width="660" alt="Original data acquisition plot"> |
@@ -60,23 +40,17 @@ flowchart LR
 
 ## IN-ARCP — reproducible radar research
 
-[![IN-ARCP — original reproducible radar detector plot](05-inarcp.svg)](05-inarcp.svg)
-
 ![Actual R22 research plot](inarcp-r22-detector.png)
 
 **Original computed radar detection plot** from the public R22 study, including detection probability versus SCR and post-onset behavior. This is not a fielded radar benchmark. [Research case](../../research/INARCP_RADAR_CASE.md) · [public source](https://github.com/razaumair2203-ux/inarcp).
 
 ## Multi-UAV SAR — simulated command reliability
 
-[![Multi-UAV SAR — original command-loss result plot](06-multi-uav-sar.svg)](06-multi-uav-sar.svg)
-
 ![Original simulated command-loss result](multi-uav-command-loss.png)
 
 **Original recorded comparison** across 24 synthetic cases and 12 terrain maps. This is distinct from the separately reported 640 ArduPilot SITL flights; none are live search missions. [Research case](../../research/MULTI_UAV_SAR_CASE.md).
 
 ## i-MSHA — private regulatory analytics product
-
-[![i-MSHA — genuine archived v1 dashboard capture](07-i-msha.svg)](07-i-msha.svg)
 
 ![Authentic historical i-MSHA browser capture](../../visuals/compliance-regtech/i-msha/dashboard-regression.png)
 
