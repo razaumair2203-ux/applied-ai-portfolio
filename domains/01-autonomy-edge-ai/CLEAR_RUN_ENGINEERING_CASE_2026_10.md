@@ -1,7 +1,7 @@
 # Clear Run — integrated airfield robotics and systems engineering
 **As of 25 October 2026 · prototype demonstration and active field-research programme**
 
-> **Engineering perspective:** The project is not a standalone FOD detector. It tests the interfaces that convert detection into supervised physical recovery. A fabricated collection system and an integrated mission demonstration are **reported by the project lead**. The public imagery documents earlier project stages; a release-cleared, as-tested image of the latest ground platform is not yet available. Repeated, independently auditable detection-to-retention performance is not yet established.
+> **Engineering perspective:** The project is not a standalone FOD detector. It tests the interfaces that convert detection into supervised physical recovery. A fabricated collection system and an integrated mission demonstration are **reported by the project lead**. A release-cleared outdoor source sequence now shows the team-built collector on a small-wheel development platform; it does not establish the later reported tracked/skid-steer configuration. Repeated, independently auditable detection-to-retention performance is not yet established.
 
 [Original field/hardware media](../../media/showcase/README.md#clear-run) · [Programme maturity summary](CLEAR_RUN_2026-10_STATUS.md) · [Public field-evidence extract](../../evidence/autonomy_edge_ai/clear_run/README.md) · [Released TIR-FOD dataset](https://doi.org/10.5281/zenodo.22546586)
 
@@ -53,14 +53,15 @@ My contribution is **systems engineering, technical direction, programme integra
 
 **Team-developed contributions:** airframe and payload integration, controller code, GCS/ROS implementation, rover construction, field activity and physical mechanism work. I do not claim sole mechanical or software authorship.
 
-## Supporting real photographs and trial captures
+## Physical hardware and authentic recorded frames
 
-| Authentic record | What it does and does not show |
-|---|---|
-| ![Actual airborne programme UAV](../../visuals/autonomy-edge-ai/tir-fod/airborne_platform.png) | Real **earlier TIR-FOD sensing UAV**, not the latest rover or proof of entire mission |
-| ![Recorded field detection outputs](../../visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png) | Actual trial-frame derivatives and event counts from an earlier September snapshot; not pickup outcomes or measured geolocation errors |
+[![Clear Run fabricated collector, three frames from one edited source](../../media/showcase/clear-run-real-collector-sequence.png)](../../media/showcase/README.md#clear-run--fabricated-debris-collection-prototype)
 
-The earlier [Clear Run public case](clear-run-tir-fod.md) contains original source and integration imagery from the September configuration. It is retained for provenance but should not be used to infer the latest installed ground hardware.
+This media comes **from the Clear Run programme itself**, not from the earlier TIR-FOD photo set. The pickup-platform frames show a fabricated mechanism on the small-wheel configuration seen in source footage; original playback is labelled **2.5×**. The final frame's “collected” label is part of the original student's edited video, **not an independently audited capture/retention result**. These frames belong to one footage family, not three repeat trials.
+
+[Unaltered original collector frame](../../media/real/clear-run-collector-before.jpg) · [Same source after movement](../../media/real/clear-run-collector-approach.jpg) · [Original outcome-overlay frame](../../media/real/clear-run-collector-source-outcome-overlay.jpg) · [Original Clear Run in-flight UAV](../../media/real/clear-run-uav-inflight.jpg)
+
+The final collector configuration, GCS dispatch state, mission timing and whole-chain object identity must still be associated with the as-tested records before declaring measured end-to-end success.
 
 ## Publications and maturity
 
