@@ -6,11 +6,11 @@
 
 | Metric | Before | After | Calculation |
 |---|---:|---:|---|
-| Landing-page words | 1,933 | 855 | Unicode whitespace-token count; **55.8% fewer** |
-| Landing-page characters | 19,985 | 8,923 | UTF-8 source characters; **55.4% shorter** |
+| Landing-page words | 1,933 | 874 | Unicode whitespace-token count; **54.8% fewer** |
+| Landing-page characters | 19,985 | 9,102 | UTF-8 source characters; **54.5% shorter** |
 | Headings (H1–H3) | 21 | 7 | Direct Markdown headings; fewer nesting decisions |
 | Selected project case links directly present | 8/12 | 12/12 | Exact evidence-case filename references in the README; **+4 cases / +33.3 percentage points coverage** |
-| First flagship-case link position | Character 1,796 | Character 864 | 1-based reader-position proxy; **51.9% earlier** |
+| First flagship-case link position | Offset 1,796 | Offset 1,043 | 0-based character offset of first flagship case; **41.9% earlier** |
 | New evidence-authentic editorial media linked | 0 | 6 | Count `visuals/editorial/*.svg` references |
 | Outdated configuration/recovery phrases on landing | 5 | 0 | Literal `Mecanum`, `developing physical recovery`, `final physical-retention closure remains open` and `IEEE Access revision in progress` |
 | Broken local README links and embedded photo refs | Not separately counted before | 0 | All relative Markdown and HTML image references checked against current repository Git tree |
