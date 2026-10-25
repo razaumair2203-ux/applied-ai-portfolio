@@ -4,8 +4,6 @@
 
 **Public evidence snapshot:** 19 September 2026. Historical measurements retain their original provenance and limitations where stated.
 
-[![Clear Run detection-to-removal architecture](../../visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
-
 Clear Run is an **airfield robotics programme**, not a standalone object detector. It connects **dataset/model development → airborne edge deployment → target geolocation and operator review → UAV–GCS–UGV mission integration → physical FOD capture and retained removal**. The programme is valuable precisely because it forces perception, avionics, communications, human supervision, ground autonomy and mechanical recovery to work as one traceable mission chain.
 
 ## At a glance
@@ -27,15 +25,11 @@ Clear Run is an **airfield robotics programme**, not a standalone object detecto
 
 The learned component is RGB/LWIR object detection. TensorRT FP16 provides the edge inference path; SAHI supports small-object processing at a cost in compute. Geolocation, message exchange, mission state and ROS2/Nav2/SLAM integration are separate software and robotics responsibilities. Detector confidence alone cannot establish coordinate accuracy or successful recovery.
 
-The ground stack retains ROS1/rosserial for the motor interface while ROS2 supplies Nav2 and SLAM Toolbox. This preserves the existing hardware interface but adds bridge, timing and frame-consistency verification obligations. Wheel/IMU odometry and LiDAR mapping require measured drift, repeatability and intervention tests. Source implementation is recorded in the [claim sources](../../evidence/claim-sources.md); mapping accuracy and unattended navigation are not established by code inspection.
+The earlier September development snapshot used a ROS1/ROS2 hybrid Mecanum navigation path, including legacy motor bridging. That configuration must **not** be presented as the later reported tracked/skid-steer as-tested collector. See the [current integration case](CLEAR_RUN_ENGINEERING_CASE_2026_10.md) for the latest team-reported hardware baseline and verification limits.
 
 **Role relevance:** technical leadership across perception, embedded deployment and system verification, with team-delivered hardware/software and explicit mission acceptance criteria.
 
 ## 1. TIR-FOD — dataset and controlled model evaluation
-
-[![TIR-FOD graphical abstract — data, evaluation finding and flight deployment](../../visuals/autonomy-edge-ai/tir-fod/graphical_abstract.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
-
-*The research story is evaluation-first: protocol effects from leakage and acquisition-block partitioning materially exceed the spread attributed to model choice. The flight-throughput figure is retained as a historical system measurement, not a checkpoint-reproducible benchmark.*
 
 The released study contains **3,499 single-shot LWIR source frames**, **5,593 bounding-box annotations** across **23 FOD classes**, a larger offline-augmented archival pool, frozen source-lineage-aware partitions and a blind second annotation pass on **338 frames**.
 
@@ -84,43 +78,18 @@ The raw ten-run logs and historical TensorRT engine were not retained, so those 
 
 Clear Run extends the perception work into an aerial-ground system with RGB and passive-IR streams, independent FP16 TensorRT models, YOLO/SAHI processing, synchronized recording, geolocation, MAVLink/REST interfaces, a purpose-built GCS, and a **Jetson Nano ground-autonomy stack combining ROS2 Nav2, RPLidar SLAM Toolbox, wheel/IMU odometry, Mecanum navigation and terminal visual-alignment/retrieval integration**.
 
-<p align="center">
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/video_thumbnail.png" alt="Clear Run field-trial evidence thumbnail" width="64%"></a>
-</p>
-
 *Recorded field-video evidence is retained in the programme archive. The public case study surfaces representative frames and the machine-readable event snapshot; these records demonstrate field inference output but are **not** used as precision/recall, geolocation-accuracy or mission-success metrics.*
-
-[![Clear Run field-trial evidence](../../visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml)
 
 Current field records demonstrate annotated RGB and passive-IR detections with class, confidence and target-coordinate outputs. The reviewed snapshot contains **8 unique trial videos** (5 RGB, 3 IR; approximately 12 min 45 s total) and **12 structured RGB event records across 8 reported classes**. Those records carry image location, target coordinates, UAV pose and altitude. Recorded model confidence spans **0.5488–0.8887** (mean **0.7125**) and logged altitude spans **1.176–2.334 m AGL** (mean **2.069 m**). These are pipeline/event statistics, not detector or geolocation accuracy.
 
 The aggregate, non-location-sensitive snapshot is published as [`field_trial_snapshot.json`](../../evidence/autonomy_edge_ai/clear_run/field_trial_snapshot.json) and validated in CI.
 
-<p align="center">
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/gcs_integration.png" alt="Clear Run ground-control integration" width="49%"></a>
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/retrieval_development.png" alt="Clear Run ground vehicle and retrieval development" width="49%"></a>
-</p>
-
-The GCS consolidates aerial telemetry, detection review, target prioritisation and ground-agent dispatch. The UGV is a **hybrid ROS1/ROS2 Mecanum platform**: legacy ROS1/rosserial supports the Nexus/Arduino motor-side interface, while ROS2 handles wheel/IMU odometry, RPLidar SLAM Toolbox, Nav2 goal execution, omnidirectional DWB planning/costmaps and the interface into terminal visual alignment. The retrieval mechanism remains under fabrication/integration and quantitative mission closure. No public SLAM trajectory-error, repeatability or autonomous mission-success measurement is available.
+In the September development snapshot, the GCS consolidated telemetry, detection review and dispatch while a hybrid ROS1/ROS2 Mecanum platform was under integration. This describes a historical development configuration, not the later reported tracked collector. The later team-reported collector has been fabricated and a complete prototype mission demonstration has been reported; quantitatively repeatable mission closure is not independently established. No public SLAM trajectory-error, repeatability or autonomous mission-success measurement is available.
 
 
-### Subsystem engineering views
+### Subsystem evidence
 
-These views come from the programme's reviewed architecture set and retain authentic project imagery/interface captures. They are functional system views rather than decorative redraws.
-
-<p align="center">
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/aerial_unit_architecture.svg" alt="Clear Run aerial-unit architecture" width="94%"></a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/gcs_architecture.svg" alt="Clear Run ground-control-station architecture" width="94%"></a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-clear-run.yml"><img src="../../visuals/autonomy-edge-ai/clear-run/ugv_architecture.svg" alt="Clear Run UGV architecture" width="94%"></a>
-</p>
-
-The dedicated GCS view makes the operator/telemetry/target-handling layer inspectable at useful scale; the Aerial and UGV views preserve the component and interface context on either side of that hand-off.
+The [current Clear Run engineering case](CLEAR_RUN_ENGINEERING_CASE_2026_10.md) identifies subsystem responsibilities and maturity. This gallery no longer substitutes designed subsystem posters for original hardware and recorded execution images.
 
 ### Mission verification status
 
@@ -157,7 +126,7 @@ The machine-readable [`mission_verification_matrix.json`](../../evidence/autonom
 ## Research status
 
 - TIR-FOD dataset v1.2 is publicly released on Zenodo.
-- The related IEEE Access manuscript remains under revision in 2026.
+- The TIR-FOD manuscript was resubmitted to IEEE Access on 6 October 2026 and awaits a decision.
 - Clear Run remains under active field integration and measurement.
 
 [Back to portfolio](../../README.md) · [Technical implementation](../../evidence/README.md) · [Research record](../../research/README.md)
