@@ -324,259 +324,123 @@ def check_research_contribution_boundaries() -> None:
 
 
 def check_documentation_structure() -> None:
+    """Validate the current source-authentic, recruiter-readable portfolio."""
     root = (ROOT / "README.md").read_text(encoding="utf-8")
+    gallery = (ROOT / "media/showcase/README.md").read_text(encoding="utf-8")
 
-    # Identity, specialization anchors and programme scale must precede deeper evidence.
-    assert root.index("## Start with three engineering cases") < root.index("## Four specialization areas")
-    assert root.index("## Four specialization areas") < root.index("## 1. Autonomous, Embedded & Edge AI")
-    assert "Applied AI & Autonomous Systems Engineering Leader" in root
-    assert "Officer In Charge Projects / R&D & Systems Engineering Lead" in root
-
-    # The four specialization anchors are an explicit navigation and information architecture contract.
-    anchor_pairs = (
-        ("autonomy-edge-ai", "## 1. Autonomous, Embedded & Edge AI"),
-        ("compliance-regtech", "## 2. Compliance & Regulatory Intelligence"),
-        ("practical-agentic-ai", "## 3. Practical Agentic AI Products"),
-        ("assurance-digital-engineering", "## 4. AI Assurance, Evaluation & Digital Engineering"),
+    selected_cases = (
+        ("### 01 · Clear Run", "media/showcase/clear-run-real-collector-sequence.png"),
+        ("### 02 · Super Mushshak", "media/showcase/super-mushshak-original-flight-evidence.png"),
+        ("### 03 · TIR-FOD", "media/showcase/tir-fod-23-class-evidence-atlas.png"),
+        ("### 04 · Counter-UAS Phase I", "media/showcase/counter-uas-real-physical-evidence.png"),
     )
-    previous = -1
-    for anchor, heading in anchor_pairs:
-        assert f"](#{anchor})" in root, anchor
-        assert f'<a name="{anchor}"></a>' in root, anchor
+    last = -1
+    for heading, media in selected_cases:
         assert heading in root, heading
         pos = root.index(heading)
-        assert pos > previous, heading
-        previous = pos
+        assert pos > last, heading
+        last = pos
+        assert media in root, media
+        assert (ROOT / media).is_file(), media
+        assert media.split("/")[-1] in gallery, media
 
-    # Core project-family coverage.
     for marker in (
-        "Clear Run / TIR-FOD",
-        "Lodestar",
-        "i-MSHA",
-        "JobLooper",
-        "Adversarial Review Lite",
-        "BuildSignal AI",
-        "Counter-UAS Phase I",
-        "AI Systems Assurance / MBSE",
-        "Super Mushshak",
-        "ATLAS GPU/HPC",
+        "Aerospace Systems Integration",
+        "JF-17", "ZDK-03 AEW&C",
+        "23 FOD categories", "3,499", "5,593",
+        "team-reported integrated prototype demonstration",
+        "not an operational counter-drone system",
+        "Lodestar", "i-MSHA", "JobLooper",
+        "Adversarial Review Lite", "BuildSignal AI", "ATLAS",
     ):
-        assert marker in root, marker
+        assert marker.lower() in root.lower(), marker
 
-    # Flagship evidence and career context.
-    for marker in (
-        "3,499 source frames",
-        "12 structured RGB events",
-        "209 documents",
-        "visuals/autonomy-edge-ai/clear-run/clear_run_detection_to_removal_architecture.webp",
-        "visuals/compliance-regtech/i-msha/dashboard-regression.png",
-        "visuals/compliance-regtech/lodestar/product-surface.svg",
-        "visuals/practical-ai-products/joblooper/dashboard-surface.svg",
-        "visuals/practical-ai-products/buildsignal/admin-surface.svg",
-        "visuals/assurance-digital-engineering/adversarial-review/audit-report-preview.jpg",
-        "visuals/assurance-digital-engineering/ai-evaluation/evaluation_pipeline.svg",
-        "visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg",
-        "visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg",
-        "profile/AI_BASE_RESUME.md",
-        "curated, release-safe technical package or review branch",
-    ):
-        assert marker in root, marker
+    import struct
+    dimensions = {
+        "media/showcase/clear-run-real-collector-sequence.png": (1600, 900),
+        "media/showcase/super-mushshak-original-flight-evidence.png": (1600, 900),
+        "media/showcase/tir-fod-23-class-evidence-atlas.png": (1600, 1260),
+        "media/showcase/counter-uas-real-physical-evidence.png": (1600, 900),
+    }
+    for rel, expected in dimensions.items():
+        raw = (ROOT / rel).read_bytes()
+        assert raw[:8] == b"\\x89PNG\\r\\n\\x1a\\n", rel
+        assert struct.unpack(">II", raw[16:24]) == expected, rel
+        assert len(raw) > 50000, rel
+        svg = ROOT / rel.replace(".png", ".svg")
+        assert svg.is_file(), svg
+        data = svg.read_text(encoding="utf-8")
+        assert "data:image/" in data and "<script" not in data.lower(), svg
 
-    # Prevent regression to the broken three-stream strip or stale external Super Mushshak asset.
-    assert "three evidence streams" not in root.lower()
-    assert "dynon-cockpit-prototype-sanitized.jpg" not in root
-    assert "raw.githubusercontent.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification" not in root
-
-    mbse_case = (ROOT / "domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md").read_text(encoding="utf-8")
-    assert "../../visuals/autonomy-edge-ai/clear-run/system_architecture.svg" in mbse_case
-    assert "../../visuals/autonomy-edge-ai/clear-run/aerial_unit_architecture.svg" in mbse_case
-    assert "../../visuals/autonomy-edge-ai/clear-run/gcs_architecture.svg" in mbse_case
-    assert "../../visuals/autonomy-edge-ai/clear-run/ugv_architecture.svg" in mbse_case
-    assert "## AI system assurance contribution" in mbse_case
-
-    clear_run = (ROOT / "domains/01-autonomy-edge-ai/clear-run-tir-fod.md").read_text(encoding="utf-8")
-    assert "final detection-to-physical-retention chain is still being quantitatively closed" in clear_run
-    assert "mission_verification_matrix.json" in clear_run
-    assert "## Contribution boundary" in clear_run
-    assert "Team-developed work" in clear_run
-
-    lodestar = (ROOT / "domains/02-compliance-regtech/lodestar.md").read_text(encoding="utf-8")
-    assert "34-query set is a regression set" in lodestar
-    assert "11-invariant reliability regression" in lodestar
-    assert "Agent-assisted implementation" in lodestar
-
-    counter_uas = (ROOT / "domains/01-autonomy-edge-ai/counter-uas.md").read_text(encoding="utf-8")
-    assert "../../visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg" in counter_uas
-    assert "../../visuals/autonomy-edge-ai/counter-uas/phase1_video_mount.jpg" in counter_uas
-    assert "../../evidence/autonomy_edge_ai/counter_uas/hardware_provenance.json" in counter_uas
-    assert "## Contribution boundary" in counter_uas
-    counter_hw = json.loads(
-        (ROOT / "evidence/autonomy_edge_ai/counter_uas/hardware_provenance.json").read_text(encoding="utf-8")
+    atlas = (ROOT / "media/showcase/tir-fod-23-class-evidence-atlas.svg").read_text(encoding="utf-8")
+    taxonomy = (
+        "Bottle", "Label", "Cutter", "AllenKey", "Glove", "Hammer",
+        "HeadSet", "MetalShard", "Screw", "Nut", "Wrench", "PaperCup",
+        "Plier", "SafetyGoggle", "Scissor", "ScrewDriver", "SprayCan",
+        "Stick", "Rock", "Tape", "SodaCan", "Wire", "Pen",
     )
-    assert len(counter_hw) == 2
-    assert counter_hw[0]["description"] == "Constructed Phase I laser-camera mount"
-    assert "no semantic alteration" in counter_hw[0]["transformation"]
+    assert len(taxonomy) == 23
+    for name in taxonomy:
+        assert f">{name}</text>" in atlas, name
 
-    mushshak = (ROOT / "domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md").read_text(
-        encoding="utf-8"
-    )
-    assert "../../visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg" in mushshak
-    assert "dynon-cockpit-prototype-sanitized.jpg" not in mushshak
-    assert "raw.githubusercontent.com" not in mushshak
-
-    project_index = (ROOT / "domains/README.md").read_text(encoding="utf-8")
-    assert "02-compliance-regtech/i-msha.md" in project_index
-    assert "03-practical-ai-products/buildsignal-ai.md" in project_index
-    assert "04-assurance-digital-engineering/super-mushshak-digital-engineering.md" in project_index
-    assert "04-assurance-digital-engineering/atlas-hpc.md" in project_index
-    assert "JobLooper / JobPilot" not in project_index
-
-    # Domain hierarchy is the repository structure, not only a landing-page label.
-    for rel in (
-        "domains/01-autonomy-edge-ai/README.md",
-        "domains/02-compliance-regtech/README.md",
-        "domains/03-practical-ai-products/README.md",
-        "domains/04-assurance-digital-engineering/README.md",
-    ):
-        assert (ROOT / rel).exists(), rel
-    assert not (ROOT / "projects").exists()
-    for rel in (
-        "evidence/lodestar", "evidence/clear-run", "evidence/tir-fod",
-        "visuals/clear-run", "visuals/tir-fod", "visuals/msha", "visuals/joblooper",
-    ):
-        assert not (ROOT / rel).exists(), rel
-
+    import hashlib
+    origin_hashes = {
+        "tir-fod-23-class-source-grid.png": "fa9b03a15d71efea097ddd5c822b3ad33c8a477b",
+        "clear-run-collector-before.jpg": "7e003c31437168db62f0fe15c6421c2889e486d8",
+        "clear-run-collector-approach.jpg": "2ea107c8015cc7f9db4f5b077c157d9849036ba9",
+        "clear-run-collector-source-outcome-overlay.jpg": "9e76eacb0eb6f408fd53b566e804193b1f40b0b0",
+        "clear-run-uav-inflight.jpg": "6f1edff8d617b09da621ef1d349e5c29b1b5a96f",
+    }
+    for name, expected_sha in origin_hashes.items():
+        raw = (ROOT / "media/real" / name).read_bytes()
+        calculated = hashlib.sha1(f"blob {len(raw)}\\0".encode() + raw).hexdigest()
+        assert calculated == expected_sha, name
 
 
 def check_portfolio_guardrails() -> None:
+    """Keep team attribution, distinct hardware configurations and actual-media truth."""
     root = (ROOT / "README.md").read_text(encoding="utf-8")
-
-    # Four-area taxonomy is stable; Clear Run MBSE is a cross-cutting Area 4 capability,
-    # not a third autonomy flagship.
-    assert "primary technical foundation" in root
-    assert "independent specialism" in root
-    assert "evidence/claim-sources.md" in root
-    assert "### AI Systems Assurance / MBSE — Clear Run" in root
-
-    autonomy_index = (ROOT / "domains/01-autonomy-edge-ai/README.md").read_text(encoding="utf-8")
-    assurance_index = (ROOT / "domains/04-assurance-digital-engineering/README.md").read_text(encoding="utf-8")
-    domain_map = (ROOT / "domains/README.md").read_text(encoding="utf-8")
-    assert "primarily classified under [AI Assurance, Evaluation & Digital Engineering]" in autonomy_index
-    assert "[AI Systems Assurance / MBSE — Clear Run]" in assurance_index
-    area1 = domain_map.split("## 1. Autonomous, embedded and edge AI", 1)[1].split(
-        "## 2. Compliance and regulatory intelligence", 1
-    )[0]
-    area4 = domain_map.split("## 4. AI assurance, evaluation and digital engineering", 1)[1]
-    assert "AI Systems Assurance / MBSE" not in area1
-    assert "AI Systems Assurance / MBSE — Clear Run" in area4
-
-    # Domain ownership must stay consistent in the public visual/evidence indexes
-    # even when the underlying asset paths remain near their originating projects.
-    visual_index = (ROOT / "visuals/README.md").read_text(encoding="utf-8")
-    visual_autonomy = visual_index.split("## Autonomous, embedded and edge AI", 1)[1].split(
-        "## Compliance and regulatory intelligence", 1
-    )[0]
-    visual_practical = visual_index.split("## Practical AI products", 1)[1].split(
-        "## AI assurance and digital engineering", 1
-    )[0]
-    visual_assurance = visual_index.split("## AI assurance and digital engineering", 1)[1]
-    assert "### AI Systems Assurance / MBSE" not in visual_autonomy
-    assert "### AI Systems Assurance / MBSE" in visual_assurance
-    assert "### Adversarial Review Lite" in visual_practical
-    assert "### Adversarial Review Lite" not in visual_assurance
-
-    evidence_index = (ROOT / "evidence/README.md").read_text(encoding="utf-8")
-    evidence_autonomy = evidence_index.split("## Autonomous, embedded and edge AI", 1)[1].split(
-        "## Compliance and regulatory intelligence", 1
-    )[0]
-    evidence_practical = evidence_index.split("## Practical AI products", 1)[1].split(
-        "## Public source repositories", 1
-    )[0]
-    evidence_assurance = evidence_index.split("## AI assurance and digital engineering", 1)[1].split(
-        "## Practical AI products", 1
-    )[0]
-    assert "AI Systems Assurance / MBSE" not in evidence_autonomy
-    assert "AI Systems Assurance / MBSE" in evidence_assurance
-    assert "Adversarial Review Lite" in evidence_practical
-
-    # Clear Run robotics depth must remain visible and must not regress to
-    # the old ROS1-only simplification.
-    clear_run_case = (ROOT / "domains/01-autonomy-edge-ai/clear-run-tir-fod.md").read_text(encoding="utf-8")
-    clear_run_cv = (ROOT / "profile/AI_BASE_RESUME.md").read_text(encoding="utf-8")
-    ugv_arch = (ROOT / "visuals/autonomy-edge-ai/clear-run/ugv_architecture.svg").read_text(encoding="utf-8")
-    for marker in ("ROS2", "Nav2", "SLAM Toolbox"):
-        assert marker in root, marker
-        assert marker in clear_run_case, marker
-        assert marker in clear_run_cv, marker
-        assert marker in ugv_arch, marker
-    assert "ROS 1 navigation" not in ugv_arch
-    assert "hybrid ROS1/ROS2" in clear_run_case
-    assert "national-scale field trials" in root
-    assert "patent filing planned after field-trial maturation" in root
-    assert "completed national deployment/adoption" in root
-    assert "filed/pending/granted IP" in root
-
-    # Counter-UAS and historical aircraft-integration depth must not regress
-    # back to detector-only or display-only descriptions.
-    counter_uas_case = (ROOT / "domains/01-autonomy-edge-ai/counter-uas.md").read_text(encoding="utf-8")
-    public_cv = (ROOT / "profile/AI_BASE_RESUME.md").read_text(encoding="utf-8")
-    for marker in ("centroid-driven", "multi-target", "Kalman-filter"):
-        assert marker in counter_uas_case, marker
-    assert "manual/automatic single/multi-target centroid tracking" in root
-    assert "Kalman stabilization" in root
-    assert "manual human-in-loop" in counter_uas_case
-    assert "centroid-driven automatic single/multi-target tracking" in public_cv
-    assert "complete modification wiring harness" in public_cv
-    assert "NAV/COM/audio/data interfaces" in public_cv
-    assert "aircraft-level retrofit" in root
-    assert "customer evaluation" in root
-
-    # Source-derived visuals must be visibly labelled on the landing page.
-    assert "Lodestar is a source-derived rendering from the current frontend code" in root
-    assert "JobLooper and BuildSignal AI surfaces are source-derived renderings" in root
-    assert "These renderings are not presented as original product screenshots." in root
-
-    # Active flagship pages expose dated public-evidence snapshots without rewriting
-    # the date/provenance of underlying measurements.
-    dated_pages = (
-        "domains/01-autonomy-edge-ai/clear-run-tir-fod.md",
-        "domains/02-compliance-regtech/i-msha.md",
-        "domains/02-compliance-regtech/lodestar.md",
-        "domains/03-practical-ai-products/joblooper-jobpilot.md",
-        "domains/03-practical-ai-products/buildsignal-ai.md",
-        "domains/03-practical-ai-products/adversarial-review-lite.md",
-    )
-    for rel in dated_pages:
-        text = (ROOT / rel).read_text(encoding="utf-8")
-        assert "**Public evidence snapshot:** 19 September 2026." in text, rel
-
-    # Landing page must expose an immediate path from claims to inspectable evidence.
-    assert "## Inspect the engineering" in root
-    for marker in (
-        "TIR-FOD reproducibility",
-        "Clear Run field/mission evidence",
-        "Lodestar retrieval & evaluation",
-        "JobLooper source",
-        "engineering CI",
-        "curated, release-safe technical package or review branch",
+    gallery = (ROOT / "media/showcase/README.md").read_text(encoding="utf-8")
+    for needle in (
+        "team-reported", "not an operational counter-drone system",
+        "not a set of 23 independently validated per-class detections",
+        "Source evidence", "2.5×",
     ):
-        assert marker in root, marker
+        assert needle.lower() in (root + gallery).lower(), needle
 
+    assert "JF-17" in root and "ZDK-03 AEW&C" in root
+    assert "Super Mushshak" in root and "Counter-UAS Phase I" in root
+    assert "TIR-FOD" in root and "Clear Run" in root
+    assert "CloakBench" in root and "IN-ARCP" in root
 
-def check_visual_manifest_and_svg() -> None:
-    """Validate actual publication bytes and SVG syntax, not just file presence."""
-    import hashlib
-    import xml.etree.ElementTree as ET
-    manifest = json.loads((ROOT / "visuals/provenance.json").read_text())
-    for item in manifest["assets"]:
-        path = ROOT / item["path"]
-        assert path.is_file(), item["path"]
-        assert hashlib.sha256(path.read_bytes()).hexdigest() == item["sha256"], item["path"]
-    for path in (ROOT / "visuals").rglob("*.svg"):
-        ET.parse(path)
-    for path in ROOT.rglob("*.md"):
-        assert "python -m evidence.lodestar." not in path.read_text(), str(path)
+    clear_run = (ROOT / "domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md").read_text(encoding="utf-8")
+    assert "small-wheel" in clear_run
+    assert "2.5×" in clear_run
+    assert "repeated, independently auditable" in clear_run
+    assert "tracked/skid-steer" in clear_run
 
+    thermal = (ROOT / "domains/01-autonomy-edge-ai/clear-run-tir-fod.md").read_text(encoding="utf-8")
+    assert "tir-fod-23-class-evidence-atlas.png" in thermal
+    assert "source-aware" in thermal
+    assert "ROS2" in thermal and "Nav2" in thermal
+
+    counter = (ROOT / "domains/01-autonomy-edge-ai/counter-uas.md").read_text(encoding="utf-8")
+    for marker in ("phase1_original_mount.jpg", "outdoor_detection.png", "indoor_detection.png", "## Contribution boundary"):
+        assert marker in counter, marker
+
+    aircraft = (ROOT / "domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md").read_text(encoding="utf-8")
+    assert "super-mushshak-original-flight-evidence.png" in aircraft
+    assert "Dynon" in aircraft and "Garmin" in aircraft
+    assert "lead systems engineer" in aircraft.lower()
+
+    for name in ("clear-run-real-collector-sequence.png",
+                 "tir-fod-23-class-evidence-atlas.png",
+                 "counter-uas-real-physical-evidence.png",
+                 "super-mushshak-original-flight-evidence.png"):
+        assert name in gallery
+    assert "not independently audited" in gallery.lower()
+    assert "same edited" in gallery.lower() or "one edited" in gallery.lower()
+    assert "fictional product screenshot is never substituted" in gallery.lower()
 
 def main() -> None:
     checks = [
