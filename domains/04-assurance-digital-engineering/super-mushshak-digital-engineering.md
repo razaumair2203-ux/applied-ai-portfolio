@@ -1,10 +1,8 @@
 # Super Mushshak — first three glass-cockpit prototypes to evidence-linked digital engineering
 
-<p align="center">
-  <img src="../../visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg" alt="Original Super Mushshak Dynon SkyView prototype cockpit" width="76%">
-</p>
+[![Authentic Super Mushshak cockpit integration and flight-test photographs](../../media/showcase/super-mushshak-original-flight-evidence.png)](../../media/showcase/README.md#super-mushshak--original-retrofit-and-flight-photographs)
 
-*Authentic installed Dynon SkyView prototype photograph copied from the current public Super Mushshak project record into this portfolio to keep the evidence stable.*
+*Original installed Dynon SkyView, in-flight cockpit and instrument-stack photographs. No synthetic instruments, no mixing with separate Garmin configurations and no unsupported certification claim.* [Original project photo archive](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/blob/main/docs/media-gallery.md).
 
 This project family starts with a **completed aircraft-level glass-cockpit integration programme for the first three Super Mushshak prototypes** and extends it into a current, bounded digital-engineering follow-on. The original work included avionics/sensor trade studies, Dynon/Garmin integration, aircraft electrical and wiring-harness changes, ARINC-429 and other interfaces, configuration/database work, installed-aircraft checks, flight-test feedback and customer evaluation—not simply display replacement.
 
