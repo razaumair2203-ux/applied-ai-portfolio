@@ -8,7 +8,9 @@
 ## Selected engineering case studies
 
 ### 01 / Clear Run — airborne sensing to physical FOD recovery
-[![Clear Run: authentic airborne hardware and September field-output evidence](media/showcase/01-clear-run.svg)](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md)
+| Original TIR-FOD sensing UAV | Recorded September RGB/LWIR detections |
+|---|---|
+| [![Actual earlier UAV](visuals/autonomy-edge-ai/tir-fod/airborne_platform.png)](visuals/autonomy-edge-ai/tir-fod/airborne_platform.png) | [![Original field-detection output](visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png)](visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png) |
 
 **The engineering problem:** carry foreign-object-debris detections from airborne RGB/LWIR sensors through localization, ground-control review and an actual ground collection prototype. A team-built integration demonstration is reported; configuration-linked end-to-end reliability remains to be independently verified. The photograph shows the earlier **TIR-FOD sensing UAV**, not the subsequent collection rover.
 
@@ -16,7 +18,9 @@
 
 ### 02 / Super Mushshak — flight-tested avionics integration
 
-[![Super Mushshak: original installed cockpit photograph and engineering scope](media/showcase/03-super-mushshak.svg)](domains/04-assurance-digital-engineering/super-mushshak-digital-engineering.md)
+| Original installed Dynon cockpit | Original cockpit photograph from flight testing |
+|---|---|
+| [![Actual installed Dynon cockpit](visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg)](visuals/assurance-digital-engineering/super-mushshak/dynon-skyview-installed-prototype.jpg) | [![Actual in-flight cockpit](https://raw.githubusercontent.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/main/assets/flight-test/cockpit-overview-inflight.jpg)](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/blob/main/assets/flight-test/cockpit-overview-inflight.jpg) |
 
 **Lead systems-engineering work:** retrofit design and integration across cockpit displays, sensors, NAV/COM, wiring, configuration control, installed ground checks, flight-test feedback and OEM discrepancy resolution. Three initial prototypes are reported in the programme record; Dynon and Garmin evaluation paths are distinguished.
 
@@ -24,7 +28,9 @@
 
 ### 03 / Counter-UAS Phase I — built vision-tracking demonstrator
 
-[![Counter-UAS Phase I: actual built mount and visual-tracking research](media/showcase/02-counter-uas.svg)](domains/01-autonomy-edge-ai/counter-uas.md)
+| Actual built camera/actuator mount | Recorded outdoor detection result |
+|---|---|
+| [![Original Counter-UAS hardware](visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg)](visuals/autonomy-edge-ai/counter-uas/phase1_original_mount.jpg) | [![Original outdoor detector output](visuals/autonomy-edge-ai/counter-uas/outdoor_detection.png)](visuals/autonomy-edge-ai/counter-uas/outdoor_detection.png) |
 
 **Principal Investigator / integration lead:** physical camera/mount development, YOLO-based perception, centroid/Kalman-based tracking controls and indoor/outdoor experiments. This is an experimental visual-tracking system, not evidence of operational counter-UAS performance or completed passive-RF fusion.
 
@@ -34,9 +40,9 @@
 
 | Engineering case | Concrete evidence | Maturity |
 |---|---|---|
-| [TIR-FOD / thermal edge AI](domains/01-autonomy-edge-ai/clear-run-tir-fod.md) | [Real mounted Jetson and capture-session media](media/showcase/04-tir-fod.svg); [public dataset](https://doi.org/10.5281/zenodo.22546586), 3,499 LWIR source frames, 5,593 annotations across 23 classes | Field R&D, article under consideration |
-| [IN-ARCP radar detection](research/INARCP_RADAR_CASE.md) | [Original R22 detector plot and source-backed media](media/showcase/05-inarcp.svg), compound-Gaussian clutter and target self-masking | Manuscript submitted, decision pending |
-| [Multi-UAV search and rescue](research/MULTI_UAV_SAR_CASE.md) | [Original simulated command-loss media](media/showcase/06-multi-uav-sar.svg), separate 640 reported SITL flights | Simulation-only, manuscript not submitted |
+| [TIR-FOD / thermal edge AI](domains/01-autonomy-edge-ai/clear-run-tir-fod.md) | [Original mounted Jetson](visuals/autonomy-edge-ai/tir-fod/jetson_mounted.png) and [capture-session plot](visuals/autonomy-edge-ai/tir-fod/capture_sessions.png); [public dataset](https://doi.org/10.5281/zenodo.22546586), 3,499 LWIR source frames, 5,593 annotations across 23 classes | Field R&D, article under consideration |
+| [IN-ARCP radar detection](research/INARCP_RADAR_CASE.md) | [Original R22 detector result plot](media/showcase/inarcp-r22-detector.png), compound-Gaussian clutter and target self-masking | Manuscript submitted, decision pending |
+| [Multi-UAV search and rescue](research/MULTI_UAV_SAR_CASE.md) | [Original simulated command-loss result](media/showcase/multi-uav-command-loss.png), separate 640 reported SITL flights | Simulation-only, manuscript not submitted |
 | [Clear Run MBSE and telemetry assurance](domains/01-autonomy-edge-ai/ai-systems-assurance-mbse.md) | Explicit requirements, interface fault replay and acceptance checks | Bounded software replay, not a certified safety case |
 | [CloakBench](research/CLOAKBENCH_CASE.md) | Displacement-versus-suppression detector evaluation | Research in progress; private unfinished repository |
 
@@ -44,7 +50,7 @@
 
 | Project | Engineering differentiator | Evidence |
 |---|---|---|
-| [i-MSHA](domains/02-compliance-regtech/i-msha.md) | MSHA data modelling, governed analytics and AI-assisted workflows; [authentic archived v1 UI](media/showcase/07-i-msha.svg) | Historical screenshot; newer private v2 remains pre-launch |
+| [i-MSHA](domains/02-compliance-regtech/i-msha.md) | MSHA data modelling, governed analytics and AI-assisted workflows; [original archived v1 screenshot](visuals/compliance-regtech/i-msha/dashboard-regression.png) | Historical screenshot; newer private v2 remains pre-launch |
 | [Lodestar](domains/02-compliance-regtech/lodestar.md) | Authority-grounded legal evidence retrieval and explicit uncertainty controls | Public-safe code/fixtures and dated private evaluation |
 | [JobLooper / JobPilot](domains/03-practical-ai-products/joblooper-jobpilot.md) | Source-bound CV/advert processing, human review, deterministic document release | [Public JobLooper source](https://github.com/razaumair2203-ux/Pub-JobLooper) |
 | [Adversarial Review Lite](domains/03-practical-ai-products/adversarial-review-lite.md) | Reciprocal cross-model review utilities with read-only/release controls | [Open-source CLI implementations](https://github.com/razaumair2203-ux/codex-adversarial-review-lite) |
