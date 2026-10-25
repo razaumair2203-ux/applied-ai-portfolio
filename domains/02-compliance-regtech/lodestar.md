@@ -4,10 +4,6 @@
 
 **Public evidence snapshot:** 19 September 2026. Corpus and evaluation counts are recorded engineering state; production legal-service operation is not claimed.
 
-[![Lodestar product landing surface](../../visuals/compliance-regtech/lodestar/product-surface.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-lodestar.yml)
-
-*Source-derived rendering of the current Lodestar frontend landing page. The private project defines the interface but has no separate distributable logo asset.*
-
 Lodestar is a working browser product for **EB-2 National Interest Waiver (NIW) and EB-1A evidence assessment**. A candidate can upload CV/evidence material, answer targeted gap questions, confirm the evidence mapping, and run a grounded assessment against the **Matter of Dhanasar** three-prong NIW test or the **Kazarian** two-step EB-1A framework.
 
 The product is deliberately narrower and more defensible than a generic immigration chatbot: it produces **evidence matrices, gap analysis, cited assessment states and drafting aids**, but it does **not** emit an approval probability, invent a legal score, or generate a finished petition. If the retrieved authority or applicant evidence does not support a conclusion, the system is designed to say so.
