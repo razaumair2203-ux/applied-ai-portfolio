@@ -438,7 +438,7 @@ def check_portfolio_guardrails() -> None:
                  "counter-uas-real-physical-evidence.png",
                  "super-mushshak-original-flight-evidence.png"):
         assert name in gallery
-    assert "not independently audited" in gallery.lower()
+    assert "not independently verified" in gallery.lower()
     assert "same edited" in gallery.lower() or "one edited" in gallery.lower()
     assert "fictional product screenshot is never substituted" in gallery.lower()
 
