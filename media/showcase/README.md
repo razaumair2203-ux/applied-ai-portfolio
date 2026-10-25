@@ -4,12 +4,12 @@ Every image on this page is linked directly to a retained original photograph, r
 
 ## Clear Run
 
-| Earlier TIR-FOD aerial sensing platform | September field-detection outputs |
+| Earlier TIR-FOD aerial sensing platform | Original TIR-FOD Jetson runtime |
 |---|---|
-| <img src="../../visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" width="660" alt="Actual airborne research UAV"> | <img src="../../visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png" width="450" alt="Recorded RGB and infrared detections"> |
-| Actual UAV photo; **not** the later collector | Original annotated RGB/LWIR results and 12 recorded RGB events; **not** evidence of successful physical pickup |
+| <img src="../../visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" width="660" alt="Actual airborne research UAV"> | <img src="../../visuals/autonomy-edge-ai/tir-fod/jetson_runtime.png" width="450" alt="Actual thermal inference runtime frame on Jetson"> |
+| Actual UAV photo; **not** the later collector | Actual embedded runtime display; **not** a current Clear Run retrieval trial or success rate |
 
-**Engineering result:** onboard perception, coordinates/events and GCS/ground interfaces; team reports a fabricated collector and integrated demonstration. The newer reported tracked ground platform is not pictured in this public gallery. [Current Clear Run case](../../domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) · [Released thermal dataset](https://doi.org/10.5281/zenodo.22546586).
+**Engineering result:** earlier real airborne/Jetson perception evidence; separately, the team reports later Clear Run GCS/ground integration, a fabricated collector and an integrated demonstration. The newer reported tracked ground platform is not pictured in this public gallery. [Current Clear Run case](../../domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) · [Released thermal dataset](https://doi.org/10.5281/zenodo.22546586).
 
 ## Counter-UAS Phase I
 
