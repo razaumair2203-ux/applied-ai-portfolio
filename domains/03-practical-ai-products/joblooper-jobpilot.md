@@ -14,9 +14,7 @@ The design principle is simple but demanding: **truth, provenance, workflow stat
   <a href="https://github.com/razaumair2203-ux/Pub-JobLooper"><img src="../../visuals/practical-ai-products/joblooper/app-icon.svg" alt="Official JobLooper project mark" width="13%"></a>
 </p>
 
-[![JobLooper application workspace](../../visuals/practical-ai-products/joblooper/dashboard-surface.svg)](https://github.com/razaumair2203-ux/Pub-JobLooper)
-
-*The official project mark comes from the public JobLooper project; the dashboard surface is rendered from the current public dashboard source.*
+*Official project mark from the public JobLooper repository. No reconstructed application screenshot is presented as runtime evidence.*
 
 ## End-to-end governed lifecycle
 
