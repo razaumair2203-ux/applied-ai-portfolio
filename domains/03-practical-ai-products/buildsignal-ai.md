@@ -8,9 +8,7 @@ BuildSignal AI is an active private **AI-native publishing operations system** f
 
 The platform is built with **Next.js / TypeScript / MDX**, but its value is the operating model around those tools: AI-generated or AI-assisted material cannot move directly from generation to publication without passing through explicit research, review and release states.
 
-[![BuildSignal AI admin workspace](../../visuals/practical-ai-products/buildsignal/admin-surface.svg)](https://github.com/razaumair2203-ux/applied-ai-portfolio/issues/new?template=access-buildsignal.yml)
-
-*Public-safe rendering of the current BuildSignal admin-page source, showing the local review workspace, publication gates and owner-controlled approval flow.*
+**Visual evidence:** the current public case intentionally uses no interface mock-up. An authentic, sanitized running-build screenshot has not been released.
 
 ## Current product scope
 
