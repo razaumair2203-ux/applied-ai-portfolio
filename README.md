@@ -34,23 +34,16 @@
 
 *These are separate streams: institutional/team aerospace and autonomy work is not portrayed as independently owned software; experimental systems are not described as certified, adopted or commercial deployments.*
 
-## Photo-authentic engineering media · October 2026
+## Evidence gallery
 
-The following media cards were assembled **only from authentic, already-public project photographs, trial captures, browser screenshots or research result figures**, with source Git blob identities retained in each SVG's metadata. Typography and layout are editorial; no equipment or scene was generated.
+The leading examples above use **actual source photographs of engineering hardware**, not stylized or AI-generated equipment. Further evidence is in the linked project cases: [Clear-Run system and trial records](domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md), [Super Mushshak original aircraft photographs](https://github.com/razaumair2203-ux/Super-Mushshak-Glass-Cockpit-Modification/blob/main/docs/media-gallery.md), [Counter-UAS prototype photographs](domains/01-autonomy-edge-ai/counter-uas.md), and [IN-ARCP reproducible plots](https://github.com/razaumair2203-ux/inarcp).
 
-| Media | Evidence represented |
-|---|---|
-| [Clear Run / applied autonomy — authentic UAV photo](visuals/editorial/clear-run-autonomy-2026.svg) | Earlier real aerial platform + current mission-chain summary; not a photo of the latest tracked rover |
-| [Super Mushshak / aircraft integration — installed cockpit](visuals/editorial/super-mushshak-systems-2026.svg) | Original installed prototype photograph and verified engineering scope |
-| [Counter-UAS / physical AI — mount and outdoor frame](visuals/editorial/counter-uas-physical-ai-2026.svg) | Real fabricated mount and experimental visual-tracking capture |
-| [i-MSHA / regulatory intelligence — authentic browser screenshot](visuals/editorial/i-msha-product-engineering-2026.svg) | Genuine development dashboard; not a production-status claim |
-| [IN-ARCP / radar research — real detection-result plot](visuals/editorial/inarcp-radar-evidence-2026.svg) | Actual computed R22 research curve; not operational radar certification |
-| [Multi-UAV SAR / mission simulation — real test-result plot](visuals/editorial/multi-uav-sar-evidence-2026.svg) | Actual command-loss simulation result, not field flight data |
+Earlier promotional-style SVG cards have been **withdrawn from the homepage**; they remain only as prior repository artifacts. The next editorial set is being independently reviewed for accuracy and readability and is not yet approved for external marketing.
 
 ## Research status and release boundaries
 
 - **TIR-FOD:** IEEE Access resubmission confirmed **6 October 2026**, decision pending; [public dataset](https://doi.org/10.5281/zenodo.22546586).
-- **Clear Run integrated-system manuscript:** submitted / under consideration as author-reported in October 2026; no publication acceptance claimed.
+- **Clear Run integrated-system manuscript:** 22 October internal checkpoint listed the paper submission-ready but not submitted; later author reports it under consideration. Submission receipt/status reconciliation pending; no acceptance claimed.
 - **IN-ARCP:** IEEE Transactions on Radar Systems submission reported **7 October 2026**; [public R22 code and reproducibility record](https://github.com/razaumair2203-ux/inarcp).
 - **Multi-UAV SAR:** simulation study and journal packages prepared; submission outstanding. **CloakBench:** research snapshot unfinished. [Details and supporting work](research/README.md).
 
