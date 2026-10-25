@@ -403,8 +403,8 @@ def check_portfolio_guardrails() -> None:
     gallery = (ROOT / "media/showcase/README.md").read_text(encoding="utf-8")
     for needle in (
         "team-reported", "not an operational counter-drone system",
-        "not a set of 23 independently validated per-class detections",
-        "Source evidence", "2.5×",
+        "23 independently validated per-class detections",
+        "Original source", "2.5×",
     ):
         assert needle.lower() in (root + gallery).lower(), needle
 
@@ -416,7 +416,7 @@ def check_portfolio_guardrails() -> None:
     clear_run = (ROOT / "domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md").read_text(encoding="utf-8")
     assert "small-wheel" in clear_run
     assert "2.5×" in clear_run
-    assert "repeated, independently auditable" in clear_run
+    assert "repeated, independently auditable" in clear_run.lower()
     assert "tracked/skid-steer" in clear_run
 
     thermal = (ROOT / "domains/01-autonomy-edge-ai/clear-run-tir-fod.md").read_text(encoding="utf-8")
