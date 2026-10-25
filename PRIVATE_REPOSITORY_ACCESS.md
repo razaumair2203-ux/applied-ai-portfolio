@@ -10,7 +10,7 @@ The portfolio deliberately separates measured experiments from team-reported dem
 
 ## Scope of an external technical review
 
-An approved reviewer is offered the **smallest useful review surface** for a specific engineering question: ordinarily a **curated release-safe technical package or review branch**, or a narrower controlled extract when required. **Complete repository access only when the repository itself is suitable** for external inspection. Access is neither automatic nor an endorsement of unreleased code.
+An approved reviewer is offered the **smallest useful review surface** for a specific engineering question: ordinarily a **curated release-safe technical package or review branch**, or a narrower controlled extract when required. Our policy permits complete repository access only when the repository itself is suitable for external inspection. Access is neither automatic nor an endorsement of unreleased code.
 
 ## Request a deeper discussion
 
