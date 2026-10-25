@@ -6,6 +6,8 @@ I lead applied-AI systems engineering, with **autonomy and edge AI as my primary
 
 **Career profile:** [AI-focused base resume](profile/AI_BASE_RESUME.md) · **LinkedIn:** [Profile](https://www.linkedin.com/in/mumairaza/) · **Research:** [Google Scholar](https://scholar.google.com/citations?user=0EVckyAAAAAJ&hl=en) · **Dataset:** [TIR-FOD v1.2](https://doi.org/10.5281/zenodo.22546586) · **Technical review:** [project-specific access](PRIVATE_REPOSITORY_ACCESS.md)
 
+> **Clear Run update (October 2026):** the fabricated recovery prototype and integrated mission demonstration represent progress beyond the September portfolio snapshot. See the [current project status and evidence boundaries](domains/01-autonomy-edge-ai/CLEAR_RUN_2026-10_STATUS.md); repeatable mission-level verification remains in progress.
+
 ## Start with three engineering cases
 
 **Role fit:** Lead / Principal Applied AI Systems Engineer, Autonomous Systems Integration Lead, and Technical Programme / R&D Lead. My experience combines technical direction and integration responsibility with implementation, code review and evaluation in agent-assisted software development.
