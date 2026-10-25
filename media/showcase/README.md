@@ -1,8 +1,12 @@
 # Engineering media — original photographs and recorded results
 
-The images below are **actual project photographs, recorded experimental outputs or screenshots** from the repositories named in their captions. They are not AI-generated hardware illustrations. The technical schematics and claims are discussed in the linked engineering cases; one photograph never establishes end-to-end reliability.
+The featured cards embed **original project photographs, recorded experiment plots or historical UI screenshots** from the linked evidence. Their headings and boundaries are editorial labels, not new experiment outputs. No AI-generated hardware, invented results or fictional interface screenshots are used. The technical schematics and claims are discussed in the linked engineering cases; one photograph never establishes end-to-end reliability.
 
 ## Clear Run
+
+[![Clear Run — actual airborne hardware and recorded field detections](01-clear-run.svg)](01-clear-run.svg)
+
+*Source-backed visual summary. Both embedded images are original evidence from the **earlier airborne sensing configuration**, not a photograph of the latest ground collector.*
 
 The interface view below is a **functional evidence map**, not an as-built equipment illustration. Each arrow is an interface to verify.
 
@@ -45,6 +49,8 @@ flowchart LR
 
 ## TIR-FOD — thermal sensing and edge deployment
 
+[![TIR-FOD — original mounted Jetson and capture-session plot](04-tir-fod.svg)](04-tir-fod.svg)
+
 | Actual mounted compute | Recorded capture-session analysis |
 |---|---|
 | <img src="../../visuals/autonomy-edge-ai/tir-fod/jetson_mounted.png" width="660" alt="Original Jetson installation photograph"> | <img src="../../visuals/autonomy-edge-ai/tir-fod/capture_sessions.png" width="660" alt="Original data acquisition plot"> |
@@ -54,17 +60,23 @@ flowchart LR
 
 ## IN-ARCP — reproducible radar research
 
+[![IN-ARCP — original reproducible radar detector plot](05-inarcp.svg)](05-inarcp.svg)
+
 ![Actual R22 research plot](inarcp-r22-detector.png)
 
 **Original computed radar detection plot** from the public R22 study, including detection probability versus SCR and post-onset behavior. This is not a fielded radar benchmark. [Research case](../../research/INARCP_RADAR_CASE.md) · [public source](https://github.com/razaumair2203-ux/inarcp).
 
 ## Multi-UAV SAR — simulated command reliability
 
+[![Multi-UAV SAR — original command-loss result plot](06-multi-uav-sar.svg)](06-multi-uav-sar.svg)
+
 ![Original simulated command-loss result](multi-uav-command-loss.png)
 
 **Original recorded comparison** across 24 synthetic cases and 12 terrain maps. This is distinct from the separately reported 640 ArduPilot SITL flights; none are live search missions. [Research case](../../research/MULTI_UAV_SAR_CASE.md).
 
 ## i-MSHA — private regulatory analytics product
+
+[![i-MSHA — genuine archived v1 dashboard capture](07-i-msha.svg)](07-i-msha.svg)
 
 ![Authentic historical i-MSHA browser capture](../../visuals/compliance-regtech/i-msha/dashboard-regression.png)
 
