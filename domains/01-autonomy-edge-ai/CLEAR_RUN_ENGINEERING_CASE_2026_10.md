@@ -1,7 +1,7 @@
 # Clear Run — integrated airfield robotics and systems engineering
 **As of 25 October 2026 · prototype demonstration and active field-research programme**
 
-> **Engineering perspective:** The project is not a standalone FOD detector. It tests the interfaces that convert detection into supervised physical recovery. A fabricated collection system and an integrated mission demonstration are **reported by the project lead**. The later described tracked/skid-steer drive configuration has not been tied to an exact dated as-tested photograph; a retained manuscript collector photograph shows wheels. Repeated, independently auditable detection-to-retention performance is not yet established.
+> **Engineering perspective:** The project is not a standalone FOD detector. It tests the interfaces that convert detection into supervised physical recovery. A fabricated collection system and an integrated mission demonstration are **reported by the project lead**. The public imagery documents earlier project stages; a release-cleared, as-tested image of the latest ground platform is not yet available. Repeated, independently auditable detection-to-retention performance is not yet established.
 
 [Original field/hardware media](../../media/showcase/README.md#clear-run) · [Programme maturity summary](CLEAR_RUN_2026-10_STATUS.md) · [Public field-evidence extract](../../evidence/autonomy_edge_ai/clear_run/README.md) · [Released TIR-FOD dataset](https://doi.org/10.5281/zenodo.22546586)
 
@@ -32,7 +32,7 @@ Each arrow represents an **engineering interface** and therefore a failure or ve
 | Thermal perception | Public 23-category LWIR dataset, source lineage, repeated model evaluation, Jetson Orin Nano / TensorRT field work | Generalization under changed acquisition and operating conditions |
 | RGB / passive-IR event pipeline | Recorded field frames and event/coordinate outputs; September public event/log batch | Link every event to calibrated truth and full trial denominators |
 | Ground control | Purpose-built GCS and tasking/interface evidence | Exact target identity through acknowledge, retry, abort and dispatch |
-| Ground hardware | **Fabricated ramp-and-lift collector**, with later tracked/skid-steer drive revision programme-reported; the retained earlier collector photograph is wheeled. An as-tested configuration map is still missing | Freeze installed hardware/firmware/sensor revisions |
+| Ground hardware | **Fabricated ramp-and-lift collector**, with a later tracked/skid-steer drive revision reported by the team; latest hardware photo not publicly released | Freeze installed hardware/firmware/sensor revisions |
 | Mission demonstration | Complete prototype mission **confirmed by project lead** | Preserve synchronized as-tested configuration, event/time chain and independent witness/records |
 | Day/night missions | **15 daytime + 15 after-dark** missions in latest author-reported campaign | Session-linked conditions, failures, success denominators and independent audit |
 | Physical retention | Earlier October author-reported **38 retained collection outcomes / 42 tasks (90.5%)** | Retained per-task ledger, object conditions, post-capture motion and failure taxonomy |
@@ -43,7 +43,7 @@ Each arrow represents an **engineering interface** and therefore a failure or ve
 
 ### Ground-platform configuration caution
 
-Earlier public engineering snapshots describe a **Mecanum chassis and hybrid ROS1/ROS2/Nav2/SLAM development configuration**. The **later programme-reported configuration** is a **tracked/skid-steer rover** with a fabricated ramp-and-lift collector. A retained journal-development photograph depicts a wheeled collector, so these are distinct unresolved revision baselines. Those are different baselines and **must not be depicted as the same installed configuration**.
+Earlier public engineering snapshots describe a **Mecanum chassis and hybrid ROS1/ROS2/Nav2/SLAM development configuration**. The team reports a later **tracked/skid-steer rover** and fabricated ramp-and-lift collector. Earlier project images and ROS/Mecanum development configurations are historical stages and must not be represented as that later as-tested configuration. Those are different baselines and **must not be depicted as the same installed configuration**.
 
 Until an as-tested build inventory exists, the portfolio does not assert that every earlier Nav2, SLAM, motor or GCS interface was part of the exact later field configuration.
 

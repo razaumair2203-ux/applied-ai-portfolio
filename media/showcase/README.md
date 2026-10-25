@@ -19,7 +19,7 @@ flowchart LR
 | <img src="../../visuals/autonomy-edge-ai/tir-fod/airborne_platform.png" width="660" alt="Actual airborne research UAV"> | <img src="../../visuals/autonomy-edge-ai/clear-run/field_trial_evidence.png" width="450" alt="Recorded RGB and infrared detections"> |
 | Actual UAV photo; **not** the later collector | Original annotated RGB/LWIR results and 12 recorded RGB events; **not** evidence of successful physical pickup |
 
-**Engineering result:** onboard perception, coordinates/events and GCS/ground interfaces; team reports a fabricated collector and integrated demonstration. The newer tracked ground-platform photo has not been linked to an independently identified as-tested hardware revision. [Current Clear Run case](../../domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) · [Released thermal dataset](https://doi.org/10.5281/zenodo.22546586).
+**Engineering result:** onboard perception, coordinates/events and GCS/ground interfaces; team reports a fabricated collector and integrated demonstration. The newer reported tracked ground platform is not pictured in this public gallery. [Current Clear Run case](../../domains/01-autonomy-edge-ai/CLEAR_RUN_ENGINEERING_CASE_2026_10.md) · [Released thermal dataset](https://doi.org/10.5281/zenodo.22546586).
 
 ## Counter-UAS Phase I
 
@@ -68,7 +68,7 @@ flowchart LR
 
 ![Authentic historical i-MSHA browser capture](../../visuals/compliance-regtech/i-msha/dashboard-regression.png)
 
-**Archived development screenshot, not production deployment or passing current test evidence.** The capture visibly includes a developer issue indicator. i-MSHA v2 is a newer, separate private pre-launch implementation; the old screenshot must not be passed off as its current interface. [Product engineering case](../../domains/02-compliance-regtech/i-msha.md).
+**Archived v1 development screenshot, not a production deployment or current test result.** The newer private i-MSHA v2 is a distinct pre-launch implementation; the historical image is not its current interface. [Product engineering case](../../domains/02-compliance-regtech/i-msha.md).
 
 ## Additional source-backed projects
 
