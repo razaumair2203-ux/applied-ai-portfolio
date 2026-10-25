@@ -4,6 +4,14 @@
 
 **Public evidence snapshot:** 19 September 2026. Historical measurements retain their original provenance and limitations where stated.
 
+**Flagship dataset visual — original thermal annotations, all 23 classes:**
+
+[![TIR-FOD 23-class atlas using only original annotated LWIR tiles](../../media/showcase/tir-fod-23-class-evidence-atlas.png)](../../media/showcase/README.md#tir-fod--all-23-genuine-lwir-fod-classes)
+
+[Original unaltered class-grid source](../../media/real/tir-fod-23-class-source-grid.png) · [Released dataset](https://doi.org/10.5281/zenodo.22546586). The atlas enlarges source crops and labels; it is not a composite of synthetic FOD objects or per-class detection results.
+
+**Scope distinction:** this page retains historical Phase-I dataset/Jetson records. The [current Clear Run collector engineering case](CLEAR_RUN_ENGINEERING_CASE_2026_10.md) and its [actual collection footage](../../media/showcase/clear-run-real-collector-sequence.png) describe later, different integration evidence.
+
 Clear Run is an **airfield robotics programme**, not a standalone object detector. It connects **dataset/model development → airborne edge deployment → target geolocation and operator review → UAV–GCS–UGV mission integration → physical FOD capture and retained removal**. The programme is valuable precisely because it forces perception, avionics, communications, human supervision, ground autonomy and mechanical recovery to work as one traceable mission chain.
 
 ## At a glance
